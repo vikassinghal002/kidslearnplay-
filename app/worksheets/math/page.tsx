@@ -3,7 +3,7 @@ import Link from "next/link";
 import { worksheets } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Free Math Worksheets for Kids — Printable PDF | KidsLearnPlay",
+  title: "Free Math Worksheets for Kids — Printable PDF | JiggyJoy",
   description:
     "Free printable math worksheets for all grades — addition, subtraction, multiplication, number bonds, counting and more. Download PDF, no signup required.",
 };

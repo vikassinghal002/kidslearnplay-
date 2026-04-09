@@ -3,7 +3,7 @@ import Link from "next/link";
 import { worksheets } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Free Kindergarten Worksheets — Printable PDF | KidsLearnPlay",
+  title: "Free Kindergarten Worksheets — Printable PDF | JiggyJoy",
   description:
     "Free printable kindergarten worksheets — maths, reading, writing and phonics worksheets for 5–6 year olds. Download free PDFs instantly.",
 };

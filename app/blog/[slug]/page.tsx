@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "article",
       publishedTime: post.date,
-      authors: ["KidsLearnPlay"],
+      authors: ["JiggyJoy"],
       tags: post.tags,
     },
   };
@@ -74,13 +74,13 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: post.date,
     author: {
       "@type": "Organization",
-      name: "KidsLearnPlay",
-      url: "https://www.kidslearnplay.com",
+      name: "JiggyJoy",
+      url: "https://www.jiggyjoy.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "KidsLearnPlay",
-      url: "https://www.kidslearnplay.com",
+      name: "JiggyJoy",
+      url: "https://www.jiggyjoy.com",
     },
     keywords: post.tags.join(", "),
   };

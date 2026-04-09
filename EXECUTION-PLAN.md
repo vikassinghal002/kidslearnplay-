@@ -1,4 +1,4 @@
-# KidsLearnPlay — Execution Plan
+# JiggyJoy — Execution Plan
 *Last updated: 2026-04-08 — Session 3*
 
 ---
@@ -135,7 +135,7 @@ GEMINI_API_KEY=AIzaSyCD4_vN5QQHu9RnjosENRN-T_juC7-DJBI node scripts/generate-ima
 
 ### Phase 4 — Deployment ⏳ TODO
 
-- [ ] Buy domain (suggested: `kidslearnplay.com` or `colorandlearn.com`) — ~$10/yr on Namecheap
+- [ ] Buy domain (suggested: `jiggyjoy.com` or `colorandlearn.com`) — ~$10/yr on Namecheap
 - [ ] Create Vercel account (free)
 - [ ] Connect GitHub repo to Vercel
 - [ ] Push project to GitHub
@@ -289,7 +289,7 @@ kidslearnplay/
    GEMINI_API_KEY=NEW_KEY node scripts/generate-images.mjs --category=animal-mandalas
    GEMINI_API_KEY=NEW_KEY node scripts/generate-images.mjs --category=floral-mandalas
    ```
-3. **Buy domain** — `kidslearnplay.com` or `colorandlearn.com` (~$10/yr on Namecheap)
+3. **Buy domain** — `jiggyjoy.com` or `colorandlearn.com` (~$10/yr on Namecheap)
 4. **Deploy to Vercel** — site is build-ready, just needs deployment
 5. **Open Etsy shop** — list first 3 bundles (animal mandalas, floral mandalas, holiday) at $4–5 each
 6. **Apply for AdSense** — once site is live with 20+ pages

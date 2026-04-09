@@ -3,7 +3,7 @@ import Link from "next/link";
 import { worksheets } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Free Tracing Worksheets for Kids — Printable PDF | KidsLearnPlay",
+  title: "Free Tracing Worksheets for Kids — Printable PDF | JiggyJoy",
   description:
     "Free printable tracing worksheets — letter tracing, number tracing and shape tracing for preschool and kindergarten. Build handwriting skills with free PDFs.",
 };

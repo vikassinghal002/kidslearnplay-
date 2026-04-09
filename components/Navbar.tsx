@@ -92,7 +92,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-xl text-purple-600 shrink-0">
           <span className="text-2xl">🌈</span>
-          <span>KidsLearnPlay</span>
+          <span>JiggyJoy</span>
         </Link>
 
         {/* Desktop nav */}

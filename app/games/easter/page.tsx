@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Easter Games for Kids — Free Online | KidsLearnPlay",
+  title: "Easter Games for Kids — Free Online | JiggyJoy",
   description:
     "Free Easter games for kids! Fun Easter activities, Easter coloring pages and spring games online. No download, no signup — perfect for Easter weekend!",
 };
@@ -186,7 +186,7 @@ export default function EasterGamesPage() {
               Free Easter Activities Online
             </h2>
             <p className="mb-3">
-              Every game and coloring page on KidsLearnPlay is completely free.
+              Every game and coloring page on JiggyJoy is completely free.
               No account needed, no subscription, no app to download — just open
               any page and start playing or printing right away.
             </p>

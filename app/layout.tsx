@@ -3,9 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const siteUrl = "https://www.kidslearnplay.com";
+const siteUrl = "https://www.jiggyjoy.com";
 
-const defaultTitle = "Free Kids Games, Coloring Pages & Worksheets | KidsLearnPlay";
+const defaultTitle = "Free Kids Games, Coloring Pages & Worksheets | JiggyJoy";
 const defaultDescription =
   "Free online games, coloring pages and printable worksheets for kids. No signup, no download — 100% free and works on any device.";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: defaultTitle,
-    template: "%s | KidsLearnPlay",
+    template: "%s | JiggyJoy",
   },
   description: defaultDescription,
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "kids coloring sheets",
   ],
   openGraph: {
-    siteName: "KidsLearnPlay",
+    siteName: "JiggyJoy",
     type: "website",
     url: siteUrl,
     title: defaultTitle,

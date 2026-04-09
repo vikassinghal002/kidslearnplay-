@@ -3,7 +3,7 @@ import Link from "next/link";
 import { worksheets } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Free Preschool Worksheets — Printable PDF | KidsLearnPlay",
+  title: "Free Preschool Worksheets — Printable PDF | JiggyJoy",
   description:
     "Free printable preschool worksheets — counting, tracing, shapes, colours and alphabet. Download free PDF worksheets for 3–5 year olds. No signup needed.",
 };
@@ -90,7 +90,7 @@ export default function PreschoolWorksheetsPage() {
 
           <h2>Free to Download — No Signup</h2>
           <p>
-            Every preschool worksheet on KidsLearnPlay is completely free to
+            Every preschool worksheet on JiggyJoy is completely free to
             download and print at home. There are no hidden fees, no email
             sign-up and no subscription required. Simply click a worksheet,
             open the PDF and print — or use the browser print button for an

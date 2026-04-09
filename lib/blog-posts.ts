@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 <p>Getting kids excited about maths can feel like an uphill battle — until you introduce the right games. Research consistently shows that <strong>game-based learning improves maths fluency</strong>, boosts confidence and keeps children coming back to practice on their own. The secret? When learning feels like play, kids forget they're working.</p>
 
-<p>At KidsLearnPlay we've built a library of free online maths games for children aged 2–10. Here are ten types of maths games that genuinely work — and why each one helps.</p>
+<p>At JiggyJoy we've built a library of free online maths games for children aged 2–10. Here are ten types of maths games that genuinely work — and why each one helps.</p>
 
 <h2>1. Mixed Maths Practice Games</h2>
 <p>Games like our <strong>Maths Play</strong> combine addition, subtraction and multiplication in one session. Switching between operations keeps children on their toes and builds flexible thinking. Children can choose their operation and beat their own high score — the competitive element drives repeat practice without any pressure.</p>
@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["halloween", "coloring pages", "free printable", "kids"],
     readingTime: "5 min read",
     content: `
-<p>Halloween is one of the most exciting times of year for children, and coloring is one of the easiest ways to get them into the spooky spirit — no mess, no carving knives, just creativity. We've put together a guide to our favourite free printable Halloween coloring pages, available to download and print instantly at KidsLearnPlay.</p>
+<p>Halloween is one of the most exciting times of year for children, and coloring is one of the easiest ways to get them into the spooky spirit — no mess, no carving knives, just creativity. We've put together a guide to our favourite free printable Halloween coloring pages, available to download and print instantly at JiggyJoy.</p>
 
 <h2>Why Halloween Coloring Pages Are Perfect for Kids</h2>
 <p>Coloring develops fine motor skills, encourages creativity and gives children a calming, focused activity during the busy Halloween season. Halloween-themed pages have the added bonus of making the holiday feel special and giving children something to display or give as gifts.</p>
@@ -107,7 +107,7 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>More Halloween Fun</h2>
-<p>Beyond coloring, KidsLearnPlay also has Halloween-themed games to keep kids entertained throughout the season. Coloring and games together make a fantastic Halloween afternoon activity for groups, classrooms or siblings.</p>
+<p>Beyond coloring, JiggyJoy also has Halloween-themed games to keep kids entertained throughout the season. Coloring and games together make a fantastic Halloween afternoon activity for groups, classrooms or siblings.</p>
 
 <p>Ready to print? Browse all of our <a href="/coloring-pages/holidays/halloween-coloring-pages">Halloween coloring pages</a> or explore our full <a href="/coloring-pages">coloring pages library</a> for hundreds more free printables.</p>
 `,
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
 <p>Questions appear one after another and children answer as fast as they can. The timer creates just enough urgency to push for rapid retrieval without causing anxiety. These work best once children have a basic grasp of a times table and are ready to automate it.</p>
 
 <h3>Multiplication Challenge Games</h3>
-<p>Challenge games pit children against a score threshold or a previous high score. The <a href="/games/times-tables-challenge">Times Tables Challenge</a> on KidsLearnPlay lets children choose their times table, answer questions and beat their personal best — a format that older children (8–11) find genuinely competitive and motivating.</p>
+<p>Challenge games pit children against a score threshold or a previous high score. The <a href="/games/times-tables-challenge">Times Tables Challenge</a> on JiggyJoy lets children choose their times table, answer questions and beat their personal best — a format that older children (8–11) find genuinely competitive and motivating.</p>
 
 <h3>Mixed Tables Practice</h3>
 <p>Once children know individual tables, mixed practice — where 6×7, 4×9 and 3×8 might all appear in the same session — builds the flexible retrieval that school tests require. Our <a href="/games/maths-play">Maths Play</a> game includes a multiplication mode that does exactly this.</p>
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: "5 min read",
     content: `
 <p>The preschool years (roughly ages 2–5) are a remarkable window for early learning. Children's brains are building foundations in language, fine motor skills, number sense and social-emotional development simultaneously. The right printables give parents and teachers low-prep, high-impact activities that support all of these areas.</p>
-<p>KidsLearnPlay offers a growing library of <strong>free preschool printables</strong> — no subscription, no watermarks, no email required. Here's how to use them effectively.</p>
+<p>JiggyJoy offers a growing library of <strong>free preschool printables</strong> — no subscription, no watermarks, no email required. Here's how to use them effectively.</p>
 
 <h2>Tracing Worksheets for Preschoolers</h2>
 <p>Tracing is one of the best pre-writing activities for preschoolers because it builds the pencil control needed for writing letters without the cognitive demand of forming them from memory. Our <a href="/worksheets/preschool-tracing-worksheets">preschool tracing worksheets</a> cover:</p>

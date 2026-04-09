@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Games for 3 Year Olds — Free Online | KidsLearnPlay",
+  title: "Games for 3 Year Olds — Free Online | JiggyJoy",
   description:
     "Free online games for 3 year olds! Simple toddler games for colours, shapes, animals and counting. Safe, no ads, no signup — fun learning for little ones.",
 };
@@ -105,7 +105,7 @@ export default function ThreeYearOldsPage() {
               Safe Games — No Ads, No Signup
             </h2>
             <p className="mb-3">
-              KidsLearnPlay is completely free and requires no account or email
+              JiggyJoy is completely free and requires no account or email
               address. There are no advertisements, no in-app purchases, and no
               links to external sites. Our games are suitable for unsupervised
               toddler play, though many parents enjoy joining in and turning

@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Games for 4 Year Olds — Free Online | KidsLearnPlay",
+  title: "Games for 4 Year Olds — Free Online | JiggyJoy",
   description:
     "Free online games for 4 year olds! Fun preschool games for letters, numbers, animals and colours. Safe, free, no signup — perfect for curious 4 year olds.",
 };
@@ -109,11 +109,11 @@ export default function FourYearOldsPage() {
               Free &amp; Safe — No Signup Required
             </h2>
             <p className="mb-3">
-              Every game on KidsLearnPlay is completely free, with no account,
+              Every game on JiggyJoy is completely free, with no account,
               email address or payment required. There are no advertisements
               shown to children, no third-party tracking, and no links to
               external websites. Parents can be confident that handing a tablet
-              to their 4 year old with KidsLearnPlay open is a fully safe
+              to their 4 year old with JiggyJoy open is a fully safe
               experience.
             </p>
             <p>

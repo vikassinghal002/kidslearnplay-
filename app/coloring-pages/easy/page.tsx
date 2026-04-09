@@ -3,7 +3,7 @@ import Link from "next/link";
 import { coloringCategories } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Easy Coloring Pages for Kids — Free Printable | KidsLearnPlay",
+  title: "Easy Coloring Pages for Kids — Free Printable | JiggyJoy",
   description:
     "Simple, easy coloring pages for young kids and beginners! Large areas, bold outlines — perfect for toddlers, preschoolers and kindergartners. Free to print.",
 };

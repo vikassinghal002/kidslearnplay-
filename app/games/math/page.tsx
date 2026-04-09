@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Free Math Games for Kids — Play Online | KidsLearnPlay",
+  title: "Free Math Games for Kids — Play Online | JiggyJoy",
   description:
     "Fun free math games for kids! Practice times tables, addition, subtraction and multiplication with our free online math games. No download, no signup.",
 };
@@ -105,7 +105,7 @@ export default function MathGamesHubPage() {
               Free Math Games — No Strings Attached
             </h2>
             <p>
-              Every math game on KidsLearnPlay is completely free. No
+              Every math game on JiggyJoy is completely free. No
               subscription, no in-app purchases, no account required. Just click
               play and start learning. Our games run directly in any modern web
               browser on phones, tablets and computers — so kids can practice

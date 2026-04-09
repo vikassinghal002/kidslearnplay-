@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Games for 5 Year Olds — Free Online | KidsLearnPlay",
+  title: "Games for 5 Year Olds — Free Online | JiggyJoy",
   description:
     "Free online games for 5 year olds! Fun kindergarten-level games for reading, maths and creative play. No download, no signup — start playing instantly.",
 };

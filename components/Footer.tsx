@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 font-bold text-xl text-white mb-3">
               <span className="text-2xl">🌈</span>
-              <span>KidsLearnPlay</span>
+              <span>JiggyJoy</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
               Free games, coloring pages and worksheets for kids. No signup, no cost.
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between gap-2">
-          <p>© {new Date().getFullYear()} KidsLearnPlay. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} JiggyJoy. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>

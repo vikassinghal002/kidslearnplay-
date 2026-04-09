@@ -137,7 +137,7 @@ export default async function GamePage({ params }: Props) {
       price: "0",
       priceCurrency: "USD",
     },
-    url: `https://www.kidslearnplay.com/games/${slug}`,
+    url: `https://www.jiggyjoy.com/games/${slug}`,
     audience: {
       "@type": "PeopleAudience",
       suggestedMinAge: isNaN(suggestedMinAge) ? 3 : suggestedMinAge,

@@ -117,7 +117,7 @@ export default function ColoringPagesHubPage() {
         </h2>
         <div className="prose text-gray-600 leading-relaxed space-y-4">
           <p>
-            KidsLearnPlay offers hundreds of <strong>free printable coloring pages</strong> for
+            JiggyJoy offers hundreds of <strong>free printable coloring pages</strong> for
             children of all ages. Our coloring sheets are designed to be simple enough for
             toddlers yet detailed enough for older kids and adults.
           </p>

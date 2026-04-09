@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — KidsLearnPlay",
-  description: "Privacy Policy for KidsLearnPlay. Learn how we protect your children's privacy.",
+  title: "Privacy Policy — JiggyJoy",
+  description: "Privacy Policy for JiggyJoy. Learn how we protect your children's privacy.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Overview</h2>
-          <p>KidsLearnPlay (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates kidslearnplay.com. We are committed to protecting the privacy of children and families who use our website. This policy explains what information we collect and how we use it.</p>
+          <p>JiggyJoy (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates jiggyjoy.com. We are committed to protecting the privacy of children and families who use our website. This policy explains what information we collect and how we use it.</p>
         </section>
 
         <section>
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Children&apos;s Privacy (COPPA)</h2>
-          <p>KidsLearnPlay is designed for use by children with parental supervision. We do not knowingly collect personal information from children under 13. We do not display behaviorally targeted advertising to children. If you believe we have inadvertently collected information from a child, please contact us immediately and we will delete it.</p>
+          <p>JiggyJoy is designed for use by children with parental supervision. We do not knowingly collect personal information from children under 13. We do not display behaviorally targeted advertising to children. If you believe we have inadvertently collected information from a child, please contact us immediately and we will delete it.</p>
         </section>
 
         <section>
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Contact Us</h2>
-          <p>If you have questions about this Privacy Policy, please contact us at: <strong>hello@kidslearnplay.com</strong></p>
+          <p>If you have questions about this Privacy Policy, please contact us at: <strong>hello@jiggyjoy.com</strong></p>
         </section>
       </div>
 

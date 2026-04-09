@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { coloringCategories, getAllColoringPages, games, worksheets } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-posts";
 
-const BASE_URL = "https://www.kidslearnplay.com";
+const BASE_URL = "https://www.jiggyjoy.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

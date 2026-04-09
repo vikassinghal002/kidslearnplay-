@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Halloween Games for Kids — Free Online | KidsLearnPlay",
+  title: "Halloween Games for Kids — Free Online | JiggyJoy",
   description:
     "Free Halloween games for kids! Spooky fun online games, Halloween party games and Halloween coloring pages. No download, no signup — perfect for Halloween parties!",
 };
@@ -162,7 +162,7 @@ export default function HalloweenGamesPage() {
               Free Halloween Games — No Signup Required
             </h2>
             <p className="mb-3">
-              Every game on KidsLearnPlay is completely free — no account, no
+              Every game on JiggyJoy is completely free — no account, no
               subscription, no credit card. On a busy Halloween night, the last
               thing parents need is to fill in forms or set up passwords just so
               a child can play a game for ten minutes.

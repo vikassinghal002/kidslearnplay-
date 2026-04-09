@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Use — KidsLearnPlay",
-  description: "Terms of Use for KidsLearnPlay free coloring pages, games and worksheets.",
+  title: "Terms of Use — JiggyJoy",
+  description: "Terms of Use for JiggyJoy free coloring pages, games and worksheets.",
 };
 
 export default function TermsPage() {
@@ -20,7 +20,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Free Personal Use</h2>
-          <p>All coloring pages, games, and worksheets on KidsLearnPlay are free for personal and classroom use. You may print, download, and share them for non-commercial educational purposes.</p>
+          <p>All coloring pages, games, and worksheets on JiggyJoy are free for personal and classroom use. You may print, download, and share them for non-commercial educational purposes.</p>
         </section>
 
         <section>
@@ -45,12 +45,12 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Disclaimer</h2>
-          <p>KidsLearnPlay provides content &ldquo;as is&rdquo; without warranties. We are not liable for any damages arising from use of this website.</p>
+          <p>JiggyJoy provides content &ldquo;as is&rdquo; without warranties. We are not liable for any damages arising from use of this website.</p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Contact</h2>
-          <p>Questions? Email us at <strong>hello@kidslearnplay.com</strong></p>
+          <p>Questions? Email us at <strong>hello@jiggyjoy.com</strong></p>
         </section>
       </div>
 

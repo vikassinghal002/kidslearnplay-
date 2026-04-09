@@ -69,7 +69,7 @@ export default function GamesHubPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 mb-3">About Our Free Kids Games</h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-3">
-            KidsLearnPlay offers a growing library of <strong>free educational games for kids</strong>.
+            JiggyJoy offers a growing library of <strong>free educational games for kids</strong>.
             Our games are designed to make learning fun — covering math, reading, spelling, shapes,
             and creative arts. All games run directly in your browser with no app download required.
           </p>

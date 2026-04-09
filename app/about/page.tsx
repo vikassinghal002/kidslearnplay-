@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About KidsLearnPlay — Free Coloring Pages & Games",
-  description: "About KidsLearnPlay — our mission to make free, high-quality educational content for every child.",
+  title: "About JiggyJoy — Free Coloring Pages & Games",
+  description: "About JiggyJoy — our mission to make free, high-quality educational content for every child.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
 
       <div className="text-center mb-10">
         <div className="text-6xl mb-4">🌈</div>
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-3">About KidsLearnPlay</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-3">About JiggyJoy</h1>
         <p className="text-gray-500 text-lg">Free coloring pages, games &amp; worksheets for every child</p>
       </div>
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
 
         <section className="bg-purple-50 rounded-2xl p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h2>
-          <p>Every child deserves access to quality educational activities — regardless of whether their parents can afford a subscription. KidsLearnPlay makes hundreds of coloring pages, games, and printable worksheets available completely free, forever.</p>
+          <p>Every child deserves access to quality educational activities — regardless of whether their parents can afford a subscription. JiggyJoy makes hundreds of coloring pages, games, and printable worksheets available completely free, forever.</p>
         </section>
 
         <section>
@@ -50,7 +50,7 @@ export default function AboutPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Get in Touch</h2>
           <p>We&apos;d love to hear from you — whether you&apos;re a parent, teacher, or just a fan of coloring pages.</p>
-          <p className="mt-2">Email us at: <strong className="text-purple-700">hello@kidslearnplay.com</strong></p>
+          <p className="mt-2">Email us at: <strong className="text-purple-700">hello@jiggyjoy.com</strong></p>
         </section>
       </div>
 

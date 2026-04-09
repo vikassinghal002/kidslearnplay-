@@ -1,4 +1,4 @@
-# KidsLearnPlay — 1 Lakh Users/Month Growth Strategy
+# JiggyJoy — 1 Lakh Users/Month Growth Strategy
 > Based on 7,304 keywords from Google Keyword Planner (Apr 2025 – Mar 2026)
 
 ---
@@ -62,7 +62,7 @@ Dedicated hub page targeting "math games for kids", "fun math games", "online ma
 
 #### C. Individual game pages optimised per keyword
 Each game at `/games/times-tables-challenge` should target its specific keyword.
-Page title formula: `"{Keyword} — Free Online Game for Kids | KidsLearnPlay"`
+Page title formula: `"{Keyword} — Free Online Game for Kids | JiggyJoy"`
 
 ---
 

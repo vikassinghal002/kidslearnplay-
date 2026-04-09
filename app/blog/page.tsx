@@ -3,7 +3,7 @@ import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "KidsLearnPlay Blog — Free Resources & Tips for Parents",
+  title: "JiggyJoy Blog — Free Resources & Tips for Parents",
   description:
     "Free resources, activity ideas and tips for parents and teachers. Math games, coloring pages, worksheets and more for kids aged 2–12.",
   keywords: [
@@ -33,7 +33,7 @@ export default function BlogPage() {
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            KidsLearnPlay Blog
+            JiggyJoy Blog
           </h1>
           <p className="text-lg text-white/90 max-w-xl mx-auto">
             Free resources, activity ideas and expert tips for parents and teachers raising curious kids aged 2–12.
@@ -102,7 +102,7 @@ export default function BlogPage() {
           </h2>
           <div className="prose text-gray-600 leading-relaxed space-y-3">
             <p>
-              The KidsLearnPlay blog covers everything parents and teachers need to support learning at home and in the classroom. From{" "}
+              The JiggyJoy blog covers everything parents and teachers need to support learning at home and in the classroom. From{" "}
               <Link href="/games/math" className="text-indigo-600 hover:underline">
                 free maths games
               </Link>{" "}

@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Free Kindergarten Games Online — Play & Learn | KidsLearnPlay",
+  title: "Free Kindergarten Games Online — Play & Learn | JiggyJoy",
   description:
     "Free online kindergarten games! Letters, numbers, counting and shapes games for 3–6 year olds. No download, no signup — safe learning fun for little ones.",
 };

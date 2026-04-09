@@ -3,7 +3,7 @@ import Link from "next/link";
 import { coloringCategories } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Free Printable Coloring Pages for Kids | KidsLearnPlay",
+  title: "Free Printable Coloring Pages for Kids | JiggyJoy",
   description:
     "Thousands of free printable coloring pages for kids! Animals, characters, holidays, mandalas and more. Print instantly — no signup, no cost.",
 };
@@ -78,7 +78,7 @@ export default function FreePrintableColoringPages() {
               Free Printable Coloring Pages for All Ages
             </h2>
             <p className="mb-3">
-              KidsLearnPlay offers thousands of free printable coloring pages
+              JiggyJoy offers thousands of free printable coloring pages
               covering every theme imaginable — from simple animal outlines for
               toddlers to intricate mandala designs for adults and older children.
               Every page is available to download and print at no cost, with no
@@ -103,7 +103,7 @@ export default function FreePrintableColoringPages() {
               How to Print Our Coloring Pages
             </h2>
             <p className="mb-3">
-              Printing from KidsLearnPlay is straightforward. Open the coloring
+              Printing from JiggyJoy is straightforward. Open the coloring
               page you want, then use your browser's print function
               (Ctrl+P on Windows, Cmd+P on Mac) or tap the print icon on mobile.
               For the best results, select &quot;fit to page&quot; and choose

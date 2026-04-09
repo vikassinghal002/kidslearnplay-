@@ -3,7 +3,7 @@ import Link from "next/link";
 import { worksheets } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Free Alphabet Worksheets — Printable PDF | KidsLearnPlay",
+  title: "Free Alphabet Worksheets — Printable PDF | JiggyJoy",
   description:
     "Free printable alphabet worksheets — trace and write A to Z, uppercase and lowercase letters, letter recognition and phonics. Download free PDFs for kids.",
 };

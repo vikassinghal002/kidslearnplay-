@@ -4,7 +4,7 @@ import { games } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Christmas Games for Kids — Free Online | KidsLearnPlay",
+  title: "Christmas Games for Kids — Free Online | JiggyJoy",
   description:
     "Free Christmas games for kids! Fun Christmas party games, Christmas coloring pages and festive online games. No download, no signup — perfect for the festive season!",
 };
@@ -179,7 +179,7 @@ export default function ChristmasGamesPage() {
               Free Christmas Activities — No Signup
             </h2>
             <p className="mb-3">
-              Everything on KidsLearnPlay is completely free. No account needed,
+              Everything on JiggyJoy is completely free. No account needed,
               no subscription, no app to download. On Christmas Day when kids
               are bouncing with excitement and you need five minutes to yourself,
               just hand over a device and let them play instantly.
