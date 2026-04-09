@@ -6,6 +6,8 @@ import GameLoader from "@/components/games/GameLoader";
 import GameScreen from "@/components/games/GameScreen";
 import { getGameVisual } from "@/lib/gameVisuals";
 import PinItButton from "@/components/PinItButton";
+import VideoEmbed from "@/components/VideoEmbed";
+import { getVideosForGame } from "@/lib/videos";
 
 const SITE_URL = "https://www.jiggyjoy.com";
 
@@ -177,6 +179,10 @@ export default async function GamePage({ params }: Props) {
     .filter((g) => g.slug !== slug && g.category === game.category)
     .slice(0, 6);
 
+  // Lever 4 — pull any YouTube videos that feature this game
+  const gameVideos = getVideosForGame(game.slug);
+  const featuredVideo = gameVideos[0];
+
   const emoji = categoryEmojis[game.category] ?? "🎯";
   const howToPlay = HOW_TO_PLAY[slug] ?? DEFAULT_HOW_TO_PLAY;
   const categoryHub = categoryHubs[game.category];
@@ -294,6 +300,36 @@ export default async function GamePage({ params }: Props) {
               ))}
             </div>
           </div>
+
+          {/* Lever 4 — Watch a walkthrough (only if a video exists for this game) */}
+          {featuredVideo && (
+            <div className="p-4 border-b border-gray-800">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+                📺 Watch a Walkthrough
+              </h3>
+              <Link
+                href={`/videos/${featuredVideo.id}`}
+                className="block rounded-xl overflow-hidden border border-gray-700 hover:border-red-500/60 transition-colors"
+              >
+                <VideoEmbed
+                  youtubeId={featuredVideo.youtubeId}
+                  title={featuredVideo.title}
+                  showTitleOverlay={false}
+                />
+              </Link>
+              <p className="mt-2 text-sm font-semibold text-gray-200 line-clamp-2">
+                {featuredVideo.title}
+              </p>
+              {gameVideos.length > 1 && (
+                <Link
+                  href="/videos"
+                  className="mt-2 inline-block text-xs font-semibold text-red-400 hover:text-red-300"
+                >
+                  +{gameVideos.length - 1} more video{gameVideos.length - 1 > 1 ? "s" : ""} →
+                </Link>
+              )}
+            </div>
+          )}
 
           {/* Related games */}
           {relatedGames.length > 0 && (

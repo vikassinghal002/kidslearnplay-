@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { coloringCategories, getAllColoringPages, games, worksheets } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-posts";
 import { activityPages, freeWorksheetTopics } from "@/lib/programmaticContent";
+import { videos } from "@/lib/videos";
 
 const BASE_URL = "https://www.jiggyjoy.com";
 
@@ -27,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/worksheets/tracing`,        priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/worksheets/alphabet`,       priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/blog`,                      priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/videos`,                    priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/about`,                     priority: 0.5, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/privacy-policy`,            priority: 0.3, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/terms`,                     priority: 0.3, changeFrequency: "yearly" as const },
@@ -62,6 +64,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
+  // Lever 4 — YouTube traffic infrastructure (individual video pages)
+  const videoPages = videos.map((v) => ({
+    url: `${BASE_URL}/videos/${v.id}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+
   // Lever 1 — programmatic SEO pages
   const activityAgePages = activityPages.map((p) => ({
     url: `${BASE_URL}/activities/${p.slug}`,
@@ -83,6 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...worksheetPages,
     ...activityAgePages,
     ...freeWorksheetTopicPages,
+    ...videoPages,
     ...blogPages,
   ];
 }
