@@ -83,6 +83,14 @@ const HOW_TO_PLAY: Record<string, string[]> = {
     "You have 3 lives and 60 seconds",
     "Mobile: drag anywhere on the screen to move",
   ],
+  "super-jumper": [
+    "← → Arrow keys or A/D to run left and right",
+    "↑ / Space / Jump button to jump",
+    "Land ON TOP of enemies to stomp them (+50 pts)",
+    "Collect gold coins for +10 pts each",
+    "Reach the 🏁 flag to win the level!",
+    "Mobile: use the on-screen ◀ ▶ and JUMP buttons",
+  ],
   "easter-egg-hunt": [
     "Click or tap to search for hidden eggs",
     "Watch the hot/cold hints — red = very close, blue = far",

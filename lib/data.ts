@@ -600,6 +600,16 @@ export const games: Game[] = [
     difficulty: "medium",
     ageRange: "7–14",
   },
+  {
+    slug: "super-jumper",
+    title: "Super Jumper — Platform Adventure",
+    description: "A Mario-style platformer! Run and jump across platforms, stomp enemies, collect coins and reach the flag. 6 zones of scrolling action with mobile controls.",
+    category: "Arcade Games",
+    tags: ["platformer", "jumping", "arcade", "coins", "adventure", "mario"],
+    component: "SuperJumperGame",
+    difficulty: "medium",
+    ageRange: "5–14",
+  },
 ];
 
 // ─── Worksheets ───────────────────────────────────────────────────────────────

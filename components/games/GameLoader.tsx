@@ -25,6 +25,7 @@ const MathQuizGame           = dynamic(() => import("./MathQuizGame"),          
 const PumpkinSmashGame       = dynamic(() => import("./PumpkinSmashGame"),       { ssr: false });
 const PresentCatcherGame     = dynamic(() => import("./PresentCatcherGame"),     { ssr: false });
 const EasterEggHuntGame      = dynamic(() => import("./EasterEggHuntGame"),      { ssr: false });
+const SuperJumperGame        = dynamic(() => import("./SuperJumperGame"),        { ssr: false });
 
 const components: Record<string, React.ComponentType> = {
   TimesChallengeGame,
@@ -50,6 +51,7 @@ const components: Record<string, React.ComponentType> = {
   BrickBreakerGame,
   DinoRunGame,
   SnakeGame,
+  SuperJumperGame,
 };
 
 export default function GameLoader({ component }: { component: string }) {

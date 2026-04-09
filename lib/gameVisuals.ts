@@ -45,6 +45,7 @@ export const gameVisuals: Record<string, GameVisual> = {
   "brick-breaker":           { hero: "🧱", gradient: "from-rose-500 via-red-500 to-orange-500",       sparkles: ["⚡", "💥", "🎯"] },
   "dino-run":                { hero: "🦖", gradient: "from-lime-500 via-green-500 to-emerald-600",    sparkles: ["🌵", "🦕", "🌋"] },
   "snake":                   { hero: "🐍", gradient: "from-green-500 via-emerald-500 to-teal-600",    sparkles: ["🍎", "⭐", "💎"] },
+  "super-jumper":            { hero: "🕺", gradient: "from-blue-500 via-indigo-500 to-purple-600",    sparkles: ["🪙", "⭐", "🍄"] },
 
   // ── Seasonal Games ───────────────────────────────────────
   "pumpkin-smash":           { hero: "🎃", gradient: "from-orange-600 via-orange-500 to-purple-900",  sparkles: ["👻", "🦇", "🕷️"] },
