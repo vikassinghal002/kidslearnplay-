@@ -63,24 +63,84 @@ export default async function WorksheetPage({ params }: Props) {
           </div>
 
           {/* Worksheet preview */}
-          <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center print:border-0">
-            <div className="text-6xl mb-4">📋</div>
-            <h2 className="text-xl font-bold text-gray-800 mb-2">{ws.title}</h2>
-            <p className="text-gray-400 text-sm mb-6">Grade: {ws.grade} | Subject: {ws.subject}</p>
-
-            {/* Placeholder worksheet content */}
-            <div className="bg-gray-50 rounded-xl p-6 text-left max-w-sm mx-auto">
-              <p className="text-xs text-gray-400 text-center mb-4">[ Worksheet preview ]</p>
-              {Array.from({ length: 5 }).map((_, i) => (
-                <div key={i} className="flex items-center gap-3 mb-3">
-                  <span className="text-gray-500 text-sm w-4">{i + 1}.</span>
-                  <div className="flex-1 border-b border-gray-300 h-6" />
-                </div>
-              ))}
+          <div className="bg-white border-2 border-dashed border-gray-200 rounded-2xl p-8 print:border-0">
+            <div className="text-center mb-6">
+              <h2 className="text-xl font-bold text-gray-800">{ws.title}</h2>
+              <p className="text-gray-400 text-sm">Grade: {ws.grade} | Subject: {ws.subject}</p>
+              <p className="text-gray-400 text-xs mt-1">Name: _________________ Date: _________</p>
             </div>
 
-            <p className="text-sm text-gray-400 mt-4">
-              Click <strong>Download PDF</strong> to get the full worksheet
+            {ws.subject === "Math" && ws.slug === "kindergarten-math-worksheets" && (
+              <div className="max-w-sm mx-auto space-y-4">
+                <p className="text-sm font-semibold text-gray-700 text-center">Count and write the number:</p>
+                {[["🍎🍎🍎", ""], ["⭐⭐⭐⭐⭐", ""], ["🐣🐣", ""], ["🌸🌸🌸🌸", ""]].map(([emoji, _], i) => (
+                  <div key={i} className="flex items-center gap-4 bg-gray-50 rounded-xl px-4 py-3">
+                    <span className="text-2xl tracking-widest">{emoji}</span>
+                    <span className="text-gray-500 text-sm">=</span>
+                    <div className="w-12 border-b-2 border-gray-400 h-7" />
+                  </div>
+                ))}
+                <p className="text-sm font-semibold text-gray-700 text-center mt-4">Simple addition:</p>
+                {["1 + 1 = ___", "2 + 3 = ___", "4 + 0 = ___"].map((q, i) => (
+                  <div key={i} className="bg-gray-50 rounded-xl px-4 py-3 text-lg font-mono text-gray-700">{q}</div>
+                ))}
+              </div>
+            )}
+
+            {ws.subject === "Math" && ws.slug === "multiplication-worksheets" && (
+              <div className="max-w-sm mx-auto">
+                <p className="text-sm font-semibold text-gray-700 text-center mb-4">Times Tables Practice:</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {[[2,3],[4,5],[3,6],[7,8],[5,9],[6,7],[8,9],[4,7]].map(([a,b], i) => (
+                    <div key={i} className="bg-gray-50 rounded-xl px-4 py-3 text-lg font-mono text-gray-700">
+                      {a} × {b} = <span className="border-b-2 border-gray-400 inline-block w-10">&nbsp;</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {ws.subject === "Math" && (ws.slug === "math-worksheets-grade-1" || ws.slug === "place-value-worksheets") && (
+              <div className="max-w-sm mx-auto space-y-3">
+                <p className="text-sm font-semibold text-gray-700 text-center mb-4">
+                  {ws.slug === "place-value-worksheets" ? "Write the place value:" : "Solve the problems:"}
+                </p>
+                {ws.slug === "place-value-worksheets"
+                  ? ["34 = ___ tens ___ ones", "57 = ___ tens ___ ones", "120 = ___ hundreds ___ tens", "209 = ___ hundreds ___ ones"].map((q, i) => (
+                    <div key={i} className="bg-gray-50 rounded-xl px-4 py-3 text-base font-mono text-gray-700">{q}</div>
+                  ))
+                  : ["3 + 5 = ___", "8 − 4 = ___", "7 + 2 = ___", "10 − 3 = ___", "6 + 6 = ___"].map((q, i) => (
+                    <div key={i} className="bg-gray-50 rounded-xl px-4 py-3 text-lg font-mono text-gray-700">{q}</div>
+                  ))
+                }
+              </div>
+            )}
+
+            {ws.subject === "Writing" && ws.slug === "alphabet-worksheets" && (
+              <div className="max-w-sm mx-auto space-y-4">
+                <p className="text-sm font-semibold text-gray-700 text-center mb-2">Trace and write each letter:</p>
+                {["Aa", "Bb", "Cc", "Dd", "Ee"].map((letter, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-2xl font-bold text-purple-400 w-10">{letter}</span>
+                    <div className="flex-1 border-b-2 border-dashed border-gray-300 h-8" />
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {ws.subject === "Writing" && ws.slug === "preschool-tracing-worksheets" && (
+              <div className="max-w-sm mx-auto space-y-4">
+                <p className="text-sm font-semibold text-gray-700 text-center mb-2">Trace the lines:</p>
+                {["1 2 3 4 5", "A B C D E", "▲ ● ■ ★ ◆"].map((row, i) => (
+                  <div key={i} className="bg-gray-50 rounded-xl px-4 py-4 text-xl text-gray-300 tracking-widest font-bold text-center">
+                    {row}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <p className="text-sm text-gray-400 mt-6 text-center">
+              Print this page or click <strong>Download PDF</strong> for the full worksheet
             </p>
           </div>
 

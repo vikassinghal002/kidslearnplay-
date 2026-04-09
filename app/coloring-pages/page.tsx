@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { coloringCategories, getAllColoringPages } from "@/lib/data";
+import { getBulkCategories, getBulkTotal } from "@/lib/bulk-data";
 
 export const metadata: Metadata = {
   title: "Free Printable Coloring Pages for Kids",
@@ -16,7 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function ColoringPagesHubPage() {
-  const allPages = getAllColoringPages();
+  const allPages   = getAllColoringPages();
+  const bulkCats   = getBulkCategories();
+  const bulkTotal  = getBulkTotal();
+  const grandTotal = allPages.length + bulkTotal;
 
   return (
     <div>
@@ -27,13 +31,13 @@ export default function ColoringPagesHubPage() {
             🎨 Free Coloring Pages
           </h1>
           <p className="text-lg text-white/90">
-            {allPages.length}+ free printable coloring pages for kids and adults.
+            {grandTotal.toLocaleString()}+ free printable coloring pages for kids and adults.
             Print instantly — no login, no cost.
           </p>
         </div>
       </section>
 
-      {/* Categories Grid */}
+      {/* Curated Categories */}
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -55,6 +59,33 @@ export default function ColoringPagesHubPage() {
           ))}
         </div>
       </section>
+
+      {/* Bulk Categories (shown only when manifest has images) */}
+      {bulkCats.length > 0 && (
+        <section className="bg-gray-50 py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-end justify-between mb-6">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">More Coloring Pages</h2>
+                <p className="text-gray-500 text-sm mt-1">{bulkTotal.toLocaleString()} additional pages across all categories</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {bulkCats.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/coloring-pages/${cat.slug}`}
+                  className={`${cat.color} rounded-2xl p-5 flex flex-col items-center text-center hover:scale-105 transition-transform shadow-sm`}
+                >
+                  <span className="text-4xl mb-2">{cat.icon}</span>
+                  <h3 className="font-bold text-gray-800 text-sm">{cat.title}</h3>
+                  <span className="text-xs text-gray-500 mt-1">{cat.count.toLocaleString()} pages</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Popular Pages */}
       <section className="bg-gray-50 py-12 px-4">
