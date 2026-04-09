@@ -1,9 +1,27 @@
 # JiggyJoy — Path to 1 Lakh Daily Users (100K DAU)
 
 > **Target:** 100,000 unique visitors per day (~3M monthly sessions)
-> **Current state:** ~24 games, 148 coloring pages, ~20 worksheets, freshly deployed on jiggyjoy.com
+> **Current state:** ~24 games, 148 coloring pages, ~20 worksheets, all 5 Lever infrastructures shipped
 > **Realistic timeline:** 18–24 months of sustained execution
-> Generated: 2026-04-09
+> Generated: 2026-04-09 · Last updated: 2026-04-09
+
+---
+
+## 📊 Progress Snapshot (2026-04-09)
+
+| Lever | Infrastructure | Content/Manual Work | Status |
+|-------|---------------|---------------------|--------|
+| **1 — Programmatic SEO** | ✅ Done | ⏳ 18/2,500 pages shipped | 🟡 Infra ready, scale content |
+| **2 — Game Engine** | ✅ Done | ⏳ 2/24 games refactored, 24/110 total games | 🟡 Engine ready, ship games |
+| **3 — Pinterest** | ✅ Done | ⏳ Domain claim + pinning cadence | 🟡 Infra ready, manual claim needed |
+| **4 — YouTube** | ✅ Done | ❌ 0/100 real videos uploaded | 🟡 Infra ready, record videos |
+| **5 — PWA + Android** | ✅ Done | ⏳ Bubblewrap + VAPID + Play Store | 🟡 Infra ready, manual submission |
+
+**What "Infrastructure Done" means:** the site is fully wired so the moment you add content/videos/do the manual Play Store steps, they deploy in seconds with zero engineering work. The compounding engine is built — now it needs fuel.
+
+**What happens next:** 80% of the remaining work is content + manual submissions. 20% is ongoing game development. None of it requires rebuilding the plumbing.
+
+---
 
 ---
 
@@ -48,7 +66,27 @@ At this scale, no single channel carries the whole thing. Here's the realistic c
 
 ## 3. The Five Levers — Prioritised
 
-### LEVER 1 — Programmatic SEO at Scale (Biggest Lever)
+### LEVER 1 — Programmatic SEO at Scale (Biggest Lever) — 🟡 INFRASTRUCTURE SHIPPED
+
+**Status (2026-04-09):** Pipeline built, 18 pages shipped as proof. 2,482 pages remaining to scale to target.
+
+**✅ Done (commit `cd3d6f6`):**
+- `lib/programmaticContent.ts` scalable data layer
+- `/activities/[age]` template + 10 age pages (2–11 years old)
+- `/worksheets/free/[topic]` template + 8 topic pages (addition, subtraction, counting, alphabet-tracing, number-tracing, shapes, sight-words, multiplication)
+- JSON-LD (Article + FAQPage + BreadcrumbList) on every page
+- All 18 new URLs in sitemap.ts
+
+**⏳ Remaining:**
+- [ ] 500 × `[topic] coloring pages` (need: extract topic list, add template)
+- [ ] 300 × `[topic] coloring pages for [age]` cross-pages
+- [ ] 500 × `[topic] worksheets for [grade]` (beyond the current 8)
+- [ ] 200 × `[math operation] games for [grade]`
+- [ ] 400 × `how to [skill] for kids` blog posts
+- [ ] 100 × `[age] year old activities` expansion (we have 10; add niche age/topic combos)
+- [ ] Auto-generated content via Claude API — unique 200+ word intro per page
+- [ ] Internal linking graph script (every page links to 10+ related)
+
 
 **Goal:** Go from ~240 indexed pages to **5,000+** high-quality pages in 12 months.
 
@@ -80,7 +118,26 @@ At this scale, no single channel carries the whole thing. Here's the realistic c
 - Related pages section
 - FAQ with real answers (Schema.org FAQPage)
 
-### LEVER 2 — Pinterest Engine (Most Underrated Channel)
+### LEVER 2 — Pinterest Engine (Most Underrated Channel) — 🟡 INFRASTRUCTURE SHIPPED
+
+**Status (2026-04-09):** Every page on the site is now automatically Pinterest-shareable. Manual domain claim + pinning cadence is the remaining work.
+
+**✅ Done (commit `cd3d6f6`):**
+- `/pin/games/[slug]`, `/pin/coloring/[category]/[slug]`, `/pin/worksheets/[slug]` — dynamic 1000×1500 ImageResponse routes
+- `lib/pinImage.tsx` + `lib/pinVisuals.ts` — shared renderer + palette
+- Rich Pin meta tags (`article:*`, `pinterest:*`) on games, coloring, worksheets pages
+- `PinItButton` component on game/coloring/worksheet sidebars
+- Every future page automatically gets a pin image
+
+**⏳ Remaining (manual):**
+- [ ] Create Pinterest business account (1 hour)
+- [ ] Claim jiggyjoy.com at pinterest.com/settings/claim (HTML file in `public/` — recommended method)
+- [ ] Submit a URL to Pinterest Rich Pin Validator to auto-enable Article Rich Pins for the whole domain
+- [ ] Create 15–25 boards (Math Worksheets, Coloring Pages for Kids, Homeschool Preschool, Halloween Crafts, etc.)
+- [ ] Sign up for Tailwind scheduler ($15/month)
+- [ ] Pin 15–30/day consistently — the biggest unlock is cadence, not creativity
+- [ ] Seasonal repinning strategy (Halloween in September, Christmas in November)
+
 
 **Goal:** 15,000 daily visits from Pinterest by Month 18.
 
@@ -106,7 +163,28 @@ At this scale, no single channel carries the whole thing. Here's the realistic c
 
 **Tooling:** Generate 1000×1500 Pinterest-ready images programmatically using the same `ImageResponse` pattern as our OG images. One script, all pages.
 
-### LEVER 3 — Games Library as Competitive Moat
+### LEVER 3 — Games Library as Competitive Moat — 🟡 ENGINE SHIPPED
+
+**Status (2026-04-09):** Reusable game engine framework built and proven on 2 games. 86 more games to ship to hit 110 total.
+
+**✅ Done (commit `cd3d6f6`):**
+- `lib/gameEngine/` — `useGameLoop`, `useGameState`, `useCanvas`, `useGameInput`, `GameHUD`, `GameOverlay`, shared `audio`, `particles`
+- SnakeGame refactored onto engine (proof of simple game integration)
+- PumpkinSmashGame refactored onto engine (proof of complex game integration, -28% lines)
+- `lib/gameEngine/README.md` — 60-line skeleton for new games
+- Future games buildable in 1–2 days instead of 1 week
+
+**⏳ Remaining:**
+- [ ] Refactor the other 22 existing games onto the engine (optional — works fine as-is)
+- [ ] **Build 86 new games** to reach 110 total:
+  - [ ] 24 more math games (fractions, money, time, geometry, algebra basics, decimals...)
+  - [ ] 17 more reading/phonics games (spelling, sight words, rhymes, word search, phonics...)
+  - [ ] 16 more puzzles (sudoku, jigsaw, logic grids, pattern extensions...)
+  - [ ] 10 more toddler games (tracing, sorting, matching, sounds...)
+  - [ ] 10 more arcade (runner, platformer, shoot-em-up, racing...)
+  - [ ] 7 more seasonal (Valentines, St Patrick's, Earth Day, Thanksgiving...)
+- [ ] Velocity target: 3–4 games/week for 6 months, then 1/week maintenance
+
 
 **Goal:** 100+ polished games by Month 18 (currently 24).
 
@@ -132,7 +210,32 @@ At this scale, no single channel carries the whole thing. Here's the realistic c
 
 **Velocity needed:** 3–4 new games/week for 6 months, then 1/week for maintenance. This is aggressive — it requires a reusable game framework (shared game engine, HUD, sound, score system) so new games can be built in 1–2 days each.
 
-### LEVER 4 — YouTube Channel (Compound Traffic Engine)
+### LEVER 4 — YouTube Channel (Compound Traffic Engine) — 🟡 INFRASTRUCTURE SHIPPED
+
+**Status (2026-04-09):** Site is fully YouTube-ready. Zero real videos uploaded yet — that's the next step and it's a manual content task.
+
+**✅ Done (commit `db62a40`):**
+- `/videos` hub page with VideoObject ItemList JSON-LD, filter tabs
+- `/videos/[slug]` per-video SSG pages with rich schema + OG tags
+- `/thumbnail/games/[slug]`, `/thumbnail/coloring/[category]/[slug]`, `/thumbnail/worksheets/[slug]` — dynamic 1280×720 ImageResponse thumbnails
+- `lib/videos.ts` data layer with 6 placeholder entries + helper functions
+- `components/VideoEmbed.tsx` — lite YouTube embed (thumbnail → iframe on click)
+- Game sidebar shows "Watch a Walkthrough" block when a video exists for that game
+- `/videos` + 6 placeholder video pages in sitemap.ts
+
+**⏳ Remaining (manual content work):**
+- [ ] Create the JiggyJoy YouTube channel (1 hour)
+- [ ] Update `YOUTUBE_CHANNEL_URL` in `app/videos/page.tsx`
+- [ ] Replace the 6 `PLACEHOLDER_*` YouTube IDs in `lib/videos.ts` with real ones
+- [ ] **Record & upload 100 videos** (~2/week for 12 months):
+  - [ ] 24 "Play [game name] — free online" gameplay videos (one per existing game)
+  - [ ] 20 tutorial videos ("Learn multiplication with fun games", etc.)
+  - [ ] 20 "Halloween coloring page speed-paint" style videos
+  - [ ] 20 compilation videos ("5 math games for 7-year-olds")
+  - [ ] 16 seasonal/themed videos
+- [ ] **YouTube Shorts:** 1/day = 365/year (60-second gameplay clips)
+- [ ] Tooling needed: OBS (free), CapCut (free), ElevenLabs or human voiceover
+
 
 **Goal:** 8,000 daily visits from YouTube by Month 18.
 
@@ -155,7 +258,33 @@ At this scale, no single channel carries the whole thing. Here's the realistic c
 - Editing: CapCut (free)
 - Thumbnails: Canva or `ImageResponse` generator
 
-### LEVER 5 — PWA + Android App (Retention Multiplier)
+### LEVER 5 — PWA + Android App (Retention Multiplier) — 🟡 INFRASTRUCTURE SHIPPED
+
+**Status (2026-04-09):** Site is a fully installable PWA with offline game play. Android TWA + push backend are documented and ready for manual submission steps.
+
+**✅ Done (commit `5c85997`):**
+- Enhanced `app/manifest.ts` — start_url (UTM-tracked), orientation, categories, 4 shortcuts (Math/Coloring/Worksheets/Halloween), wide + narrow screenshots
+- `public/sw.js` custom service worker — versioned cache, pre-caches app shell, cache-first for /games/[slug] and /_next/static/*, network-first fallback
+- `ServiceWorkerRegister` — prod-only registration
+- `InstallPrompt` — 3-visit threshold, iOS Safari branch (Add to Home Screen), 30-day dismissal, GA4 event tracking, auto-mounted in layout
+- `PushPermission` component + `/api/push/subscribe` Next.js 16 route handler stub + `lib/push/README.md` with VAPID docs and sample sender code
+- `android-twa/README.md` — Bubblewrap commands, Play Store listing copy, submission checklist
+- `public/.well-known/assetlinks.json` template for TWA
+- Offline play works: visit a game once, then play it with no network
+
+**⏳ Remaining (manual):**
+- [ ] Generate VAPID keys: `npx web-push generate-vapid-keys`
+- [ ] Add `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` to Vercel env vars
+- [ ] Build server-side push sender (Vercel Function + subscription storage — Vercel KV or Supabase)
+- [ ] Decide where to mount `<PushPermission />` button (footer recommended)
+- [ ] Run `cd android-twa && npx @bubblewrap/cli init --manifest https://jiggyjoy.com/manifest.webmanifest`
+- [ ] Run `npx @bubblewrap/cli build`, back up `android.keystore` immediately
+- [ ] Replace `REPLACE_WITH_SHA256_FINGERPRINT` in `public/.well-known/assetlinks.json`
+- [ ] Create Google Play Console account ($25 one-time fee)
+- [ ] Complete Play Store listing: screenshots, content rating, privacy policy URL
+- [ ] Submit AAB to Play Store review (2–7 day approval)
+- [ ] Set up daily/weekly push campaign cadence once sender is live
+
 
 **Goal:** 50,000+ installs, 10K daily app users by Month 18.
 
@@ -263,13 +392,16 @@ Even at 30% of that, it's a real business. This justifies serious investment in 
 ## 7. Timeline — 18 Month Roadmap
 
 ### Phase A: Foundation (Month 1–3) — Target: 5K DAU
-- [ ] Publish all 148 coloring pages, 20 worksheets, 24 games
-- [ ] Submit sitemap, get 200+ pages indexed
-- [ ] Apply for Ezoic (turn on ads at 1K DAU)
-- [ ] Launch Pinterest account, first 200 pins
-- [ ] Launch YouTube channel, first 20 videos
-- [ ] Build reusable game engine framework
-- [ ] Set up programmatic SEO infrastructure
+- [x] Publish all 148 coloring pages, 20 worksheets, 24 games ✅
+- [x] Submit sitemap, get pages indexed ✅ (Google Search Console verified)
+- [x] Build reusable game engine framework ✅ (`lib/gameEngine/`)
+- [x] Set up programmatic SEO infrastructure ✅ (18 pages live)
+- [x] Pinterest pin generation infrastructure ✅ (every page auto-pinnable)
+- [x] YouTube infrastructure (hub, thumbnails, embed) ✅
+- [x] PWA installable + offline play ✅
+- [ ] Apply for Ezoic (turn on ads at any traffic level — no minimum)
+- [ ] Claim domain on Pinterest + first 200 pins (MANUAL)
+- [ ] Launch YouTube channel + first 20 videos (MANUAL)
 
 ### Phase B: Content Machine (Month 4–9) — Target: 25K DAU
 - [ ] Ship 2,500 programmatic pages (animals, worksheets, age-specific)
@@ -371,3 +503,55 @@ After week 1, revisit priorities based on what moved the needle.
 ---
 
 *This plan assumes sustained execution. Skipping 2 weeks of content shipping delays the 100K DAU target by 2 months. The compounding is everything.*
+
+---
+
+## 12. What's Left — Priority Order (Updated 2026-04-09)
+
+All 5 Levers have their code infrastructure shipped. The site is wired end-to-end. What remains is content, manual submissions, and ongoing operations. Grouped by how much leverage each item has:
+
+### 🔴 CRITICAL — Do This Week (manual steps that unlock everything)
+1. **Apply for Ezoic** — no traffic minimum, 2–3× AdSense RPM. Start earning from day one of traffic. (ezoic.com)
+2. **Claim jiggyjoy.com on Pinterest** — drop the HTML verification file in `public/` root. Unlocks Rich Pins across the whole domain.
+3. **Create YouTube channel** — even before uploading videos, get the channel live. Update `YOUTUBE_CHANNEL_URL` in `app/videos/page.tsx`.
+4. **Generate VAPID keys** — `npx web-push generate-vapid-keys`. Add to Vercel env. Enables push notifications.
+5. **Record first 5 YouTube gameplay videos** — Super Jumper, Snake, Maths Play, Multiplication Blast, Times Tables Challenge. Upload, replace `PLACEHOLDER_*` IDs in `lib/videos.ts`.
+
+### 🟠 HIGH — Do This Month (content velocity starts here)
+6. **Ship 100 more programmatic SEO pages** — append rows to `lib/programmaticContent.ts`. Focus on `[topic] coloring pages` and `[topic] worksheets for [grade]`. Each is 5 minutes of data entry.
+7. **Launch Tailwind** (Pinterest scheduler, $15/mo) and pin 15/day for 30 days straight.
+8. **Ship 10 new games using the game engine** — prove the engine at scale. Pick high-volume keywords: fractions, money, time, geometry, spelling.
+9. **Upload 20 YouTube videos** — gameplay + 3 tutorials + 3 speed-paints.
+10. **Mount `<PushPermission />`** in the site footer.
+
+### 🟡 MEDIUM — Do Next 3 Months (compounding work)
+11. **Android TWA submission** — Bubblewrap init/build → Play Store ($25). 2–7 day approval.
+12. **Build server-side push sender** — Vercel Function + Vercel KV for subscriptions.
+13. **Scale to 1,000+ programmatic pages** — automate content generation via Claude API.
+14. **Ship 40 more games** (total 64 from current 24) using the engine.
+15. **Seasonal Halloween hub** (publish September 1 for October traffic spike).
+16. **Apply for Mediavine** (at 50K monthly sessions).
+
+### 🟢 STEADY-STATE — Ongoing (do forever)
+17. **50 pages/week** — coloring pages, worksheets, programmatic SEO combined.
+18. **2 YouTube videos/week** — gameplay or tutorial.
+19. **1 YouTube Short/day** — 60-second gameplay clip.
+20. **15–30 Pinterest pins/day** via Tailwind scheduler.
+21. **1 game/week** — maintenance pace after the initial 86-game push.
+22. **Weekly newsletter** — once email list hits 1K.
+
+### ⚪ OPTIONAL / FUTURE OPTIMISATIONS
+23. Refactor the remaining 22 existing games onto the new game engine (cosmetic — works fine as-is)
+24. Internal linking generator script
+25. Hreflang for UK/IN English variants
+26. Hindi/Spanish localisation (Phase D, Month 16+)
+27. Teacher/homeschool outreach (blog guest posts, forum presence)
+
+---
+
+## 13. Single-Line Summary of What Was Shipped 2026-04-09
+
+**5 Levers × infrastructure done × 0 content = ~265 pages live, ready to scale 20× in content without touching code.**
+
+The compounding engine is built. Now it needs content, manual submissions, and time.
+
