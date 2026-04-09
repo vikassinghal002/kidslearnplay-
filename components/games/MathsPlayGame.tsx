@@ -29,19 +29,21 @@ function generateChoices(answer: number) {
   return [...choices].sort(() => Math.random() - 0.5);
 }
 
+function newRound(op: Op) {
+  const q = generateQuestion(op);
+  return { question: q, choices: generateChoices(q.answer) };
+}
+
 export default function MathsPlayGame() {
   const [op, setOp] = useState<Op>("+");
-  const [question, setQuestion] = useState(() => generateQuestion("+"));
-  const [choices, setChoices] = useState(() => generateChoices(generateQuestion("+").answer));
+  const [{ question, choices }, setRound] = useState(() => newRound("+"));
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [total, setTotal] = useState(0);
 
   const nextQuestion = useCallback((newOp: Op = op) => {
-    const q = generateQuestion(newOp);
-    setQuestion(q);
-    setChoices(generateChoices(q.answer));
+    setRound(newRound(newOp));
     setFeedback(null);
   }, [op]);
 
