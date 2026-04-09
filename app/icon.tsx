@@ -17,7 +17,7 @@ export default function Icon() {
           borderRadius: 120,
         }}
       >
-        <div style={{ fontSize: 300 }}>🌈</div>
+        <div style={{ fontSize: 260, lineHeight: 1 }}>🕺</div>
       </div>
     ),
     { ...size }

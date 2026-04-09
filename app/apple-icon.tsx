@@ -17,7 +17,7 @@ export default function AppleIcon() {
           borderRadius: 40,
         }}
       >
-        <div style={{ fontSize: 120 }}>🌈</div>
+        <div style={{ fontSize: 110, lineHeight: 1 }}>🕺</div>
       </div>
     ),
     { ...size }
