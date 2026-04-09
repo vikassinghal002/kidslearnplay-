@@ -3,6 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { worksheets, getWorksheetBySlug } from "@/lib/data";
 import PrintButton from "@/components/PrintButton";
+import PinItButton from "@/components/PinItButton";
+
+const SITE_URL = "https://www.jiggyjoy.com";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,10 +17,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const ws = getWorksheetBySlug(slug);
   if (!ws) return {};
+
+  const pageUrl = `${SITE_URL}/worksheets/${slug}`;
+  const pinUrl  = `${SITE_URL}/pin/worksheets/${slug}`;
+  const title   = `${ws.title} — Free Printable PDF`;
+
   return {
-    title: `${ws.title} — Free Printable PDF`,
+    title,
     description: ws.description,
     keywords: [...ws.tags, "free printable", "worksheet", "PDF download"],
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      title,
+      description: ws.description,
+      url: pageUrl,
+      type: "article",
+      siteName: "JiggyJoy",
+      images: [
+        { url: pinUrl, width: 1000, height: 1500, alt: ws.title },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: ws.description,
+      images: [pinUrl],
+    },
+    other: {
+      "article:published_time": "2025-01-01T00:00:00Z",
+      "article:author":         "JiggyJoy",
+      "article:section":        `${ws.subject} Worksheets`,
+      "pinterest:description":  ws.description,
+      "pinterest:media":        pinUrl,
+    },
   };
 }
 
@@ -27,6 +59,9 @@ export default async function WorksheetPage({ params }: Props) {
   if (!ws) notFound();
 
   const related = worksheets.filter((w) => w.slug !== slug && w.subject === ws.subject).slice(0, 3);
+  const pageUrl     = `${SITE_URL}/worksheets/${slug}`;
+  const pinImageUrl = `${SITE_URL}/pin/worksheets/${slug}`;
+  const pinDesc     = `${ws.title} — Free printable ${ws.subject.toLowerCase()} worksheet for ${ws.grade}. ${ws.description} Print free at jiggyjoy.com`;
 
   return (
     <div>
@@ -60,6 +95,7 @@ export default async function WorksheetPage({ params }: Props) {
             >
               ⬇️ Download PDF — Free
             </a>
+            <PinItButton pageUrl={pageUrl} mediaUrl={pinImageUrl} description={pinDesc} />
           </div>
 
           {/* Worksheet preview */}

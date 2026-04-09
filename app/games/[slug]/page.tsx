@@ -5,6 +5,9 @@ import { games, getGameBySlug } from "@/lib/data";
 import GameLoader from "@/components/games/GameLoader";
 import GameScreen from "@/components/games/GameScreen";
 import { getGameVisual } from "@/lib/gameVisuals";
+import PinItButton from "@/components/PinItButton";
+
+const SITE_URL = "https://www.jiggyjoy.com";
 
 const categoryEmojis: Record<string, string> = {
   "Arcade Games":      "🕹️",
@@ -113,10 +116,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const game = getGameBySlug(slug);
   if (!game) return {};
+
+  const pageUrl = `${SITE_URL}/games/${slug}`;
+  const pinUrl  = `${SITE_URL}/pin/games/${slug}`;
+  const ogUrl   = `${SITE_URL}/games/${slug}/opengraph-image`; // Next's auto-generated 1200x630 (if present)
+  const title   = `${game.title} — Free Online Game for Kids`;
+
   return {
-    title: `${game.title} — Free Online Game for Kids`,
+    title,
     description: game.description,
     keywords: [...game.tags, "free kids game", "educational game", "online learning"],
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      title,
+      description: game.description,
+      url: pageUrl,
+      type: "article",
+      siteName: "JiggyJoy",
+      // Pinterest uses the FIRST og:image, so we list the 1000x1500 pin first.
+      // Facebook / Twitter are happy with any of these.
+      images: [
+        {
+          url: pinUrl,
+          width: 1000,
+          height: 1500,
+          alt: `${game.title} — free online game for kids`,
+        },
+        {
+          url: ogUrl,
+          width: 1200,
+          height: 630,
+          alt: game.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: game.description,
+      images: [pinUrl],
+    },
+    other: {
+      // Pinterest Rich Pins read these article:* tags.
+      "article:published_time": "2025-01-01T00:00:00Z",
+      "article:author":         "JiggyJoy",
+      "article:section":        game.category,
+      // Explicit Pinterest image hint — some scrapers look for this.
+      "pinterest:description":  game.description,
+      "pinterest:media":        pinUrl,
+    },
   };
 }
 
@@ -132,6 +180,10 @@ export default async function GamePage({ params }: Props) {
   const emoji = categoryEmojis[game.category] ?? "🎯";
   const howToPlay = HOW_TO_PLAY[slug] ?? DEFAULT_HOW_TO_PLAY;
   const categoryHub = categoryHubs[game.category];
+
+  const pageUrl     = `${SITE_URL}/games/${slug}`;
+  const pinImageUrl = `${SITE_URL}/pin/games/${slug}`;
+  const pinDesc     = `${game.title} — Free online ${game.category.toLowerCase()} for kids. ${game.description} Play free on jiggyjoy.com`;
 
   const suggestedMinAge = parseInt(game.ageRange.split(/[–\-]/)[0], 10);
   const schemaData = {
@@ -272,6 +324,12 @@ export default async function GamePage({ params }: Props) {
 
           {/* Navigation buttons */}
           <div className="p-4 border-t border-gray-800 flex flex-col gap-2">
+            <PinItButton
+              pageUrl={pageUrl}
+              mediaUrl={pinImageUrl}
+              description={pinDesc}
+              className="block w-full text-center py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl font-semibold text-sm transition-colors"
+            />
             {categoryHub && categoryHub.href !== "/games" && (
               <Link
                 href={categoryHub.href}

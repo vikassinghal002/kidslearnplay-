@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { coloringCategories, getAllColoringPages, games, worksheets } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-posts";
+import { activityPages, freeWorksheetTopics } from "@/lib/programmaticContent";
 
 const BASE_URL = "https://www.jiggyjoy.com";
 
@@ -61,12 +62,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
+  // Lever 1 — programmatic SEO pages
+  const activityAgePages = activityPages.map((p) => ({
+    url: `${BASE_URL}/activities/${p.slug}`,
+    priority: 0.9,
+    changeFrequency: "weekly" as const,
+  }));
+
+  const freeWorksheetTopicPages = freeWorksheetTopics.map((p) => ({
+    url: `${BASE_URL}/worksheets/free/${p.slug}`,
+    priority: 0.9,
+    changeFrequency: "weekly" as const,
+  }));
+
   return [
     ...staticPages,
     ...categoryPages,
     ...coloringPages,
     ...gamePages,
     ...worksheetPages,
+    ...activityAgePages,
+    ...freeWorksheetTopicPages,
     ...blogPages,
   ];
 }

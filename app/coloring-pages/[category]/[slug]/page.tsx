@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 import { coloringCategories, getCategoryBySlug, getAllColoringPages } from "@/lib/data";
 import { getBulkPageBySlug, getBulkPagesByCategory, getBulkCategoryMeta } from "@/lib/bulk-data";
 import PrintButton from "@/components/PrintButton";
+import PinItButton from "@/components/PinItButton";
 import ColoringCanvas from "@/components/ColoringCanvas";
 import Image from "next/image";
+
+const SITE_URL = "https://www.jiggyjoy.com";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -20,26 +23,83 @@ export async function generateStaticParams() {
 export const dynamicParams = true; // allow dynamic rendering for bulk slugs
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { category, slug } = await params;
 
   const curated = getAllColoringPages().find((p) => p.slug === slug);
   if (curated) {
+    const pageUrl = `${SITE_URL}/coloring-pages/${curated.category}/${curated.slug}`;
+    const pinUrl  = `${SITE_URL}/pin/coloring/${curated.category}/${curated.slug}`;
+    const title   = `${curated.title} — Free Printable`;
     return {
-      title: `${curated.title} — Free Printable`,
+      title,
       description: curated.description,
       keywords: [...curated.tags, "free printable", "coloring page", "print and color"],
+      alternates: { canonical: pageUrl },
+      openGraph: {
+        title,
+        description: curated.description,
+        url: pageUrl,
+        type: "article",
+        siteName: "JiggyJoy",
+        images: [
+          { url: pinUrl, width: 1000, height: 1500, alt: curated.title },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description: curated.description,
+        images: [pinUrl],
+      },
+      other: {
+        "article:published_time": "2025-01-01T00:00:00Z",
+        "article:author":         "JiggyJoy",
+        "article:section":        "Coloring Pages",
+        "pinterest:description":  curated.description,
+        "pinterest:media":        pinUrl,
+      },
     };
   }
 
   const bulk = getBulkPageBySlug(slug);
   if (bulk) {
+    const pageUrl = `${SITE_URL}/coloring-pages/${bulk.category}/${bulk.slug}`;
+    const pinUrl  = `${SITE_URL}/pin/coloring/${bulk.category}/${bulk.slug}`;
+    const title   = `${bulk.title} — Free Printable Coloring Page`;
+    const desc    = `Free printable ${bulk.title.toLowerCase()} — download and print instantly.`;
     return {
-      title: `${bulk.title} — Free Printable Coloring Page`,
-      description: `Free printable ${bulk.title.toLowerCase()} — download and print instantly.`,
+      title,
+      description: desc,
       keywords: [...bulk.tags, "free printable", "coloring page"],
+      alternates: { canonical: pageUrl },
+      openGraph: {
+        title,
+        description: desc,
+        url: pageUrl,
+        type: "article",
+        siteName: "JiggyJoy",
+        images: [
+          { url: pinUrl, width: 1000, height: 1500, alt: bulk.title },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description: desc,
+        images: [pinUrl],
+      },
+      other: {
+        "article:published_time": "2025-01-01T00:00:00Z",
+        "article:author":         "JiggyJoy",
+        "article:section":        "Coloring Pages",
+        "pinterest:description":  desc,
+        "pinterest:media":        pinUrl,
+      },
     };
   }
 
+  // Reference `category` for the unused-var check (stable canonical even on 404)
+  void category;
   return {};
 }
 
@@ -52,6 +112,9 @@ export default async function ColoringPageDetail({ params }: Props) {
 
   if (cat && curated) {
     const related = cat.pages.filter((p) => p.slug !== slug).slice(0, 4);
+    const pageUrl     = `${SITE_URL}/coloring-pages/${cat.slug}/${curated.slug}`;
+    const pinImageUrl = `${SITE_URL}/pin/coloring/${cat.slug}/${curated.slug}`;
+    const pinDesc     = `${curated.title} — Free printable coloring page. ${curated.description} Print for free at jiggyjoy.com`;
 
     return (
       <div>
@@ -77,6 +140,7 @@ export default async function ColoringPageDetail({ params }: Props) {
               >
                 ⬇️ Download PDF
               </a>
+              <PinItButton pageUrl={pageUrl} mediaUrl={pinImageUrl} description={pinDesc} />
             </div>
 
             <ColoringCanvas slug={curated.slug} title={curated.title} emoji={cat.icon} />
@@ -143,6 +207,9 @@ export default async function ColoringPageDetail({ params }: Props) {
 
   const bulkMeta = getBulkCategoryMeta(bulk.category);
   const related  = getBulkPagesByCategory(bulk.category, 1, 4).filter((p) => p.slug !== slug);
+  const bulkPageUrl     = `${SITE_URL}/coloring-pages/${bulk.category}/${bulk.slug}`;
+  const bulkPinImageUrl = `${SITE_URL}/pin/coloring/${bulk.category}/${bulk.slug}`;
+  const bulkPinDesc     = `${bulk.title} — Free printable coloring page. Download and print instantly from jiggyjoy.com`;
 
   return (
     <div>
@@ -161,6 +228,7 @@ export default async function ColoringPageDetail({ params }: Props) {
 
           <div className="flex flex-wrap gap-3 mb-6">
             <PrintButton />
+            <PinItButton pageUrl={bulkPageUrl} mediaUrl={bulkPinImageUrl} description={bulkPinDesc} />
           </div>
 
           {/* Static image — print-ready */}
