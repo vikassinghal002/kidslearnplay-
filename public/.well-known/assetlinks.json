@@ -1,0 +1,18 @@
+[
+  {
+    "_comment_1": "Digital Asset Links for the JiggyJoy Android TWA.",
+    "_comment_2": "Must be served at https://jiggyjoy.com/.well-known/assetlinks.json",
+    "_comment_3": "REPLACE the sha256_cert_fingerprints value below with the real fingerprint from your Bubblewrap keystore.",
+    "_comment_4": "Run: npx @bubblewrap/cli fingerprint   (or:  keytool -list -v -keystore android.keystore)",
+    "_comment_5": "The fingerprint is 64 hex chars with colons, e.g. 14:6D:E9:83:...",
+    "_comment_6": "If you change the application id or re-sign with a different key, this file MUST be updated and redeployed.",
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jiggyjoy.app",
+      "sha256_cert_fingerprints": [
+        "REPLACE_WITH_SHA256_FINGERPRINT"
+      ]
+    }
+  }
+]
