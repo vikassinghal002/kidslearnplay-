@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
@@ -39,6 +40,23 @@ export default function BubblePopABCGame() {
   const [next, setNext] = useState(0); // index into LETTERS
   const [wrong, setWrong] = useState<number | null>(null);
   const [score, setScore] = useState(0);
+  const [muted, setMuted] = useState(false);
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    return () => stopMusic();
+  }, []);
+
+  function toggleMute() {
+    const nextMuted = !muted;
+    setMuted(nextMuted);
+    setGlobalMuted(nextMuted);
+    if (nextMuted) {
+      stopMusic();
+    } else if (startedRef.current) {
+      startMusic("twinkle");
+    }
+  }
 
   const reset = useCallback(() => {
     setBubbles(makeBubbles(LETTERS));
@@ -49,13 +67,26 @@ export default function BubblePopABCGame() {
 
   function pop(bubble: Bubble) {
     if (bubble.popped) return;
+    // Start music on first pop (browser autoplay policy)
+    if (!startedRef.current && !muted) {
+      startedRef.current = true;
+      startMusic("twinkle");
+    }
+    sfx.bubbleBurst();
     if (bubble.letter === LETTERS[next]) {
       setBubbles((bs) => bs.map((b) => b.id === bubble.id ? { ...b, popped: true } : b));
       setNext((n) => n + 1);
       setScore((s) => s + 1);
       setWrong(null);
+      sfx.letterPop();
+      sfx.correct();
+      if (next + 1 === LETTERS.length) {
+        sfx.levelUp();
+        sfx.sparkle();
+      }
     } else {
       setWrong(bubble.id);
+      sfx.wrong();
       setTimeout(() => setWrong(null), 600);
     }
   }
@@ -63,7 +94,14 @@ export default function BubblePopABCGame() {
   const done = next === LETTERS.length;
 
   return (
-    <div className="bg-gradient-to-br from-sky-50 to-blue-100 rounded-2xl p-5 max-w-lg mx-auto text-center select-none">
+    <div className="bg-gradient-to-br from-sky-50 to-blue-100 rounded-2xl p-5 max-w-lg mx-auto text-center select-none relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-white/90 border border-blue-200 text-blue-600 rounded-full hover:bg-blue-50 shadow-sm z-10"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <h2 className="text-2xl font-extrabold text-blue-600 mb-1">🫧 Bubble Pop ABCs</h2>
       <p className="text-gray-500 text-sm mb-1">Pop the bubbles in ABC order!</p>
 

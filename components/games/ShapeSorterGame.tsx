@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 type Shape = "circle" | "square" | "triangle" | "star" | "heart" | "diamond";
 
@@ -20,6 +21,30 @@ export default function ShapeSorterGame() {
   const [matched, setMatched] = useState<Set<Shape>>(new Set());
   const [wrong, setWrong]     = useState<Shape | null>(null);
   const [score, setScore]     = useState(0);
+  const [muted, setMuted]     = useState(false);
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    return () => stopMusic();
+  }, []);
+
+  function ensureMusic() {
+    if (!startedRef.current && !muted) {
+      startedRef.current = true;
+      startMusic("playful");
+    }
+  }
+
+  function toggleMute() {
+    const next = !muted;
+    setMuted(next);
+    setGlobalMuted(next);
+    if (next) {
+      stopMusic();
+    } else if (startedRef.current) {
+      startMusic("playful");
+    }
+  }
 
   const current = queue[0] ?? null;
   const currentInfo = SHAPES.find((s) => s.shape === current);
@@ -33,14 +58,22 @@ export default function ShapeSorterGame() {
 
   function tryDrop(target: Shape) {
     if (!current) return;
+    ensureMusic();
     if (target === current) {
       const newMatched = new Set([...matched, current]);
       setMatched(newMatched);
       setQueue((q) => q.slice(1));
       setScore((s) => s + 1);
       setWrong(null);
+      sfx.sortDrop();
+      sfx.correct();
+      if (newMatched.size === SHAPES.length) {
+        sfx.levelUp();
+        sfx.sparkle();
+      }
     } else {
       setWrong(target);
+      sfx.wrong();
       setTimeout(() => setWrong(null), 600);
     }
   }
@@ -48,7 +81,14 @@ export default function ShapeSorterGame() {
   const done = queue.length === 0;
 
   return (
-    <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none">
+    <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-white/90 border border-purple-200 text-purple-600 rounded-full hover:bg-purple-50 shadow-sm z-10"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <h2 className="text-2xl font-extrabold text-purple-600 mb-1">🔷 Shape Sorter</h2>
       <p className="text-gray-500 text-sm mb-4">Click the matching shape hole!</p>
 

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 // ─── Pattern engine ───────────────────────────────────────────────────────────
 
@@ -73,24 +74,70 @@ export default function PatternWizardGame() {
   const [state, setState]       = useState<"playing" | "correct" | "wrong" | "complete">("playing");
   const [score, setScore]       = useState(0);
   const [streak, setStreak]     = useState(0);
+  const [muted, setMuted]       = useState(false);
+  const [started, setStarted]   = useState(false);
+  const revealTimers = useRef<number[]>([]);
   const ROUNDS_PER_LEVEL = 5;
+
+  useEffect(() => {
+    if (started && !muted && state !== "complete") startMusic("mystery");
+    return () => stopMusic();
+  }, [started, muted, state]);
+
+  const toggleMute = () => {
+    const n = !muted;
+    setMuted(n);
+    setGlobalMuted(n);
+    if (n) stopMusic();
+    else if (started && state !== "complete") startMusic("mystery");
+  };
 
   const newRound = useCallback((lvl = level) => {
     const template = PATTERN_TEMPLATES[Math.min(lvl, PATTERN_TEMPLATES.length - 1)];
-    setRoundData(makeRound(template, ITEMS));
+    const data = makeRound(template, ITEMS);
+    setRoundData(data);
     setSelected([]);
     setState("playing");
+
+    // Pattern preview animation — tap sfx for each revealed item
+    revealTimers.current.forEach((t) => clearTimeout(t));
+    revealTimers.current = [];
+    data.shown.forEach((_, i) => {
+      const id = window.setTimeout(() => sfx.tap(), 100 + i * 120);
+      revealTimers.current.push(id);
+    });
   }, [level]);
 
   useEffect(() => { newRound(level); }, [level]);
 
+  // Cleanup reveal timers on unmount
+  useEffect(() => {
+    return () => {
+      revealTimers.current.forEach((t) => clearTimeout(t));
+    };
+  }, []);
+
   function pickChoice(item: typeof ITEMS[0]) {
     if (state !== "playing") return;
+    if (!started) setStarted(true);
+
+    sfx.tap();
+
     const needed = roundData.answers.length;
     const next = [...selected, item];
 
+    // Check if this individual pick matches the expected next answer
+    const pickIdx = selected.length;
+    const isThisPickCorrect = item.id === roundData.answers[pickIdx].id;
+
     if (next.length < needed) {
       setSelected(next);
+      if (isThisPickCorrect) {
+        setTimeout(() => sfx.sparkle(), 60);
+      } else {
+        // still let them finish before judging full answer — soft hint
+        setTimeout(() => sfx.correct(), 60);
+      }
       return;
     }
 
@@ -101,9 +148,13 @@ export default function PatternWizardGame() {
       setState("correct");
       setScore((s) => s + 10 + streak * 2);
       setStreak((s) => s + 1);
+      setTimeout(() => sfx.magicChime(), 100);
       setTimeout(() => {
         if (round + 1 >= ROUNDS_PER_LEVEL) {
           setState("complete");
+          setTimeout(() => sfx.levelUp(), 50);
+          setTimeout(() => sfx.sparkle(), 350);
+          stopMusic();
         } else {
           setRound((r) => r + 1);
           newRound(level);
@@ -112,6 +163,7 @@ export default function PatternWizardGame() {
     } else {
       setState("wrong");
       setStreak(0);
+      sfx.wrong();
       setTimeout(() => {
         setSelected([]);
         setState("playing");
@@ -120,17 +172,24 @@ export default function PatternWizardGame() {
   }
 
   if (state === "complete") return (
-    <div className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-2xl p-8 max-w-lg mx-auto text-center">
+    <div className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-2xl p-8 max-w-lg mx-auto text-center relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors z-10"
+      >
+        {muted ? "🔇 Muted" : "🔊 Sound"}
+      </button>
       <div className="text-6xl mb-3">🧙</div>
       <h3 className="text-2xl font-extrabold text-purple-700">Level {level + 1} Complete!</h3>
       <p className="text-gray-600 mb-4">Score: <span className="font-bold text-purple-600">{score}</span></p>
       <div className="flex gap-3 justify-center">
-        <button onClick={() => { setScore(0); setRound(0); setStreak(0); setLevel(0); newRound(0); setState("playing"); }}
+        <button onClick={() => { sfx.click(); setScore(0); setRound(0); setStreak(0); setLevel(0); newRound(0); setState("playing"); }}
           className="px-4 py-2 bg-white border border-purple-300 text-purple-700 rounded-full font-bold hover:bg-purple-50 text-sm">
           Start Over
         </button>
         {level < PATTERN_TEMPLATES.length - 1 && (
-          <button onClick={() => { setRound(0); setLevel((l) => l + 1); setState("playing"); }}
+          <button onClick={() => { sfx.click(); setRound(0); setLevel((l) => l + 1); setState("playing"); }}
             className="px-5 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700">
             Next Level →
           </button>
@@ -142,10 +201,18 @@ export default function PatternWizardGame() {
   const blanksNeeded = roundData.answers.length;
 
   return (
-    <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-5 max-w-lg mx-auto select-none">
+    <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-5 max-w-lg mx-auto select-none relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors z-10"
+      >
+        {muted ? "🔇 Muted" : "🔊 Sound"}
+      </button>
+
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-xl font-extrabold text-purple-700">🧙 Pattern Wizard</h2>
-        <div className="flex gap-2 text-sm">
+        <div className="flex gap-2 text-sm mr-20">
           <span className="bg-white rounded-xl px-3 py-1 font-bold text-purple-600">Score: {score}</span>
           {streak > 1 && <span className="bg-purple-100 rounded-xl px-3 py-1 font-bold text-purple-500">{streak}🔥</span>}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 const W = 480, H = 500;
 const PLAYER_W = 36, PLAYER_H = 28;
@@ -42,6 +43,8 @@ export default function SpaceDefenderGame() {
   const [hiScore, setHiScore] = useState(0);
   const [lives, setLives] = useState(3);
   const [wave, setWave]   = useState(1);
+  const [muted, setMuted] = useState(false);
+  const mutedRef = useRef(false);
 
   const initState = useCallback((w = 1) => ({
     playerX: W / 2,
@@ -75,6 +78,7 @@ export default function SpaceDefenderGame() {
 
   useEffect(() => {
     if (phase !== "playing") return;
+    if (!mutedRef.current) startMusic("space");
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d")!;
@@ -234,6 +238,7 @@ export default function SpaceDefenderGame() {
       if ((keys.has("Space") || keys.has("ArrowUp")) && s.shootCooldown <= 0) {
         s.bullets.push({ x: s.playerX, y: H - 50, vy: -BULLET_SPEED, fromPlayer: true });
         s.shootCooldown = 0.18;
+        if (!mutedRef.current) sfx.shoot();
       }
 
       // Move bullets
@@ -283,6 +288,7 @@ export default function SpaceDefenderGame() {
             const colors = ["#00ffcc", "#ff6b6b", "#ffd93d"];
             spawnParticles(s, e.x, e.y, colors[e.type] ?? "#fff");
             s.score += (e.type + 1) * 10 * s.wave;
+            if (!mutedRef.current) sfx.enemyHit();
           }
         }
       }
@@ -296,7 +302,8 @@ export default function SpaceDefenderGame() {
             s.lives--;
             s.invincible = 2;
             spawnParticles(s, s.playerX, H - 36, "#00ccff");
-            if (s.lives <= 0) s.phase = "gameOver";
+            if (!mutedRef.current) sfx.playerHit();
+            if (s.lives <= 0) { s.phase = "gameOver"; if (!mutedRef.current) sfx.die(); }
           }
         }
       }
@@ -304,11 +311,17 @@ export default function SpaceDefenderGame() {
 
       // Enemies reached bottom
       for (const e of s.enemies) {
-        if (e.alive && e.y > H - 60) s.phase = "gameOver";
+        if (e.alive && e.y > H - 60 && s.phase === "playing") {
+          s.phase = "gameOver";
+          if (!mutedRef.current) sfx.die();
+        }
       }
 
       // Wave complete
-      if (!s.enemies.some((e: Enemy) => e.alive)) s.phase = "waveComplete";
+      if (!s.enemies.some((e: Enemy) => e.alive) && s.phase === "playing") {
+        s.phase = "waveComplete";
+        if (!mutedRef.current) sfx.levelUp();
+      }
 
       // Particles
       for (const p of s.particles) {
@@ -341,8 +354,18 @@ export default function SpaceDefenderGame() {
       cancelAnimationFrame(animId);
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
+      stopMusic();
     };
   }, [phase, wave]);
+
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    mutedRef.current = next;
+    setGlobalMuted(next);
+    if (next) stopMusic();
+    else if (phase === "playing") startMusic("space");
+  };
 
   function handleStart() { stateRef.current = initState(1); setWave(1); setScore(0); setLives(3); setPhase("playing"); }
   function handleNextWave() { const w = wave + 1; setWave(w); stateRef.current = initState(w); stateRef.current.score = score; stateRef.current.lives = lives; setPhase("playing"); }
@@ -357,6 +380,14 @@ export default function SpaceDefenderGame() {
     <div className="flex flex-col gap-2 select-none" style={{ width: "100%", maxWidth: "min(100%, calc(100dvh - 80px))", margin: "0 auto" }}>
       <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-indigo-900">
         <canvas ref={canvasRef} width={W} height={H} className="block" style={{ width: "100%", height: "auto", background: "#050a1a" }} />
+
+        <button
+          onClick={toggleMute}
+          aria-label={muted ? "Unmute" : "Mute"}
+          className="absolute top-2 right-2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 text-white text-lg flex items-center justify-center z-20 border border-cyan-500/50"
+        >
+          {muted ? "🔇" : "🔊"}
+        </button>
 
         {phase === "menu" && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80">

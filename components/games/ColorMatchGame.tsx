@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 const COLORS = [
   { name: "Red",    bg: "bg-red-500",    light: "bg-red-100",    border: "border-red-400",    text: "text-red-600"    },
@@ -19,6 +20,30 @@ export default function ColorMatchGame() {
   const [wrong, setWrong]   = useState<string | null>(null);
   const [streak, setStreak] = useState(0);
   const [done, setDone]     = useState(false);
+  const [muted, setMuted]   = useState(false);
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    return () => stopMusic();
+  }, []);
+
+  function ensureMusic() {
+    if (!startedRef.current && !muted) {
+      startedRef.current = true;
+      startMusic("playful");
+    }
+  }
+
+  function toggleMute() {
+    const next = !muted;
+    setMuted(next);
+    setGlobalMuted(next);
+    if (next) {
+      stopMusic();
+    } else if (startedRef.current) {
+      startMusic("playful");
+    }
+  }
 
   const reset = useCallback(() => {
     setQueue(shuffle([...COLORS.map((c) => c.name), ...COLORS.map((c) => c.name)]).slice(0, 10));
@@ -32,16 +57,29 @@ export default function ColorMatchGame() {
 
   function guess(name: string) {
     if (!current) return;
+    ensureMusic();
+    sfx.tap();
     if (name === current.name) {
       const newQueue = queue.slice(1);
+      const newStreak = streak + 1;
       setScore((s) => s + 1);
-      setStreak((s) => s + 1);
+      setStreak(newStreak);
       setWrong(null);
-      if (newQueue.length === 0) setDone(true);
-      else setQueue(newQueue);
+      sfx.correct();
+      // Streak milestones
+      if (newStreak === 3) sfx.sparkle();
+      else if (newStreak >= 5 && newStreak % 5 === 0) sfx.levelUp();
+      if (newQueue.length === 0) {
+        setDone(true);
+        sfx.levelUp();
+        sfx.sparkle();
+      } else {
+        setQueue(newQueue);
+      }
     } else {
       setWrong(name);
       setStreak(0);
+      sfx.wrong();
       setTimeout(() => setWrong(null), 600);
     }
   }
@@ -49,7 +87,14 @@ export default function ColorMatchGame() {
   const total = 10;
 
   return (
-    <div className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none">
+    <div className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-white/90 border border-orange-200 text-orange-600 rounded-full hover:bg-orange-50 shadow-sm z-10"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <h2 className="text-2xl font-extrabold text-orange-600 mb-1">🎨 Colour Match</h2>
       <p className="text-gray-500 text-sm mb-4">Tap the bucket that matches the colour!</p>
 

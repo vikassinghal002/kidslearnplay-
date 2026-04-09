@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 type Op = "+" | "-" | "×";
 
@@ -41,6 +42,15 @@ export default function MathsPlayGame() {
   const [streak, setStreak] = useState(0);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [total, setTotal] = useState(0);
+  const [muted, setMuted] = useState(false);
+  const mutedRef = useRef(false);
+  const [started, setStarted] = useState(false);
+
+  // Start music once the user interacts (respects autoplay policy). Stop on unmount.
+  useEffect(() => {
+    if (started && !muted) startMusic("quirky");
+    return () => stopMusic();
+  }, [started, muted]);
 
   const nextQuestion = useCallback((newOp: Op = op) => {
     setRound(newRound(newOp));
@@ -48,26 +58,55 @@ export default function MathsPlayGame() {
   }, [op]);
 
   const handleOp = (newOp: Op) => {
+    if (!mutedRef.current) sfx.click();
+    if (!started) setStarted(true);
     setOp(newOp);
     nextQuestion(newOp);
   };
 
   const handleAnswer = (choice: number) => {
     if (feedback) return;
+    if (!started) setStarted(true);
+    if (!mutedRef.current) sfx.tap();
     setTotal((t) => t + 1);
     if (choice === question.answer) {
       setFeedback("correct");
       setScore((s) => s + 1);
-      setStreak((s) => s + 1);
+      setStreak((s) => {
+        const next = s + 1;
+        if (!mutedRef.current) {
+          if (next > 0 && next % 3 === 0) sfx.combo();
+          else sfx.correct();
+        }
+        return next;
+      });
     } else {
       setFeedback("wrong");
+      if (!mutedRef.current) sfx.wrong();
       setStreak(0);
     }
     setTimeout(() => nextQuestion(), 1200);
   };
 
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    mutedRef.current = next;
+    setGlobalMuted(next);
+    if (next) stopMusic();
+    else if (started) startMusic("quirky");
+  };
+
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center max-w-lg mx-auto">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 text-center max-w-lg mx-auto relative">
+      {/* Mute button — top-right, matches BrickBreaker style */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors z-10"
+      >
+        {muted ? "🔇 Muted" : "🔊 Sound"}
+      </button>
+
       {/* Mode selector */}
       <div className="flex gap-2 justify-center mb-6">
         {(["+", "-", "×"] as Op[]).map((o) => (

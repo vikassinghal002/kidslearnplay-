@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 // ─── Categories ───────────────────────────────────────────────────────────────
 
@@ -44,9 +45,37 @@ export default function SortingFrenzyGame() {
   const [flash, setFlash]           = useState<{ cat: string; ok: boolean } | null>(null);
   const [gameOver, setGameOver]     = useState(false);
   const [speedMult, setSpeedMult]   = useState(1);
+  const [streak, setStreak]         = useState(0);
+  const [muted, setMuted]           = useState(false);
+  const mutedRef = useRef(false);
+  const prevSpeedTierRef = useRef(1);
   const arenaRef = useRef<HTMLDivElement>(null);
 
   const catSet = CATEGORY_SETS[setIdx];
+
+  // Background music — starts on phase transition to "playing", stops on cleanup
+  useEffect(() => {
+    if (running && !muted) startMusic("adventure");
+    return () => stopMusic();
+  }, [running, muted]);
+
+  // Level up SFX when speed tier crosses a new threshold (every +0.3 speedMult)
+  useEffect(() => {
+    const tier = Math.floor((speedMult - 1) / 0.3) + 1;
+    if (tier > prevSpeedTierRef.current && running) {
+      prevSpeedTierRef.current = tier;
+      if (!mutedRef.current) sfx.levelUp();
+    }
+  }, [speedMult, running]);
+
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    mutedRef.current = next;
+    setGlobalMuted(next);
+    if (next) stopMusic();
+    else if (running) startMusic("adventure");
+  };
 
   // Spawn items
   useEffect(() => {
@@ -72,7 +101,11 @@ export default function SortingFrenzyGame() {
           if (newY > 90) { newMissed++; }
           else next.push({ ...item, y: newY });
         }
-        if (newMissed > 0) setMissed((m) => m + newMissed);
+        if (newMissed > 0) {
+          setMissed((m) => m + newMissed);
+          setStreak(0);
+          if (!mutedRef.current) sfx.wallHit();
+        }
         return next;
       });
     }, 50);
@@ -101,6 +134,8 @@ export default function SortingFrenzyGame() {
   function endGame() {
     setRunning(false);
     setGameOver(true);
+    if (!mutedRef.current) sfx.die();
+    stopMusic();
   }
 
   function startGame(sIdx = setIdx) {
@@ -111,6 +146,8 @@ export default function SortingFrenzyGame() {
     setTimeLeft(60);
     setGameOver(false);
     setSpeedMult(1);
+    setStreak(0);
+    prevSpeedTierRef.current = 1;
     setRunning(true);
   }
 
@@ -121,18 +158,40 @@ export default function SortingFrenzyGame() {
       const correct = item.category === catId;
       setFlash({ cat: catId, ok: correct });
       setTimeout(() => setFlash(null), 400);
-      if (correct) setScore((s) => s + 10);
-      else setMissed((m) => m + 1);
+      if (correct) {
+        setScore((s) => s + 10);
+        setStreak((s) => {
+          const next = s + 1;
+          if (!mutedRef.current) {
+            sfx.sortDrop();
+            if (next > 0 && next % 5 === 0) sfx.combo();
+            else sfx.correct();
+          }
+          return next;
+        });
+      } else {
+        setMissed((m) => m + 1);
+        setStreak(0);
+        if (!mutedRef.current) sfx.wrong();
+      }
       return prev.filter((i) => i.id !== itemId);
     });
   }
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-4 max-w-lg mx-auto select-none">
-      <div className="flex items-center justify-between mb-3">
+    <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-4 max-w-lg mx-auto select-none relative">
+      {/* Mute button — top-right */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors z-10"
+      >
+        {muted ? "🔇 Muted" : "🔊 Sound"}
+      </button>
+
+      <div className="flex items-center justify-between mb-3 pr-24">
         <h2 className="text-xl font-extrabold text-gray-800">🌪️ Sorting Frenzy</h2>
         {running && (
-          <div className="flex gap-2 text-sm">
+          <div className="flex gap-2 text-sm flex-wrap">
             <span className="bg-green-100 text-green-700 rounded-xl px-3 py-1 font-bold">{score} pts</span>
             <span className={`rounded-xl px-3 py-1 font-bold ${timeLeft < 15 ? "bg-red-100 text-red-600 animate-pulse" : "bg-white text-gray-700"}`}>⏱ {timeLeft}s</span>
             <span className="bg-red-50 text-red-500 rounded-xl px-3 py-1 font-bold">❌ {missed}/5</span>

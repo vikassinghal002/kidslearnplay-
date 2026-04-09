@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 // ─── Story engine ─────────────────────────────────────────────────────────────
 
@@ -145,11 +146,33 @@ export default function StoryAdventureGame() {
   const [score, setScore]       = useState(0);
   const [history, setHistory]   = useState<string[]>([]);
   const [chosen, setChosen]     = useState<string | null>(null);
+  const [muted, setMuted]       = useState(false);
+  const mutedRef                = useRef(false);
+  const endingPlayedRef         = useRef<string | null>(null);
 
   const story = STORIES[storyIdx];
   const scene = sceneId ? story.scenes[sceneId] : null;
 
+  // Music: play "mystery" when inside a story
+  useEffect(() => {
+    if (sceneId && !muted) startMusic("mystery");
+    else stopMusic();
+    return () => stopMusic();
+  }, [sceneId, muted]);
+
+  // Ending chime (play once per ending)
+  useEffect(() => {
+    if (!scene?.ending) { endingPlayedRef.current = null; return; }
+    if (endingPlayedRef.current === scene.id) return;
+    endingPlayedRef.current = scene.id;
+    if (mutedRef.current) return;
+    if (score >= 30) { sfx.levelUp(); setTimeout(() => sfx.storyChime(), 400); }
+    else if (score >= 15) sfx.storyChime();
+    else sfx.die();
+  }, [scene, score]);
+
   function start(idx = storyIdx) {
+    if (!mutedRef.current) sfx.click();
     setStoryIdx(idx);
     setSceneId("start");
     setScore(0);
@@ -159,10 +182,12 @@ export default function StoryAdventureGame() {
 
   function choose(choice: Choice) {
     if (chosen) return;
+    if (!mutedRef.current) sfx.click();
     setChosen(choice.next);
     setScore((s) => s + choice.points);
     setHistory((h) => [...h, sceneId!]);
     setTimeout(() => {
+      if (!mutedRef.current) sfx.pageFlip();
       setSceneId(choice.next);
       setChosen(null);
     }, 700);
@@ -170,15 +195,36 @@ export default function StoryAdventureGame() {
 
   function goBack() {
     if (history.length === 0) return;
+    if (!mutedRef.current) sfx.pageFlip();
     const prev = history[history.length - 1];
     setHistory((h) => h.slice(0, -1));
     setSceneId(prev);
     setChosen(null);
   }
 
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    mutedRef.current = next;
+    setGlobalMuted(next);
+    if (next) stopMusic();
+    else if (sceneId) startMusic("mystery");
+  };
+
+  const muteBtn = (
+    <button
+      onClick={toggleMute}
+      aria-label={muted ? "Unmute" : "Mute"}
+      className="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-base flex items-center justify-center shadow border border-indigo-200 z-20"
+    >
+      {muted ? "🔇" : "🔊"}
+    </button>
+  );
+
   // ── Home screen ─────────────────────────────────────────────────────────────
   if (!sceneId) return (
-    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 max-w-lg mx-auto text-center">
+    <div className="relative bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 max-w-lg mx-auto text-center">
+      {muteBtn}
       <h2 className="text-2xl font-extrabold text-indigo-700 mb-1">📖 Story Adventure</h2>
       <p className="text-gray-500 text-sm mb-6">Make choices and shape the story!</p>
       <div className="space-y-3">
@@ -202,7 +248,8 @@ export default function StoryAdventureGame() {
 
   // ── Ending screen ────────────────────────────────────────────────────────────
   if (scene.ending) return (
-    <div className={`bg-gradient-to-br ${scene.bg} rounded-2xl p-6 max-w-lg mx-auto text-center`}>
+    <div className={`relative bg-gradient-to-br ${scene.bg} rounded-2xl p-6 max-w-lg mx-auto text-center`}>
+      {muteBtn}
       <div className="text-6xl mb-3">{scene.ending.emoji}</div>
       <h3 className="text-2xl font-extrabold text-gray-800 mb-2">{scene.ending.title}</h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{scene.ending.message}</p>
@@ -224,7 +271,8 @@ export default function StoryAdventureGame() {
 
   // ── Scene ────────────────────────────────────────────────────────────────────
   return (
-    <div className={`bg-gradient-to-br ${scene.bg} rounded-2xl p-5 max-w-lg mx-auto`}>
+    <div className={`relative bg-gradient-to-br ${scene.bg} rounded-2xl p-5 max-w-lg mx-auto`}>
+      {muteBtn}
       {/* Header */}
       <div className="flex items-center gap-2 mb-3">
         {history.length > 0 && (

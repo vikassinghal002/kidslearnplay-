@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
@@ -19,6 +20,23 @@ export default function AlphabetMatchGame() {
   const [selected, setSelected] = useState<number[]>([]);
   const [score, setScore] = useState(0);
   const [moves, setMoves] = useState(0);
+  const [muted, setMuted] = useState(false);
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    return () => stopMusic();
+  }, []);
+
+  function toggleMute() {
+    const next = !muted;
+    setMuted(next);
+    setGlobalMuted(next);
+    if (next) {
+      stopMusic();
+    } else if (startedRef.current) {
+      startMusic("twinkle");
+    }
+  }
 
   const reset = () => {
     setDeck(createDeck());
@@ -30,6 +48,14 @@ export default function AlphabetMatchGame() {
   const handleFlip = useCallback((index: number) => {
     if (selected.length === 2) return;
     if (deck[index].flipped || deck[index].matched) return;
+
+    // Start music on first flip (browser autoplay policy)
+    if (!startedRef.current && !muted) {
+      startedRef.current = true;
+      startMusic("twinkle");
+    }
+
+    sfx.cardFlip();
 
     const newDeck = deck.map((c, i) => i === index ? { ...c, flipped: true } : c);
     const newSelected = [...selected, index];
@@ -45,9 +71,14 @@ export default function AlphabetMatchGame() {
         setDeck(matched);
         setScore((s) => s + 1);
         setSelected([]);
+        sfx.cardMatch();
+        if (matched.every((c) => c.matched)) {
+          sfx.levelUp();
+        }
       } else {
         setDeck(newDeck);
         setSelected(newSelected);
+        sfx.wrong();
         setTimeout(() => {
           setDeck((d) => d.map((c, i) =>
             (i === a || i === b) && !d[i].matched ? { ...c, flipped: false } : c
@@ -59,12 +90,19 @@ export default function AlphabetMatchGame() {
       setDeck(newDeck);
       setSelected(newSelected);
     }
-  }, [deck, selected]);
+  }, [deck, selected, muted]);
 
   const allMatched = deck.every((c) => c.matched);
 
   return (
-    <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 text-center max-w-lg mx-auto">
+    <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 text-center max-w-lg mx-auto relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-white/90 border border-green-200 text-green-600 rounded-full hover:bg-green-50 shadow-sm z-10"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <div className="flex justify-between mb-4 text-sm">
         <div className="bg-white rounded-xl px-4 py-2">
           <span className="text-gray-500">Pairs found</span>

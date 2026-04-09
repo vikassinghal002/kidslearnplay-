@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 const ANIMALS = [
   { name: "Cat",      emoji: "🐱", sound: "Meow!",      color: "bg-orange-100 border-orange-300" },
@@ -17,20 +18,59 @@ const ANIMALS = [
   { name: "Snake",    emoji: "🐍", sound: "Hisss!",     color: "bg-teal-100   border-teal-300"   },
 ];
 
+// Map animal names not in the audio layer to closest match or fallback
+const ANIMAL_AUDIO_MAP: Record<string, string> = {
+  Cat: "cat", Dog: "dog", Cow: "cow", Duck: "duck", Sheep: "sheep",
+  Pig: "pig", Lion: "lion", Elephant: "elephant", Frog: "frog", Horse: "horse",
+  Owl: "owl",   // not supported → falls back to pop
+  Snake: "snake", // not supported → falls back to pop
+};
+
 export default function AnimalSoundsGame() {
   const [active, setActive] = useState<string | null>(null);
   const [tapped, setTapped] = useState<Set<string>>(new Set());
+  const [muted, setMuted] = useState(false);
+  const startedRef = useRef(false);
+
+  // Cleanup music on unmount
+  useEffect(() => {
+    return () => stopMusic();
+  }, []);
 
   function handleTap(name: string) {
+    // Start background music on first tap (browser autoplay policy)
+    if (!startedRef.current && !muted) {
+      startedRef.current = true;
+      startMusic("happy");
+    }
+    sfx.animal(ANIMAL_AUDIO_MAP[name] ?? name);
     setActive(name);
     setTapped((prev) => new Set([...prev, name]));
     setTimeout(() => setActive(null), 1500);
   }
 
+  function toggleMute() {
+    const next = !muted;
+    setMuted(next);
+    setGlobalMuted(next);
+    if (next) {
+      stopMusic();
+    } else if (startedRef.current) {
+      startMusic("happy");
+    }
+  }
+
   const allDone = tapped.size === ANIMALS.length;
 
   return (
-    <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none">
+    <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-white/90 border border-orange-200 text-orange-600 rounded-full hover:bg-orange-50 shadow-sm z-10"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <h2 className="text-2xl font-extrabold text-orange-600 mb-1">🐾 Animal Sounds</h2>
       <p className="text-gray-500 text-sm mb-4">Tap each animal to hear its sound!</p>
 

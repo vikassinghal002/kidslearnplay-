@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 // Each picture: array of [x%, y%] positions for dots, plus the SVG path revealed when complete
 const PICTURES = [
@@ -55,19 +56,43 @@ export default function ConnectDotsGame() {
   const [next, setNext]     = useState(1); // next dot number to tap (1-indexed)
   const [lines, setLines]   = useState<[number, number][][]>([]);
   const [done, setDone]     = useState(false);
+  const [muted, setMuted]   = useState(false);
+  const [started, setStarted] = useState(false);
 
   const pic = PICTURES[picIdx];
+
+  useEffect(() => {
+    if (started && !muted) startMusic("calm");
+    return () => stopMusic();
+  }, [started, muted]);
+
+  const toggleMute = () => {
+    const n = !muted;
+    setMuted(n);
+    setGlobalMuted(n);
+    if (n) stopMusic();
+    else if (started) startMusic("calm");
+  };
 
   function reset(idx = picIdx) {
     setPicIdx(idx);
     setNext(1);
     setLines([]);
     setDone(false);
+    // Moving to a next/new picture feels like a level up
+    if (started) sfx.levelUp();
   }
 
   function tapDot(i: number) { // i is 0-indexed
     if (done) return;
-    if (i + 1 !== next) return; // wrong order
+    if (!started) setStarted(true);
+    if (i + 1 !== next) {
+      // wrong-order tap
+      sfx.wrong();
+      return;
+    }
+
+    sfx.dotConnect();
 
     if (next > 1) {
       const prev = pic.dots[i - 1];
@@ -79,12 +104,21 @@ export default function ConnectDotsGame() {
       // close the shape
       setLines((l) => [...l, [pic.dots[pic.dots.length - 1], pic.dots[0]]]);
       setDone(true);
+      setTimeout(() => sfx.pictureReveal(), 200);
     }
     setNext((n) => n + 1);
   }
 
   return (
-    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none">
+    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-5 max-w-lg mx-auto text-center select-none relative">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-3 right-3 text-xs px-3 py-1 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors z-10"
+      >
+        {muted ? "🔇 Muted" : "🔊 Sound"}
+      </button>
+
       <h2 className="text-2xl font-extrabold text-indigo-600 mb-1">✏️ Connect the Dots</h2>
       <p className="text-gray-500 text-sm mb-3">Tap the dots in order 1, 2, 3... to reveal the picture!</p>
 

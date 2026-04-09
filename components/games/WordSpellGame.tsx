@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { sfx, startMusic, stopMusic, setGlobalMuted } from "@/lib/gameAudio";
 
 // ─── Word bank ────────────────────────────────────────────────────────────────
 
@@ -68,9 +69,32 @@ export default function WordSpellGame() {
   const [score, setScore]         = useState(0);
   const [streak, setStreak]       = useState(0);
   const [hintShown, setHintShown] = useState(false);
+  const [muted, setMuted]         = useState(false);
+  const mutedRef                  = useRef(false);
 
   const level  = LEVELS[levelIdx];
   const entry  = level.words[wordOrder[wordIdx]];
+
+  // Music: quest vibe
+  useEffect(() => {
+    if (state === "complete") { stopMusic(); return; }
+    if (!muted) startMusic("quest");
+    return () => stopMusic();
+  }, [state, muted]);
+
+  // Level-complete celebration
+  useEffect(() => {
+    if (state === "complete" && !mutedRef.current) sfx.levelUp();
+  }, [state]);
+
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    mutedRef.current = next;
+    setGlobalMuted(next);
+    if (next) stopMusic();
+    else if (state !== "complete") startMusic("quest");
+  };
 
   // Build tiles whenever the entry changes
   useEffect(() => {
@@ -91,6 +115,7 @@ export default function WordSpellGame() {
   function pickTile(idx: number) {
     if (state !== "playing") return;
     const letter = tiles[idx];
+    if (!mutedRef.current) sfx.letterPop();
     setTiles((t) => t.filter((_, i) => i !== idx));
     setAnswer((a) => [...a, letter]);
   }
@@ -98,6 +123,7 @@ export default function WordSpellGame() {
   function removeLetter(idx: number) {
     if (state !== "playing") return;
     const letter = answer[idx];
+    if (!mutedRef.current) sfx.click();
     setAnswer((a) => a.filter((_, i) => i !== idx));
     setTiles((t) => [...t, letter]);
   }
@@ -107,11 +133,13 @@ export default function WordSpellGame() {
     const guess = answer.join("");
     if (guess === entry.word) {
       setState("correct");
+      if (!mutedRef.current) sfx.wordComplete();
       setScore((s) => s + 1 + streak);
       setStreak((s) => s + 1);
       setTimeout(next, 1400);
     } else {
       setState("wrong");
+      if (!mutedRef.current) sfx.wrong();
       setStreak(0);
       setTimeout(() => {
         setTiles(shuffle(entry.word.split("")));
@@ -133,7 +161,14 @@ export default function WordSpellGame() {
 
   // ── Complete screen ─────────────────────────────────────────────────────────
   if (state === "complete") return (
-    <div className="bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl p-6 max-w-lg mx-auto text-center">
+    <div className="relative bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl p-6 max-w-lg mx-auto text-center">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-base flex items-center justify-center shadow border border-amber-200 z-20"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       <div className="text-6xl mb-3">🏆</div>
       <h3 className="text-2xl font-extrabold text-amber-700 mb-1">Level Complete!</h3>
       <p className="text-gray-600 mb-1">Score: <span className="font-bold text-amber-600">{score}</span></p>
@@ -158,9 +193,16 @@ export default function WordSpellGame() {
   );
 
   return (
-    <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-5 max-w-lg mx-auto select-none">
+    <div className="relative bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-5 max-w-lg mx-auto select-none">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-base flex items-center justify-center shadow border border-amber-200 z-20"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
       {/* Header */}
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-3 pr-10">
         <h2 className="text-xl font-extrabold text-amber-700">📝 Word Spell</h2>
         <div className="flex gap-2 text-sm">
           <span className="bg-white rounded-xl px-3 py-1 font-bold text-amber-600">Score: {score}</span>
@@ -226,7 +268,7 @@ export default function WordSpellGame() {
       {/* Actions */}
       <div className="flex gap-2 justify-center">
         <button
-          onClick={() => setHintShown(true)}
+          onClick={() => { setHintShown(true); if (!mutedRef.current) sfx.sparkle(); }}
           disabled={hintShown}
           className="px-4 py-2 bg-white border border-amber-300 text-amber-700 rounded-full text-sm font-semibold hover:bg-amber-50 disabled:opacity-40"
         >
