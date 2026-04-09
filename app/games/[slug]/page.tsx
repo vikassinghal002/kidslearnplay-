@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { games, getGameBySlug } from "@/lib/data";
 import GameLoader from "@/components/games/GameLoader";
 import GameScreen from "@/components/games/GameScreen";
+import { getGameVisual } from "@/lib/gameVisuals";
 
 const categoryEmojis: Record<string, string> = {
   "Arcade Games":      "🕹️",
@@ -239,19 +240,24 @@ export default async function GamePage({ params }: Props) {
             <div className="p-4 flex-1">
               <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">More {game.category}</h3>
               <div className="space-y-2">
-                {relatedGames.map((g) => (
-                  <Link
-                    key={g.slug}
-                    href={`/games/${g.slug}`}
-                    className="flex items-center gap-3 p-2.5 rounded-xl bg-gray-800/60 hover:bg-gray-800 border border-gray-700/50 hover:border-purple-600/50 transition-all group"
-                  >
-                    <span className="text-xl">{categoryEmojis[g.category] ?? "🎯"}</span>
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold text-gray-200 group-hover:text-white truncate">{g.title}</p>
-                      <p className="text-xs text-gray-500">Age {g.ageRange}</p>
-                    </div>
-                  </Link>
-                ))}
+                {relatedGames.map((g) => {
+                  const visual = getGameVisual(g.slug);
+                  return (
+                    <Link
+                      key={g.slug}
+                      href={`/games/${g.slug}`}
+                      className="flex items-center gap-3 p-2.5 rounded-xl bg-gray-800/60 hover:bg-gray-800 border border-gray-700/50 hover:border-purple-600/50 transition-all group"
+                    >
+                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${visual.gradient} flex items-center justify-center text-xl shrink-0`}>
+                        {visual.hero}
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-gray-200 group-hover:text-white truncate">{g.title}</p>
+                        <p className="text-xs text-gray-500">Age {g.ageRange}</p>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}

@@ -11,37 +11,63 @@ interface Props {
 
 export default function GameScreen({ children, title, howToPlay, skills }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isFS, setIsFS]       = useState(false);
+  const [isFS, setIsFS]         = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
 
+  // Track native fullscreen exits (Esc key etc.)
   useEffect(() => {
-    const onChange = () => setIsFS(!!document.fullscreenElement);
+    const onChange = () => {
+      if (!document.fullscreenElement) setIsFS(false);
+    };
     document.addEventListener("fullscreenchange", onChange);
     return () => document.removeEventListener("fullscreenchange", onChange);
   }, []);
 
+  // Lock scroll when CSS-fullscreen is active on iOS
+  useEffect(() => {
+    document.body.style.overflow = isFS ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isFS]);
+
   function toggleFullscreen() {
+    const el = containerRef.current;
+    if (!el) return;
+
+    // iOS Safari: no Fullscreen API — use CSS overlay
+    if (!document.fullscreenEnabled) {
+      setIsFS(f => !f);
+      return;
+    }
+
     if (!document.fullscreenElement) {
-      containerRef.current?.requestFullscreen().catch(() => {});
+      el.requestFullscreen().catch(() => {
+        // API rejected (some browsers) — fall back to CSS
+        setIsFS(true);
+      });
+      setIsFS(true);
     } else {
       document.exitFullscreen().catch(() => {});
+      setIsFS(false);
     }
   }
 
   return (
     <div
       ref={containerRef}
-      className={`flex flex-col bg-gray-950 ${isFS ? "fixed inset-0 z-[9999] overflow-hidden" : "w-full h-full"}`}
+      className={
+        isFS
+          ? "fixed inset-0 z-[9999] flex flex-col bg-gray-950 overflow-hidden"
+          : "flex flex-col bg-gray-950 w-full h-full"
+      }
     >
       {/* ── Game area ──────────────────────────────────────────────────── */}
       <div className={`relative flex items-center justify-center bg-gray-950 w-full ${isFS ? "flex-1 min-h-0 overflow-hidden" : ""}`}>
 
-        {/* Game component — fills width; each game constrains own max-size */}
         <div className={isFS ? "w-full h-full flex items-center justify-center" : "w-full flex items-center justify-center"}>
           {children}
         </div>
 
-        {/* Fullscreen toggle button */}
+        {/* Fullscreen toggle */}
         <button
           onClick={toggleFullscreen}
           title={isFS ? "Exit fullscreen" : "Enter fullscreen"}
