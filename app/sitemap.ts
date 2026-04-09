@@ -1,7 +1,12 @@
 import { MetadataRoute } from "next";
 import { coloringCategories, getAllColoringPages, games, worksheets } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-posts";
-import { activityPages, freeWorksheetTopics } from "@/lib/programmaticContent";
+import {
+  activityPages,
+  freeWorksheetTopics,
+  printablePages,
+  learnTopics,
+} from "@/lib/programmaticContent";
 import { videos } from "@/lib/videos";
 
 const BASE_URL = "https://www.jiggyjoy.com";
@@ -29,6 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/worksheets/alphabet`,       priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/blog`,                      priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/videos`,                    priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/printables`,                priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/learn`,                     priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/about`,                     priority: 0.5, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/privacy-policy`,            priority: 0.3, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/terms`,                     priority: 0.3, changeFrequency: "yearly" as const },
@@ -84,6 +91,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
   }));
 
+  const printableDetailPages = printablePages.map((p) => ({
+    url: `${BASE_URL}/printables/${p.slug}`,
+    priority: 0.8,
+    changeFrequency: "weekly" as const,
+  }));
+
+  const learnTopicPages = learnTopics.map((t) => ({
+    url: `${BASE_URL}/learn/${t.slug}`,
+    priority: 0.8,
+    changeFrequency: "weekly" as const,
+  }));
+
   return [
     ...staticPages,
     ...categoryPages,
@@ -92,6 +111,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...worksheetPages,
     ...activityAgePages,
     ...freeWorksheetTopicPages,
+    ...printableDetailPages,
+    ...learnTopicPages,
     ...videoPages,
     ...blogPages,
   ];

@@ -112,7 +112,69 @@ self.addEventListener("notificationclick", (event) => {
 Kids-app push etiquette: at most 1–2 pushes per week, never during school
 hours in the user's timezone. Track last-sent-at per subscription to enforce.
 
-## 6. Checklist to go live
+## 6. Testing the fan-out (local dev)
+
+The scaffold now ships with a working **in-memory** fan-out — enough to prove
+the loop end-to-end on your laptop. Data resets on every `next dev` restart /
+Vercel cold start, so production still needs KV (see §3).
+
+### a. One-time setup
+
+1. Generate VAPID keys (`npx web-push generate-vapid-keys`) and put them in
+   `.env.local` along with a made-up admin token:
+
+   ```ini
+   NEXT_PUBLIC_VAPID_PUBLIC_KEY=BN4...
+   VAPID_PRIVATE_KEY=abc...
+   VAPID_SUBJECT=mailto:hello@jiggyjoy.com
+   PUSH_ADMIN_TOKEN=some-long-random-secret
+   ```
+
+2. Restart `npm run dev` so the new env vars are picked up.
+
+### b. Subscribe a browser
+
+1. Open `http://localhost:3000` in Chrome or Edge (HTTPS/localhost are both
+   fine for Push).
+2. Scroll to the footer — there's a "Get notified about new games" button
+   rendered by `components/PushPermission.tsx`.
+3. Click it and accept the browser's permission prompt. The button will flip
+   to "You will hear about new games!" once the subscription has been POSTed
+   to `/api/push/subscribe`.
+
+### c. Fire a test push
+
+In a second terminal (same machine, `PUSH_ADMIN_TOKEN` exported):
+
+```bash
+export PUSH_ADMIN_TOKEN=same-value-as-env-local
+node scripts/send-push.mjs "JiggyJoy" "Hello from the fan-out!" "/games/snake"
+```
+
+You should:
+
+- see a 200 JSON response like `{ ok: true, sent: 1, failed: 0, remaining: 1 }`
+- see a system notification pop up in the OS notification centre
+- clicking the notification should open `http://localhost:3000/games/snake`
+
+### d. Common failure modes
+
+| Response                                             | Fix                                                                 |
+|------------------------------------------------------|---------------------------------------------------------------------|
+| `401 unauthorized`                                   | `x-admin-token` header doesn't match `PUSH_ADMIN_TOKEN`             |
+| `500 VAPID keys not configured`                      | One of the three `VAPID_*` env vars is missing — see §2             |
+| `200 sent: 0`                                        | Nobody has clicked the subscribe button yet (Map is empty)          |
+| `200 sent: 0, failed: 1, pruned: 1`                  | The browser subscription was revoked — re-subscribe                 |
+| Notification never arrives even though `sent: 1`     | Check `public/sw.js` has a `push` event handler and is registered   |
+
+### e. Where the in-memory store lives
+
+- `lib/push/store.ts` — the Map. Swap this file for KV to ship for real.
+- `app/api/push/subscribe/route.ts` — POST (subscribe) + DELETE (unsubscribe).
+- `app/api/push/send/route.ts` — admin-only fan-out.
+- `scripts/send-push.mjs` — the CLI used above.
+
+## 7. Checklist to go live
 
 - [ ] Generate VAPID keys, add env vars
 - [ ] Pick storage (Vercel KV recommended)

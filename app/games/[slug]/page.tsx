@@ -104,6 +104,30 @@ const HOW_TO_PLAY: Record<string, string[]> = {
     "Find all eggs to advance to the next round",
     "How many rounds can you complete?",
   ],
+  "fractions-frenzy": [
+    "Look at the pizza pie — count how many slices are shaded",
+    "Pick the fraction that matches what you see (e.g. 3/8 or 1/2)",
+    "10 rounds — pies get trickier as you go",
+    "Mobile: tap the answer button that matches the shaded amount",
+  ],
+  "money-match": [
+    "Read the target amount at the top (e.g. Make 65¢)",
+    "Tap pennies, nickels, dimes and quarters to add up to the target",
+    "Don't go over — if your total is too big it resets",
+    "Mobile: tap each coin to add it; tap Undo or Reset to start the round over",
+  ],
+  "spelling-bee": [
+    "Look at the picture and spell the word by tapping letter tiles in order",
+    "You have 30 seconds per word — don't let the bee fly off!",
+    "Complete all 10 sight words to beat the round",
+    "Mobile: tap a letter tile to drop it in the next blank, tap Undo to remove the last letter",
+  ],
+  "time-teller": [
+    "Read the analog clock and pick the correct time from 4 choices",
+    "Rounds 1-3 are to the hour, 4-6 are to the half hour, 7-10 are to the quarter hour",
+    "10 rounds total — aim for a perfect score",
+    "Mobile: tap the time button that matches the clock",
+  ],
 };
 
 const DEFAULT_HOW_TO_PLAY = ["Read the instructions on screen", "Tap or click to interact", "Try to get the highest score!", "Works on phone, tablet and computer"];

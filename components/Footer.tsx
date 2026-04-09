@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import PushPermission from "@/components/PushPermission";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -78,18 +79,26 @@ export default function Footer() {
             </ul>
             <h3 className="font-semibold text-white mb-3">More</h3>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/printables" className="hover:text-white transition-colors">Free Printables</Link></li>
+              <li><Link href="/learn" className="hover:text-white transition-colors">How to Teach Guides</Link></li>
+              <li><Link href="/activities/5-year-olds" className="hover:text-white transition-colors">Activities by Age</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between gap-2">
-          <p>© {new Date().getFullYear()} JiggyJoy. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+        <div className="border-t border-gray-800 pt-6">
+          <div className="flex justify-center mb-6">
+            <PushPermission />
+          </div>
+          <div className="text-sm text-gray-500 flex flex-col md:flex-row justify-between gap-2">
+            <p>© {new Date().getFullYear()} JiggyJoy. All rights reserved.</p>
+            <div className="flex gap-4">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+              <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            </div>
           </div>
         </div>
       </div>

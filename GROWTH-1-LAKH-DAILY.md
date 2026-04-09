@@ -1,21 +1,29 @@
 # JiggyJoy — Path to 1 Lakh Daily Users (100K DAU)
 
 > **Target:** 100,000 unique visitors per day (~3M monthly sessions)
-> **Current state:** ~24 games, 148 coloring pages, ~20 worksheets, all 5 Lever infrastructures shipped
+> **Current state:** 30 games · 148 coloring pages · ~20 worksheets · 147 programmatic SEO pages · 30 video entries · 422 prerendered routes
 > **Realistic timeline:** 18–24 months of sustained execution
-> Generated: 2026-04-09 · Last updated: 2026-04-09
+> Generated: 2026-04-09 · Last updated: 2026-04-10
 
 ---
 
-## 📊 Progress Snapshot (2026-04-09)
+## 📊 Progress Snapshot (2026-04-10)
 
 | Lever | Infrastructure | Content/Manual Work | Status |
 |-------|---------------|---------------------|--------|
-| **1 — Programmatic SEO** | ✅ Done | ⏳ 18/2,500 pages shipped | 🟡 Infra ready, scale content |
-| **2 — Game Engine** | ✅ Done | ⏳ 2/24 games refactored, 24/110 total games | 🟡 Engine ready, ship games |
+| **1 — Programmatic SEO** | ✅ Done | ✅ 147/2,500 pages shipped (8× growth this session) | 🟢 Scaling — keep appending rows |
+| **2 — Game Engine** | ✅ Done | ⏳ 30/110 games shipped (was 24 — added 4 this session) | 🟢 Shipping — 3–4/week velocity needed |
 | **3 — Pinterest** | ✅ Done | ⏳ Domain claim + pinning cadence | 🟡 Infra ready, manual claim needed |
-| **4 — YouTube** | ✅ Done | ❌ 0/100 real videos uploaded | 🟡 Infra ready, record videos |
-| **5 — PWA + Android** | ✅ Done | ⏳ Bubblewrap + VAPID + Play Store | 🟡 Infra ready, manual submission |
+| **4 — YouTube** | ✅ Done | ⏳ 30 catalog entries (placeholders) · 0/100 real videos | 🟡 Catalog live, videos still to record |
+| **5 — PWA + Android** | ✅ Done · Push fan-out live | ⏳ Bubblewrap + VAPID + Play Store | 🟡 Push API ready, VAPID env + Play Store pending |
+
+### What shipped 2026-04-10 (this session — parallel agents A/B/C)
+
+**Agent A — Programmatic SEO scale (Lever 1):** `lib/programmaticContent.ts` grew from 18 → 147 entries. Added 10 new activity routes (toddler, preschool, kindergarten, 1st/2nd/3rd grade, indoor, rainy-day, educational, screen-free), 15 new worksheet topics (phonics, handwriting, time-telling, money, fractions, place-value, comprehension, division, word-families, rhyming, patterns, days, seasons, opposites, measurement), 50 `/printables/[slug]` entries (holidays, flashcards, charts, word searches, mazes), 54 `/learn/[topic]` how-to-teach guides. New hub pages at `/printables` and `/learn`. Sitemap + Footer updated. Build: 422 static pages, zero errors.
+
+**Agent B — Ship 4 new educational games (Lever 3):** Shipped Fractions Frenzy (SVG pie chart, 10 rounds, difficulty ramps 2→8 denominators), Money Match (tap pennies/nickels/dimes/quarters to hit target sum), Spelling Bee (25 sight words, 30s timer per word, 🐝 theme, differentiated from existing WordSpell), Time Teller (hand-built SVG analog clock, hour→half→quarter progression). Each game has distinct music (quirky/playful/happy/calm), full SFX layer, mute button, mobile tap targets ≥44px. Registered in GameLoader + lib/data.ts + HOW_TO_PLAY.
+
+**Agent C — Push fan-out + video catalog (Levers 4+5):** Rewrote `app/api/push/subscribe/route.ts` to use a shared in-memory store (`lib/push/store.ts`, documented as swap-for-Vercel-KV seam). New `app/api/push/send/route.ts` — admin-only fan-out with `x-admin-token` gate, prunes dead 404/410 endpoints, handles missing VAPID env vars gracefully (returns 500 with hint, never crashes). New `scripts/send-push.mjs` CLI for manual campaign testing. Mounted `<PushPermission />` in the Footer. Video catalog 6 → 30 entries (10 more gameplay, 5 tutorials, 5 speedpaints, 4 compilations — all with valid `relatedSlug` references to lib/data.ts).
 
 **What "Infrastructure Done" means:** the site is fully wired so the moment you add content/videos/do the manual Play Store steps, they deploy in seconds with zero engineering work. The compounding engine is built — now it needs fuel.
 
