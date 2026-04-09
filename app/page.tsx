@@ -1,19 +1,27 @@
 import Link from "next/link";
-import { coloringCategories, games, worksheets, adultCategories, kidsCategories } from "@/lib/data";
+import { coloringCategories, games, worksheets, adultCategories, kidsCategories, getGameBySlug } from "@/lib/data";
+import GameCard from "@/components/GameCard";
 
 const stats = [
-  { value: "130+", label: "Coloring Pages" },
-  { value: "8", label: "Free Games" },
-  { value: "6", label: "Worksheets" },
-  { value: "100%", label: "Free Forever" },
+  { value: "12,000+", label: "Coloring Pages" },
+  { value: "25+",     label: "Free Games" },
+  { value: "20+",     label: "Worksheets" },
+  { value: "100%",    label: "Free Forever" },
 ];
 
-const featuredGames = [
-  { slug: "maths-play", title: "Maths Play", emoji: "🔢", desc: "The ultimate maths playground!", badge: "Popular" },
-  { slug: "color-by-number", title: "Colour by Number", emoji: "🎨", desc: "Fill in pictures with the right colours!", badge: null },
-  { slug: "alphabet-match", title: "Alphabet Match", emoji: "🔤", desc: "Match letters in this memory game!", badge: "New" },
-  { slug: "counting-game", title: "Counting Stars", emoji: "⭐", desc: "Count and pick the right number!", badge: null },
+const FEATURED_GAME_SLUGS = [
+  "maths-play",
+  "pumpkin-smash",
+  "dino-run",
+  "snake",
+  "memory-match-animals",
+  "colour-match",
+  "pattern-wizard",
+  "space-defender",
 ];
+const featuredGames = FEATURED_GAME_SLUGS
+  .map((slug) => getGameBySlug(slug))
+  .filter((g): g is NonNullable<typeof g> => Boolean(g));
 
 export default function HomePage() {
   return (
@@ -84,8 +92,8 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900">🌸 Adult Coloring Pages</h2>
-              <p className="text-gray-500 mt-1">Mandalas, stress relief, fantasy — what others charge $60/yr for, free here</p>
+              <h2 className="text-3xl font-bold text-gray-900">🌸 Detailed & Mindful Coloring</h2>
+              <p className="text-gray-500 mt-1">Mandalas, stress relief, zodiac & fantasy — intricate designs, completely free</p>
             </div>
             <Link href="/coloring-pages" className="text-purple-600 font-semibold hover:underline hidden sm:block">View all →</Link>
           </div>
@@ -114,23 +122,9 @@ export default function HomePage() {
               All games →
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
             {featuredGames.map((game) => (
-              <Link
-                key={game.slug}
-                href={`/games/${game.slug}`}
-                className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow relative"
-              >
-                {game.badge && (
-                  <span className="absolute top-3 right-3 text-xs bg-purple-600 text-white px-2 py-0.5 rounded-full font-semibold">
-                    {game.badge}
-                  </span>
-                )}
-                <div className="text-4xl mb-3">{game.emoji}</div>
-                <h3 className="font-bold text-gray-800 mb-1">{game.title}</h3>
-                <p className="text-sm text-gray-500">{game.desc}</p>
-                <div className="mt-3 text-purple-600 text-sm font-semibold">Play now →</div>
-              </Link>
+              <GameCard key={game.slug} game={game} />
             ))}
           </div>
         </div>

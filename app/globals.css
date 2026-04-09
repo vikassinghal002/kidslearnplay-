@@ -19,3 +19,20 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 2s ease-in-out infinite;
 }
+
+/* ── Game canvas — prevent browser swipe-to-scroll hijacking ────────── */
+canvas {
+  touch-action: none;
+}
+
+/* ── Fullscreen canvas fix ───────────────────────────────────────────
+   Fill screen by HEIGHT so a 1:1 canvas doesn't become 1456×1456px
+   on a wide monitor. Width auto = maintains aspect ratio.
+──────────────────────────────────────────────────────────────────── */
+:fullscreen canvas,
+:-webkit-full-screen canvas,
+:-moz-full-screen canvas {
+  height: 100dvh !important;
+  width: auto !important;
+  max-width: 100dvw !important;
+}

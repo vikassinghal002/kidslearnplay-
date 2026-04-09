@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/lib/data";
+import GameCard from "@/components/GameCard";
 
 export const metadata: Metadata = {
   title: "Free Educational Games for Kids",
@@ -18,9 +19,11 @@ export const metadata: Metadata = {
 };
 
 const categoryEmojis: Record<string, string> = {
-  "Math Games": "🔢",
-  "Coloring Games": "🎨",
+  "Arcade Games":      "🕹️",
+  "Toddler Games":     "🧸",
   "Educational Games": "📚",
+  "Math Games":        "🔢",
+  "Coloring Games":    "🎨",
 };
 
 const categories = [...new Set(games.map((g) => g.category))];
@@ -51,30 +54,9 @@ export default function GamesHubPage() {
                 <span>{categoryEmojis[cat] ?? "🎯"}</span>
                 <span>{cat}</span>
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
                 {catGames.map((game) => (
-                  <Link
-                    key={game.slug}
-                    href={`/games/${game.slug}`}
-                    className="bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-md hover:border-purple-200 transition-all"
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <span className="text-4xl">{categoryEmojis[game.category] ?? "🎯"}</span>
-                      <div className="flex gap-1">
-                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">
-                          {game.difficulty}
-                        </span>
-                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">
-                          Age {game.ageRange}
-                        </span>
-                      </div>
-                    </div>
-                    <h3 className="font-bold text-gray-900 mb-1">{game.title}</h3>
-                    <p className="text-sm text-gray-500 mb-4">{game.description}</p>
-                    <span className="inline-block px-4 py-1.5 bg-purple-600 text-white rounded-full text-sm font-semibold hover:bg-purple-700 transition-colors">
-                      Play Free →
-                    </span>
-                  </Link>
+                  <GameCard key={game.slug} game={game} />
                 ))}
               </div>
             </div>
