@@ -1,5 +1,5 @@
 # KidsLearnPlay — Execution Plan
-*Last updated: 2026-04-08 — Session 2*
+*Last updated: 2026-04-08 — Session 3*
 
 ---
 
@@ -52,10 +52,25 @@
 
 **API Key:** Generate a new one at aistudio.google.com *(current key was shared in chat — rotate it)*
 
-**Quota reality:** `gemini-2.5-flash-image` free tier = **~17–20 images per API key**.
-**Solution:** Each new API key = fresh quota. Create a new key for each batch of ~15 images.
-**Get new key (30 seconds):** https://aistudio.google.com/app/apikey
-**Script auto-skips** already-generated images — safe to re-run anytime.
+**Gemini blocker:** Free tier has a **$0 monthly spending cap** on image generation — hit after ~17 images.
+**Two paths forward:**
+
+**Path A — Enable Gemini billing (~$5.30 for all 133 remaining images)**
+- aistudio.google.com → Settings → Billing → Add card → Set $10 limit
+- Cost: ~$0.04/image × 133 = ~$5.30 one-time
+- Run: `GEMINI_API_KEY=key node scripts/generate-images.mjs`
+
+**Path B — HuggingFace (FREE, no card, best quality)**
+- Sign up free at huggingface.co → settings/tokens → New token → Read → copy
+- Run: `HF_TOKEN=your_token node scripts/generate-images-hf.mjs --limit=10`
+- Script: `scripts/generate-images-hf.mjs` ✅ ready to use
+- Uses FLUX.1-schnell model — same as Pollinations but direct, no rate limit issues
+
+**Path C — Pollinations.ai (FREE, no account needed)**
+- No API key required — just run
+- Run: `node scripts/generate-images-free.mjs`
+- Script: `scripts/generate-images-free.mjs` ✅ ready to use  
+- Note: needs 15s between requests. If rate limited, wait 5 min and retry.
 
 #### Image Generation Status — Updated 2026-04-08
 
@@ -74,9 +89,13 @@
 | `animals` | 25 | 6 | 🔄 Partial | `--category=animals` |
 | `holidays` | 14 | 3 | 🔄 Partial | `--category=holidays` |
 | `educational` | 10 | 0 | ⏳ Day 4 | `--category=educational` |
-| **TOTAL** | **148** | **17** | | |
+| **TOTAL** | **148** | **19** | | |
 
-**Images currently live:** bluey, butterfly, cat, christmas, dinosaur, disney, dog, easter, elephant, fish, floral, halloween, hello-kitty, mandala, mindfulness, paw-patrol, pokemon
+**Images currently live (19):** bluey, butterfly, cat, christmas, dinosaur, disney, dog, easter, elephant, elephant-mandala, fish, floral, halloween, hello-kitty, lion-mandala, mandala, mindfulness, paw-patrol, pokemon
+
+**Image quality confirmed ✅** — User approved all 19 images. Full generation of remaining 129 in progress via Pollinations.ai (free, no API key).
+
+**Active generation:** `node scripts/generate-images-free.mjs` running in background. Uses 15s spacing + exponential backoff on rate limits.
 
 **Run commands (in priority order):**
 ```bash

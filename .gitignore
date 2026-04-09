@@ -42,3 +42,11 @@ next-env.d.ts
 
 # Claude Code internal state (worktrees, agent scratch)
 .claude/
+
+# Bulk downloaded coloring page images (12k+ files, served at runtime)
+public/images/coloring/*.jpg
+public/images/coloring/manifest.json
+
+# Logs
+*.log
+download-bulk.log
