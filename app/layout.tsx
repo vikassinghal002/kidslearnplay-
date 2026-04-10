@@ -70,6 +70,13 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "yPFsdm56U4bCUf8Y1iOWUXU6HPVn25Z7t1sLV2nH9dY",
+    // TODO: Paste the Bing Webmaster Tools verification code after signing up at
+    // https://www.bing.com/webmasters (one-click import from GSC).
+    // other: { "msvalidate.01": "YOUR-BING-CODE-HERE" },
+    // TODO: Paste the Pinterest domain verification code after creating a free
+    // business account at https://www.pinterest.com/business/create/ and
+    // claiming the jiggyjoy.com domain.
+    // other: { "p:domain_verify": "YOUR-PINTEREST-CODE-HERE" },
   },
 };
 
