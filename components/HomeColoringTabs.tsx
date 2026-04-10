@@ -2,14 +2,27 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import type { ColoringCategory } from "@/lib/data";
 
 type Mode = "kids" | "adults";
 const STORAGE_KEY = "jj_coloring_mode";
 
+// Slim projection — we deliberately do NOT accept the full ColoringCategory
+// objects here. Each category on the full shape carries a `pages` array
+// with dozens of coloring-page records, and passing that from the server
+// component to this client tile serialises thousands of records into the
+// RSC payload for the home page. We only need slug/title/icon/color/count,
+// so HomePage projects the data down before rendering.
+export type ColoringTabCard = {
+  slug: string;
+  title: string;
+  icon: string;
+  color: string;
+  pageCount: number;
+};
+
 type Props = {
-  kidsCategories: ColoringCategory[];
-  adultCategories: ColoringCategory[];
+  kidsCategories: ColoringTabCard[];
+  adultCategories: ColoringTabCard[];
 };
 
 export default function HomeColoringTabs({ kidsCategories, adultCategories }: Props) {
@@ -102,7 +115,7 @@ export default function HomeColoringTabs({ kidsCategories, adultCategories }: Pr
                 mode === "adults" ? "text-purple-700" : "text-gray-700"
               }`}
             >
-              {cat.pages.length} {mode === "adults" ? "free pages" : "pages"}
+              {cat.pageCount} {mode === "adults" ? "free pages" : "pages"}
             </span>
           </Link>
         ))}

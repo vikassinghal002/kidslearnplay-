@@ -1,16 +1,14 @@
-"use client";
+// NOTE: Footer is a **server component** — no "use client" directive.
+// It used to be a client component solely because it called usePathname
+// to hide itself on /games/[slug] detail pages. That pulled PushPermission
+// and the whole footer tree into the client bundle of every page on the
+// site. The pathname check now lives in FooterGate (a tiny client
+// component) which wraps this server-rendered shell in app/layout.tsx.
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import PushPermission from "@/components/PushPermission";
 
 export default function Footer() {
-  const pathname = usePathname();
-  if (pathname?.match(/^\/games\/[^/]+/) &&
-      !pathname.match(/^\/games\/(math|kindergarten|halloween|christmas|easter|3-year-olds|4-year-olds|5-year-olds|preschool)$/)) {
-    return null;
-  }
-
   return (
     <footer className="bg-gray-900 text-gray-300 mt-16">
       {/* Kids-first pledge strip */}

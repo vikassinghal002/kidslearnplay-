@@ -3,10 +3,10 @@ import { Nunito, Fredoka } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FooterGate from "@/components/FooterGate";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
-import InstallPrompt from "@/components/InstallPrompt";
+import ClientSideAddons from "@/components/ClientSideAddons";
 
 // Kid-friendly body font — rounded, extra-legible, loaded via CSS variable
 const nunito = Nunito({
@@ -88,18 +88,34 @@ export default function RootLayout({
       lang="en"
       className={`h-full ${nunito.variable} ${fredoka.variable}`}
     >
+      <head>
+        {/* Give the browser a head-start on third-party origins so the
+            TLS + DNS handshake happens in parallel with HTML parsing
+            instead of blocking the first analytics call later on. */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+      </head>
       <body className="min-h-full flex flex-col antialiased font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer />
+        {/* Footer is a pure server component. FooterGate is a tiny client
+            shim that hides it on individual game pages — everything inside
+            stays RSC-rendered and out of the page JS bundle. */}
+        <FooterGate>
+          <Footer />
+        </FooterGate>
         <Analytics />
-        <ServiceWorkerRegister />
-        <InstallPrompt />
+        {/* Non-critical client addons (SW register + PWA install banner)
+            are code-split and loaded after the main document is ready. */}
+        <ClientSideAddons />
+        {/* Google Analytics — lazyOnload keeps gtag.js completely off the
+            critical path. It loads during browser idle, well after LCP. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6XN1W2RTC1"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

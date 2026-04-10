@@ -50,6 +50,13 @@ export default function GameCard({ game, size = "md" }: Props) {
   return (
     <Link
       href={`/games/${game.slug}`}
+      // Listing pages like /games show 30+ cards in the viewport at once.
+      // With the default `auto` prefetch, Next would fire off a prefetch
+      // for every card on initial render — that's 30+ HTML/RSC round
+      // trips the kid never uses. Turning it off keeps the listing page
+      // lean; nav to an individual game is still instant because the
+      // page is SSG'd via generateStaticParams.
+      prefetch={false}
       className="group block focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-400 rounded-3xl"
       aria-label={`Play ${game.title}`}
     >

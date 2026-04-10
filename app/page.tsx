@@ -1,7 +1,25 @@
 import Link from "next/link";
-import { games, worksheets, adultCategories, kidsCategories, getGameBySlug } from "@/lib/data";
+import { worksheets, adultCategories, kidsCategories, getGameBySlug } from "@/lib/data";
+import type { ColoringCategory } from "@/lib/data";
 import GameCard from "@/components/GameCard";
-import HomeColoringTabs from "@/components/HomeColoringTabs";
+import HomeColoringTabs, { type ColoringTabCard } from "@/components/HomeColoringTabs";
+
+// Project the full ColoringCategory (with hundreds of `pages`) down to the
+// handful of fields the client tab actually renders. Without this the RSC
+// payload for "/" carries every single coloring page slug, title, tags and
+// description — tens of kilobytes of dead weight on first load.
+function toTabCards(cats: ColoringCategory[]): ColoringTabCard[] {
+  return cats.map((c) => ({
+    slug: c.slug,
+    title: c.title,
+    icon: c.icon,
+    color: c.color,
+    pageCount: c.pages.length,
+  }));
+}
+
+const kidsColoringCards = toTabCards(kidsCategories);
+const adultColoringCards = toTabCards(adultCategories);
 
 const stats = [
   { value: "12,000+", label: "Coloring Pages" },
@@ -100,7 +118,7 @@ export default function HomePage() {
       </section>
 
       {/* Coloring Pages — Kids / Adults switcher */}
-      <HomeColoringTabs kidsCategories={kidsCategories} adultCategories={adultCategories} />
+      <HomeColoringTabs kidsCategories={kidsColoringCards} adultCategories={adultColoringCards} />
 
       {/* Featured Games */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-10 sm:py-14">
