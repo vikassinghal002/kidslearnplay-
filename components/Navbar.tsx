@@ -91,6 +91,12 @@ export default function Navbar() {
     return null;
   }
 
+  // Hide the secondary "By age" strip on pages that already own a
+  // first-class age filter (the /games listing). Two age pickers in a row
+  // is confusing — the page-level one wins because it actually filters
+  // in place instead of navigating away.
+  const hideAgeStrip = pathname === "/games";
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
@@ -142,7 +148,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Age shortcut strip — visible on ALL screens. The #1 affordance for kids. */}
+      {/* Age shortcut strip — visible on ALL screens. The #1 affordance for kids.
+          Hidden on /games where the page has its own (richer) age filter. */}
+      {!hideAgeStrip && (
       <div className="border-t border-gray-100 bg-gradient-to-r from-purple-50/70 via-white to-pink-50/70">
         <div className="max-w-6xl mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto scrollbar-none snap-x">
           <span className="hidden sm:inline text-xs font-extrabold uppercase tracking-wider text-gray-500 pr-2 whitespace-nowrap">
@@ -168,11 +176,12 @@ export default function Navbar() {
           })}
         </div>
       </div>
+      )}
 
       {/* Mobile menu — full-height sheet. Offset accounts for header (4rem) + age strip (~3.25rem). */}
       {mobileOpen && (
         <div
-          className="md:hidden fixed inset-x-0 bottom-0 top-[7.5rem] z-40 bg-white overflow-y-auto"
+          className={`md:hidden fixed inset-x-0 bottom-0 ${hideAgeStrip ? "top-16" : "top-[7.5rem]"} z-40 bg-white overflow-y-auto`}
           role="dialog"
           aria-modal="true"
           aria-label="Main menu"
