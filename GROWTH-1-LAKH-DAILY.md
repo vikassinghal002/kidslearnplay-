@@ -1,21 +1,31 @@
 # JiggyJoy — Path to 1 Lakh Daily Users (100K DAU)
 
 > **Target:** 100,000 unique visitors per day (~3M monthly sessions)
-> **Current state:** 30 games · 148 coloring pages · ~20 worksheets · 147 programmatic SEO pages · 30 video entries · 422 prerendered routes
+> **Current state:** 36 games · 148 coloring pages · ~20 worksheets · 221 programmatic SEO pages · 30 video entries · **519 prerendered routes**
 > **Realistic timeline:** 18–24 months of sustained execution
-> Generated: 2026-04-09 · Last updated: 2026-04-10
+> Generated: 2026-04-09 · Last updated: 2026-04-10 (Phase 2)
 
 ---
 
-## 📊 Progress Snapshot (2026-04-10)
+## 📊 Progress Snapshot (2026-04-10 — Phase 2)
 
 | Lever | Infrastructure | Content/Manual Work | Status |
 |-------|---------------|---------------------|--------|
-| **1 — Programmatic SEO** | ✅ Done | ✅ 147/2,500 pages shipped (8× growth this session) | 🟢 Scaling — keep appending rows |
-| **2 — Game Engine** | ✅ Done | ⏳ 30/110 games shipped (was 24 — added 4 this session) | 🟢 Shipping — 3–4/week velocity needed |
+| **1 — Programmatic SEO** | ✅ Done | ✅ 221/2,500 pages shipped (+74 in phase 2) | 🟢 Scaling — keep appending rows |
+| **2 — Game Engine** | ✅ Done | ⏳ 36/110 games shipped (+6 in phase 2) | 🟢 Shipping — 3–4/week velocity needed |
 | **3 — Pinterest** | ✅ Done | ⏳ Domain claim + pinning cadence | 🟡 Infra ready, manual claim needed |
 | **4 — YouTube** | ✅ Done | ⏳ 30 catalog entries (placeholders) · 0/100 real videos | 🟡 Catalog live, videos still to record |
 | **5 — PWA + Android** | ✅ Done · Push fan-out live | ⏳ Bubblewrap + VAPID + Play Store | 🟡 Push API ready, VAPID env + Play Store pending |
+
+### Phase 2 — what shipped 2026-04-10 (parallel agents 1/2/3)
+
+**Agent 1 — pSEO mega-expansion:** `lib/programmaticContent.ts` grew from 147 → 221 entries. Added 25 new themed activity routes (indoor, rainy-day, montessori, sensory, outdoor, car-ride, busy-bag, reggio, fine/gross-motor, water play, art, science, cooking, nature), 20 new worksheet topics (place-value, fractions, comprehension, division, digraphs, blending, compound words, synonyms, graphing, symmetry, roman numerals, etc), 30 new learn/how-to-teach guides (phonics strategies, decimals, percentages, negative numbers, graphs, summarising, inference, poetry, grammar, picky eaters, resilience, growth mindset). Added brand-new **`/coloring-pages/topics/[slug]` route** with 12 high-volume topic hubs (halloween, christmas, easter, valentines, unicorn, dinosaur, princess, animal, mandala, adult, easy, toddler colouring) — targets 1.2M+/month combined search volume. Sitemap updated.
+
+**Agent 2 — Ship 6 more games (30→36):** Addition Attack (asteroid arcade, 15 rounds, 3 lives, ramping difficulty up to 50+50), Subtraction Station (train-themed, 12 take-away rounds, friendly visuals), Division Duel (race-the-clock head-to-head vs CPU, best-of-9, facts up to 12×10), Reading Rocket (CVC phonics game, 3 levels of short-vowel drills, rocket fuel mechanic), Sight Word Slam (Dolch sight-word speed-match, 20 rounds with ramping timer), Sudoku Kids (kid-friendly 4×4 sudoku with 5 puzzles and best-time tracking). All 6 registered in GameLoader, lib/data.ts, HOW_TO_PLAY. Each game has mute button, procedural audio, mobile-first tap targets, themed colour palette.
+
+**Agent 3 — Internal links + Halloween hub + Blog:** New `lib/internalLinks.ts` topical cluster generator (tokenized keyword overlap + diversity guard — every pSEO page gets 12 related links across game/worksheet/printable/learn buckets). New `/halloween` seasonal landing page aggregating games + coloring topics + printables for peak October search season. Blog expansion in `lib/blog-posts.ts` (+998 lines of author-written posts). Defensive namespace import for the `coloringTopicPages` array so internalLinks shipped safely before Agent 1 populated the data.
+
+**Build result:** `npx next build` → ✅ **519 static pages prerendered** (up from 422), zero errors, zero TS warnings. The site is ready to push.
 
 ### What shipped 2026-04-10 (this session — parallel agents A/B/C)
 

@@ -128,6 +128,42 @@ const HOW_TO_PLAY: Record<string, string[]> = {
     "10 rounds total — aim for a perfect score",
     "Mobile: tap the time button that matches the clock",
   ],
+  "addition-attack": [
+    "Read the question at the top (e.g. 5 + 4 = ?)",
+    "Tap the asteroid showing the correct sum before it reaches the ground",
+    "Wrong tap or missed asteroid = lose a life — you have 3 lives, 15 rounds",
+    "Mobile: tap the right asteroid to blast it out of the sky",
+  ],
+  "subtraction-station": [
+    "Look at the train car's equation (e.g. 10 − 3 = ?)",
+    "Tap the passenger button showing the correct answer",
+    "Correct answers make the train puff and the next car arrive",
+    "Mobile: tap a passenger to answer — 12 rounds total",
+  ],
+  "division-duel": [
+    "Solve each division problem before the red CPU timer bar fills",
+    "Correct answer scores a point for you, wrong or too slow scores for CPU",
+    "First to 5 points wins the duel — best-of-9 rounds",
+    "Mobile: tap your answer fast before the bar fills",
+  ],
+  "sight-word-slam": [
+    "Read the target sight word at the top of the screen",
+    "Tap the matching word card from the 6 options before the timer runs out",
+    "Wrong tap or timeout = lose a life — you have 3 lives and 20 rounds",
+    "Mobile: tap the card that matches the target word",
+  ],
+  "reading-rocket": [
+    "Look at the picture and the word with the missing middle vowel (e.g. C_T)",
+    "Pick the right vowel from a, e, i, o, u to fill the blank",
+    "Each correct answer fills the rocket's fuel tank by 20% — hit 100% to launch!",
+    "3 levels of CVC word phonics practice. Mobile: tap the vowel button",
+  ],
+  "sudoku-kids": [
+    "Fill every row, column and 2×2 box with the numbers 1 to 4 — no repeats",
+    "Tap a blank cell, then tap a number 1-4 to place it (✕ clears)",
+    "Invalid moves flash red so you can try again",
+    "Beat your best time! 5 puzzles to solve. Mobile: tap cell, tap number",
+  ],
 };
 
 const DEFAULT_HOW_TO_PLAY = ["Read the instructions on screen", "Tap or click to interact", "Try to get the highest score!", "Works on phone, tablet and computer"];

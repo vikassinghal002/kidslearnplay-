@@ -823,6 +823,591 @@ export const activityPages: ProgrammaticPage[] = [
     linkedWorksheetSlugs: ["preschool-tracing-worksheets", "counting-worksheets", "addition-worksheets", "letter-tracing-worksheets", "number-tracing-worksheets", "shapes-worksheets", "color-by-number-worksheets", "pattern-worksheets"],
     linkedColoringCategorySlugs: ["bold-easy", "cozy-animals", "fantasy", "animal-mandalas", "floral-mandalas"],
   },
+  {
+    slug: "quiet-time-activities",
+    keyword: "quiet time activities for toddlers",
+    searchVolume: 12000,
+    h1: "Quiet Time Activities — The Ones That Actually Buy You 30 Minutes",
+    title: "Quiet Time Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Quiet time activities that actually work — printable colouring, tracing, mazes and screen activities kids will do on their own. Ages 2 to 9.",
+    intro: [
+      "Quiet time isn't really about silence — it's about independence. The goal is an activity that a child will pick up, sit with, and finish without calling for help every 90 seconds. That's a much narrower set of activities than most 'quiet time' lists admit, because anything with a tricky instruction or a missing piece breaks the spell instantly.",
+      "What works, in our experience watching our own kids: colouring pages with fat outlines (no frustration about staying in the lines), simple dot-to-dots, sticker charts they fill in as they go, and single-screen tap games that don't require reading. We've pulled the specific JiggyJoy activities that meet that bar onto this page, sorted roughly from toddler to school age.",
+      "Print a couple of sheets the night before, have them on the table by the time the afternoon slump hits, and don't hover. Quiet time ends the second a parent starts 'helping' — the whole point is that the child owns the activity.",
+    ],
+    faqs: [
+      {
+        question: "How long should quiet time last for toddlers?",
+        answer:
+          "Start with 10 minutes and build up. A 3-year-old who happily spends 20 minutes alone with a colouring page is doing well. By age 5, most kids can sustain 30 to 45 minutes with the right activity.",
+      },
+      {
+        question: "Is quiet time the same as nap time?",
+        answer:
+          "No — quiet time is the replacement for nap time once a child has dropped their nap. The child is awake but doing something calm and independent, which gives them (and you) a reset.",
+      },
+      {
+        question: "What's the best quiet time activity for a 4 year old?",
+        answer:
+          "A short stack of colouring pages, a dot-to-dot puzzle, or a simple sticker book. At 4, kids can also handle a 10-minute tablet game if you prefer a screen option.",
+      },
+      {
+        question: "Do I have to sit with my child during quiet time?",
+        answer:
+          "The whole point is no — the child practises being alone with their own attention. Stay in earshot, but don't sit beside them. That's what makes it quiet time rather than together time.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "connect-the-dots", "memory-match-animals", "shape-sorter"],
+    linkedWorksheetSlugs: ["color-by-number-worksheets", "pattern-worksheets", "preschool-tracing-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy", "cozy-animals"],
+  },
+  {
+    slug: "sensory-play-activities",
+    keyword: "sensory play activities",
+    searchVolume: 22000,
+    h1: "Sensory Play Activities — At-Home Ideas That Don't Require a Shop",
+    title: "Sensory Play Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Sensory play activities for toddlers and preschoolers — free ideas using kitchen ingredients plus printable sensory worksheets and matching games.",
+    intro: [
+      "Most sensory-play Pinterest boards assume you've got a storage cupboard full of kinetic sand, dried chickpeas, three colours of food dye and a set of tiny wooden scoops. We've got good news: a bowl of rice, a handful of pasta shapes and a muffin tin will deliver 90% of the developmental benefit with 5% of the shopping list.",
+      "This page pairs the simple household sensory activities we actually use with the JiggyJoy printables and games that complement them. The colour matching and texture sorting activities transfer well to screen games like Colour Match and Sorting Frenzy, and the fine-motor work in a rice bin prepares little hands for the tracing sheets in our worksheet library.",
+      "Sensory play doesn't replace structured learning — it lays the groundwork for it. A toddler who's spent ten hours scooping rice will hold a pencil differently to one who hasn't, and that shows up when they start handwriting in Reception.",
+    ],
+    faqs: [
+      {
+        question: "What are sensory play activities?",
+        answer:
+          "Any activity where the main purpose is stimulating the senses — touch, sight, sound, smell, sometimes taste. Rice bins, water play, playdough, and texture matching all count.",
+      },
+      {
+        question: "What age is sensory play best for?",
+        answer:
+          "Birth to age 5 is the core window. Babies benefit from texture exploration, toddlers love dumping and scooping, and preschoolers start doing structured sensory activities with a learning goal attached.",
+      },
+      {
+        question: "Do I need to buy special equipment?",
+        answer:
+          "No. Rice, dried pasta, water, cornflour, flour, and household containers cover most of the sensory play you'll ever do. Save the expensive kinetic sand for when the free stuff stops working.",
+      },
+      {
+        question: "Is sensory play messy?",
+        answer:
+          "Yes. Do it on a tray, a tablecloth, or outside. The mess is the point — that's what makes it sensory.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "sorting-frenzy", "shape-sorter"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "color-by-number-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy", "cozy-animals"],
+  },
+  {
+    slug: "outdoor-activities-for-kids",
+    keyword: "outdoor activities for kids",
+    searchVolume: 27000,
+    h1: "Outdoor Activities for Kids — Ideas for Gardens, Parks and Nothing in Particular",
+    title: "Outdoor Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Outdoor activities for kids — garden games, scavenger hunts, free printable nature packs and off-screen ideas. Ages 3 to 10.",
+    intro: [
+      "The best outdoor activity is usually 'go outside', and adults have been over-thinking this for roughly three decades. But a prompt helps when the 'I'm bored' arrives at 10am on a Saturday, and that's what this page is for — a grab-bag of outdoor ideas with a printable or two to anchor each one.",
+      "Scavenger hunt printables are the single highest-return outdoor prep you can do: a sheet with 'find a red leaf, find a smooth stone, find something buzzing' will occupy a 6-year-old for an hour in a plain suburban garden. We've collected our printable scavenger hunts, nature bingo cards and simple garden games, plus the JiggyJoy games that pair with outdoor themes (bug-spotting, weather, plant identification).",
+      "Rotate outdoor activities with screen activities like any sensible parent. Our view is roughly: outside first, screens as a treat, printables as the fallback when the weather turns. This page is the outside-first half.",
+    ],
+    faqs: [
+      {
+        question: "What outdoor activities can toddlers do?",
+        answer:
+          "Water play with a bucket, chalk on the path, a simple colour scavenger hunt, and digging in a sandpit. Toddlers don't need structured activities — they need space and a few low-stakes props.",
+      },
+      {
+        question: "What's a good outdoor activity for a rainy day?",
+        answer:
+          "Puddle jumping with wellies, mud painting, collecting rain in jars, or a 'rainy day' scavenger hunt looking for worms and snails. Kids love rain — it's adults who invented indoors.",
+      },
+      {
+        question: "How do I get my kids to go outside without complaining?",
+        answer:
+          "Print a scavenger hunt or a nature bingo card, hand them the sheet, and step out the door. Having a structured task turns 'we're going outside' from a chore into a game.",
+      },
+      {
+        question: "Are outdoor activities educational?",
+        answer:
+          "Profoundly. Nature exposure is linked to stronger executive function, and simple outdoor games build gross motor skills that classroom activities never touch.",
+      },
+    ],
+    linkedGameSlugs: ["animal-sounds", "dino-run", "super-jumper"],
+    linkedWorksheetSlugs: ["counting-worksheets", "shapes-worksheets"],
+    linkedColoringCategorySlugs: ["animals", "cozy-animals"],
+  },
+  {
+    slug: "car-ride-activities",
+    keyword: "car ride activities for kids",
+    searchVolume: 9000,
+    h1: "Car Ride Activities — Printables and Games for the Back Seat",
+    title: "Car Ride Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Car ride activities for kids — printable travel packs, I-spy games, screen activities and offline puzzles. Great for long drives and road trips.",
+    intro: [
+      "Long car journeys with kids are negotiated in 15-minute chunks. Anything that buys a clean 15 minutes is worth its weight in petrol money, and anything that buys 30 is a small miracle. The trick is variety — the same activity twice in a row on a two-hour drive just doesn't work, because the novelty is the whole mechanism.",
+      "On this page we've pulled together car-friendly activities across three formats: printable travel packs (mazes, dot-to-dots, simple puzzles), offline screen games that don't need Wi-Fi, and classic spoken games (I-spy, 20 questions, number plate bingo). The printables are the anchor — print a small booklet the night before and hand it to each kid at the start of the drive.",
+      "Keep screens as the emergency reserve. A child who burns their screen allowance in the first hour has nothing left for the tough middle stretch, and that's where car journeys go wrong. Rotate: printable, chat, printable, snack, screen, printable, snack, done.",
+    ],
+    faqs: [
+      {
+        question: "What's the best car activity for a 4 year old?",
+        answer:
+          "Printable sticker books, window markers, and simple maze booklets. Avoid anything with small loose pieces — the back seat of a car is where small pieces go to die.",
+      },
+      {
+        question: "How long can a 3 year old sit in a car?",
+        answer:
+          "Most 3-year-olds manage 60 to 90 minutes before needing a break, regardless of activity. Plan stops every hour for anyone under 5.",
+      },
+      {
+        question: "Are screens okay for long car journeys?",
+        answer:
+          "Yes — the usual screen-time rules relax for a 6-hour drive. Pair screens with printables and offline games so nothing gets overused.",
+      },
+      {
+        question: "What should I pack for a road trip with kids?",
+        answer:
+          "A printable activity booklet, a couple of short board books, snacks in small portions, one quiet toy per child, a tablet as backup, and a bin bag for rubbish. That's it.",
+      },
+    ],
+    linkedGameSlugs: ["connect-the-dots", "memory-match-animals", "colour-match"],
+    linkedWorksheetSlugs: ["pattern-worksheets", "color-by-number-worksheets", "sight-words-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy", "cozy-animals"],
+  },
+  {
+    slug: "busy-bag-activities",
+    keyword: "busy bag activities",
+    searchVolume: 8000,
+    h1: "Busy Bag Activities — What to Put in One and Why They Work",
+    title: "Busy Bag Activities for Toddlers & Preschoolers | JiggyJoy",
+    metaDescription:
+      "Busy bag activity ideas for toddlers and preschoolers — printables, matching games, fine motor tasks. Ages 2 to 5. Free to print.",
+    intro: [
+      "A busy bag is a small zip-top bag containing one self-contained activity that a child can do quietly, anywhere, without needing an adult to explain anything. That's the whole definition, and it's the reason they work — the bag is the container for independence, not for entertainment.",
+      "The best busy bag fillers are things the child has already done once with you, so they know what the activity is. Simple pattern-match sheets, a few counting cards, colour-match pegs, and a laminated tracing mat are the classics. We've pulled the JiggyJoy printables that work best as busy bag fillers here, and they all print in a format that folds neatly into a standard sandwich bag.",
+      "Keep five to ten bags on rotation. Swap them weekly. The magic of busy bags is the reveal — a bag a child hasn't seen for two weeks feels new again, which is what buys the quiet 20 minutes.",
+    ],
+    faqs: [
+      {
+        question: "What's a busy bag?",
+        answer:
+          "A small, portable, self-contained activity stored in a zip-top bag. One activity per bag. Usually aimed at toddlers through age 5.",
+      },
+      {
+        question: "What should I put in a busy bag for a 2 year old?",
+        answer:
+          "Colour-match pom-poms, simple shape sorters, felt pieces, or a laminated tracing card with a dry-wipe pen. Everything must be chunky enough that it's not a choking hazard.",
+      },
+      {
+        question: "Where do you use busy bags?",
+        answer:
+          "Restaurants, waiting rooms, car journeys, church, and the 20 minutes before dinner when the kitchen needs to be a kid-free zone.",
+      },
+      {
+        question: "How many busy bags do I need?",
+        answer:
+          "Five to ten is a good starting collection. Rotate them so kids see each one every couple of weeks — the novelty is what keeps them engaging.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "shape-sorter", "pattern-wizard"],
+    linkedWorksheetSlugs: ["preschool-tracing-worksheets", "shapes-worksheets", "counting-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy"],
+  },
+  {
+    slug: "tot-school-activities",
+    keyword: "tot school activities",
+    searchVolume: 6000,
+    h1: "Tot School Activities — A Loose Rhythm for Ages 18 Months to 3",
+    title: "Tot School Activities for Toddlers | JiggyJoy",
+    metaDescription:
+      "Tot school activities for toddlers — weekly themes, fine motor tasks, sensory play and printable worksheets. A gentle at-home curriculum for 18 months to 3.",
+    intro: [
+      "Tot school is homeschool for toddlers, which sounds more formal than it actually is. In practice, it's a loose weekly theme (colours, farm animals, numbers to 5) with three or four short activities sprinkled through the day. Ten minutes at a time. No tests. No worksheets the toddler tries to eat.",
+      "This page collects the JiggyJoy activities that slot neatly into a tot school rotation: the simplest tapping games (Colour Match, Animal Sounds), bold-outline colouring pages, and our toddler tracing worksheets which work as laminated fine-motor mats. We've arranged them into the themes that parents search for most — colours week, animals week, shapes week, numbers week.",
+      "The goal isn't academic progress — 2-year-olds don't need that yet. It's exposure and routine. A toddler who's spent a week with farm animal activities will still remember the pig a year later, and that's the whole win.",
+    ],
+    faqs: [
+      {
+        question: "What age is tot school for?",
+        answer:
+          "Usually 18 months to 3 years. Once a child hits 3 and starts asking for real structure, you transition into preschool activities.",
+      },
+      {
+        question: "How long should a tot school session be?",
+        answer:
+          "Five to ten minutes at a time, three or four times a day. Toddlers have no sustained attention span and forcing more than ten minutes backfires fast.",
+      },
+      {
+        question: "Do I need a curriculum?",
+        answer:
+          "No. A loose weekly theme is enough. Pick a topic Sunday night (colours, shapes, letter A, farm animals) and build a few 5-minute activities around it.",
+      },
+      {
+        question: "Is tot school the same as Montessori?",
+        answer:
+          "They overlap but aren't the same. Montessori has very specific materials and methods; tot school is a looser term for any home-based toddler activity rotation.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "animal-sounds", "shape-sorter", "counting-game"],
+    linkedWorksheetSlugs: ["preschool-tracing-worksheets", "shapes-worksheets", "counting-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy", "cozy-animals"],
+  },
+  {
+    slug: "montessori-activities-at-home",
+    keyword: "montessori activities at home",
+    searchVolume: 14000,
+    h1: "Montessori Activities at Home — The Ones You Can Set Up Without a Shop",
+    title: "Montessori Activities at Home for Toddlers | JiggyJoy",
+    metaDescription:
+      "Montessori-inspired activities at home for toddlers and preschoolers — practical life, sensorial and fine motor tasks using household items.",
+    intro: [
+      "True Montessori is a trained teacher, specific wooden materials, and a carefully prepared environment. At-home Montessori is more flexible — a practical life task (pouring water, spooning beans), a sensorial task (matching textures), and a fine motor task (threading, tonging). That's the core. You can do all three with things already in your kitchen.",
+      "On this page we've gathered the JiggyJoy printables that work in a Montessori-inspired rotation. Our pattern, sorting and counting worksheets align well with Montessori's mathematics area. The letter and number tracing sheets mirror the sandpaper letter work without the expensive sandpaper. And our colour match games sit neatly alongside the colour tablet exercises.",
+      "None of this is a substitute for a real Montessori nursery, but for parents who want the principles at home — child-led, hands-on, minimal instruction — this is a reasonable starting point. Keep sessions short and set up clear trays; that's most of the method right there.",
+    ],
+    faqs: [
+      {
+        question: "What age is home Montessori for?",
+        answer:
+          "Birth to 6 is the classic Montessori window. Most at-home Montessori activities work best from about 18 months to 5 years.",
+      },
+      {
+        question: "Do I need to buy Montessori materials?",
+        answer:
+          "Not really. A few trays, small containers, tongs, and natural objects cover most of the method. Save the expensive wooden materials for specific tasks if you're committed to the full approach.",
+      },
+      {
+        question: "Can I mix Montessori with other activities?",
+        answer:
+          "Yes. Purists would disagree, but in practice most home Montessori parents mix it with art, outdoor play, screen time, and regular toys. Do what works for your family.",
+      },
+      {
+        question: "What's a practical life activity?",
+        answer:
+          "Any real-world task adapted for small hands: pouring, spooning, sweeping, buttoning, washing a dish. These build independence and fine motor control at the same time.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "shape-sorter", "sorting-frenzy", "pattern-wizard"],
+    linkedWorksheetSlugs: ["preschool-tracing-worksheets", "letter-tracing-worksheets", "number-tracing-worksheets", "pattern-worksheets", "counting-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy"],
+  },
+  {
+    slug: "reggio-inspired-activities",
+    keyword: "reggio emilia activities",
+    searchVolume: 4500,
+    h1: "Reggio-Inspired Activities — Child-Led Projects You Can Try at Home",
+    title: "Reggio-Inspired Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Reggio Emilia inspired activities for kids — open-ended art, nature-based learning and project-led ideas with free printables.",
+    intro: [
+      "The Reggio Emilia approach is built around a simple idea: children are competent, curious investigators, and the adult's job is to set up the environment and then get out of the way. It's less a curriculum and more a stance. You can absolutely take that stance at home, and you don't need to repaint your living room in Reggio colours to do it.",
+      "What Reggio does well at home is open-ended art, loose-parts play, and project-based learning. A child gets interested in butterflies, and for two weeks you follow that interest — colouring butterfly pages, counting butterflies, watching butterfly videos, going on a butterfly walk. The JiggyJoy activities on this page are arranged around that model — they're flexible enough to plug into a child-led project in whatever direction it goes.",
+      "Don't expect Reggio to deliver a predictable learning plan. It delivers depth in whatever subject the child picks, which is a different (and often better) outcome. This page is for the parents happy to follow the interest instead of leading it.",
+    ],
+    faqs: [
+      {
+        question: "What is the Reggio Emilia approach?",
+        answer:
+          "An early-years philosophy from Reggio Emilia, Italy. It's built around child-led projects, open-ended materials, and the idea that children have 'a hundred languages' for expressing what they know. Not a formal curriculum.",
+      },
+      {
+        question: "How is Reggio different from Montessori?",
+        answer:
+          "Montessori is more structured — specific materials, specific sequences. Reggio is more fluid — projects grow from whatever the child is interested in that week. Both are child-centred but in different ways.",
+      },
+      {
+        question: "Can I do Reggio at home?",
+        answer:
+          "Yes, in spirit. Set up an art area with open-ended materials, follow your child's interests, and document their projects with photos. That's most of the at-home version.",
+      },
+      {
+        question: "What does 'the hundred languages' mean?",
+        answer:
+          "It's a Reggio phrase — the idea that children express ideas through many media: drawing, clay, movement, music, building, writing. Reggio schools encourage them all instead of privileging reading and writing.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "colour-match", "pattern-wizard"],
+    linkedWorksheetSlugs: ["pattern-worksheets", "color-by-number-worksheets", "shapes-worksheets"],
+    linkedColoringCategorySlugs: ["cozy-animals", "fantasy", "animals"],
+  },
+  {
+    slug: "fine-motor-activities",
+    keyword: "fine motor activities for preschoolers",
+    searchVolume: 18000,
+    h1: "Fine Motor Activities — The Ones That Actually Build Pencil Grip",
+    title: "Fine Motor Activities for Toddlers & Preschoolers | JiggyJoy",
+    metaDescription:
+      "Fine motor activities for toddlers and preschoolers — tracing sheets, pegboards, cutting practice and printable fine motor exercises.",
+    intro: [
+      "Fine motor development is the quiet workhorse of early childhood. It's not glamorous, nobody Instagrams it, but a 4-year-old who can hold a pencil properly will find Reception ten times easier than one who can't. The muscles that do the work are tiny and take years to build — which is why you start at 18 months, not at 5.",
+      "What actually builds fine motor: tonging, threading, peg boards, tearing paper, scissor work, and tracing. What doesn't: giving a 3-year-old a pencil and asking them to write their name. The order matters. This page has the JiggyJoy activities that fit into the build-up phase — the tracing worksheets, the colour match games, the shape sorting printables — plus a guide to pairing them with real-world fine motor tasks.",
+      "If you do nothing else, do tracing five minutes a day. That's the single highest-return fine motor activity for the pre-writing window, and our number and letter tracing sheets are printable, free and sized for small hands.",
+    ],
+    faqs: [
+      {
+        question: "What age should I start fine motor activities?",
+        answer:
+          "From 12 to 18 months with simple tasks like stacking blocks and picking up small objects. Structured fine motor work starts around age 2 and ramps up through age 5.",
+      },
+      {
+        question: "What are the best fine motor activities at home?",
+        answer:
+          "Tonging pom-poms into an ice cube tray, threading beads, peg boards, tearing paper, and tracing with a chunky crayon. All cheap, all effective.",
+      },
+      {
+        question: "Does fine motor affect handwriting?",
+        answer:
+          "Yes — strongly. Poor fine motor development is the most common reason a 5-year-old can't form letters. Get the muscles built first, then introduce pencil work.",
+      },
+      {
+        question: "Are scissors okay for a 3 year old?",
+        answer:
+          "Yes, with safety scissors and supervision. Cutting is one of the best fine motor exercises you can do at this age.",
+      },
+    ],
+    linkedGameSlugs: ["connect-the-dots", "colour-match", "pattern-wizard", "shape-sorter"],
+    linkedWorksheetSlugs: ["preschool-tracing-worksheets", "letter-tracing-worksheets", "number-tracing-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy"],
+  },
+  {
+    slug: "gross-motor-activities",
+    keyword: "gross motor activities for kids",
+    searchVolume: 15000,
+    h1: "Gross Motor Activities — Indoor and Outdoor Ideas That Burn Energy",
+    title: "Gross Motor Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Gross motor activities for toddlers and preschoolers — indoor obstacle courses, outdoor games and printable movement cards. Ages 2 to 8.",
+    intro: [
+      "Gross motor is the big-muscle half of movement — jumping, climbing, running, balancing. It's what a kid does at the park without being told, and it's also what they don't get enough of on a rainy Tuesday indoors. Most of the 'my kid is bouncing off the walls' complaints are really 'my kid hasn't moved their big muscles for two hours' complaints.",
+      "This page has indoor and outdoor gross motor activities. For indoor we've pulled together simple obstacle course ideas (sofa cushions, masking tape on the floor, a hoop), plus the JiggyJoy movement-based games that genuinely get kids up and active. For outdoor, it's the classic list — running games, ball games, balance challenges — plus our printable scavenger hunts that add structure without killing the energy.",
+      "Aim for at least an hour of gross motor a day. That's the NHS recommendation for under-5s, and it's roughly what every experienced preschool teacher knows keeps a class functional.",
+    ],
+    faqs: [
+      {
+        question: "What counts as gross motor activity?",
+        answer:
+          "Running, jumping, climbing, balancing, throwing, catching, kicking, dancing. Anything that uses the large muscles of arms, legs and core.",
+      },
+      {
+        question: "How much gross motor should a 4 year old do?",
+        answer:
+          "At least 3 hours of movement a day for under-5s, with at least 1 hour of that being energetic activity. Most preschools meet this naturally; home-based kids need deliberate scheduling.",
+      },
+      {
+        question: "What's a simple indoor gross motor activity?",
+        answer:
+          "Masking tape obstacle course on the living room floor, pillow jumping, dance party, or simon-says. All free, all fast to set up.",
+      },
+      {
+        question: "Does gross motor affect learning?",
+        answer:
+          "Yes. Kids who meet movement guidelines score better on attention, memory and early academic measures. The body-brain link is strongest in the preschool years.",
+      },
+    ],
+    linkedGameSlugs: ["dino-run", "super-jumper", "brick-breaker", "snake"],
+    linkedWorksheetSlugs: ["counting-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: ["animals", "characters"],
+  },
+  {
+    slug: "water-play-ideas",
+    keyword: "water play ideas",
+    searchVolume: 8500,
+    h1: "Water Play Ideas — Ten Minute Setups That Buy You an Hour",
+    title: "Water Play Ideas for Toddlers & Preschoolers | JiggyJoy",
+    metaDescription:
+      "Water play ideas for toddlers and preschoolers — garden water trays, washing-up bowls, sink play and printable water-themed activities.",
+    intro: [
+      "Water play is the highest return-on-effort activity in the toddler years. A washing-up bowl, a few scoops, a yoghurt pot with holes, and you've bought yourself a full hour of contented scooping and pouring. No prep, no clean-up beyond a towel, and it works indoors and outdoors.",
+      "On this page we've sorted water play by setup: garden water trays (the big one), kitchen sink play (the weather-proof one), bath time water play (the doubly-productive one), and outdoor hose play (the wild one). Each comes with a short prop list — nothing you don't already own. We've also linked the JiggyJoy ocean and weather colouring pages that pair well as quiet follow-up activities.",
+      "Supervise everything. Even a few inches of water in a bowl is a drowning risk for under-2s. That said, once you've got an eye on them, this is as close to a free hour as parenting gets.",
+    ],
+    faqs: [
+      {
+        question: "What age is water play good for?",
+        answer:
+          "6 months to 6 years, with close supervision at all ages. Toddlers love it most — the scoop, pour, dump cycle is irresistible to a 2-year-old.",
+      },
+      {
+        question: "What props do I need for water play?",
+        answer:
+          "Nothing specialised. Yoghurt pots, a ladle, a turkey baster, old cups, a funnel, a colander, and maybe a small sieve. Raid your kitchen and you're done.",
+      },
+      {
+        question: "Is water play educational?",
+        answer:
+          "Yes — it's an introduction to volume, flow, cause and effect, and basic maths (which cup holds more?). It also builds the fine motor control needed for pouring without spilling.",
+      },
+      {
+        question: "How do I do water play indoors?",
+        answer:
+          "Kitchen sink with a step stool, the bath, or a washing-up bowl on a towel. Indoor water play is realistic — just commit to a 10-minute mop afterwards.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "sorting-frenzy"],
+    linkedWorksheetSlugs: ["counting-worksheets", "shapes-worksheets"],
+    linkedColoringCategorySlugs: ["animals", "cozy-animals"],
+  },
+  {
+    slug: "art-activities-for-kids",
+    keyword: "art activities for kids",
+    searchVolume: 22000,
+    h1: "Art Activities for Kids — Mess-Friendly Ideas and Free Printables",
+    title: "Art Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Art activities for kids — process art, printable colouring pages, craft tutorials and simple drawing prompts. Ages 3 to 10.",
+    intro: [
+      "The thing most art-for-kids lists get wrong is treating the finished piece as the point. For children under about 8, art is almost entirely about the process — the squishing, mixing, gluing, smearing. A toddler who spent 30 minutes on a muddy brown blob has done more art than a toddler who produced a 'nice' bird drawing under adult direction.",
+      "This page is organised around process. The colouring pages section links to JiggyJoy's full catalogue of bold-outline colouring sheets. The drawing prompts section has our simplest starter activities for kids who 'can't draw'. The craft ideas link to collage, painting and printable templates that kids can personalise. We've kept the list short and opinionated because an art page with 200 Pinterest ideas is just overwhelming.",
+      "Keep a small art drawer — paper, crayons, glue stick, child safety scissors, a few felt pens — and don't overthink it. The kids who do the most art are the kids who have materials within reach at all times.",
+    ],
+    faqs: [
+      {
+        question: "What's process art?",
+        answer:
+          "Art where the child leads and the end result doesn't matter. You set up materials, the child does whatever they want with them, and you don't correct or direct. It builds creativity and independence far better than adult-led crafts.",
+      },
+      {
+        question: "What art supplies do I need for a 4 year old?",
+        answer:
+          "Paper, chunky crayons, washable markers, a glue stick, safety scissors, and maybe watercolour pans. That's enough for a year of art.",
+      },
+      {
+        question: "Are colouring pages real art?",
+        answer:
+          "They're a useful form of it — great for fine motor and colour practice — but they're not a substitute for open-ended drawing and painting. Do both.",
+      },
+      {
+        question: "How do I deal with the mess?",
+        answer:
+          "A tablecloth on the floor, smocks or old t-shirts, and a bucket of soapy water nearby. Accept the mess as part of the deal and art becomes much less stressful.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "connect-the-dots", "pattern-wizard"],
+    linkedWorksheetSlugs: ["color-by-number-worksheets", "pattern-worksheets", "shapes-worksheets"],
+    linkedColoringCategorySlugs: ["bold-easy", "floral-mandalas", "animal-mandalas", "cozy-animals"],
+  },
+  {
+    slug: "science-experiments-for-kids",
+    keyword: "easy science experiments for kids",
+    searchVolume: 33000,
+    h1: "Science Experiments for Kids — Safe, Simple and Properly Fun",
+    title: "Science Experiments for Kids | JiggyJoy",
+    metaDescription:
+      "Easy science experiments for kids — baking soda volcanoes, density jars, garden biology and printable science worksheets. Ages 4 to 10.",
+    intro: [
+      "Kids science is at its best when the experiment is genuinely surprising — when the child sees something they didn't expect and asks 'why did that happen?'. A baking soda volcano is the classic not because adults love it but because it fizzes unexpectedly every single time, even on the fifth go. That's the bar for a real experiment.",
+      "The activities on this page are the ones we've actually run with our own kids. Baking soda and vinegar reactions, density towers with honey and washing-up liquid, simple circuits, growing seeds in a jar. Each one takes kitchen ingredients and finishes in under 20 minutes. We've linked the JiggyJoy worksheets that work as lab sheets — places to draw the observation or write down the prediction — plus the science-themed colouring pages kids like to fill in afterwards.",
+      "Real science, not craft dressed up as science. The test is: does the kid learn something true about how the world works? If yes, it's science. If no, it's a craft — which is also fine, just label it honestly.",
+    ],
+    faqs: [
+      {
+        question: "What's the best science experiment for a 5 year old?",
+        answer:
+          "Baking soda and vinegar volcanoes, skittles in water (colour diffusion), and growing seeds in a clear jar. All three are visually striking, safe, and spark real curiosity.",
+      },
+      {
+        question: "Are these experiments safe?",
+        answer:
+          "Yes — everything we recommend uses food-safe ingredients and household items. Supervise anything with hot water, magnets, or small parts.",
+      },
+      {
+        question: "Do I need a science kit?",
+        answer:
+          "No. Baking soda, vinegar, food colouring, a jar, a torch, and a magnet cover dozens of experiments. Save the kits for when a child's interest is deep enough to justify the price.",
+      },
+      {
+        question: "How do I turn an experiment into real learning?",
+        answer:
+          "Ask the child to predict what will happen before you do it. Write the prediction on a lab sheet. Do the experiment. Talk about what was different from the prediction. That loop is the scientific method — and it's the thing worksheets alone can't teach.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy", "pattern-wizard"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: ["animals", "educational"],
+  },
+  {
+    slug: "cooking-activities-with-kids",
+    keyword: "cooking activities for kids",
+    searchVolume: 11000,
+    h1: "Cooking Activities With Kids — Simple Recipes and Kitchen Skills",
+    title: "Cooking Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Cooking activities for kids — age-appropriate recipes, kitchen skill progressions and printable recipe sheets. Ages 3 to 11.",
+    intro: [
+      "Cooking with kids is the original practical-life curriculum. It's maths (measuring), science (chemistry of baking), literacy (reading a recipe), fine motor (stirring, pouring, cracking), and nutrition, all in one activity. The catch is that it takes three times as long as cooking alone and the kitchen looks like a disaster. That's the price of entry.",
+      "This page breaks cooking activities down by age: mashing bananas and tearing lettuce at 3, measuring and stirring at 5, reading a recipe and using a knife by 8, whole dishes solo by 10. We've linked our printable recipe sheets (the ones formatted for small hands) and our food-themed colouring pages for waiting-for-the-oven downtime.",
+      "The goal isn't a photogenic Instagram bake. It's a kid who, by age 11, can make scrambled eggs on their own. Every session towards that goal is worth the flour on the floor.",
+    ],
+    faqs: [
+      {
+        question: "What can a 3 year old do in the kitchen?",
+        answer:
+          "Wash fruit, tear lettuce, mash bananas, stir a bowl, pour pre-measured ingredients, and decorate biscuits. Anything that doesn't involve heat or sharp blades.",
+      },
+      {
+        question: "When can kids use a knife?",
+        answer:
+          "Around age 5 with a butter knife and soft food, age 6 to 7 with a nylon kid's knife on harder items, age 8 to 10 with a real knife under supervision.",
+      },
+      {
+        question: "What's a good first recipe to make with kids?",
+        answer:
+          "Banana bread or simple drop cookies. Both are forgiving, use household ingredients, and don't require precise measuring.",
+      },
+      {
+        question: "Is cooking with kids educational?",
+        answer:
+          "Extremely. It covers maths, science, reading, motor skills and independence. Almost every developmental domain except for team sports shows up in a shared cooking session.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy", "math-addition"],
+    linkedWorksheetSlugs: ["counting-worksheets", "addition-worksheets"],
+    linkedColoringCategorySlugs: ["cozy-animals", "characters"],
+  },
+  {
+    slug: "nature-activities-for-kids",
+    keyword: "nature activities for kids",
+    searchVolume: 12000,
+    h1: "Nature Activities for Kids — Outdoor Learning That's Worth the Wellies",
+    title: "Nature Activities for Kids | JiggyJoy",
+    metaDescription:
+      "Nature activities for kids — bug hunts, leaf pressing, nature scavenger hunts and printable nature worksheets. Ages 3 to 10.",
+    intro: [
+      "Children who spend time in nature score better on almost everything — attention, creativity, stress, immune function, even eyesight. But 'go outside' is a hard sell to a screen-loving 7-year-old, so the trick is giving them a job out there: a bug to find, a leaf to press, a tree to identify, something that turns the walk into a mission.",
+      "On this page we've collected the JiggyJoy nature printables that give kids that job. Scavenger hunts by season, bug identification sheets, a printable leaf press template, and our animal and weather colouring pages that pair with outdoor observation. Everything prints on a single sheet and fits in a coat pocket for the walk.",
+      "Nature activities work across the whole age range — a 3-year-old collects pebbles and a 10-year-old identifies birds, but the fundamental activity is the same. Pick a simple theme, print the sheet, and walk.",
+    ],
+    faqs: [
+      {
+        question: "What's a good nature activity for a 4 year old?",
+        answer:
+          "A colour scavenger hunt: find something red, something green, something brown. Even a suburban park has enough variety to fill the list in 15 minutes.",
+      },
+      {
+        question: "Do nature activities need special equipment?",
+        answer:
+          "No. A printable checklist, a pencil, and a bag for collected finds is enough. Older kids enjoy a magnifying glass and a simple bug pot but neither is essential.",
+      },
+      {
+        question: "What's the best season for nature activities?",
+        answer:
+          "All of them. Autumn for leaves and conkers, winter for bare tree shapes and animal tracks, spring for bulbs and bird nests, summer for bugs and flowers. Each season has its own material.",
+      },
+      {
+        question: "How long should a nature walk be?",
+        answer:
+          "Twenty minutes of walking plus 20 minutes of finding things is plenty for a preschooler. Older kids can sustain an hour or more if the activity is compelling enough.",
+      },
+    ],
+    linkedGameSlugs: ["animal-sounds", "sorting-frenzy", "colour-match"],
+    linkedWorksheetSlugs: ["counting-worksheets", "shapes-worksheets"],
+    linkedColoringCategorySlugs: ["animals", "cozy-animals", "floral-mandalas"],
+  },
 ];
 
 // ─── Free worksheets topic pages ─────────────────────────────────────────────
@@ -1730,6 +2315,786 @@ export const freeWorksheetTopics: ProgrammaticPage[] = [
     linkedGameSlugs: ["math-quiz", "sorting-frenzy", "shape-sorter"],
     linkedWorksheetSlugs: ["grade-2-math-worksheets", "grade-3-math-worksheets", "math-worksheets-grade-1"],
     linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "blending-sounds",
+    keyword: "blending sounds worksheets",
+    searchVolume: 4800,
+    h1: "Free Blending Sounds Worksheets — Printable PDF",
+    title: "Free Blending Sounds Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable blending sounds worksheets for phonics. Sound out CVC words, consonant blends and digraphs. Kindergarten to Grade 1.",
+    intro: [
+      "Blending is the moment phonics clicks — the child sounds out 'c' 'a' 't' and suddenly hears 'cat'. Before blending, phonics is a list of letter sounds in no particular order. After blending, it's reading. The gap between the two is about four weeks of deliberate practice, and worksheets are one of the cleanest ways to close it.",
+      "This page has the full progression. Early sheets are CVC blends only — three letter sounds the child slides together out loud. Middle sheets add initial blends (bl, cr, sp) and short vowel patterns. Advanced sheets bring in digraphs (sh, ch, th) and the child starts reading four and five letter words. Each sheet is set up for oral practice first, pencil work second.",
+      "Print these and read them with the child, not at them. Blending is an oral skill before it's a written one — the child needs to hear themselves slide the sounds together, and the adult needs to be there to catch them before the habit of guessing sets in.",
+    ],
+    faqs: [
+      {
+        question: "What is blending in phonics?",
+        answer:
+          "Sliding individual letter sounds together to read a whole word. 'c-a-t' becomes 'cat'. It's the core mechanic that turns letter knowledge into reading.",
+      },
+      {
+        question: "At what age should kids start blending?",
+        answer:
+          "Once they know about 6 to 8 letter sounds reliably — usually age 4 to 5. Don't wait for the full alphabet; start as soon as you have enough sounds to make CVC words (s, a, t, p, i, n).",
+      },
+      {
+        question: "Why is blending so hard?",
+        answer:
+          "Because the brain has to hold three separate sounds in working memory and fuse them into a word that means something. Practice and patience are the only shortcuts.",
+      },
+      {
+        question: "What if my child can read the letters but not blend?",
+        answer:
+          "Model the slide. Say 'ssss-aaaaa-t, sat' stretching each sound into the next. Do it ten times in one session. Most children get it within a week of deliberate modelling.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "bubble-pop-abc", "alphabet-match"],
+    linkedWorksheetSlugs: ["alphabet-worksheets", "letter-tracing-worksheets", "sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "digraphs",
+    keyword: "digraph worksheets",
+    searchVolume: 3400,
+    h1: "Free Digraphs Worksheets — Printable PDF",
+    title: "Free Digraphs Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable digraph worksheets — sh, ch, th, wh, ph and vowel digraphs. For Kindergarten to Grade 2 phonics practice.",
+    intro: [
+      "Digraphs are the first curveball in phonics — two letters, one sound, nothing the child can deduce from the individual letters alone. 'sh' isn't 's' plus 'h', it's a brand new sound, and until the child has memorised it they'll keep trying to blend it phonetically and failing.",
+      "The worksheets on this page cover the full set in the order most schemes teach them. Consonant digraphs come first: sh, ch, th (unvoiced), th (voiced), wh, ph, ck, ng. Then vowel digraphs: ai, ay, ee, ea, oa, ow, oi, oy. Each sheet introduces one digraph with picture prompts, then gives reading and writing practice, then mixes it into words the child already knows.",
+      "The test for digraph fluency is whether a child can read 'ship' and 'chop' without pausing. When they can, move on. When they can't, do another five-minute session on that specific digraph. Most kids master the full consonant set in six to eight weeks.",
+    ],
+    faqs: [
+      {
+        question: "What's a digraph?",
+        answer:
+          "Two letters that together make a single sound. 'sh' in 'ship', 'ch' in 'chop', 'ai' in 'rain'. They're one of the first departures from pure letter-by-letter phonics.",
+      },
+      {
+        question: "Which digraphs should be taught first?",
+        answer:
+          "The consonant digraphs — sh, ch, th, wh, ph — are usually taught before vowel digraphs because they appear in more common words and are easier to hear.",
+      },
+      {
+        question: "What age are digraphs taught at?",
+        answer:
+          "Most curricula introduce consonant digraphs at the end of Reception or early Year 1 (age 5 to 6). Vowel digraphs come slightly later, usually mid to late Year 1.",
+      },
+      {
+        question: "Are trigraphs on these sheets?",
+        answer:
+          "The most common ones, yes — igh, air, ear, ure. They follow the same pattern as digraphs, just with three letters making one sound.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "bubble-pop-abc", "spelling-bee"],
+    linkedWorksheetSlugs: ["alphabet-worksheets", "sight-words-worksheets", "letter-tracing-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "cvc-words",
+    keyword: "cvc words worksheets",
+    searchVolume: 7200,
+    h1: "Free CVC Words Worksheets — Printable PDF",
+    title: "Free CVC Words Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable CVC words worksheets — read, write and build consonant-vowel-consonant words. Kindergarten and early Grade 1 phonics practice.",
+    intro: [
+      "CVC words — cat, dog, pin, bus, top — are the first real words most children read. They're the payoff for weeks of letter-sound work, and they're the bridge from phonics to reading actual books. A child who can confidently read 30 CVC words is ready to start a proper decodable reading scheme.",
+      "This page has CVC worksheets grouped by vowel: short 'a' first (cat, mat, bat, hat), then short 'i' (pin, sit, win), then short 'o' (dog, pot, top), then short 'u' and short 'e'. Within each group we go from picture-match sheets (look at the picture, circle the word) to blank-fill sheets (write the missing vowel) to independent writing sheets. The progression mirrors how kindergarten classrooms teach it.",
+      "Use these alongside simple decodable books once the child has the first vowel solid. Don't wait for mastery across all five vowels before starting to read — real books build motivation in a way no worksheet ever will.",
+    ],
+    faqs: [
+      {
+        question: "What does CVC stand for?",
+        answer:
+          "Consonant-Vowel-Consonant. Three letter words where the pattern is consonant, vowel, consonant — like cat, sit, mug. They're the easiest words to sound out.",
+      },
+      {
+        question: "At what age should a child read CVC words?",
+        answer:
+          "Most children are reading CVC words confidently by the end of Reception or early Year 1 (age 5 to 6). Some 4-year-olds start earlier, which is fine if they're interested.",
+      },
+      {
+        question: "How many CVC words should a child know?",
+        answer:
+          "About 50 is the rough benchmark before moving to digraphs and longer words. Once a child can read the common 50 without guessing, they're ready for the next step.",
+      },
+      {
+        question: "Are CVC words the same as sight words?",
+        answer:
+          "No. CVC words follow phonics rules and are decoded. Sight words are high-frequency words that often break the rules (the, was, one) and are memorised as wholes.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "bubble-pop-abc", "alphabet-match", "spelling-bee"],
+    linkedWorksheetSlugs: ["alphabet-worksheets", "sight-words-worksheets", "letter-tracing-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "compound-words",
+    keyword: "compound words worksheets",
+    searchVolume: 5500,
+    h1: "Free Compound Words Worksheets — Printable PDF",
+    title: "Free Compound Words Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable compound words worksheets — match, build and write compound words. Grade 1 to Grade 3 literacy practice.",
+    intro: [
+      "Compound words are one of the easiest wins in literacy: they're intrinsically fun (sun + flower = sunflower), they build vocabulary, and they introduce the idea that big words are often just small words stuck together. A kid who learns to unpack 'classroom' into 'class' and 'room' will later unpack 'antidisestablishmentarianism' with more confidence.",
+      "The sheets on this page start with picture-match activities (pair two small pictures to make one compound word picture) and move up to writing practice and sentence work. Early sheets cover the obvious ones: sunflower, rainbow, bookshelf, cupcake. Later sheets introduce less intuitive compounds: breakfast, afternoon, handwriting, keyboard. There's a guessing game in the middle that kids love.",
+      "Compound words appear at the end of Grade 1 in most curricula, but the activity works from Kindergarten upwards if you use pictures instead of words. Print a set, cut them apart, and play a quick matching game on the carpet before sitting down to do the written practice.",
+    ],
+    faqs: [
+      {
+        question: "What's a compound word?",
+        answer:
+          "A word made of two smaller words joined together. 'Sunflower' is sun + flower. 'Doghouse' is dog + house. Learning compound words is a big step towards decoding longer vocabulary.",
+      },
+      {
+        question: "What grade are compound words taught in?",
+        answer:
+          "Most curricula introduce compound words at the end of Grade 1 or in Grade 2, once children are reading confidently.",
+      },
+      {
+        question: "Are compound words always joined?",
+        answer:
+          "No — some are hyphenated (mother-in-law) and some are separate (ice cream). The sheets here focus on closed compounds (sunflower) because they're the easiest entry point.",
+      },
+      {
+        question: "What's a good compound words activity?",
+        answer:
+          "Cut the words in half on two sets of cards, shuffle them, and have the child match them back together. The physical matching is more engaging than pure worksheet work.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "memory-match-animals", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "contractions",
+    keyword: "contractions worksheets",
+    searchVolume: 4900,
+    h1: "Free Contractions Worksheets — Printable PDF",
+    title: "Free Contractions Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable contractions worksheets — don't, isn't, we're, I'll and more. Grade 1 to Grade 3 grammar practice.",
+    intro: [
+      "Contractions are the first piece of grammar that feels like a trick. Two words smush into one, a letter disappears, and an apostrophe appears in a place that looks wrong. A 6-year-old seeing 'don't' for the first time needs an actual explanation, not just an example. These worksheets provide that scaffolding.",
+      "Start with the easy ones: is + not = isn't, do + not = don't, I + am = I'm. The sheets here group contractions by pattern so children can see the underlying rule. Middle sheets mix them together and ask the child to expand or contract sentences. Advanced sheets cover the trickier ones (won't, shan't) and the homophones that come with them ('your' vs 'you're').",
+      "A common mistake is teaching contractions as spellings without the grammar explanation. That produces kids who write 'im' without the apostrophe forever. Teach the 'missing letter' rule explicitly — the apostrophe stands in for the dropped letter — and the spelling sticks.",
+    ],
+    faqs: [
+      {
+        question: "What's a contraction?",
+        answer:
+          "A shortened form of two words joined together with an apostrophe. 'Do not' becomes 'don't'. 'I am' becomes 'I'm'. The apostrophe shows where letters have been dropped.",
+      },
+      {
+        question: "What grade are contractions taught?",
+        answer:
+          "Usually Grade 1 or Grade 2. The most common contractions (don't, isn't, I'm) show up in early readers, so kids encounter them before they formally study them.",
+      },
+      {
+        question: "Why do kids confuse 'your' and 'you're'?",
+        answer:
+          "Because they sound identical and the grammatical distinction is subtle. Teach the apostrophe rule explicitly: 'you're' always means 'you are'. If you can't swap it for 'you are', it's 'your'.",
+      },
+      {
+        question: "Should kids write with contractions?",
+        answer:
+          "Yes — contractions are standard in modern writing. The old rule about avoiding them in formal writing is largely outdated outside of academic publishing.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "capitalization",
+    keyword: "capitalization worksheets",
+    searchVolume: 5100,
+    h1: "Free Capitalization Worksheets — Printable PDF",
+    title: "Free Capitalization Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable capitalization worksheets — sentence starts, proper nouns, titles and dates. Grade 1 to Grade 3 grammar practice.",
+    intro: [
+      "Capitalisation seems simple to adults because we never think about it, but there are actually about eight separate rules a child needs to learn and they don't all come at once. Sentence starts first, then proper nouns, then I as a pronoun, then titles, then dates — each a separate lesson with its own worksheet cycle.",
+      "The sheets on this page are sorted by rule. Early sheets focus on fixing incorrect sentence starts (the lowercase 't' at the start of a sentence). Middle sheets drill proper nouns — names, countries, cities, days of the week. Advanced sheets cover titles, headings and correspondence formats. Every sheet uses genuine sentences rather than abstract grammar drills, because that's how the rule actually sticks.",
+      "Pair these with a simple 'fix my writing' game: give the child a paragraph you wrote on purpose with all caps wrong and let them mark it up like a teacher. Kids love correcting adults, and the error-spotting skill is what later turns into self-editing.",
+    ],
+    faqs: [
+      {
+        question: "What are the main capitalization rules?",
+        answer:
+          "Start of a sentence, the pronoun I, proper nouns (names, places, days, months), titles, and the start of direct speech. Those five cover 95% of everyday writing.",
+      },
+      {
+        question: "When should kids learn capitalization?",
+        answer:
+          "Sentence-start capitals are taught from Year 1. Proper nouns come shortly after. Full capitalization rules are usually mastered by Year 3.",
+      },
+      {
+        question: "Why do children miss capitals?",
+        answer:
+          "Because handwriting is a motor effort and they're focused on letter formation. Capitals get dropped under cognitive load. The fix is editing practice, not more rule-teaching.",
+      },
+      {
+        question: "Do I capitalize seasons?",
+        answer:
+          "No — spring, summer, autumn, winter are lowercase. Days and months are capitalised but seasons aren't. It's the kind of small rule these worksheets make explicit.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "letter-tracing-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "punctuation",
+    keyword: "punctuation worksheets",
+    searchVolume: 8700,
+    h1: "Free Punctuation Worksheets — Printable PDF",
+    title: "Free Punctuation Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable punctuation worksheets — full stops, commas, question marks, apostrophes and speech marks. Grade 1 to Grade 4.",
+    intro: [
+      "Punctuation is the single biggest quality signal in children's writing. A 7-year-old who uses full stops and capital letters consistently looks like a strong writer, almost regardless of what they're actually saying. And for most kids, punctuation is the easiest wobble to fix — it's mechanical, it's rule-based, and it responds well to practice.",
+      "On this page we've arranged punctuation worksheets by mark, starting with full stops and capital letters (Grade 1), moving to question marks and exclamation marks (Grade 2), then commas in lists and speech marks (Grade 3), and finally apostrophes for possession and contraction (Grade 3 to 4). Each sheet isolates one rule so kids don't get overwhelmed.",
+      "The trick with punctuation is not to introduce a new mark until the previous one is secure. A child who sometimes uses full stops doesn't need a comma lesson yet — they need more full-stop practice. This progression honours that.",
+    ],
+    faqs: [
+      {
+        question: "When do kids learn punctuation?",
+        answer:
+          "Full stops and capital letters in Year 1. Question and exclamation marks in Year 2. Commas and speech marks in Year 3. Apostrophes in Year 3 to 4.",
+      },
+      {
+        question: "What's the most common punctuation mistake?",
+        answer:
+          "Missing full stops. Children write run-on sentences because the spoken voice in their head doesn't pause the way adult writing does. Explicit pause-and-stop practice fixes it.",
+      },
+      {
+        question: "Are these UK or US punctuation rules?",
+        answer:
+          "Mostly universal, but we note the small differences (double vs single speech marks, serial comma use) where they matter for a given sheet.",
+      },
+      {
+        question: "How do I teach apostrophes?",
+        answer:
+          "Teach the two uses separately: contraction (don't) first, possession (Sam's) second. Never teach them in the same week — kids conflate the rules and end up apostrophising plurals, which is worse than not using them at all.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "parts-of-speech",
+    keyword: "parts of speech worksheets",
+    searchVolume: 9600,
+    h1: "Free Parts of Speech Worksheets — Printable PDF",
+    title: "Free Parts of Speech Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable parts of speech worksheets — nouns, verbs, adjectives, adverbs and pronouns. Grade 1 to Grade 4 grammar practice.",
+    intro: [
+      "Parts of speech are grammar's periodic table — once a child can name the parts, they can start to see how sentences are built instead of just producing them by instinct. The early teaching is pattern recognition: 'which of these words is a doing word?', 'which of these is a describing word?'. Rules come later.",
+      "This page has a worksheet for each part of speech: nouns (Grade 1), verbs (Grade 1), adjectives (Grade 2), adverbs (Grade 2 to 3), pronouns, prepositions, and conjunctions. Every sheet uses simple sentences and colour-codes the target part of speech with underlining or circling. The goal is fast recognition first, precise definitions second.",
+      "Teach parts of speech through sentences, not lists. A list of 20 nouns is boring and useless. A sentence with one noun to identify is a puzzle, and kids genuinely enjoy the puzzle. These sheets are built around that principle.",
+    ],
+    faqs: [
+      {
+        question: "What are the 8 parts of speech?",
+        answer:
+          "Nouns, verbs, adjectives, adverbs, pronouns, prepositions, conjunctions, and interjections. Most primary curricula teach all eight by the end of Year 4.",
+      },
+      {
+        question: "When do kids learn parts of speech?",
+        answer:
+          "Nouns and verbs in Year 1, adjectives in Year 2, adverbs and conjunctions in Year 2 to 3, the rest in Year 3 to 4.",
+      },
+      {
+        question: "What's the difference between an adjective and an adverb?",
+        answer:
+          "Adjectives describe nouns (the RED ball). Adverbs describe verbs (she ran QUICKLY). The easy test: if the word tells you HOW something happened, it's usually an adverb.",
+      },
+      {
+        question: "Do I need to teach all 8 parts of speech?",
+        answer:
+          "Eventually yes, but not at once. Master nouns and verbs before introducing adjectives. Adding a new category before the previous one is secure leads to confusion.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "spelling-bee", "sorting-frenzy"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "nouns-and-verbs",
+    keyword: "nouns and verbs worksheets",
+    searchVolume: 6400,
+    h1: "Free Nouns and Verbs Worksheets — Printable PDF",
+    title: "Free Nouns and Verbs Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable nouns and verbs worksheets — sort, identify and use nouns and verbs in sentences. Grade 1 to Grade 3.",
+    intro: [
+      "Nouns and verbs are the foundation of every sentence a child will ever write, and they're the easiest grammar concepts to teach well. 'A noun is a person, place or thing' works as a definition for a 6-year-old. 'A verb is a doing word' is equally clear. Once those two labels stick, everything else in grammar hangs off them.",
+      "The worksheets on this page focus on sorting and identification. Early sheets ask kids to tick which words are nouns and which are verbs. Middle sheets have them circle the noun and underline the verb in a short sentence. Advanced sheets move into writing — build a sentence with this noun and this verb. That progression from recognition to production is what turns a grammar rule into a writing skill.",
+      "We've deliberately kept these separate from the full parts-of-speech sheets because nouns-and-verbs are worth spending a couple of weeks on before introducing adjectives. Don't rush it. A Year 2 child who is rock solid on nouns and verbs will fly through the rest of grammar.",
+    ],
+    faqs: [
+      {
+        question: "What's the difference between a noun and a verb?",
+        answer:
+          "A noun names a thing (dog, table, happiness). A verb describes an action or state (run, is, think). Every normal sentence has at least one of each.",
+      },
+      {
+        question: "What age should kids learn nouns and verbs?",
+        answer:
+          "Year 1 (age 5 to 6) is when most curricula introduce them, with fluent use expected by Year 2 or 3.",
+      },
+      {
+        question: "Can a word be both a noun and a verb?",
+        answer:
+          "Yes — 'run' is a verb (I run fast) but also a noun (I went for a run). Context decides. The advanced sheets here include these tricky cases.",
+      },
+      {
+        question: "What's a common noun vs a proper noun?",
+        answer:
+          "A common noun is generic (dog, city, teacher). A proper noun names a specific one (Rex, London, Mrs Smith). Proper nouns always take a capital letter.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "sorting-frenzy", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "synonyms-and-antonyms",
+    keyword: "synonyms and antonyms worksheets",
+    searchVolume: 7400,
+    h1: "Free Synonyms and Antonyms Worksheets — Printable PDF",
+    title: "Free Synonyms and Antonyms Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable synonyms and antonyms worksheets — match, sort and use similar and opposite words. Grade 1 to Grade 4 vocabulary practice.",
+    intro: [
+      "Synonyms and antonyms are vocabulary-building in disguise. Every time a child learns that 'big' has synonyms (large, huge, enormous, massive) they've added four words to their active vocabulary, and every time they learn the opposite they've solidified the meaning of the original. It's the cheapest way to grow word count.",
+      "The sheets here start with matching games (draw a line between the pair) and progress to gap-fill sentences (replace the word 'big' with a better one). Antonym sheets work the same way: first matching, then sentence substitution, then writing with a partner word. We've paired the sheets so you can teach synonyms and antonyms in the same week — they reinforce each other.",
+      "A good synonym sheet exposes a child to at least three new words per exercise. Keep a running list of 'stronger words' on a wall chart, and every time a child reaches for 'good' or 'nice' in their writing, send them to the chart. That habit turns worksheet vocabulary into real-writing vocabulary.",
+    ],
+    faqs: [
+      {
+        question: "What's a synonym?",
+        answer:
+          "A word with the same or nearly the same meaning as another word. 'Big' and 'large' are synonyms. 'Happy' and 'pleased' are synonyms.",
+      },
+      {
+        question: "What's an antonym?",
+        answer:
+          "A word with the opposite meaning. 'Hot' and 'cold'. 'Fast' and 'slow'. 'Happy' and 'sad'.",
+      },
+      {
+        question: "What age should kids learn synonyms?",
+        answer:
+          "Year 2 (age 6 to 7) is the standard introduction point, with fluent use expected by Year 4.",
+      },
+      {
+        question: "Why are synonyms useful?",
+        answer:
+          "They improve writing variety and build vocabulary faster than almost any other exercise. A child who knows five synonyms for 'big' writes more expressive sentences.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "memory-match-animals", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "cause-and-effect",
+    keyword: "cause and effect worksheets",
+    searchVolume: 5300,
+    h1: "Free Cause and Effect Worksheets — Printable PDF",
+    title: "Free Cause and Effect Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable cause and effect worksheets — match causes to effects, read short passages and identify outcomes. Grade 1 to Grade 4.",
+    intro: [
+      "Cause and effect is a comprehension skill dressed up as a reading skill. Before a child can identify the cause and effect in a paragraph, they need to be able to hold two events in their head and see the link between them. That's a cognitive move — not a phonics move — and it's one of the easier targets for structured practice.",
+      "The sheets on this page start with picture pairs: 'the boy kicked the ball. The window broke.' The child draws an arrow from cause to effect. Middle sheets use short paragraphs with a single cause-effect pair to find. Advanced sheets use longer passages with multiple pairs, and the child has to identify each one. Every sheet uses scenarios kids will recognise — no abstract examples.",
+      "This is one of the most high-leverage comprehension skills you can teach at primary age. It shows up in every standardised reading test and, more importantly, it's what lets a child actually follow a story rather than just read the words. Worth three or four weeks of attention.",
+    ],
+    faqs: [
+      {
+        question: "What does 'cause and effect' mean?",
+        answer:
+          "Cause is what made something happen. Effect is what happened because of it. 'The rain caused the flood' — rain is the cause, flood is the effect.",
+      },
+      {
+        question: "What age should kids learn cause and effect?",
+        answer:
+          "The concept is introduced informally from Year 1 through storytelling. Formal cause-and-effect comprehension work usually starts in Year 2 and continues through Year 4.",
+      },
+      {
+        question: "How is it different from sequencing?",
+        answer:
+          "Sequencing is just 'what order did things happen in'. Cause and effect adds the 'why' — which event made the next one happen.",
+      },
+      {
+        question: "Why is cause and effect on standardised tests?",
+        answer:
+          "Because it's a proxy for real comprehension. A child who can spot cause-effect relationships understood what they read, rather than just decoding the words.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "sorting-frenzy"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "rhyming-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "main-idea",
+    keyword: "main idea worksheets",
+    searchVolume: 7800,
+    h1: "Free Main Idea Worksheets — Printable PDF",
+    title: "Free Main Idea Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable main idea worksheets — identify the central message of a paragraph or story. Grade 2 to Grade 5 comprehension practice.",
+    intro: [
+      "Finding the main idea of a passage is a surprisingly late skill. A 6-year-old can read a story but often can't tell you what it was about in one sentence. The move from 'what happens' to 'what it's really about' is the heart of comprehension, and it's a skill worth deliberate practice from Year 2 onward.",
+      "The sheets on this page build up the skill in three stages. First, picture-based — a scene with an obvious theme and the child circles the phrase that best describes it. Second, short paragraph reading with four title options. Third, full-passage work with open-ended main idea questions. Each stage has matching supporting-detail work to go with it.",
+      "A useful teaching move: ask the child to describe the passage in one sentence after reading. If they list events, they've got the details but not the main idea. Nudge them toward 'the story is about X'. It takes a few weeks to make that shift.",
+    ],
+    faqs: [
+      {
+        question: "What's the main idea of a passage?",
+        answer:
+          "The overall message or topic. If you had to describe the passage in one sentence, the main idea is that sentence.",
+      },
+      {
+        question: "How is main idea different from topic?",
+        answer:
+          "The topic is what it's about in one word (dogs, space, friendship). The main idea is what the author is saying about that topic in one sentence.",
+      },
+      {
+        question: "What age should kids learn main idea?",
+        answer:
+          "Year 2 or Year 3 (age 6 to 8) is the standard introduction point. Mastery is usually a Year 4 to 5 target.",
+      },
+      {
+        question: "Any tips for finding the main idea?",
+        answer:
+          "Read the first and last sentence first — they often contain the main idea. Then ask: 'what is this passage mostly about?'. Avoid the trap of just retelling the first event.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "word-spell"],
+    linkedWorksheetSlugs: ["sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "sequencing",
+    keyword: "sequencing worksheets",
+    searchVolume: 6100,
+    h1: "Free Sequencing Worksheets — Printable PDF",
+    title: "Free Sequencing Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable sequencing worksheets — put events in order, number the steps of a story, retell in the correct sequence. Grade 1 to Grade 3.",
+    intro: [
+      "Sequencing is the answer to the question 'what happened first, next, then, finally?'. It's the building block of comprehension and also of writing — a child who can sequence events can write a story, and a child who can't will produce paragraphs that jump around.",
+      "The worksheets on this page cover the three standard levels. Beginner sheets have picture sequences (four pictures of a child getting dressed; put them in order). Intermediate sheets use short passages with number-the-events questions. Advanced sheets use longer stories and ask the child to retell them using first/next/then/finally. Each sheet ends with a simple writing task where the child produces their own sequence.",
+      "Sequencing is also the hidden skill in a lot of other subjects. Maths problem-solving uses it (first I add, next I subtract). Science uses it (first pour, next observe). Teaching it in a reading context spills over into everything.",
+    ],
+    faqs: [
+      {
+        question: "What's sequencing in reading?",
+        answer:
+          "Putting the events of a story or passage in the order they happened. A sequencing worksheet asks the child to number the events correctly or retell them using sequence words.",
+      },
+      {
+        question: "What age should kids learn sequencing?",
+        answer:
+          "Picture sequencing from Reception or Year 1. Text-based sequencing from Year 2 onwards. Most curricula expect mastery by Year 3.",
+      },
+      {
+        question: "What are sequencing words?",
+        answer:
+          "First, next, then, after, finally, before, while, during. These signal the order of events in a passage and are worth teaching explicitly.",
+      },
+      {
+        question: "How do I teach sequencing?",
+        answer:
+          "Start with simple picture sets. Move to short stories with three or four clear events. Always have the child verbalise the order before writing it down.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "memory-match-animals", "pattern-wizard"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "graphing",
+    keyword: "graphing worksheets for kids",
+    searchVolume: 5800,
+    h1: "Free Graphing Worksheets — Printable PDF",
+    title: "Free Graphing Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable graphing worksheets — bar graphs, pictographs, tally charts and line graphs. Grade 1 to Grade 4 data handling practice.",
+    intro: [
+      "Graphing is where maths turns into a story. A column of numbers is abstract; a bar chart made from those numbers is obvious. Kids who 'don't like maths' often love the graphing unit because it looks like colouring-in that happens to count as homework.",
+      "The sheets on this page progress from simple pictographs (one picture represents one item) through tally charts, bar charts and finally line graphs for older kids. Each sheet gives the child a small data set — favourite ice cream flavours in the class, number of pets, daily weather — and asks them to build the graph from scratch, then answer questions about it.",
+      "Pair these with a real data collection at home. Ask the child to survey the family about their favourite fruits, write the tally, and graph it. The exercise becomes meaningful once the data is about people they know, which is why the real-world version is always more memorable than the worksheet.",
+    ],
+    faqs: [
+      {
+        question: "What types of graphs do kids learn?",
+        answer:
+          "Pictographs and tally charts in Year 1 to 2, bar graphs in Year 2 to 3, and line graphs in Year 3 to 4. Pie charts usually come in Year 5.",
+      },
+      {
+        question: "What's a pictograph?",
+        answer:
+          "A graph where pictures represent data. For example, one smiley face equals one vote for ice cream. They're the easiest graph type for young children.",
+      },
+      {
+        question: "What age should kids learn bar graphs?",
+        answer:
+          "Year 2 or Year 3, once they can count reliably and understand scale (one square on the graph represents one or two items).",
+      },
+      {
+        question: "How do I make graphing real?",
+        answer:
+          "Survey the family. Count the cars in a colour on the way to school. Measure something daily for a week and graph the results. Real data beats worksheet data every time.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy", "math-quiz", "pattern-wizard"],
+    linkedWorksheetSlugs: ["grade-2-math-worksheets", "grade-3-math-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "telling-time-half-hour",
+    keyword: "telling time half hour worksheets",
+    searchVolume: 4200,
+    h1: "Free Telling Time to the Half Hour Worksheets — Printable PDF",
+    title: "Telling Time to the Half Hour Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable telling time worksheets — read and draw clock hands to the half hour. Grade 1 time practice with analog clocks.",
+    intro: [
+      "Telling time to the half hour is the second stop on the time-telling journey, after o'clocks but before quarter-past and quarter-to. It's where kids first encounter the idea that the hour hand moves between numbers — at half past seven, the hour hand is halfway between seven and eight, not pointing at seven. That one concept trips up most six-year-olds and is worth explicit practice.",
+      "The sheets on this page follow the standard progression. Early sheets show a clock with the hands already drawn and the child writes the time. Middle sheets give the time and the child draws the hands. Advanced sheets mix o'clocks and half-pasts so the child has to decide which pattern each clock is showing. Every clock uses traditional analog design.",
+      "Pair these with a real analog clock on the wall. Telling time from a printed worksheet is a pale imitation of reading the real thing, and kids who only do the worksheet version often struggle when you point to the kitchen clock. Use the sheets to teach the mechanics, then use the real clock every day to cement it.",
+    ],
+    faqs: [
+      {
+        question: "What age do kids learn half-hour time?",
+        answer:
+          "Year 1 (age 5 to 6). O'clock comes first, then half-past within the same year. Quarter-past and quarter-to are Year 2.",
+      },
+      {
+        question: "Why is half-past tricky?",
+        answer:
+          "Because the hour hand is between two numbers, not on one. Kids who've only seen o'clocks expect the hand to point at a number and get confused when it doesn't.",
+      },
+      {
+        question: "How do I explain half past?",
+        answer:
+          "The minute hand has gone halfway around the clock — that's the 'half' part. The hour hand is halfway between the old hour and the new one. Walk through it on a physical clock, not just a worksheet.",
+      },
+      {
+        question: "Analog or digital first?",
+        answer:
+          "Analog. Digital is trivially easy once a child can read numbers, but analog is a structural skill — you need it before digital makes sense. Teach analog first.",
+      },
+    ],
+    linkedGameSlugs: ["time-teller", "math-quiz"],
+    linkedWorksheetSlugs: ["math-worksheets-grade-1", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "skip-counting",
+    keyword: "skip counting worksheets",
+    searchVolume: 8900,
+    h1: "Free Skip Counting Worksheets — Printable PDF",
+    title: "Free Skip Counting Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable skip counting worksheets — count by 2s, 5s, 10s and beyond. Kindergarten to Grade 3 foundation for multiplication.",
+    intro: [
+      "Skip counting is the bridge between counting and multiplication. A child who can skip count in 2s, 5s and 10s has already learned three times tables without knowing it — the 2s are 2, 4, 6, 8; the 5s are 5, 10, 15, 20. When multiplication is formally introduced in Year 2 or 3, kids who skip-counted early find it almost trivial.",
+      "The worksheets on this page progress through the standard order: 10s first (it mirrors counting patterns), then 2s, then 5s, then harder tables like 3s, 4s and 11s. Early sheets have fill-in-the-blank sequences. Middle sheets use number lines and hundreds charts. Advanced sheets build up to skip counting backwards, which is the foundation of division.",
+      "The rhyme-and-repetition approach matters here. A kid who chants '2, 4, 6, 8' twenty times in the car will recall the pattern faster than one who only sees it on paper. Worksheets are the quiet practice half; verbal chanting is the other half. Do both.",
+    ],
+    faqs: [
+      {
+        question: "What is skip counting?",
+        answer:
+          "Counting in jumps instead of by ones. Skip counting by 2 is '2, 4, 6, 8'. By 5 is '5, 10, 15, 20'. It's the precursor to multiplication.",
+      },
+      {
+        question: "What age should kids start skip counting?",
+        answer:
+          "Reception or Year 1 for 10s and 2s. Year 2 for 5s and 3s. Year 3 for the rest. It should be solid before times tables are introduced.",
+      },
+      {
+        question: "How does skip counting help with multiplication?",
+        answer:
+          "Because the 2 times table IS skip counting by 2. A child who's chanted the pattern knows the answer to 3×2 before you ask it — they just didn't know it was called multiplication.",
+      },
+      {
+        question: "What's the best way to teach skip counting?",
+        answer:
+          "Chanting in the car, hundreds charts with circled patterns, and number lines. The visual pattern on a hundreds chart (the 5s column, the 10s column) is what cements it.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "times-tables-challenge", "multiplication-blast", "counting-game"],
+    linkedWorksheetSlugs: ["counting-worksheets", "multiplication-worksheets", "math-worksheets-grade-1"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "even-and-odd-numbers",
+    keyword: "even and odd numbers worksheets",
+    searchVolume: 5600,
+    h1: "Free Even and Odd Numbers Worksheets — Printable PDF",
+    title: "Free Even and Odd Numbers Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable even and odd numbers worksheets — identify, sort and colour even and odd numbers. Grade 1 and Grade 2 maths practice.",
+    intro: [
+      "Even and odd is a concept so simple adults often forget to teach it properly, and then a Year 2 child gets stuck on a worksheet and everyone's confused. The key insight: every number is either even or odd, and the test is whether you can split a group of objects into two equal piles. If yes, it's even. If there's one left over, it's odd.",
+      "The sheets on this page teach the concept visually first. Early sheets have groups of dots with a 'can you split them in two?' exercise. Middle sheets use numbers alone — circle the even numbers on this list. Advanced sheets apply the concept: which of these additions gives an even answer? Which gives odd? That last step turns the concept into real mathematical reasoning.",
+      "Pair these with a quick physical activity: get a handful of cereal pieces and have the child sort them into two rows. If the rows match, it's even. If one row has an extra, it's odd. Five minutes of that makes the worksheet version trivial.",
+    ],
+    faqs: [
+      {
+        question: "What's an even number?",
+        answer:
+          "A number that can be split exactly into two equal groups. 2, 4, 6, 8, 10 are all even. The pattern is: even numbers always end in 0, 2, 4, 6 or 8.",
+      },
+      {
+        question: "What's an odd number?",
+        answer:
+          "A number that can't be split into two equal groups — there's always one left over. 1, 3, 5, 7, 9 are all odd. They always end in 1, 3, 5, 7 or 9.",
+      },
+      {
+        question: "What age should kids learn odd and even?",
+        answer:
+          "Year 1 (age 5 to 6). It's usually the first properties-of-numbers concept children meet.",
+      },
+      {
+        question: "Why does it matter?",
+        answer:
+          "It's the foundation for divisibility rules, multiplication patterns, and later algebra. It also shows up constantly in everyday maths (can we share these 7 sweets fairly?).",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "sorting-frenzy", "counting-game"],
+    linkedWorksheetSlugs: ["counting-worksheets", "math-worksheets-grade-1", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "tally-marks",
+    keyword: "tally marks worksheets",
+    searchVolume: 4100,
+    h1: "Free Tally Marks Worksheets — Printable PDF",
+    title: "Free Tally Marks Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable tally marks worksheets — count and record data using tally marks. Kindergarten to Grade 2 data handling practice.",
+    intro: [
+      "Tally marks are one of the most satisfying early maths tools. A child counting items with tallies feels like a proper scientist, and the crossed-line pattern (four straight, then one across) is surprisingly memorable. It's also a real-world skill — anyone running a survey or counting votes uses tallies.",
+      "The sheets on this page start with basic tally reading (how many tallies are there?) and move to recording — count the pictures and draw the tallies. Middle sheets introduce grouped tallies (the crossed pattern for 5). Advanced sheets use tally marks as part of data handling problems, with the child tallying survey results and then answering comparison questions.",
+      "Do a quick household tally survey alongside the worksheets. Count the spoons in the drawer, the windows in the house, the cars on the street for five minutes. Real tally practice beats pure worksheet tallies every time.",
+    ],
+    faqs: [
+      {
+        question: "What are tally marks?",
+        answer:
+          "A way of counting using single vertical lines, grouped into fives with a diagonal line across every fifth tally. Quick to draw and easy to count in groups of five.",
+      },
+      {
+        question: "What age should kids learn tally marks?",
+        answer:
+          "Year 1 to 2 (age 5 to 7). They're usually introduced alongside basic data handling and bar charts.",
+      },
+      {
+        question: "Why group tallies in fives?",
+        answer:
+          "Because it makes counting faster. A cluster of 15 tallies in groups of five counts as 5, 10, 15 — much quicker than counting 15 individual marks.",
+      },
+      {
+        question: "Are tally marks still used in real life?",
+        answer:
+          "Yes — in sports scorekeeping, surveys, scientific counting, and quick stock takes. It's one of the most genuinely useful maths tools kids learn.",
+      },
+    ],
+    linkedGameSlugs: ["counting-game", "sorting-frenzy", "math-quiz"],
+    linkedWorksheetSlugs: ["counting-worksheets", "math-worksheets-grade-1", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "roman-numerals",
+    keyword: "roman numerals worksheets",
+    searchVolume: 9500,
+    h1: "Free Roman Numerals Worksheets — Printable PDF",
+    title: "Free Roman Numerals Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable Roman numerals worksheets — learn and practise I, V, X, L, C up to 100. Grade 3 and Grade 4 maths extension.",
+    intro: [
+      "Roman numerals are one of the most fun maths side-quests. They're not on the core curriculum, they don't come up on standardised tests until late primary, but every child who learns them feels like they've cracked a code. That enthusiasm is worth tapping into, especially for kids who find regular maths a bit grim.",
+      "The sheets here cover the basic set: I, V, X, L, C. Early sheets teach the symbols individually and the addition rule (VII = 5 + 1 + 1). Middle sheets introduce the subtraction rule (IV = 5 - 1, IX = 10 - 1), which is the main conceptual hurdle. Advanced sheets mix the two rules up to 100, which is the standard Year 4 target.",
+      "Point out Roman numerals in the real world once the child knows them — clock faces, book chapters, movie sequel titles, the year on old buildings. That kind of sighting solidifies the learning much faster than another worksheet.",
+    ],
+    faqs: [
+      {
+        question: "What are Roman numerals?",
+        answer:
+          "A number system used in ancient Rome, still used today for clock faces, book chapters and royal names. I = 1, V = 5, X = 10, L = 50, C = 100.",
+      },
+      {
+        question: "What age should kids learn Roman numerals?",
+        answer:
+          "Year 3 or Year 4 (age 7 to 9) in most UK schools. They're a Year 4 target in the national curriculum.",
+      },
+      {
+        question: "How do subtraction numerals work?",
+        answer:
+          "A smaller numeral before a larger one means subtract. IV = 5 - 1 = 4. IX = 10 - 1 = 9. XL = 50 - 10 = 40. This rule catches most kids out on their first attempt.",
+      },
+      {
+        question: "What's the biggest Roman numeral?",
+        answer:
+          "M = 1000 is the biggest single symbol. Primary school only covers up to 100, but once kids know the system they can read larger numerals instinctively.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "memory-match-animals"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "symmetry",
+    keyword: "symmetry worksheets",
+    searchVolume: 6700,
+    h1: "Free Symmetry Worksheets — Printable PDF",
+    title: "Free Symmetry Worksheets (Printable PDF) | JiggyJoy",
+    metaDescription:
+      "Free printable symmetry worksheets — identify lines of symmetry, draw the other half and create symmetrical patterns. Grade 1 to Grade 4.",
+    intro: [
+      "Symmetry sits at the edge of maths and art, and for a lot of kids it's the first time those two subjects feel like the same thing. A child drawing the other half of a butterfly is doing geometry — they just don't know it yet. The shift from 'this is art' to 'this is maths' is one of the nice stealth wins of the symmetry topic.",
+      "The sheets on this page start with recognition (is this shape symmetrical? draw a line through it to show the line of symmetry) and move to construction (here's half a picture, draw the other half). Advanced sheets introduce multiple lines of symmetry and rotational symmetry for older kids. Every sheet uses shapes and pictures kids will want to finish.",
+      "This is a great topic for kids who struggle with pure number work. The visual-creative component makes symmetry feel like a reward rather than a drill, and the skill itself is genuinely useful for later geometry.",
+    ],
+    faqs: [
+      {
+        question: "What is symmetry in maths?",
+        answer:
+          "When a shape can be folded in half so that both halves match exactly. The fold line is called the line of symmetry. A butterfly is symmetrical; a hand isn't.",
+      },
+      {
+        question: "What age should kids learn symmetry?",
+        answer:
+          "Year 2 for basic line-symmetry recognition. Year 3 to 4 for drawing the missing half. Rotational symmetry comes in Year 5.",
+      },
+      {
+        question: "What's rotational symmetry?",
+        answer:
+          "When a shape looks the same after being rotated by less than a full turn. A square has rotational symmetry of order 4 (looks the same every 90 degrees).",
+      },
+      {
+        question: "How do I teach symmetry?",
+        answer:
+          "Start with folded paper. Cut a shape out of folded paper, unfold it, and you have a symmetrical shape. The physical act of folding is what makes the concept click.",
+      },
+    ],
+    linkedGameSlugs: ["shape-sorter", "pattern-wizard", "connect-the-dots"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: ["floral-mandalas", "animal-mandalas"],
   },
 ];
 
@@ -5818,8 +7183,1546 @@ export const learnTopics: ProgrammaticPage[] = [
     linkedWorksheetSlugs: ["counting-worksheets", "kindergarten-math-worksheets"],
     linkedColoringCategorySlugs: ["numbers-coloring-pages"],
   },
+  {
+    slug: "how-to-teach-regrouping",
+    keyword: "how to teach regrouping",
+    searchVolume: 3900,
+    h1: "How to Teach Regrouping (Borrowing and Carrying)",
+    title: "How to Teach Regrouping in Addition and Subtraction",
+    metaDescription:
+      "Regrouping is where most Year 2 maths wobbles start. Teach it with base-ten blocks, not tricks — here's the sequence that actually works.",
+    intro: [
+      "Regrouping — the thing adults still call 'borrowing and carrying' — is the single biggest jump in primary maths after addition itself. A child who was confidently doing 24 + 35 last week suddenly gets 28 + 37 wrong because the tens column needs a new digit from somewhere. That 'somewhere' is the hurdle.",
+      "The fix is base-ten blocks, every time. Don't start with the written algorithm. Give the child a pile of ones blocks and tens rods, do the addition physically, and let them watch as ten ones get swapped for one ten. Once they've seen the swap happen three times, the algorithm on paper becomes a translation of something they already understand.",
+      "The classic mistake is teaching regrouping as a trick. 'Carry the one' works until the child meets a problem where the pattern doesn't fit, and then the whole structure falls apart. Base-ten first, written method second, speed third.",
+    ],
+    faqs: [
+      {
+        question: "What is regrouping in math?",
+        answer:
+          "Rearranging the parts of a number when adding or subtracting. In addition, ten ones become one ten (carrying). In subtraction, one ten becomes ten ones (borrowing).",
+      },
+      {
+        question: "What age is regrouping taught?",
+        answer:
+          "Year 2 for addition with regrouping, Year 2 to 3 for subtraction with regrouping. It's the biggest leap in Key Stage 1 maths.",
+      },
+      {
+        question: "Why do kids struggle with borrowing?",
+        answer:
+          "Because it reverses the usual column order. Kids have to cross out, add to another column, and then subtract — three steps instead of one. Break it into those three steps explicitly.",
+      },
+      {
+        question: "Should I use place value blocks?",
+        answer:
+          "Yes, for at least the first two weeks. Regrouping makes sense physically before it makes sense on paper. Skipping this step is why children fail regrouping tests.",
+      },
+    ],
+    linkedGameSlugs: ["math-addition", "math-subtraction", "math-quiz"],
+    linkedWorksheetSlugs: ["addition-worksheets", "subtraction-worksheets", "place-value-worksheets", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-long-division",
+    keyword: "how to teach long division",
+    searchVolume: 6400,
+    h1: "How to Teach Long Division (Without Tears)",
+    title: "How to Teach Long Division — A Step-by-Step Guide",
+    metaDescription:
+      "Long division is where fourth-grade maths goes wrong for half the class. Teach it with the 'Dad Mother Sister Brother' mnemonic and chunking first.",
+    intro: [
+      "Long division is the Everest of primary maths. The algorithm has four separate steps, each of which can go wrong, and getting them in the right order is the entire skill. Children who can multiply fluently still often stumble on long division because of the sheer procedural weight of it.",
+      "There are two viable approaches. The first is the traditional 'Divide, Multiply, Subtract, Bring down' algorithm, taught with the DMSB mnemonic (Dad, Mother, Sister, Brother, Rover for the remainder). The second is chunking, which is gentler and used in many UK schools. We recommend starting with chunking to build understanding, then moving to the traditional algorithm once the concept is solid.",
+      "The prerequisite is rock-solid times tables. A child who can't recall 7 × 8 instantly will never get comfortable with long division because they'll lose the thread on every problem. Get fluency first, then introduce the algorithm.",
+    ],
+    faqs: [
+      {
+        question: "What age is long division taught?",
+        answer:
+          "Year 5 or Year 6 in the UK (age 9 to 11). In the US, it's typically introduced in fourth grade and polished in fifth.",
+      },
+      {
+        question: "What's the DMSB mnemonic?",
+        answer:
+          "Divide, Multiply, Subtract, Bring down — the four steps of traditional long division. The classroom version is 'Dad, Mother, Sister, Brother' to make it memorable.",
+      },
+      {
+        question: "What's chunking?",
+        answer:
+          "A gentler division method where the child repeatedly subtracts multiples of the divisor. 72 ÷ 6 becomes 72 − 60 (ten sixes) − 12 (two sixes) = twelve sixes. It builds understanding before the algorithm.",
+      },
+      {
+        question: "Why do kids fail at long division?",
+        answer:
+          "Three reasons: weak times tables, losing their place in the algorithm, and making arithmetic errors mid-problem. Fix each separately rather than just doing more practice problems.",
+      },
+    ],
+    linkedGameSlugs: ["multiplication-blast", "times-tables-challenge", "math-quiz"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-decimals",
+    keyword: "how to teach decimals",
+    searchVolume: 4800,
+    h1: "How to Teach Decimals — From Money to Place Value",
+    title: "How to Teach Decimals to Kids — A Parent's Guide",
+    metaDescription:
+      "Decimals are easier to teach than fractions if you start with money. Here's the sequence from £0.50 to hundredths and thousandths.",
+    intro: [
+      "Decimals are easier to teach than most parents expect, because every child has already seen them — on price tags. £1.50 and $3.75 are decimal numbers, and a 7-year-old who knows that a fifty-pence piece is half a pound has already grasped the core concept of tenths without knowing the name.",
+      "Start there. Teach decimals as money first, then extend to measurement (centimetres and metres), and only introduce the place-value grid (tenths, hundredths, thousandths) once the child can confidently handle decimal money. That order puts the concept before the abstraction, which is how maths should always work at this age.",
+      "The biggest trap is treating decimals as a brand new topic disconnected from fractions. Every decimal is secretly a fraction: 0.5 is 1/2, 0.25 is 1/4. Make that link explicit from day one and the two topics reinforce each other instead of confusing each other.",
+    ],
+    faqs: [
+      {
+        question: "What age are decimals taught?",
+        answer:
+          "Year 4 to Year 5 in the UK (age 8 to 10). US fourth and fifth grades cover the equivalent content.",
+      },
+      {
+        question: "How do I explain decimals?",
+        answer:
+          "Start with money. £1.50 means one pound and fifty pence. The fifty pence is the decimal part. Once that's clear, introduce tenths and hundredths as the place-value names for the digits after the dot.",
+      },
+      {
+        question: "Are decimals the same as fractions?",
+        answer:
+          "Yes — different notation for the same concept. 0.5 = 1/2. 0.25 = 1/4. Teaching them together (showing the equivalence) is more effective than teaching them in separate units.",
+      },
+      {
+        question: "What comes after decimals?",
+        answer:
+          "Percentages. They're the third way of writing the same thing — 0.5 = 1/2 = 50%. Once a child sees that all three are equivalent, the rest of the topic becomes translation.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "money-match", "fractions-frenzy"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-percentages",
+    keyword: "how to teach percentages",
+    searchVolume: 3700,
+    h1: "How to Teach Percentages — Real-World First",
+    title: "How to Teach Percentages to Kids — A Practical Guide",
+    metaDescription:
+      "Percentages are just hundredths in disguise. Teach with sale prices and pie charts first, algorithms second. Grade 4 to Grade 6.",
+    intro: [
+      "Percentages have a reputation for being hard because they arrive with their own symbol and a set of procedural rules, but the concept itself is simple: percent means 'out of a hundred'. Every percentage a child will ever see is just a fraction with 100 on the bottom. Start there and the rest falls into place.",
+      "The real-world hook is sales. A shop sign that says '50% off' is something a 9-year-old can understand because they already want the toy. Work out the saving on a £30 item, then on a £20 item, then on a £45 item. Within ten minutes they're doing mental percentage calculations that would have looked impossible on a worksheet.",
+      "Don't rush the algorithm. 'To find 15% of 80, multiply 80 by 0.15' is the endgame, not the starting point. Get the conceptual grip (what is percent?) before the procedural move (how do I calculate it?) — otherwise you end up with a child who can do the maths but doesn't know what the answer means.",
+    ],
+    faqs: [
+      {
+        question: "What does percent mean?",
+        answer:
+          "'Per cent' means 'out of a hundred'. 25% means 25 out of 100, which is the same as 25/100 or 1/4.",
+      },
+      {
+        question: "What age should kids learn percentages?",
+        answer:
+          "Year 5 to 6 in the UK (age 9 to 11), typically after fractions and decimals are secure.",
+      },
+      {
+        question: "How do I calculate 15% of a number?",
+        answer:
+          "Teach 10% first (divide by 10) then 5% (half of 10%) then add them together. For 15% of 80: 10% is 8, 5% is 4, answer is 12. This chaining approach is easier than the multiplication formula.",
+      },
+      {
+        question: "Are fractions, decimals and percentages the same?",
+        answer:
+          "They're three ways of writing the same thing. 1/2 = 0.5 = 50%. Teaching the equivalences early saves a year of confusion later.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "fractions-frenzy", "money-match"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-negative-numbers",
+    keyword: "how to teach negative numbers",
+    searchVolume: 2400,
+    h1: "How to Teach Negative Numbers",
+    title: "How to Teach Negative Numbers — Temperature, Lifts and Number Lines",
+    metaDescription:
+      "Negative numbers click when you use thermometers, lifts and football scores — not abstract number lines. A Year 4 to 6 teaching guide.",
+    intro: [
+      "Negative numbers are one of the first genuine abstractions in maths. Before this point, every number a child has met could be represented by a physical quantity — you can count three apples but you can't count minus three apples. The concept of 'below zero' has to be scaffolded with real-world metaphors, and some metaphors work much better than others.",
+      "The two that work best: a thermometer and a lift. A thermometer is intuitive because every child has experienced cold weather — 'it's minus two outside' is a real sentence they've heard. A lift shows the same pattern: the ground floor is zero, the basement is minus one. Both map directly onto a vertical number line, which is the cleanest visual.",
+      "Avoid the 'owing money' metaphor too early. It works for adults but confuses kids because they don't yet have a strong grip on credit and debt. Temperature and lifts are concrete and don't need extra explanation.",
+    ],
+    faqs: [
+      {
+        question: "What age are negative numbers taught?",
+        answer:
+          "Year 4 or Year 5 in the UK (age 8 to 10). Full negative number arithmetic is a Year 6 to KS3 topic.",
+      },
+      {
+        question: "What's the best metaphor for negatives?",
+        answer:
+          "A thermometer. Every child has felt cold weather and heard 'minus two degrees', so the concept is pre-loaded. Draw a vertical thermometer and use it for all early negative number work.",
+      },
+      {
+        question: "How do I explain that minus minus equals plus?",
+        answer:
+          "Wait until later. The 'two negatives make a positive' rule is a Year 7 topic. At primary level, stick to reading negative values, ordering them, and adding or subtracting to cross zero.",
+      },
+      {
+        question: "Are negative numbers in the primary curriculum?",
+        answer:
+          "Reading and ordering negative numbers is a Year 4 target. Calculating with them is Key Stage 3 in most curricula.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "maths-play"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-graphs",
+    keyword: "how to teach graphs",
+    searchVolume: 2900,
+    h1: "How to Teach Graphs to Kids",
+    title: "How to Teach Graphs — Bar Charts, Pictographs and Line Graphs",
+    metaDescription:
+      "Teach graphs with real data from home — favourite fruits, daily weather, family ages. The real data beats any worksheet.",
+    intro: [
+      "Graphs click faster than any other area of data handling because they turn abstract numbers into pictures. A child who glazes over at a table of data will lean in at a bar chart made from the same numbers. That's not a personality quirk — it's how human brains work, and smart teaching leans into it.",
+      "Start with a real data collection. Ask the family to vote on favourite fruits, write the tally, and draw the bar chart. The child is the author of the data, which means they care about the result, which means they remember the process. Then repeat with weather for a week, or with family birthdays by month.",
+      "The biggest trap is letting kids skip the labels. A bar chart without a title and axis labels is an unfinished chart, and a 7-year-old will happily leave them off forever if you don't insist. Title, x-axis, y-axis — every time. That habit becomes the difference between a confident graph-maker and one who gets marked down on every test.",
+    ],
+    faqs: [
+      {
+        question: "What graph types do kids learn?",
+        answer:
+          "Pictographs and tally charts first (Year 1 to 2). Bar graphs in Year 2 to 3. Line graphs in Year 3 to 4. Pie charts in Year 5 to 6.",
+      },
+      {
+        question: "How do I make graphing engaging?",
+        answer:
+          "Use real data. Survey the family, count cars on the road, track daily rainfall for a week. Once the data is about something the child cares about, the graph stops feeling like a chore.",
+      },
+      {
+        question: "What are the key graph rules?",
+        answer:
+          "Title at the top. Labels on both axes. Consistent scale. One clear unit per square. If any of those are missing, the graph is incomplete.",
+      },
+      {
+        question: "When do pie charts come in?",
+        answer:
+          "Year 5 or 6. They require understanding of fractions, so they come after decimals and fractions are secure.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy", "math-quiz"],
+    linkedWorksheetSlugs: ["grade-2-math-worksheets", "grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-data-handling",
+    keyword: "how to teach data handling",
+    searchVolume: 1600,
+    h1: "How to Teach Data Handling to Primary Kids",
+    title: "How to Teach Data Handling — Surveys, Tallies and Simple Stats",
+    metaDescription:
+      "Data handling is the applied side of primary maths. Teach through household surveys — favourite snacks, daily weather, shoe sizes.",
+    intro: [
+      "Data handling is the bit of the maths curriculum that everyone forgets until SATs week. It shows up in the national curriculum from Year 1, gets a dedicated strand by Year 3, and then turns into statistics in secondary school. The good news is it's the most intrinsically fun part of maths — it's about real information about real things.",
+      "The best way to teach it is with tiny household surveys. Ask each family member their favourite biscuit. Tally the results. Write the data into a table. Draw a bar chart. Work out the mode. That sequence — collect, tally, table, chart, interpret — is the entire data handling curriculum in miniature, and it takes about 20 minutes.",
+      "Repeat it weekly with different topics and the child develops real data fluency. No child has ever forgotten how to draw a bar chart if they've drawn five of them about things they care about. Worksheets alone can't deliver that, which is why this topic rewards a hands-on approach.",
+    ],
+    faqs: [
+      {
+        question: "What is data handling in primary maths?",
+        answer:
+          "Collecting, organising, displaying and interpreting data. Typically covered through surveys, tally charts, bar graphs, pictograms and simple averages.",
+      },
+      {
+        question: "What age does data handling start?",
+        answer:
+          "Informally from Reception, formally from Year 1 with simple sorting and tallying. Full data handling strand begins in Year 3.",
+      },
+      {
+        question: "What's the mode?",
+        answer:
+          "The most frequent value in a data set. If five kids like chocolate and two like vanilla, chocolate is the mode. Mean, median and range come later.",
+      },
+      {
+        question: "How do I make data handling stick?",
+        answer:
+          "Run one real survey per week about something trivial — favourite dinners, pet names, outdoor temperature. Five surveys in and the concept is rock solid.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy", "math-quiz", "counting-game"],
+    linkedWorksheetSlugs: ["grade-2-math-worksheets", "counting-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-probability",
+    keyword: "how to teach probability to kids",
+    searchVolume: 1900,
+    h1: "How to Teach Probability to Kids",
+    title: "How to Teach Probability — Dice, Coins and Simple Chance",
+    metaDescription:
+      "Probability at primary is about words like 'likely', 'unlikely' and 'certain'. Use coins and dice to build intuition before the fractions come in.",
+    intro: [
+      "Primary probability is language-first. Before a child meets any numbers, they learn the words that describe chance: impossible, unlikely, even chance, likely, certain. Once they can classify an event into one of those buckets, the numerical version becomes a translation problem rather than a new concept.",
+      "Coin flips are the perfect teaching tool. Flip a coin ten times, record heads or tails, and talk about why the result isn't exactly five and five. Then flip twenty times. The longer the sample, the closer you get to 50-50. That single observation is the foundation of all probability — and you can teach it at age 6.",
+      "Dice games introduce the next level: a six-sided dice has six equal outcomes, so the probability of rolling a three is one in six. At this point you introduce fraction notation, which connects probability to the fractions unit kids already know. The whole topic takes about three weeks if you pace it right.",
+    ],
+    faqs: [
+      {
+        question: "What age is probability taught?",
+        answer:
+          "Language-of-chance work starts in Year 2 or 3. Numerical probability (as fractions) is typically Year 5 to 6.",
+      },
+      {
+        question: "How do I teach probability to a 7 year old?",
+        answer:
+          "Coin flips, dice rolls, and conversations. 'Is it likely to rain today?' 'Is it certain the sun will rise tomorrow?' That language-first approach builds the foundation before any maths.",
+      },
+      {
+        question: "What's a fair game?",
+        answer:
+          "One where every player has the same chance of winning. Flipping a coin is fair. 'You win if the dice shows 1, I win if it shows anything else' is not. The fair-game test is a great way to teach probability reasoning.",
+      },
+      {
+        question: "Is probability on primary tests?",
+        answer:
+          "Basic probability language appears in Year 5 to 6 maths. Full probability calculation is Key Stage 3 and beyond.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "pattern-wizard"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "teaching-comprehension-strategies",
+    keyword: "reading comprehension strategies for kids",
+    searchVolume: 12000,
+    h1: "Reading Comprehension Strategies for Kids",
+    title: "Reading Comprehension Strategies — What Good Readers Actually Do",
+    metaDescription:
+      "Strong readers use five specific strategies: predict, question, clarify, summarise, visualise. Teach each one explicitly and comprehension improves.",
+    intro: [
+      "Reading comprehension isn't a single skill — it's a set of five strategies that strong readers deploy without thinking. The breakthrough insight for teaching is that these strategies can be named, explained, practised individually, and then combined. Children who are taught them explicitly comprehend better than children who are just told to 'read carefully'.",
+      "The five are: predict (what will happen next?), question (what does this word mean? why did the character do that?), clarify (reread the bit that didn't make sense), summarise (what just happened in one sentence?), and visualise (picture the scene in your head). Teach one a week for five weeks, with a different book each week.",
+      "The best teaching move is to model it out loud. Read a page, stop, and say 'I'm going to predict what happens next — I think the rabbit will run away because he's scared'. Then read on and check. Kids who watch an adult use strategies learn to use them themselves, which is the whole point.",
+    ],
+    faqs: [
+      {
+        question: "What are comprehension strategies?",
+        answer:
+          "Specific mental moves that skilled readers use: predicting, questioning, clarifying, summarising, visualising. Teaching each one explicitly is the most research-backed way to improve comprehension.",
+      },
+      {
+        question: "What age should kids learn comprehension strategies?",
+        answer:
+          "Informally from Year 1 through storytime questions. Explicit strategy teaching usually starts in Year 2 to 3.",
+      },
+      {
+        question: "Which strategy is most important?",
+        answer:
+          "Questioning is the foundation. A child who asks 'why did that happen?' while reading is engaging with the text rather than just decoding it.",
+      },
+      {
+        question: "How often should I do comprehension practice?",
+        answer:
+          "Daily, in small doses. Ten minutes of read-aloud with questions is more effective than a weekly worksheet.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "word-spell"],
+    linkedWorksheetSlugs: ["sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-summarising",
+    keyword: "how to teach summarising",
+    searchVolume: 1400,
+    h1: "How to Teach Summarising to Kids",
+    title: "How to Teach Summarising — The 'One Sentence' Test",
+    metaDescription:
+      "Summarising is the comprehension skill that reveals whether a child actually understood the passage. Here's how to teach it step by step.",
+    intro: [
+      "Summarising is the final boss of comprehension. A child can decode every word of a passage, answer literal 'what happened' questions, and still completely miss the point. The test of real comprehension is: can they tell you what the passage was about in one sentence? If yes, they understood it. If no, they were reading on autopilot.",
+      "Teach it in three steps. First, ask them to retell the passage in detail (this is easier than summarising, and it's the warm-up). Second, ask them to pick the most important thing that happened. Third, ask them to describe the passage in one sentence. Each step strips away detail, which is what summarising actually is — compression.",
+      "Older kids can be taught the 'somebody, wanted, but, so, then' formula (somebody did what? wanted what? but what got in the way? so what did they do? then what happened?). It forces a whole-story shape and works on fiction at any age.",
+    ],
+    faqs: [
+      {
+        question: "What does it mean to summarise?",
+        answer:
+          "To describe the key points of a passage or story in a shorter form. Usually the summary is a few sentences at most, focusing on main ideas rather than details.",
+      },
+      {
+        question: "What age should kids summarise?",
+        answer:
+          "Year 2 or 3 (age 6 to 8) is the standard start. Full summarising skill is usually expected by Year 5.",
+      },
+      {
+        question: "What's the somebody-wanted-but-so-then formula?",
+        answer:
+          "A five-point structure for summarising stories. Somebody (character), wanted (goal), but (obstacle), so (action), then (result). It forces a clean narrative shape.",
+      },
+      {
+        question: "How do I know if a summary is good?",
+        answer:
+          "If it captures the main idea and you can replace the original passage with it for the purposes of explaining what happened. If key events are missing or if irrelevant details are included, it needs revision.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "word-spell"],
+    linkedWorksheetSlugs: ["sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-inference",
+    keyword: "how to teach inference",
+    searchVolume: 2100,
+    h1: "How to Teach Inference in Reading",
+    title: "How to Teach Inference — Reading Between the Lines",
+    metaDescription:
+      "Inference is the skill of reading between the lines. Teach it with picture prompts first, then short text, then full passages.",
+    intro: [
+      "Inference is what makes reading feel like real thinking. A literal reader tells you what happened. An inferring reader tells you why it happened, what the character was feeling, and what will happen next. The leap between those two is the single biggest comprehension step in primary years.",
+      "Start with pictures, not text. Show a child a photograph of a boy holding a broken toy with his head down. Ask 'how do you think he feels? how do you know?'. That 'how do you know' is the inference move — the child has to point to visual evidence in the picture to support their answer. Once they can do it with pictures, the same move transfers cleanly to text.",
+      "The explicit prompt 'what does the text tell us? what does it make us think?' is the scaffolding that makes inference teachable. Use it on every passage for a term and the skill transfers to independent reading.",
+    ],
+    faqs: [
+      {
+        question: "What does inference mean in reading?",
+        answer:
+          "Using clues in the text to work out something that isn't stated directly. If a character 'slams the door', the text doesn't say they're angry — the reader infers it.",
+      },
+      {
+        question: "What age should kids learn inference?",
+        answer:
+          "Picture inference from Year 1. Text inference from Year 2 onwards. Mastery is usually a Year 4 to 5 target.",
+      },
+      {
+        question: "How do I teach inference?",
+        answer:
+          "Start with pictures. Ask 'how does this character feel?' and 'how do you know?'. The how-do-you-know is the inference move and needs to be practised explicitly.",
+      },
+      {
+        question: "Why is inference so hard?",
+        answer:
+          "Because the evidence is implicit. A child has to hold the text in memory, notice the detail, and reason from it — three cognitive moves at once. Worth lots of scaffolded practice.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure"],
+    linkedWorksheetSlugs: ["sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-spelling-rules",
+    keyword: "how to teach spelling rules",
+    searchVolume: 2700,
+    h1: "How to Teach Spelling Rules",
+    title: "How to Teach Spelling Rules — The Ones That Actually Work",
+    metaDescription:
+      "English spelling is patternable, not chaotic. Here are the rules to teach and the ones to skip entirely.",
+    intro: [
+      "English spelling has a bad reputation and most of it is unearned. It's not as clean as Italian, but it's much more patterned than people assume — about 85% of English words follow predictable rules. The problem is that schools often teach the irregular 15% first, which makes the whole language look like a minefield.",
+      "The rules worth teaching explicitly: magic-e (the 'e' on the end of 'cake' makes the 'a' say its name), doubling (runner, running), dropping-e before -ing (make → making), and the i-before-e rule (with its famous exceptions). That's about it for the primary years — four rules that cover a huge fraction of everyday writing.",
+      "The trap is over-teaching. A child who has memorised twenty spelling rules is more confused than one who has internalised four. Pick the ones with the highest coverage, teach them properly, and let the rest come through reading and practice.",
+    ],
+    faqs: [
+      {
+        question: "What's the magic-e rule?",
+        answer:
+          "When a word ends in 'e', the vowel before it usually says its own name. 'cap' has a short a; 'cape' has a long a. It's one of the highest-value spelling rules for early readers.",
+      },
+      {
+        question: "What's the doubling rule?",
+        answer:
+          "When you add -ing to a short-vowel word ending in a single consonant, you double the consonant. 'Run' becomes 'running', not 'runing'. It's a Year 2 topic.",
+      },
+      {
+        question: "Is i-before-e still a good rule?",
+        answer:
+          "Roughly — it works most of the time after 'c' but has plenty of exceptions (weird, neither, their). Worth teaching as a guide, not as gospel.",
+      },
+      {
+        question: "What rules should I skip?",
+        answer:
+          "Obscure ones with small coverage. A rule that only applies to 20 words isn't worth the cognitive load. Focus on high-leverage rules first.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "spelling-bee", "bubble-pop-abc"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-paragraph-writing",
+    keyword: "how to teach paragraph writing",
+    searchVolume: 2300,
+    h1: "How to Teach Paragraph Writing",
+    title: "How to Teach Paragraph Writing — Topic Sentence First",
+    metaDescription:
+      "A paragraph is a topic sentence plus supporting sentences. Teach it with that structure and writing quality jumps overnight.",
+    intro: [
+      "Paragraph writing is where primary literacy stops being about mechanics and starts being about organisation. A child who can write good sentences doesn't automatically write good paragraphs — they have to be taught that a paragraph has a shape: topic sentence, two or three supporting sentences, and a closing sentence if needed. That shape is the whole skill.",
+      "The teaching sequence: model a paragraph out loud, identify the topic sentence, identify the supporting sentences, then ask the child to write one the same shape on a different topic. Do that five times across a week and they'll start producing structured paragraphs on their own. Without the explicit structure teaching, kids write paragraphs that wander.",
+      "The topic sentence is the piece to drill. Every paragraph needs one sentence that tells the reader what the paragraph is about. A child who can identify topic sentences in their reading will start writing them in their own work, and that single habit lifts paragraph quality more than any other intervention.",
+    ],
+    faqs: [
+      {
+        question: "What's a topic sentence?",
+        answer:
+          "The sentence that tells the reader what a paragraph is about. Usually the first sentence, though it can appear later. The rest of the paragraph supports or develops the topic sentence.",
+      },
+      {
+        question: "What age should kids write paragraphs?",
+        answer:
+          "Year 3 to 4 (age 7 to 9) is the standard start. Before then, children write sentence-level pieces that gradually get longer.",
+      },
+      {
+        question: "How many sentences in a paragraph?",
+        answer:
+          "Three to five is the usual guide at primary level. More than five and the paragraph has probably become two paragraphs.",
+      },
+      {
+        question: "What's a common paragraph mistake?",
+        answer:
+          "Starting a new idea halfway through. Every time the topic changes, you need a new paragraph. Teach that rule explicitly.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "story-adventure"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-story-writing",
+    keyword: "how to teach story writing",
+    searchVolume: 4200,
+    h1: "How to Teach Story Writing to Kids",
+    title: "How to Teach Story Writing — Structure, Characters and Voice",
+    metaDescription:
+      "Story writing needs structure before creativity. Teach the beginning-middle-end shape first, then add character and voice.",
+    intro: [
+      "Most kids love making up stories orally and then freeze when asked to write one down. The gap is usually structure, not imagination. A child who tells a rambling verbal story can't reproduce it on paper because paper demands a shape, and nobody's taught them the shape yet.",
+      "The teaching sequence: start with three-part stories (beginning, middle, end) and never go straight to six-part arcs. The child writes 'one day there was a dog. Then the dog found a bone. And then the dog was happy'. That's a complete three-part story and worth celebrating, because the structure is there. Depth comes later.",
+      "Once the three-part shape is comfortable, add characters (a name, a feeling, a reason for being in the story), then add a problem (something goes wrong), then a resolution. Those are the four building blocks of primary-level story writing and they unlock everything else. Creative flair is what happens after the structure is secure, not before.",
+    ],
+    faqs: [
+      {
+        question: "What's the basic story structure for kids?",
+        answer:
+          "Beginning (who, where), middle (problem), end (resolution). Three parts, each with a clear purpose. Everything else is decoration.",
+      },
+      {
+        question: "What age should kids start story writing?",
+        answer:
+          "Oral stories from age 3. Written stories from Year 1 (age 5 to 6), starting with a few sentences and growing to full paragraphs by Year 3.",
+      },
+      {
+        question: "How do I help a child who's stuck?",
+        answer:
+          "Ask 'who's your character? where are they? what goes wrong?'. Those three questions unstick most blocks. Writing prompts with pictures also help.",
+      },
+      {
+        question: "Should I correct their spelling?",
+        answer:
+          "Not during the first draft. Let the child get the story out, then edit for spelling in a separate pass. Correcting mid-writing kills creative flow.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "word-spell"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: ["fantasy", "characters"],
+  },
+  {
+    slug: "how-to-teach-descriptive-writing",
+    keyword: "how to teach descriptive writing",
+    searchVolume: 1800,
+    h1: "How to Teach Descriptive Writing",
+    title: "How to Teach Descriptive Writing — Show Don't Tell",
+    metaDescription:
+      "Descriptive writing is the 'show don't tell' skill. Teach it with sensory detail prompts, not adjective lists.",
+    intro: [
+      "Descriptive writing is where kids are supposed to learn 'show don't tell', and most of them get taught it as 'use lots of adjectives'. That's not the same thing, and the difference is why most primary descriptive writing is a list of words like 'tall', 'big', 'red' instead of a scene you can actually picture.",
+      "The better teaching move is sensory detail. Ask the child: what can you see? what can you hear? what can you smell? what does it feel like? One sentence on each sense, and the writing instantly comes alive without a single adjective being added. 'The kitchen smelled of burnt toast' is a better description than 'the kitchen was smelly and messy'.",
+      "Model it first. Write a four-sentence description of the classroom using each sense, read it out, and ask the child to do the same for their bedroom. Within two sessions they'll start using sensory writing unprompted, which is the whole goal.",
+    ],
+    faqs: [
+      {
+        question: "What's descriptive writing?",
+        answer:
+          "Writing that creates a vivid picture in the reader's mind. It uses sensory detail, specific nouns and verbs, and sometimes figurative language (similes, metaphors).",
+      },
+      {
+        question: "What age should kids learn descriptive writing?",
+        answer:
+          "Year 2 to 3 for basic sensory detail. Year 4 onwards for similes, metaphors and extended descriptions.",
+      },
+      {
+        question: "Why is 'show don't tell' hard?",
+        answer:
+          "Because kids default to telling — it's faster and easier. Showing requires a pause to think about specifics, which is a habit that takes deliberate practice.",
+      },
+      {
+        question: "How do I teach sensory writing?",
+        answer:
+          "Pick a place the child knows well. Ask them to write one sentence for each sense — sight, sound, smell, touch, taste. That exercise alone improves description immediately.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "word-spell"],
+    linkedWorksheetSlugs: ["sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-poetry",
+    keyword: "how to teach poetry to kids",
+    searchVolume: 2500,
+    h1: "How to Teach Poetry to Kids",
+    title: "How to Teach Poetry — Rhymes, Rhythm and Read-Alouds",
+    metaDescription:
+      "Poetry teaching starts with reading it aloud, not analysing it. Kids who hear poetry first write better poems when asked to.",
+    intro: [
+      "Poetry teaching at primary usually goes wrong because adults treat it as a puzzle to decode rather than a sound to hear. Kids should meet poems through their ears first — read aloud, chanted, memorised — before they ever see one on a page. The ones that come alive for them tend to be the playful ones: Roald Dahl, Michael Rosen, Julia Donaldson, Dr Seuss.",
+      "Once a child has heard 20 or 30 poems read with expression, writing one becomes much less intimidating. They've internalised the rhythms without knowing it. Start their writing with simple structured forms — acrostics (name poems), list poems, haiku — rather than asking for free-form creative poetry.",
+      "Don't push rhyme too hard. Rhyming poems are fun to read but difficult to write well, and a 7-year-old forcing a rhyme often sacrifices meaning for sound. Start with unrhymed structured forms and let rhyming come later.",
+    ],
+    faqs: [
+      {
+        question: "What age should kids start poetry?",
+        answer:
+          "Hearing poetry: from birth, in nursery rhymes. Reading and reciting: from Year 1. Writing poetry: from Year 2 or 3, usually in structured forms first.",
+      },
+      {
+        question: "What poems work best for kids?",
+        answer:
+          "Playful, rhythmic, funny poems with clear rhymes. Roald Dahl, Michael Rosen, Shel Silverstein and Julia Donaldson are the classics. Save the serious poetry for later.",
+      },
+      {
+        question: "What's an acrostic poem?",
+        answer:
+          "A poem where the first letter of each line spells a word, usually the subject of the poem. Great first form for primary kids because the structure does half the work.",
+      },
+      {
+        question: "Should kids memorise poems?",
+        answer:
+          "Yes — one short poem a month. Memorising builds vocabulary, rhythm awareness and confidence. The kids who can recite one poem at age 7 grow into better writers.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "story-adventure"],
+    linkedWorksheetSlugs: ["rhyming-words-worksheets", "sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-grammar",
+    keyword: "how to teach grammar to kids",
+    searchVolume: 3800,
+    h1: "How to Teach Grammar to Kids",
+    title: "How to Teach Grammar — Sentences First, Terminology Later",
+    metaDescription:
+      "Grammar teaching works best when you teach sentence patterns before terminology. Here's the sequence that actually sticks.",
+    intro: [
+      "Grammar teaching has a reputation for being dry because most curricula teach terminology before patterns. A 7-year-old memorises the definition of a subordinate clause but can't produce one in their own writing — which is exactly backwards from how language actually works. Kids need to use the pattern first and name it second.",
+      "The approach that works: teach sentence types through lots of examples. Show ten simple sentences, then ten compound sentences, then ten complex sentences. Ask the child to copy the pattern with their own content. Only after weeks of pattern practice do you introduce the names ('this is called a compound sentence'). By then the label sticks to something concrete.",
+      "For the formal terminology the SATs require (subordinate clause, relative pronoun, fronted adverbial), teach them at the end, as vocabulary on top of skills that already exist. That's much less confusing than trying to learn the label and the skill at once.",
+    ],
+    faqs: [
+      {
+        question: "What age should kids learn grammar?",
+        answer:
+          "Implicit grammar from Year 1 through sentence work. Explicit terminology from Year 3 to 4 onwards, building toward the SATs grammar test in Year 6.",
+      },
+      {
+        question: "Is grammar important for writing?",
+        answer:
+          "Yes, but only the usable parts. Sentence variety, agreement, tense consistency and punctuation make a bigger difference than knowing what a fronted adverbial is.",
+      },
+      {
+        question: "How do I teach grammar without it being boring?",
+        answer:
+          "Use real sentences from books the child likes. Find examples of the pattern in their reading. Much more engaging than abstract grammar exercises.",
+      },
+      {
+        question: "What's the most important grammar rule?",
+        answer:
+          "Subject-verb agreement. 'He run' is wrong; 'he runs' is right. This single rule, taught well, prevents most primary-level grammar errors.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "spelling-bee"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "reading-strategies-for-kids",
+    keyword: "reading strategies for kids",
+    searchVolume: 3500,
+    h1: "Reading Strategies for Kids — What Good Readers Do",
+    title: "Reading Strategies for Kids — Five Habits That Build Fluency",
+    metaDescription:
+      "Strong readers use five habits: read daily, choose their own books, reread favourites, ask questions, and talk about stories.",
+    intro: [
+      "Strong primary readers have five habits in common and almost nothing else. They read every day. They choose at least some of their own books. They reread favourites instead of only moving on. They ask questions while they read. And they talk about what they've read with someone, often an adult. That's it. Those five habits produce more strong readers than any single reading scheme.",
+      "The habits are easier to support than to teach. Daily reading needs ten minutes a day, at a set time. Choice means a weekly library visit or a well-stocked home shelf. Rereading means resisting the urge to swap books too quickly. Questioning means pausing to wonder out loud. And talking means dinner-table conversations about what the child read today.",
+      "The worksheet and testing side of reading is important for school, but it's not what makes readers. What makes readers is the five habits above. Build those first and the test performance comes with them.",
+    ],
+    faqs: [
+      {
+        question: "How much should a child read each day?",
+        answer:
+          "Ten to fifteen minutes of independent reading for Year 1 to 2, twenty minutes by Year 3 to 4, thirty minutes by Year 5 to 6. That's the fluency benchmark in most guidance.",
+      },
+      {
+        question: "Should kids reread books?",
+        answer:
+          "Yes, lots. Rereading builds fluency, deepens comprehension, and — crucially — builds love of reading. Kids who reread favourites grow into strong adult readers more reliably than kids who never do.",
+      },
+      {
+        question: "Does the type of book matter?",
+        answer:
+          "Less than you'd think at primary age. Comics, graphic novels, non-fiction, joke books all count. The genre hierarchy doesn't apply to developing readers — quantity and engagement matter more.",
+      },
+      {
+        question: "What if my child only likes non-fiction?",
+        answer:
+          "Fine. Lean into it. Kids who only read non-fiction for two years and then get interested in fiction turn into perfectly good all-round readers. Don't force a format.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "bubble-pop-abc", "story-adventure"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "writing-prompts-for-kids",
+    keyword: "writing prompts for kids",
+    searchVolume: 14000,
+    h1: "Writing Prompts for Kids — Unsticking the Blank Page",
+    title: "Writing Prompts for Kids — Story Starters That Actually Work",
+    metaDescription:
+      "The blank page is the hardest part of writing. Here are the prompts that unstick primary kids — pictures, first lines, and 'what if' questions.",
+    intro: [
+      "The blank page is the enemy. A 7-year-old asked to 'write a story' will stare at the paper for twenty minutes and produce four sentences. The same child given a writing prompt — a picture of a mysterious door, a first line like 'When I opened the box...' — will produce two pages without noticing. That's what prompts are for.",
+      "Three prompt types do most of the work. Picture prompts (a photo of an unusual scene) give the child a starting point without suggesting the plot. First-line prompts ('I should never have picked up the phone...') give the voice and tone. 'What if' prompts ('what if cats could talk?') open up a scenario. Rotate between types so the child doesn't get stuck in one style.",
+      "The trick is not to over-explain. A good prompt is short and open. A long prompt with character names and plot hints is a template, not a prompt, and it kills creativity. Give the spark, then get out of the way.",
+    ],
+    faqs: [
+      {
+        question: "What's a writing prompt?",
+        answer:
+          "A short starting point for a writing task — a picture, a first line, or a question — that gives the writer a spark without dictating the full content.",
+      },
+      {
+        question: "What age are writing prompts for?",
+        answer:
+          "Any age from when a child can write a sentence. Reception and Year 1 use picture prompts; older kids use written ones.",
+      },
+      {
+        question: "How long should a prompt be?",
+        answer:
+          "Short. One sentence, one image, or one question. Long prompts turn into templates and constrain creativity.",
+      },
+      {
+        question: "How often should we do prompts?",
+        answer:
+          "Two or three times a week is a good rhythm. Often enough to build the writing habit, not so often that it becomes a chore.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure", "word-spell"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "alphabet-worksheets"],
+    linkedColoringCategorySlugs: ["fantasy", "characters"],
+  },
+  {
+    slug: "how-to-raise-a-reader",
+    keyword: "how to raise a reader",
+    searchVolume: 6200,
+    h1: "How to Raise a Reader — The Habits That Matter",
+    title: "How to Raise a Reader — A Parent's Guide",
+    metaDescription:
+      "Raising a reader is mostly about environment, not instruction. Books in easy reach, reading aloud daily, and letting them choose.",
+    intro: [
+      "Raising a reader is less about teaching reading and more about building an environment where reading is the easy choice. The kids who grow into strong readers almost always come from homes where books are visible, accessible, and part of the daily rhythm. That's more important than any phonics scheme.",
+      "The three environmental factors that do most of the work: books in easy reach at child height (not on a high shelf), a daily read-aloud ritual (even after the child can read independently), and letting the child choose at least half of what they read. All three are free, none require a reading programme, and all three compound over years.",
+      "What doesn't work: enforced reading time, reading as a punishment substitute, reading rewards tied to quantity, and book snobbery. Any of those can turn a potential reader off permanently. The goal is to build the association between reading and pleasure, which is the only association that produces lifelong readers.",
+    ],
+    faqs: [
+      {
+        question: "When should I start reading to my child?",
+        answer:
+          "Birth. Infant read-alouds build vocabulary and phonological awareness, and they establish the reading-equals-cuddle association that makes older kids love books.",
+      },
+      {
+        question: "Should I stop reading aloud once they can read alone?",
+        answer:
+          "No. Keep reading aloud through primary school at least. Kids who are read to daily have bigger vocabularies, stronger comprehension, and better relationships with reading.",
+      },
+      {
+        question: "What if my child doesn't like reading?",
+        answer:
+          "Usually a book match problem, not a reading problem. Try a different format (graphic novels, non-fiction, comics), a different genre, or a series recommendation. Persistence without pressure is the right mix.",
+      },
+      {
+        question: "Do reading rewards work?",
+        answer:
+          "They work short-term and backfire long-term. Rewards teach that reading is something you do to get paid, which is the opposite of the association you want.",
+      },
+    ],
+    linkedGameSlugs: ["word-spell", "story-adventure", "bubble-pop-abc"],
+    linkedWorksheetSlugs: ["sight-words-worksheets", "rhyming-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-a-picky-eater",
+    keyword: "how to teach a picky eater",
+    searchVolume: 5400,
+    h1: "How to Teach a Picky Eater",
+    title: "How to Teach a Picky Eater — Strategies That Actually Work",
+    metaDescription:
+      "Picky eating is almost always developmental, not behavioural. Here's how to expand the plate without turning dinner into a battleground.",
+    intro: [
+      "Picky eating peaks between ages 2 and 5 and is almost always developmental rather than behavioural. A toddler who suddenly refuses green food isn't being difficult — their palate is in a phase. The classic mistake parents make is turning it into a battle of wills, which adds an emotional layer to a problem that was just about taste.",
+      "What actually works: consistent low-pressure exposure. Put a tiny portion of the new food on the plate (not a full serving) alongside food the child already eats. Say nothing about it. Offer it again tomorrow. And the day after. It takes an average of ten to fifteen exposures before a picky eater accepts a new food, which is far more than most parents realise.",
+      "The 'one bite rule' and bribery both backfire. Kids learn to associate the new food with stress, which makes them less likely to try it voluntarily. Low pressure, high repetition, and a calm dinner table. That's the whole method, and it's boring because it works.",
+    ],
+    faqs: [
+      {
+        question: "Is picky eating normal?",
+        answer:
+          "Yes — peaks between 2 and 5, usually resolves by age 7 to 8. About 25% of kids are described as picky at some point. It's a normal developmental phase.",
+      },
+      {
+        question: "How many exposures does it take to accept a new food?",
+        answer:
+          "Research suggests 10 to 15 exposures on average. Parents often give up after 2 or 3, which isn't enough.",
+      },
+      {
+        question: "Should I force my child to finish their plate?",
+        answer:
+          "No — it teaches kids to ignore their hunger cues and is linked to poor eating habits later. Offer the food, let them decide how much to eat, and trust the process.",
+      },
+      {
+        question: "What if they only eat three foods?",
+        answer:
+          "If it's genuinely three or fewer foods and they're losing weight, it's worth seeing a GP or dietitian. Extreme picky eating (ARFID) is a real thing. Normal picky eating covers maybe 15 to 20 accepted foods.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-tying-shoes",
+    keyword: "how to teach kid to tie shoes",
+    searchVolume: 8900,
+    h1: "How to Teach a Kid to Tie Their Shoes",
+    title: "How to Teach a Kid to Tie Shoes — The Bunny Ears Method",
+    metaDescription:
+      "Tying shoelaces takes ten minutes to explain and two weeks to practise. Use the bunny ears method — it's simpler than the loop method.",
+    intro: [
+      "Teaching shoe-tying is the kind of parenting milestone that nobody ever warns you about. You think it'll take one session. It takes two weeks. The good news: the technique is simple, it's always the same two weeks, and once it clicks it never unclicks.",
+      "The bunny ears method is easier for most kids than the traditional loop method. You make two bunny ears (two loops), cross them over, and tuck one through. That's it. No 'squirrel round the tree' nonsense, no complicated one-handed holding. Four discrete steps, each of which a 5-year-old can manage.",
+      "Practise without the shoes on first. Lay the shoe on the table, put the child's hands in front of them, and walk through each step slowly. Do it ten times in a row while they watch, then ten times with them doing it. Then put the shoe on and repeat. Two or three sessions a day for a week usually cracks it, and by the end of a fortnight they can do it without thinking.",
+    ],
+    faqs: [
+      {
+        question: "What age should kids tie their shoes?",
+        answer:
+          "Most children are developmentally ready around age 5 to 6. Some earlier, some later — there's no rush and no standard target.",
+      },
+      {
+        question: "Bunny ears or loop method?",
+        answer:
+          "Bunny ears is easier for most beginners because each step is discrete. The loop method is faster once you know it but harder to learn first. Start with bunny ears.",
+      },
+      {
+        question: "How long does it take to learn?",
+        answer:
+          "Two weeks of daily practice is typical. Some kids get it in three days, some take a month. It's not a skill that responds to more practice per day — little and often is the rule.",
+      },
+      {
+        question: "Should I buy shoes with velcro instead?",
+        answer:
+          "Fine for everyday wear, but teach shoelaces at some point before age 7. It's a basic life skill and avoiding it just pushes the problem later.",
+      },
+    ],
+    linkedGameSlugs: [],
+    linkedWorksheetSlugs: ["pattern-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-telling-time-analog",
+    keyword: "how to teach analog clock",
+    searchVolume: 4800,
+    h1: "How to Teach a Child to Read an Analog Clock",
+    title: "How to Teach Analog Clock Reading — From O'Clock to Minutes",
+    metaDescription:
+      "Analog clock teaching follows a strict sequence: o'clock, half past, quarter past, quarter to, and finally minutes. Here's how to pace it.",
+    intro: [
+      "Analog clock reading is the most structured time-telling teaching topic, and it has a right order that most curriculum guides follow: o'clock, then half past, then quarter past and quarter to, and finally minutes past and minutes to. Skipping steps or going too fast is the main reason children get confused.",
+      "The single best teaching tool is a physical clock — a plastic learning clock where you can move the hands. Worksheets alone don't work because the child can't manipulate the clock face, and manipulating it is how the concept lands. Five minutes a day with a real clock beats twenty minutes a day of worksheet practice.",
+      "Don't introduce digital until analog is solid. Most adults now read digital by default, but analog reading is the structural skill that makes time make sense. A child who learned digital first usually struggles with analog later; a child who learned analog first finds digital trivial when they meet it.",
+    ],
+    faqs: [
+      {
+        question: "What age should kids read an analog clock?",
+        answer:
+          "O'clock by age 5. Half past by 6. Quarter past and quarter to by 7. Minute-precision by 8. That's the standard progression in most curricula.",
+      },
+      {
+        question: "Why teach analog first?",
+        answer:
+          "Because analog shows time as a physical quantity — the hands moving around the dial. Digital just shows numbers. The analog version teaches the concept; the digital version is just reading.",
+      },
+      {
+        question: "What if my child already knows digital?",
+        answer:
+          "Fine — teach analog alongside it. Use both clocks in daily conversation ('it's half past three on the analog clock, 3:30 on the digital') and the connection forms naturally.",
+      },
+      {
+        question: "Do I need a learning clock?",
+        answer:
+          "Strongly recommended. A movable-hand clock costs a fiver and is the single most useful time-teaching tool. Worksheets alone don't deliver the same understanding.",
+      },
+    ],
+    linkedGameSlugs: ["time-teller", "math-quiz"],
+    linkedWorksheetSlugs: ["math-worksheets-grade-1", "grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "how-to-teach-money-skills",
+    keyword: "how to teach money skills",
+    searchVolume: 3100,
+    h1: "How to Teach Money Skills to Kids",
+    title: "How to Teach Money Skills — From Pocket Money to Budgeting",
+    metaDescription:
+      "Teaching money skills is easiest with real money and real decisions. Start with pocket money, build to saving, and cover budgeting by age 10.",
+    intro: [
+      "Money skills don't come from worksheets. They come from handling real money, making real decisions, and living with real consequences. A child who has never had their own pound to spend at a shop can't meaningfully learn about budgeting, no matter how many worksheets you print.",
+      "The curriculum, roughly: age 4 to 6 is coin recognition (what's a 20p? what's a £2?). Age 6 to 8 is pocket money and basic saving (earn some, spend some, save some). Age 8 to 10 is budgeting (planning how to use a larger amount). Age 10+ introduces concepts like interest, opportunity cost and delayed gratification. Each stage builds on the last.",
+      "Pocket money is the key teaching tool. Not as a reward — as a learning tool. A child with £2 a week learns what things cost, learns that money runs out, and learns that saving for something bigger takes discipline. You can't teach any of that from a textbook.",
+    ],
+    faqs: [
+      {
+        question: "When should I start pocket money?",
+        answer:
+          "Age 5 or 6 is typical. A small amount (a pound or two a week) is enough to teach basic concepts without creating spending that parents need to manage.",
+      },
+      {
+        question: "Should pocket money be tied to chores?",
+        answer:
+          "Mixed opinions. The case for: it teaches that money comes from work. The case against: chores should be part of family responsibility, not paid work. Both approaches can work.",
+      },
+      {
+        question: "What's the 'save, spend, give' system?",
+        answer:
+          "A common approach where pocket money is split three ways: some saved for a long-term goal, some spent immediately, some given to charity or a family cause. Teaches balance without being complicated.",
+      },
+      {
+        question: "When should kids have a bank account?",
+        answer:
+          "Most children can have a child account from age 7 or 8. Opening one is a good moment to discuss saving, interest, and what a bank actually does.",
+      },
+    ],
+    linkedGameSlugs: ["money-match", "math-quiz", "math-addition"],
+    linkedWorksheetSlugs: ["grade-2-math-worksheets", "grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "teaching-kids-responsibility",
+    keyword: "teaching kids responsibility",
+    searchVolume: 4300,
+    h1: "Teaching Kids Responsibility",
+    title: "Teaching Kids Responsibility — Chores, Ownership and Natural Consequences",
+    metaDescription:
+      "Kids learn responsibility through age-appropriate chores, genuine ownership of outcomes, and natural consequences — not lectures.",
+    intro: [
+      "Responsibility is not something a child learns from being told to be responsible. It's built through small, consistent experiences of owning an outcome: making a bed, feeding a pet, packing a school bag. Each of those is a tiny test, and over years they compound into the trait we call responsibility.",
+      "The main mistake parents make is doing too much for the child. A 6-year-old whose parent always packs their school bag never learns to own the outcome of forgetting their homework. A 6-year-old who packs their own bag and once arrives at school without their lunch learns faster than any amount of reminding could teach them. Natural consequences beat lectures, as long as the consequences are safe.",
+      "Start small and age-appropriate. A 4-year-old can put their shoes by the door. A 6-year-old can lay out their clothes the night before. An 8-year-old can make their own breakfast. A 10-year-old can plan their weekend schedule. Each age has its natural level, and stretching it gradually is the whole method.",
+    ],
+    faqs: [
+      {
+        question: "What's age-appropriate responsibility?",
+        answer:
+          "Ages 3 to 4: tidy toys, put shoes away. Ages 5 to 6: make bed, feed pets. Ages 7 to 8: pack school bag, simple cooking. Ages 9 to 10: do own laundry, plan small projects.",
+      },
+      {
+        question: "What if my child refuses?",
+        answer:
+          "Consistency matters more than enforcement. Set the expectation, don't nag, let natural consequences play out. A child who refuses to tidy their toys might find them confiscated for a week. That works better than arguing.",
+      },
+      {
+        question: "Do chores really build character?",
+        answer:
+          "Yes — longitudinal studies link childhood chores to adult success in work and relationships. The effect is real, though the mechanism is probably more about practice of follow-through than anything mystical.",
+      },
+      {
+        question: "When do kids get 'responsible'?",
+        answer:
+          "There's no age — it's a gradual build. But most kids raised with consistent small responsibilities show meaningful self-management by age 9 or 10.",
+      },
+    ],
+    linkedGameSlugs: ["sorting-frenzy"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "teaching-kids-resilience",
+    keyword: "teaching kids resilience",
+    searchVolume: 6700,
+    h1: "Teaching Kids Resilience",
+    title: "Teaching Kids Resilience — How to Build Bounce-Back",
+    metaDescription:
+      "Resilience is built through small, supported struggles. Don't rescue too fast. Let kids fail safely and help them process what happened.",
+    intro: [
+      "Resilience is the skill of recovering from setbacks, and it's almost impossible to teach a child who has never experienced a setback. The counter-intuitive truth is that highly protected children are often less resilient because they haven't practised bouncing back from small failures. A bit of safe struggle in primary years produces a more resilient teenager.",
+      "The parental move that builds resilience is holding back just a little. When a child gets frustrated with a puzzle, don't rush in to solve it. When they fall off the bike, don't immediately pick them up and offer consolation. Give them space to work through the emotion, then help them process what happened. 'That was hard. What will you try next time?' is the resilience-building question.",
+      "This is not about being harsh or unsupportive. It's about timing. Support comes — just a beat later than the child expects, which is what creates the small window where they handle the feeling themselves. Over years of those small moments, resilience becomes automatic.",
+    ],
+    faqs: [
+      {
+        question: "What is resilience in kids?",
+        answer:
+          "The ability to recover from setbacks, frustrations, and disappointments. It shows up as bouncing back after a bad grade, trying again after failing, and staying calm in new situations.",
+      },
+      {
+        question: "Can resilience be taught?",
+        answer:
+          "Yes — through experience more than instruction. Kids who are allowed to struggle safely and then supported through the recovery build more resilience than kids who are protected from struggle.",
+      },
+      {
+        question: "What's the biggest mistake parents make?",
+        answer:
+          "Rescuing too fast. When a child hits a wall, the instinct is to fix it. The resilience move is to wait a few seconds, see if they can fix it themselves, and only step in if they really can't.",
+      },
+      {
+        question: "Is it the same as grit?",
+        answer:
+          "Related but not identical. Grit is sustained effort toward a long-term goal. Resilience is recovery from setbacks. Both matter, and they reinforce each other.",
+      },
+    ],
+    linkedGameSlugs: ["story-adventure"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "teaching-kids-growth-mindset",
+    keyword: "how to teach growth mindset",
+    searchVolume: 4500,
+    h1: "How to Teach a Growth Mindset to Kids",
+    title: "How to Teach Growth Mindset — Effort Over Ability",
+    metaDescription:
+      "Growth mindset is built through the words you use, not through lectures. Praise effort and strategy instead of 'being smart'.",
+    intro: [
+      "Growth mindset is the belief that abilities can be developed through effort. The opposite — fixed mindset — is the belief that you either have a talent or you don't. Kids with growth mindsets persist longer on hard tasks, recover better from failure, and grow academically faster. The research on this is robust.",
+      "The single most important thing you can do is change the words you use when praising. Instead of 'you're so clever', say 'you worked really hard on that'. Instead of 'you're a natural reader', say 'I noticed you kept going even when that word was tricky'. This tiny shift, repeated consistently, trains the child to value effort over innate ability — which is the whole basis of growth mindset.",
+      "The same applies when they fail. Instead of 'don't worry, you're not a maths person', say 'that one was hard — what could you try differently next time?'. That question turns a failure into a learning opportunity and reinforces the belief that ability grows. Both of these moves are small. Done over years, they're transformative.",
+    ],
+    faqs: [
+      {
+        question: "What's a growth mindset?",
+        answer:
+          "The belief that intelligence and ability can be developed through effort and practice. The opposite is fixed mindset — the belief that ability is innate and unchangeable.",
+      },
+      {
+        question: "How do I teach growth mindset to a child?",
+        answer:
+          "Change how you praise. Focus on effort, strategy and process rather than 'being smart' or 'being a natural'. Do it consistently over years, not as a one-off lesson.",
+      },
+      {
+        question: "What's the 'power of yet'?",
+        answer:
+          "Adding 'yet' to failure statements. 'I can't do this' becomes 'I can't do this yet'. The word implies the skill will come with practice, which is the core growth-mindset attitude.",
+      },
+      {
+        question: "Does it really work?",
+        answer:
+          "Carol Dweck's research shows meaningful effect sizes on academic outcomes. It's not a miracle, but the intervention is essentially free and the evidence is solid.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "word-spell", "story-adventure"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: [],
+  },
 ];
 
 export function getLearnTopicBySlug(slug: string): ProgrammaticPage | undefined {
   return learnTopics.find((p) => p.slug === slug);
+}
+
+// ─── Coloring topic pages ────────────────────────────────────────────────────
+//
+// Keyword cluster: "[theme] coloring pages [modifier]". These pages target
+// high-volume, SEO-priority colouring intents that are not already covered by
+// a category page in lib/data.ts. Each one is a hub that points into existing
+// coloring categories and individual pages (via linkedColoringCategorySlugs)
+// and also cross-links to relevant games + printables.
+//
+// Rendered by app/coloring-pages/topics/[slug]/page.tsx.
+
+export const coloringTopicPages: ProgrammaticPage[] = [
+  {
+    slug: "halloween-coloring-pages",
+    keyword: "halloween coloring pages",
+    searchVolume: 201000,
+    h1: "Free Printable Halloween Coloring Pages",
+    title: "Free Halloween Coloring Pages — Pumpkins, Ghosts & More | JiggyJoy",
+    metaDescription:
+      "Free printable Halloween coloring pages — pumpkins, ghosts, witches, bats and haunted houses. Instant download, print on regular paper, no signup.",
+    intro: [
+      "Halloween is the one night of the year kids are allowed to be properly weird, and colouring pages are the perfect warm-up act. Print a pumpkin before trick-or-treat and a 4-year-old will happily sit at the table with a fat orange crayon for twenty minutes — long enough for you to finish the costume. Hand a 9-year-old a page of jack-o'-lanterns and they'll start designing faces they want to carve.",
+      "Everything on this hub is free, instantly printable, and sized for regular A4 or US Letter paper. Our Halloween colouring set covers the full classic lineup — pumpkins, ghosts, witches and cats, bats and spider webs, haunted houses, cute friendly monsters and spooky trees. There is nothing here that would scare a three-year-old, but the detailed pages will still keep an older kid busy.",
+      "If your child finishes a page and wants more Halloween fun, we also have Halloween-themed games on JiggyJoy — Pumpkin Smash and the Halloween game hub are linked below. Colouring is a quiet downtime activity; the games are the wind-up. Pair them together for a full afternoon of spooky play that costs nothing.",
+    ],
+    faqs: [
+      {
+        question: "Are these Halloween coloring pages really free?",
+        answer:
+          "Yes. Every Halloween colouring page on JiggyJoy prints for free, no signup, no watermark and no trial. Click, print, colour.",
+      },
+      {
+        question: "What ages are these Halloween coloring pages for?",
+        answer:
+          "Our Halloween pages span ages 3–10. Younger kids do well with the bold pumpkin and ghost outlines; older kids can tackle the detailed haunted-house and jack-o'-lantern scenes.",
+      },
+      {
+        question: "Can I use these for a classroom or party?",
+        answer:
+          "Yes — classroom and birthday party use is fine. Print as many copies as you need. We just ask that you don't resell the files as your own.",
+      },
+      {
+        question: "Do you have any Halloween games too?",
+        answer:
+          "Yes — check the Halloween game hub and Pumpkin Smash in the links below. Both are free browser games with no downloads.",
+      },
+    ],
+    linkedGameSlugs: ["pumpkin-smash", "memory-match-animals", "connect-the-dots"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["holidays", "fantasy", "cozy-animals"],
+  },
+  {
+    slug: "christmas-coloring-pages",
+    keyword: "christmas coloring pages",
+    searchVolume: 246000,
+    h1: "Free Printable Christmas Coloring Pages",
+    title: "Free Christmas Coloring Pages — Santa, Reindeer & Trees | JiggyJoy",
+    metaDescription:
+      "Free printable Christmas coloring pages for kids — Santa, reindeer, Christmas trees, snowmen, gingerbread and more. Instant download, no signup.",
+    intro: [
+      "Christmas colouring pages are one of the busiest things parents search for between late November and December 24 — and for good reason. They calm over-excited kids, they make a cheap Advent activity, and by the end of the month you have a stack of hand-drawn pictures you can stick on the fridge or gift to grandparents. Every sheet on this hub is free, printable and ready for that stack.",
+      "Our Christmas colouring set includes the full seasonal lineup: Santa Claus and his reindeer, Christmas trees with baubles and presents, snowmen in scarves, gingerbread houses and gingerbread men, wreaths and candy canes, and friendly elves. We've kept the outlines bold enough for a four-year-old and the scenes interesting enough for a nine-year-old. The pages print well on regular paper, no fancy cardstock required.",
+      "If you're running a December Advent countdown, pair these with the Present Catcher game below — it makes a nice 'finish your page, then 5 minutes on the game' routine. And for Christmas Eve quiet time, the colouring pages win hands down over another episode of holiday TV.",
+    ],
+    faqs: [
+      {
+        question: "When are Christmas coloring pages most popular?",
+        answer:
+          "Search interest climbs steeply from November 15 and peaks around December 18–22. If you're looking to use them for Advent, print the first batch around December 1.",
+      },
+      {
+        question: "Are these Christmas coloring pages free to print?",
+        answer:
+          "Yes — 100% free, no signup, no watermark, no paywall. Print as many copies as you need for your family or classroom.",
+      },
+      {
+        question: "Can I use these on a tablet to colour digitally?",
+        answer:
+          "Most of our pages are PNG/JPEG and can be imported into any drawing app (Procreate, Concepts, etc). For digital colouring, download the page and open it in your preferred app.",
+      },
+      {
+        question: "Do you have more holiday coloring pages?",
+        answer:
+          "Yes — see our Easter, Valentine's Day, Thanksgiving and Halloween hubs, plus the full holidays category below.",
+      },
+    ],
+    linkedGameSlugs: ["present-catcher", "memory-match-animals", "counting-game"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["holidays", "cozy-animals", "fantasy"],
+  },
+  {
+    slug: "easter-coloring-pages",
+    keyword: "easter coloring pages",
+    searchVolume: 74000,
+    h1: "Free Printable Easter Coloring Pages",
+    title: "Free Easter Coloring Pages — Bunnies, Eggs, Chicks | JiggyJoy",
+    metaDescription:
+      "Free printable Easter coloring pages — bunnies, chicks, decorated eggs, baskets and spring flowers. Instant download, no signup required.",
+    intro: [
+      "Easter colouring pages are a classic Sunday-afternoon quiet-time activity, and they do double duty as decorations once the kids are done — tape the finished pages to windows, the fridge or the kitchen cupboards and instantly you have an Easter-ready house. Everything on this hub is free, printable and designed for kids aged 3 through 10.",
+      "Our Easter set covers bunnies of every style (the fluffy realistic kind for older kids, big-eyed cartoon bunnies for toddlers), decorated eggs in intricate geometric and floral patterns, hatching chicks, overflowing Easter baskets, and spring meadow scenes with flowers and butterflies. The egg-decoration pages are especially good — older kids can invent their own patterns, younger ones can just fill each section with a different colour.",
+      "Pair the pages with the Easter Egg Hunt game below for a full hour of Easter play. And if you want a second round of something to colour, jump to the Spring flowers and Cozy animals sections — they're seasonally adjacent and just as cheerful.",
+    ],
+    faqs: [
+      {
+        question: "When should I print Easter coloring pages?",
+        answer:
+          "Peak search season is mid-March to mid-April. Most parents print them for the two weekends before Easter Sunday as a rainy-day activity.",
+      },
+      {
+        question: "Can I use these for a church Easter activity?",
+        answer:
+          "Yes — classroom, Sunday school and birthday party printing is fine. Print freely, just don't resell the files.",
+      },
+      {
+        question: "Are there simple Easter pages for toddlers?",
+        answer:
+          "Yes — look for the bold bunny outlines and the big cartoon chick pages. Both are designed with wide sections that a 2- or 3-year-old can fill in without getting frustrated.",
+      },
+      {
+        question: "Do you have other spring printables?",
+        answer:
+          "Yes — our Cozy Animals, Floral and Botanical colouring categories are all spring-themed. Scroll down for links.",
+      },
+    ],
+    linkedGameSlugs: ["easter-egg-hunt", "memory-match-animals", "colour-match"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["holidays", "cozy-animals", "floral-mandalas"],
+  },
+  {
+    slug: "valentines-day-coloring-pages",
+    keyword: "valentines day coloring pages",
+    searchVolume: 50000,
+    h1: "Free Printable Valentine's Day Coloring Pages",
+    title: "Free Valentine's Day Coloring Pages — Hearts & Cards | JiggyJoy",
+    metaDescription:
+      "Free printable Valentine's Day coloring pages — hearts, love bugs, cards, cupids and sweet treats. Instant print, no signup, perfect for classrooms.",
+    intro: [
+      "Valentine's Day colouring pages are one of the easiest classroom crafts a teacher can run — print 30, hand out crayons, done. They're equally useful at home: a 10-minute activity that results in something the kid can actually give to a grandparent, a sibling or a best friend. Our hub has all the classic Valentine's motifs, free to print.",
+      "Expect the full set: hearts big and small, love-bug cartoons (bees, ladybugs and butterflies holding hearts), fold-able Valentine cards your child can colour and sign, cupids, heart-shaped balloon bouquets, bears holding hearts, and sweet-treat pages (chocolate boxes, heart-shaped cupcakes, lollipops). We've kept the style warm and cartoon-ish rather than hyper-romantic so they work for any age from pre-school up.",
+      "These pages are especially popular for the week of February 10–14. Print a batch as a classroom activity, take a few home for a quiet evening, or use them as a 'make a card for everyone in your class' project. Free, no ads, no signup.",
+    ],
+    faqs: [
+      {
+        question: "Are these Valentine's Day coloring pages free for classroom use?",
+        answer:
+          "Yes — print as many copies as you need for your class or home. We just ask you don't resell the files.",
+      },
+      {
+        question: "Can my child colour and give these as cards?",
+        answer:
+          "Absolutely — that's one of the main uses. We've included fold-able card pages that work perfectly for handing out to classmates.",
+      },
+      {
+        question: "What ages are Valentine's coloring pages best for?",
+        answer:
+          "Ages 3–10. Younger kids love the bold heart outlines; older kids enjoy the detailed love-bug and sweet-treat scenes.",
+      },
+      {
+        question: "Do you have matching Valentine's games?",
+        answer:
+          "Not a dedicated Valentine's game, but Memory Match Animals and Colour Match both work well for the same age group on the same day.",
+      },
+    ],
+    linkedGameSlugs: ["memory-match-animals", "colour-match", "connect-the-dots"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["holidays", "cozy-animals", "characters"],
+  },
+  {
+    slug: "coloring-pages-for-adults",
+    keyword: "coloring pages for adults",
+    searchVolume: 301000,
+    h1: "Free Printable Coloring Pages for Adults",
+    title: "Free Coloring Pages for Adults — Mandalas, Botanical, Stress Relief | JiggyJoy",
+    metaDescription:
+      "Free printable coloring pages for adults — mandalas, botanical, animal mandalas and stress relief. Complex detailed designs, instant download, no signup.",
+    intro: [
+      "Adult colouring took off a decade ago and it hasn't slowed down, because it turns out that sitting still and filling in a detailed pattern is a genuinely nice way to de-stress. Most of what you'll find online is locked behind a subscription — JiggyJoy keeps it free. Every sheet on this hub prints on regular paper and has enough detail to hold a grown-up's attention for a proper hour.",
+      "Our adult collection leans into the styles with the highest therapeutic value: geometric mandalas (simple circular to elaborate layered), floral mandalas (peonies, lotus, sunflowers and wildflowers), animal mandalas (lions, elephants, wolves and butterflies drawn as symmetrical patterns), botanical illustrations, and bold-easy designs for when you want to colour without eye strain. These are the same categories therapists actually recommend for mindful colouring.",
+      "Use them as they're meant to be used — 30 quiet minutes after work, with a cup of tea and a set of fineliners. No phone. We've heard from readers who print a batch on Sunday night and colour one a day through the week as a reset. Try it and you'll see why adult colouring is a multi-million-dollar category.",
+    ],
+    faqs: [
+      {
+        question: "Why is coloring considered good for stress relief?",
+        answer:
+          "Colouring is a low-stakes focus task — it engages your visual attention enough to crowd out intrusive thoughts without asking you to make hard decisions. It is often compared to mindfulness meditation.",
+      },
+      {
+        question: "Do I need special paper or pens?",
+        answer:
+          "No — regular printer paper is fine for coloured pencils, crayons and water-based markers. Alcohol markers and watercolours do better on cartridge or 100gsm paper.",
+      },
+      {
+        question: "Are these really free without signup?",
+        answer:
+          "Yes. Every adult colouring page on JiggyJoy is free to print with no account, no email capture, no trial.",
+      },
+      {
+        question: "What's the most popular adult coloring category?",
+        answer:
+          "Animal mandalas and floral mandalas are consistently the top downloaded categories. Both have a large set of pages in the links below.",
+      },
+    ],
+    linkedGameSlugs: [],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["animal-mandalas", "floral-mandalas", "bold-easy", "zodiac", "dark-academia"],
+  },
+  {
+    slug: "mandala-coloring-pages",
+    keyword: "mandala coloring pages",
+    searchVolume: 135000,
+    h1: "Free Printable Mandala Coloring Pages",
+    title: "Free Mandala Coloring Pages — Simple to Intricate | JiggyJoy",
+    metaDescription:
+      "Free printable mandala coloring pages — simple beginner mandalas, intricate geometric and floral designs. Instant download for adults and kids.",
+    intro: [
+      "Mandalas are circular geometric patterns that radiate out from a central point, and they're the single most therapeutic thing you can colour. The symmetry gives your brain a predictable rhythm; the repetition is soothing without being boring. Our mandala hub has enough designs to fill a whole notebook, all free.",
+      "We've split our mandalas into three difficulty tiers. Easy mandalas have large, bold sections and work well for beginners or kids aged 8+. Medium mandalas add floral and geometric layers — these are the sweet spot for most adults. Advanced mandalas are deeply detailed, with the kind of fine lines that you can fill in for hours. Pick the level that matches your mood, not your skill — even seasoned colourists reach for simple designs when they just want to switch off.",
+      "If you're new to mandalas, start with the bold-easy category and a set of coloured pencils. Work outwards from the centre, varying colours as you move through each ring. Don't overthink it — mandalas look good whether you colour them precisely or loosely.",
+    ],
+    faqs: [
+      {
+        question: "Are mandalas only for adults?",
+        answer:
+          "No — our easy mandalas are designed for kids as young as 7. Younger kids can colour simple mandalas with wide sections if you help them stay in the lines.",
+      },
+      {
+        question: "What's the spiritual meaning of a mandala?",
+        answer:
+          "Mandalas originate from Hindu and Buddhist traditions as symbols of the universe and meditation aids. Modern colouring mandalas are decorative rather than religious, but the meditative quality is real.",
+      },
+      {
+        question: "What colours should I use?",
+        answer:
+          "Any combination you like. Analogous palettes (colours next to each other on the colour wheel) give a calm result; complementary palettes (opposite colours) look bold and striking.",
+      },
+      {
+        question: "How long does a mandala take to colour?",
+        answer:
+          "Easy mandalas: 15–30 minutes. Intricate ones: 2–4 hours, sometimes spread across several sittings.",
+      },
+    ],
+    linkedGameSlugs: [],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["animal-mandalas", "floral-mandalas", "bold-easy", "zodiac"],
+  },
+  {
+    slug: "unicorn-coloring-pages",
+    keyword: "unicorn coloring pages",
+    searchVolume: 135000,
+    h1: "Free Printable Unicorn Coloring Pages",
+    title: "Free Unicorn Coloring Pages for Kids — Magical Designs | JiggyJoy",
+    metaDescription:
+      "Free printable unicorn coloring pages — rainbows, magical forests, baby unicorns, flying unicorns and unicorn princesses. Instant print, no signup.",
+    intro: [
+      "Unicorns are the top-searched colouring topic for girls ages 4 through 9, and with good reason — they're magical, they're rainbow-coloured by default, and they give kids total creative permission to use every crayon in the box. Every unicorn page on this hub is free, printable and ready for that rainbow.",
+      "Our unicorn collection covers the full fantasy range: majestic unicorns with flowing manes and tails, baby unicorns for younger kids, flying unicorns with wings (technically alicorns, but no 5-year-old cares), unicorn princesses with crowns and castles, unicorns galloping through magical forests, and unicorns with rainbow backgrounds ready for colour explosion. We've kept the line weight friendly for fat crayons, fine markers and coloured pencils.",
+      "Pair unicorn colouring with the Connect the Dots game below — one of the unlockable shapes is a unicorn, which kids love to discover. For longer sessions, print 3–4 pages at once and let the child work through them over an afternoon.",
+    ],
+    faqs: [
+      {
+        question: "Are unicorn coloring pages suitable for boys too?",
+        answer:
+          "Yes — there's nothing gender-specific about unicorns. Plenty of boys like unicorns, dragons, and fantasy creatures in general.",
+      },
+      {
+        question: "What ages are these unicorn pages for?",
+        answer:
+          "Ages 3–10 are the sweet spot. Toddlers love the simple baby unicorns; older kids enjoy the detailed magical forest scenes.",
+      },
+      {
+        question: "Can I print these on cardstock?",
+        answer:
+          "Yes. Cardstock (120–200gsm) is great if you want to use markers without bleed-through, or if you plan to frame the finished picture.",
+      },
+      {
+        question: "Do you have dragon and fantasy pages too?",
+        answer:
+          "Yes — see our Fantasy colouring category below. It includes dragons, fairies, mermaids and more.",
+      },
+    ],
+    linkedGameSlugs: ["connect-the-dots", "memory-match-animals", "colour-match"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["fantasy", "characters", "cozy-animals"],
+  },
+  {
+    slug: "dinosaur-coloring-pages",
+    keyword: "dinosaur coloring pages",
+    searchVolume: 60000,
+    h1: "Free Printable Dinosaur Coloring Pages",
+    title: "Free Dinosaur Coloring Pages for Kids — T-Rex, Triceratops | JiggyJoy",
+    metaDescription:
+      "Free printable dinosaur coloring pages — T-Rex, triceratops, stegosaurus, brachiosaurus and baby dinos. Instant download for kids who love dinosaurs.",
+    intro: [
+      "Dinosaurs are the permanent obsession of a certain kind of 5-year-old, and dinosaur colouring pages are one of the most reliable ways to get an hour of focused quiet time out of that child. Our hub has a proper line-up of the actual dinosaurs kids know by name, drawn with enough accuracy to satisfy the little palaeontologist in your house.",
+      "Expect the full species list: T-Rex (always the most requested), triceratops with its three horns, stegosaurus with plate-back, brachiosaurus reaching for leaves, velociraptors, pterodactyls, dilophosaurus and ankylosaurus. We've also included cartoon baby dinosaurs for the under-fives, and a handful of 'prehistoric scene' pages with multiple dinosaurs in a jungle or by a volcano.",
+      "Dinosaur colouring is also a good stealth education — point at the triceratops and say 'three horns', point at the stegosaurus and say 'those plates kept it cool'. You'll be surprised how much a 6-year-old will remember. Pair with the Dino Run game below for full-day dinosaur immersion.",
+    ],
+    faqs: [
+      {
+        question: "Which dinosaur is most popular to colour?",
+        answer:
+          "T-Rex, by a long margin. Triceratops and stegosaurus are a close second and third.",
+      },
+      {
+        question: "Are these dinosaur pages accurate to the real species?",
+        answer:
+          "Yes — we've drawn the recognisable features of each species, so kids learn the right shape and horn/plate arrangement while they colour.",
+      },
+      {
+        question: "What ages are dinosaur coloring pages best for?",
+        answer:
+          "Ages 3–10 is the main audience. Dinosaur obsession usually peaks around 5–7.",
+      },
+      {
+        question: "Do you have a dinosaur game too?",
+        answer:
+          "Yes — Dino Run, linked below. It's a side-scrolling runner where a cartoon dinosaur jumps cactuses and rocks.",
+      },
+    ],
+    linkedGameSlugs: ["dino-run", "memory-match-animals", "connect-the-dots"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["animals", "fantasy", "educational"],
+  },
+  {
+    slug: "princess-coloring-pages",
+    keyword: "princess coloring pages",
+    searchVolume: 74000,
+    h1: "Free Printable Princess Coloring Pages",
+    title: "Free Princess Coloring Pages for Kids — Crowns & Castles | JiggyJoy",
+    metaDescription:
+      "Free printable princess coloring pages — crowns, castles, ball gowns, magical kingdoms and fairytale scenes. Instant print for girls aged 3–10.",
+    intro: [
+      "Princess colouring pages are one of the most consistent search hits in the kids' colouring category — and they hold up across every age from 3 to 10. Our princess hub has the full fairy-tale wardrobe of crowns, gowns and castles, plus some less-common princess scenes that break the tiara-and-dress mould.",
+      "Inside you'll find classic princesses in ball gowns, princesses holding royal crowns, scenes of castle towers and drawbridges, princesses with horses and royal carriages, princess and unicorn combos (because two magical things are better than one), and princess tea party scenes. We've kept the outlines friendly and the details interesting enough to keep a 9-year-old engaged.",
+      "For a fuller princess-themed afternoon, pair these pages with the Fantasy colouring category and Connect the Dots — we've included unicorns, castles and magical creatures across both. Print a few pages, hand out the crayons, and you've got quiet time sorted.",
+    ],
+    faqs: [
+      {
+        question: "Are these based on specific movie princesses?",
+        answer:
+          "No — our princesses are original generic fairy-tale designs. That means no copyright issues if you want to use them at a birthday party or classroom event.",
+      },
+      {
+        question: "What ages are princess coloring pages best for?",
+        answer:
+          "Ages 3–10 is the sweet spot, with peak interest between 4 and 7.",
+      },
+      {
+        question: "Can boys colour these?",
+        answer:
+          "Of course — princesses aren't gender-locked. We also have dragon and knight pages in the Fantasy category if your child prefers.",
+      },
+      {
+        question: "Are there more fairy-tale themed pages?",
+        answer:
+          "Yes — see Fantasy (dragons, fairies, mermaids) and Characters in the links below.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "memory-match-animals", "connect-the-dots"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["fantasy", "characters", "cozy-animals"],
+  },
+  {
+    slug: "animal-coloring-pages",
+    keyword: "animal coloring pages",
+    searchVolume: 90000,
+    h1: "Free Printable Animal Coloring Pages",
+    title: "Free Animal Coloring Pages — Zoo, Farm, Jungle & Ocean | JiggyJoy",
+    metaDescription:
+      "Free printable animal coloring pages — zoo, farm, jungle, ocean, pets and safari animals. Instant print, no signup, for kids aged 3–10.",
+    intro: [
+      "Animal colouring pages are the workhorse of the kids' colouring world — they work for every age, every mood, and every kid who has ever said 'I want to colour something'. Our animal hub covers every habitat and category, all free to print. It's the single most-used category on JiggyJoy and for good reason.",
+      "Browse by habitat: farm animals (cows, pigs, sheep, chickens, horses), zoo animals (lions, tigers, elephants, giraffes, zebras), jungle animals (monkeys, parrots, tigers, snakes), ocean animals (dolphins, whales, sharks, octopus, sea turtles), safari animals, pet animals (cats, dogs, rabbits, hamsters) and woodland animals (foxes, deer, owls, bears). We've kept line weights bold enough for toddlers and scenes detailed enough for 10-year-olds.",
+      "If your child loves a specific animal, check the sub-categories for dedicated sets — our cat and dog pages have their own full collections. For learning-as-you-colour, the animal pages pair naturally with the Animal Sounds game below, where kids tap to hear each animal's call.",
+    ],
+    faqs: [
+      {
+        question: "What's the most popular animal to colour?",
+        answer:
+          "Cats and dogs lead by a wide margin, followed by unicorns (technically an animal), dolphins and lions.",
+      },
+      {
+        question: "Are there animal pages for very young children?",
+        answer:
+          "Yes — our bold animal outlines are designed for toddlers with fat crayons. Wide sections, no tiny details, forgiving of scribbles.",
+      },
+      {
+        question: "Can I print these for a school project?",
+        answer:
+          "Yes. Classroom and home use is free and unlimited; we just ask you don't resell the files.",
+      },
+      {
+        question: "Do you have animal games too?",
+        answer:
+          "Yes — Animal Sounds, Memory Match Animals and Sorting Frenzy are all animal-themed and free to play.",
+      },
+    ],
+    linkedGameSlugs: ["animal-sounds", "memory-match-animals", "sorting-frenzy"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["animals", "cozy-animals", "animal-mandalas", "dog-breeds"],
+  },
+  {
+    slug: "easy-coloring-pages",
+    keyword: "easy coloring pages",
+    searchVolume: 40000,
+    h1: "Free Printable Easy Coloring Pages",
+    title: "Easy Coloring Pages — Simple Designs for Beginners | JiggyJoy",
+    metaDescription:
+      "Free easy coloring pages — bold outlines, wide sections, simple designs for toddlers, beginners and stress relief. Instant print, no signup.",
+    intro: [
+      "Easy colouring pages are for anyone who wants to colour without having to focus too hard — toddlers, preschoolers, beginners, and adults who just want to switch their brain off. Our easy set has the biggest, boldest outlines on JiggyJoy, with wide sections that are forgiving of shaky hands or impatient colour-choices.",
+      "You'll find simple animal outlines (one animal per page, big sections), basic shapes and patterns, easy mandalas with wide rings, bold flowers, and scenes with just a few elements. Nothing here requires a fine-tip marker or patience — fat crayons and coloured pencils work perfectly. These are the pages you print when your 3-year-old wants to join the grown-up colouring session.",
+      "Don't confuse 'easy' with 'boring' — bold colours on simple outlines actually make some of the most striking finished pictures. A bold easy flower filled with three vibrant colours looks more polished than a detailed mandala half-completed. Start here, and graduate to the detailed pages when you're ready.",
+    ],
+    faqs: [
+      {
+        question: "Are easy coloring pages only for kids?",
+        answer:
+          "No — adults use them for stress relief when they want to colour without straining their eyes or thinking too hard. It's one of the most popular adult categories.",
+      },
+      {
+        question: "How wide are the sections on easy pages?",
+        answer:
+          "Wide enough that a 3-year-old with a fat crayon can stay inside the lines with 80% success. Think half-centimetre-minimum sections.",
+      },
+      {
+        question: "Do easy pages print well on regular paper?",
+        answer:
+          "Yes. Bold outlines photocopy and print crisply on any paper weight.",
+      },
+      {
+        question: "Where should I go for harder pages?",
+        answer:
+          "Check our Mandala and Adult hubs above, or the detailed Animal Mandalas category for something with more lines.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "shape-sorter", "counting-game"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["bold-easy", "cozy-animals", "animals"],
+  },
+  {
+    slug: "coloring-pages-for-toddlers",
+    keyword: "coloring pages for toddlers",
+    searchVolume: 45000,
+    h1: "Free Printable Coloring Pages for Toddlers",
+    title: "Coloring Pages for Toddlers — Big Bold Designs | JiggyJoy",
+    metaDescription:
+      "Free printable coloring pages for toddlers — huge bold outlines, simple shapes, animals and objects. Toddler-safe, no tiny details, instant print.",
+    intro: [
+      "Toddlers are the hardest audience to design a colouring page for — they have fat crayons, unsteady hands, and a 4-minute attention span. A well-made toddler page respects all three of those constraints: huge outlines, wide sections, single-subject pages, and designs that look finished even if your two-year-old scribbles outside the lines.",
+      "This hub collects all the toddler-friendly pages on JiggyJoy in one place. Expect: one big animal per page (not a busy scene), simple shapes and objects (apple, sun, house, car, ball), basic letters and numbers drawn at full page height, and bold patterns like stripes and dots that any child can fill in. We've cut everything fiddly — no flower stems that are 1mm wide, no detailed faces.",
+      "For a typical toddler colouring session, print 3 pages at once, sit next to them with your own crayon, and demonstrate the 'pick a colour, fill a section' pattern. That simple imitation is how they learn, and it's more valuable than the finished picture. Colouring at this age is about fine-motor practice and colour recognition, not artwork.",
+    ],
+    faqs: [
+      {
+        question: "What's the best age to start colouring?",
+        answer:
+          "Around 18 months — at first they just scribble, by 2–2.5 they start filling specific areas, by 3 they stay inside the lines most of the time.",
+      },
+      {
+        question: "What crayons work best for toddlers?",
+        answer:
+          "Fat triangular or chunky crayons. They're harder to break, easier to grip and don't roll off the table.",
+      },
+      {
+        question: "Are these pages non-toxic-friendly?",
+        answer:
+          "The pages themselves are plain printer paper, so they're safe with any non-toxic crayon, coloured pencil or washable marker.",
+      },
+      {
+        question: "Should I worry if my toddler colours outside the lines?",
+        answer:
+          "No. Colouring inside the lines is a skill they develop gradually. Enjoy the scribble phase — it doesn't last long.",
+      },
+    ],
+    linkedGameSlugs: ["colour-match", "shape-sorter", "counting-game", "animal-sounds"],
+    linkedWorksheetSlugs: [],
+    linkedColoringCategorySlugs: ["bold-easy", "cozy-animals", "animals"],
+  },
+];
+
+export function getColoringTopicBySlug(slug: string): ProgrammaticPage | undefined {
+  return coloringTopicPages.find((p) => p.slug === slug);
 }

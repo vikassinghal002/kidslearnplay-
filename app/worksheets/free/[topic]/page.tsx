@@ -10,6 +10,7 @@ import {
   getGameBySlug,
   getWorksheetBySlug,
 } from "@/lib/data";
+import { getRelatedLinks } from "@/lib/internalLinks";
 
 const BASE_URL = "https://www.jiggyjoy.com";
 
@@ -65,6 +66,14 @@ export default async function FreeWorksheetTopicPage({ params }: Props) {
 
   // Internal link footer: other worksheet topics
   const otherTopics = freeWorksheetTopics.filter((p) => p.slug !== page.slug).slice(0, 6);
+
+  // Topical cluster links (Lever — SEO internal linking)
+  const relatedLinks = getRelatedLinks({
+    pageType: "worksheet-topic",
+    slug: page.slug,
+    keyword: page.keyword,
+    limit: 12,
+  });
 
   const canonical = `${BASE_URL}/worksheets/free/${page.slug}`;
 
@@ -210,6 +219,31 @@ export default async function FreeWorksheetTopicPage({ params }: Props) {
                 <div className="text-lg font-bold text-white mb-2">{g.title}</div>
                 <div className="text-sm text-gray-400 line-clamp-3">{g.description}</div>
                 <div className="text-xs text-gray-500 mt-3">Ages {g.ageRange}</div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Related resources — topical cluster links */}
+      {relatedLinks.length > 0 && (
+        <section className="max-w-6xl mx-auto px-4 py-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            More learning ideas
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {relatedLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="flex items-center justify-between bg-gray-900 border border-gray-800 rounded-2xl p-4 hover:border-green-500 hover:bg-gray-800 transition-colors"
+              >
+                <span className="text-sm md:text-base font-semibold text-white pr-3">
+                  {l.label}
+                </span>
+                <span className="text-[10px] uppercase tracking-wider font-bold text-green-300 bg-green-500/10 border border-green-500/30 rounded px-2 py-1">
+                  {l.type === "learn" ? "GUIDE" : l.type === "activity" ? "ACTIVITY" : l.type.toUpperCase()}
+                </span>
               </Link>
             ))}
           </div>

@@ -11,6 +11,7 @@ import {
   getWorksheetBySlug,
   getCategoryBySlug,
 } from "@/lib/data";
+import { getRelatedLinks } from "@/lib/internalLinks";
 
 const BASE_URL = "https://www.jiggyjoy.com";
 
@@ -76,6 +77,14 @@ export default async function LearnTopicPage({ params }: Props) {
   const otherTopics = learnTopics
     .filter((t) => t.slug !== page.slug)
     .slice(0, 8);
+
+  // Topical cluster links (Lever — SEO internal linking)
+  const relatedLinks = getRelatedLinks({
+    pageType: "learn",
+    slug: page.slug,
+    keyword: page.keyword,
+    limit: 12,
+  });
 
   const canonical = `${BASE_URL}/learn/${page.slug}`;
 
@@ -233,6 +242,31 @@ export default async function LearnTopicPage({ params }: Props) {
                 <div className="text-3xl mb-2">{c.icon}</div>
                 <div className="text-lg font-bold text-white mb-2">{c.title}</div>
                 <div className="text-sm text-gray-400 line-clamp-3">{c.description}</div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Related resources — topical cluster links */}
+      {relatedLinks.length > 0 && (
+        <section className="max-w-6xl mx-auto px-4 py-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            More learning ideas
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {relatedLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="flex items-center justify-between bg-gray-900 border border-gray-800 rounded-2xl p-4 hover:border-sky-500 hover:bg-gray-800 transition-colors"
+              >
+                <span className="text-sm md:text-base font-semibold text-white pr-3">
+                  {l.label}
+                </span>
+                <span className="text-[10px] uppercase tracking-wider font-bold text-sky-300 bg-sky-500/10 border border-sky-500/30 rounded px-2 py-1">
+                  {l.type === "learn" ? "GUIDE" : l.type === "activity" ? "ACTIVITY" : l.type.toUpperCase()}
+                </span>
               </Link>
             ))}
           </div>

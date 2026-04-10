@@ -6,6 +6,7 @@ import {
   freeWorksheetTopics,
   printablePages,
   learnTopics,
+  coloringTopicPages,
 } from "@/lib/programmaticContent";
 import { videos } from "@/lib/videos";
 
@@ -36,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/videos`,                    priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/printables`,                priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/learn`,                     priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/halloween`,                  priority: 0.95, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/about`,                     priority: 0.5, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/privacy-policy`,            priority: 0.3, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/terms`,                     priority: 0.3, changeFrequency: "yearly" as const },
@@ -103,10 +105,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
   }));
 
+  const coloringTopicPageUrls = coloringTopicPages.map((t) => ({
+    url: `${BASE_URL}/coloring-pages/topics/${t.slug}`,
+    priority: 0.85,
+    changeFrequency: "weekly" as const,
+  }));
+
   return [
     ...staticPages,
     ...categoryPages,
     ...coloringPages,
+    ...coloringTopicPageUrls,
     ...gamePages,
     ...worksheetPages,
     ...activityAgePages,

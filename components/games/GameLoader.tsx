@@ -30,6 +30,12 @@ const FractionsFrenzyGame    = dynamic(() => import("./FractionsFrenzyGame"),   
 const MoneyMatchGame         = dynamic(() => import("./MoneyMatchGame"),         { ssr: false });
 const SpellingBeeGame        = dynamic(() => import("./SpellingBeeGame"),        { ssr: false });
 const TimeTellerGame         = dynamic(() => import("./TimeTellerGame"),         { ssr: false });
+const AdditionAttackGame     = dynamic(() => import("./AdditionAttackGame"),     { ssr: false });
+const SubtractionStationGame = dynamic(() => import("./SubtractionStationGame"), { ssr: false });
+const DivisionDuelGame       = dynamic(() => import("./DivisionDuelGame"),       { ssr: false });
+const ReadingRocketGame      = dynamic(() => import("./ReadingRocketGame"),      { ssr: false });
+const SightWordSlamGame      = dynamic(() => import("./SightWordSlamGame"),      { ssr: false });
+const SudokuKidsGame         = dynamic(() => import("./SudokuKidsGame"),         { ssr: false });
 
 const components: Record<string, React.ComponentType> = {
   TimesChallengeGame,
@@ -60,6 +66,12 @@ const components: Record<string, React.ComponentType> = {
   MoneyMatchGame,
   SpellingBeeGame,
   TimeTellerGame,
+  AdditionAttackGame,
+  SubtractionStationGame,
+  DivisionDuelGame,
+  ReadingRocketGame,
+  SightWordSlamGame,
+  SudokuKidsGame,
 };
 
 export default function GameLoader({ component }: { component: string }) {
