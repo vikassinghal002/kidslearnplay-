@@ -24,6 +24,12 @@ export const gameVisuals: Record<string, GameVisual> = {
   "math-addition":           { hero: "➕", gradient: "from-emerald-500 via-teal-500 to-cyan-500",   sparkles: ["🌟", "💚", "🎯"] },
   "math-subtraction":        { hero: "➖", gradient: "from-rose-500 via-red-500 to-orange-500",      sparkles: ["💖", "🎯", "✨"] },
   "counting-game":           { hero: "⭐", gradient: "from-amber-400 via-yellow-400 to-orange-400",  sparkles: ["🌟", "✨", "💫"] },
+  "fractions-frenzy":        { hero: "🍕", gradient: "from-red-500 via-orange-500 to-yellow-400",   sparkles: ["🍅", "🧀", "➗"] },
+  "money-match":             { hero: "💰", gradient: "from-yellow-400 via-amber-500 to-orange-600", sparkles: ["🪙", "💵", "✨"] },
+  "time-teller":             { hero: "⏰", gradient: "from-sky-400 via-blue-500 to-indigo-500",      sparkles: ["🕐", "🕒", "🕕"] },
+  "addition-attack":         { hero: "☄️", gradient: "from-slate-700 via-indigo-800 to-purple-900",  sparkles: ["➕", "💥", "🌠"] },
+  "subtraction-station":     { hero: "🚂", gradient: "from-emerald-500 via-teal-500 to-cyan-600",    sparkles: ["➖", "🚃", "💨"] },
+  "division-duel":           { hero: "⚔️", gradient: "from-red-600 via-rose-600 to-pink-700",        sparkles: ["➗", "🛡️", "⏱️"] },
 
   // ── Toddler Games ────────────────────────────────────────
   "shape-sorter":            { hero: "🔷", gradient: "from-teal-400 via-cyan-500 to-blue-500",      sparkles: ["🔶", "🟣", "🟢"] },
@@ -39,6 +45,12 @@ export const gameVisuals: Record<string, GameVisual> = {
   "pattern-wizard":          { hero: "🔮", gradient: "from-purple-500 via-fuchsia-500 to-pink-500",  sparkles: ["✨", "🌟", "💫"] },
   "sorting-frenzy":          { hero: "🎯", gradient: "from-red-500 via-orange-500 to-yellow-500",    sparkles: ["📦", "🎁", "⚡"] },
   "story-adventure":         { hero: "📚", gradient: "from-amber-500 via-orange-500 to-red-500",     sparkles: ["🗺️", "🏰", "✨"] },
+  "spelling-bee":            { hero: "🐝", gradient: "from-yellow-300 via-amber-400 to-yellow-600",  sparkles: ["🌻", "🌼", "🍯"] },
+  "reading-rocket":          { hero: "🛸", gradient: "from-teal-400 via-cyan-500 to-sky-600",         sparkles: ["🅰️", "🅾️", "⭐"] },
+  "sight-word-slam":         { hero: "📝", gradient: "from-pink-500 via-fuchsia-500 to-purple-600",   sparkles: ["⚡", "🔤", "💨"] },
+  "sudoku-kids":             { hero: "🧩", gradient: "from-blue-400 via-indigo-500 to-violet-600",    sparkles: ["1️⃣", "2️⃣", "3️⃣"] },
+  "number-surge":            { hero: "🎲", gradient: "from-purple-600 via-violet-600 to-blue-700",    sparkles: ["2️⃣", "4️⃣", "8️⃣"] },
+  "cipher-sprint":           { hero: "🔐", gradient: "from-slate-700 via-gray-800 to-zinc-900",       sparkles: ["🔑", "🕵️", "⏳"] },
 
   // ── Arcade Games ─────────────────────────────────────────
   "space-defender":          { hero: "🚀", gradient: "from-indigo-700 via-purple-700 to-blue-800",   sparkles: ["👾", "🛸", "⭐"] },
@@ -46,6 +58,7 @@ export const gameVisuals: Record<string, GameVisual> = {
   "dino-run":                { hero: "🦖", gradient: "from-lime-500 via-green-500 to-emerald-600",    sparkles: ["🌵", "🦕", "🌋"] },
   "snake":                   { hero: "🐍", gradient: "from-green-500 via-emerald-500 to-teal-600",    sparkles: ["🍎", "⭐", "💎"] },
   "super-jumper":            { hero: "🕺", gradient: "from-blue-500 via-indigo-500 to-purple-600",    sparkles: ["🪙", "⭐", "🍄"] },
+  "stack-attack":            { hero: "🏗️", gradient: "from-amber-500 via-yellow-500 to-lime-500",     sparkles: ["📦", "🧱", "⬆️"] },
 
   // ── Seasonal Games ───────────────────────────────────────
   "pumpkin-smash":           { hero: "🎃", gradient: "from-orange-600 via-orange-500 to-purple-900",  sparkles: ["👻", "🦇", "🕷️"] },

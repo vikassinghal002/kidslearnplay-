@@ -29,7 +29,7 @@ export type { UseCanvasOptions, UseCanvasResult } from "./useCanvas";
 export { useGameInput } from "./useGameInput";
 export type { GameInput, KeyBindings, UseGameInputOptions } from "./useGameInput";
 
-export { sfx, music, setMuted, isMuted, toggleMuted } from "./audio";
+export { sfx, music, setMuted, isMuted, toggleMuted, stopAll } from "./audio";
 export type { MusicTheme } from "./audio";
 
 export { ParticleSystem } from "./particles";

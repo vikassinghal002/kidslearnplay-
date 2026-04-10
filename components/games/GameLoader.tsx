@@ -1,6 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
+import { stopAll as stopAllGameAudio } from "@/lib/gameEngine";
 
 // Kid-friendly loading skeleton — bouncing dots + a rainbow shimmer
 // so the game container never appears blank while the chunk loads.
@@ -102,6 +104,13 @@ const components: Record<string, React.ComponentType> = {
 };
 
 export default function GameLoader({ component }: { component: string }) {
+  // Silence every sound when the player navigates away. Without this the
+  // scheduled music setTimeout chain keeps ticking and the tune follows you
+  // to the home screen — kids (and parents) hate that.
+  useEffect(() => {
+    return () => { stopAllGameAudio(); };
+  }, [component]);
+
   const Component = components[component];
   if (!Component) return <div className="text-gray-400 text-center py-12">Game not found.</div>;
   return <Component />;

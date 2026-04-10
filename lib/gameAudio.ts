@@ -241,3 +241,30 @@ export function stopMusic() {
   currentTune = "";
   if (musicTimer) { clearTimeout(musicTimer); musicTimer = null; }
 }
+
+/**
+ * Hard stop — kills music AND suspends the audio context so any in-flight
+ * oscillators go silent immediately. The next call to getCtx() will resume
+ * the context automatically, so this is safe to call on unmount.
+ *
+ * Needed because games navigate away while music is still scheduling notes
+ * via setTimeout chains; without this the background tune keeps playing on
+ * the home screen. See lib/gameEngine/audio.ts for the React-side cleanup.
+ */
+export function stopAllSounds() {
+  stopMusic();
+  if (ctx && ctx.state === "running") {
+    ctx.suspend().catch(() => { /* ignore — closing tab, nothing we can do */ });
+  }
+}
+
+// Auto-register once on the client: if the tab is hidden or the page is
+// being torn down, silence everything. `pagehide` covers BFCache + hard nav;
+// `visibilitychange` covers tab switches and mobile app backgrounding.
+if (typeof window !== "undefined" && !(window as unknown as { __jjAudioHooked?: boolean }).__jjAudioHooked) {
+  (window as unknown as { __jjAudioHooked?: boolean }).__jjAudioHooked = true;
+  window.addEventListener("pagehide", () => { stopAllSounds(); });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") stopAllSounds();
+  });
+}

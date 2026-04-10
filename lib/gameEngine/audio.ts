@@ -21,6 +21,7 @@ import {
   sfx as rawSfx,
   startMusic as rawStartMusic,
   stopMusic as rawStopMusic,
+  stopAllSounds as rawStopAllSounds,
 } from "@/lib/gameAudio";
 
 type SfxFn = () => void;
@@ -103,3 +104,12 @@ export const music = {
     rawStopMusic();
   },
 };
+
+/**
+ * Kills every sound immediately — music chain, scheduled oscillators, the lot.
+ * Call this from the game container's unmount effect so audio doesn't leak
+ * into the page the kid just navigated to.
+ */
+export function stopAll() {
+  rawStopAllSounds();
+}

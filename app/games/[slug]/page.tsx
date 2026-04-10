@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { games, getGameBySlug } from "@/lib/data";
 import GameLoader from "@/components/games/GameLoader";
 import GameScreen from "@/components/games/GameScreen";
+import OrientationLock from "@/components/games/OrientationLock";
+import { needsLandscape } from "@/lib/landscapeGames";
 import { getGameVisual } from "@/lib/gameVisuals";
 import PinItButton from "@/components/PinItButton";
 import VideoEmbed from "@/components/VideoEmbed";
@@ -313,9 +315,17 @@ export default async function GamePage({ params }: Props) {
         {/* Desktop: fills remaining width, fixed height                  */}
         <div className="w-full lg:flex-1 lg:overflow-hidden" style={{ minHeight: "var(--game-h)" }}>
           {game.component ? (
-            <GameScreen title={game.title} howToPlay={howToPlay} skills={game.tags}>
-              <GameLoader component={game.component} />
-            </GameScreen>
+            needsLandscape(slug) ? (
+              <OrientationLock>
+                <GameScreen title={game.title} howToPlay={howToPlay} skills={game.tags}>
+                  <GameLoader component={game.component} />
+                </GameScreen>
+              </OrientationLock>
+            ) : (
+              <GameScreen title={game.title} howToPlay={howToPlay} skills={game.tags}>
+                <GameLoader component={game.component} />
+              </GameScreen>
+            )
           ) : game.embedUrl ? (
             <iframe src={game.embedUrl} className="w-full min-h-[400px] lg:h-full" title={game.title} allowFullScreen />
           ) : (
