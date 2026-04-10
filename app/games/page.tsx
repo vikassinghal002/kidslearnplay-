@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/lib/data";
-import GameCard from "@/components/GameCard";
+import GamesAgeFilter from "@/components/GamesAgeFilter";
 
 export const metadata: Metadata = {
   title: "Free Educational Games for Kids",
@@ -26,15 +26,13 @@ const categoryEmojis: Record<string, string> = {
   "Coloring Games":    "🎨",
 };
 
-const categories = [...new Set(games.map((g) => g.category))];
-
 export default function GamesHubPage() {
   return (
     <div>
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-14 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
+          <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-3">
             🎮 Free Kids Games
           </h1>
           <p className="text-lg text-white/90">
@@ -44,25 +42,8 @@ export default function GamesHubPage() {
         </div>
       </section>
 
-      {/* Category tabs */}
-      <section className="max-w-6xl mx-auto px-4 py-10">
-        {categories.map((cat) => {
-          const catGames = games.filter((g) => g.category === cat);
-          return (
-            <div key={cat} className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-5 flex items-center gap-2">
-                <span>{categoryEmojis[cat] ?? "🎯"}</span>
-                <span>{cat}</span>
-              </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-                {catGames.map((game) => (
-                  <GameCard key={game.slug} game={game} />
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </section>
+      {/* Age-filtered game grid */}
+      <GamesAgeFilter games={games} categoryEmojis={categoryEmojis} />
 
       {/* SEO block */}
       <section className="bg-gray-50 py-10 px-4">

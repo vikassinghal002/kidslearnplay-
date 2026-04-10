@@ -13,6 +13,19 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-300 mt-16">
+      {/* Kids-first pledge strip */}
+      <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm md:text-base font-bold text-center">
+          <span className="flex items-center gap-2">🛡️ No accounts</span>
+          <span className="flex items-center gap-2">🚫 No ads at kids</span>
+          <span className="flex items-center gap-2">🔒 No data collection</span>
+          <span className="flex items-center gap-2">💯 100% free</span>
+          <Link href="/parents" className="underline hover:text-green-100 whitespace-nowrap">
+            Read our pledge →
+          </Link>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
 
@@ -83,6 +96,7 @@ export default function Footer() {
               <li><Link href="/learn" className="hover:text-white transition-colors">How to Teach Guides</Link></li>
               <li><Link href="/activities/5-year-olds" className="hover:text-white transition-colors">Activities by Age</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link href="/parents" className="hover:text-white transition-colors">For Parents</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>

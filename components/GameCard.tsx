@@ -9,6 +9,21 @@ type Props = {
 };
 
 /**
+ * Color-code an ageRange string into a kid-friendly bucket.
+ *  2–4  → green   (toddler)
+ *  5–7  → yellow  (early elementary)
+ *  8–10 → blue    (elementary)
+ *  11+  → purple  (tween)
+ */
+function ageBucket(ageRange: string) {
+  const first = parseInt(ageRange.match(/\d+/)?.[0] ?? "5", 10);
+  if (first <= 4) return { color: "bg-green-400", ring: "ring-green-200", label: "Little kids" };
+  if (first <= 7) return { color: "bg-yellow-400", ring: "ring-yellow-200", label: "Early elementary" };
+  if (first <= 10) return { color: "bg-blue-400", ring: "ring-blue-200", label: "Elementary" };
+  return { color: "bg-purple-400", ring: "ring-purple-200", label: "Tweens" };
+}
+
+/**
  * Kid-friendly game tile.
  *
  * Kids don't read — they recognise characters and colours. This card leads
@@ -20,6 +35,7 @@ type Props = {
  */
 export default function GameCard({ game, size = "md" }: Props) {
   const visual = getGameVisual(game.slug);
+  const bucket = ageBucket(game.ageRange);
 
   const heroSize =
     size === "lg" ? "text-[7rem] sm:text-[8rem]" :
@@ -53,9 +69,14 @@ export default function GameCard({ game, size = "md" }: Props) {
           </span>
         )}
 
-        {/* Age badge */}
-        <span className="absolute top-3 right-3 z-10 text-[11px] font-bold bg-white/90 text-gray-800 px-2.5 py-1 rounded-full shadow">
-          Age {game.ageRange}
+        {/* Age badge — colored dot + age range, readable at a glance */}
+        <span
+          className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-white/95 text-gray-900 pl-2 pr-3 py-1 rounded-full shadow text-sm font-bold"
+          title={`${bucket.label} · Age ${game.ageRange}`}
+          aria-label={`Age ${game.ageRange}, ${bucket.label}`}
+        >
+          <span className={`w-3 h-3 rounded-full ${bucket.color} ring-2 ${bucket.ring}`} aria-hidden="true" />
+          {game.ageRange}
         </span>
 
         {/* Huge hero emoji */}

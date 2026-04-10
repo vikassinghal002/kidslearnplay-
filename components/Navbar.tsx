@@ -7,12 +7,17 @@ import { usePathname } from "next/navigation";
 const gamesMenu = [
   { href: "/games", label: "All Games", emoji: "🎮", desc: "Browse every game" },
   { href: "/games/math", label: "Math Games", emoji: "🔢", desc: "Times tables, quizzes & more" },
-  { href: "/games/kindergarten", label: "Kindergarten", emoji: "🎒", desc: "Ages 3–6" },
-  { href: "/games/3-year-olds", label: "Ages 3–4", emoji: "🧸", desc: "Toddler favourites" },
-  { href: "/games/5-year-olds", label: "Ages 5–6", emoji: "⭐", desc: "Pre-school & early KS1" },
   { href: "/games/halloween", label: "Halloween", emoji: "🎃", desc: "Spooky seasonal fun" },
   { href: "/games/christmas", label: "Christmas", emoji: "🎄", desc: "Festive games" },
   { href: "/games/easter", label: "Easter", emoji: "🐣", desc: "Spring activities" },
+];
+
+// Age shortcut bar — the thing kids (and parents) actually want
+const ageShortcuts = [
+  { href: "/games/3-year-olds",   label: "Ages 3–4", emoji: "🧸", dot: "bg-green-400",  ring: "ring-green-200" },
+  { href: "/games/5-year-olds",   label: "Ages 5–6", emoji: "⭐", dot: "bg-yellow-400", ring: "ring-yellow-200" },
+  { href: "/games/kindergarten",  label: "K–2",      emoji: "🎒", dot: "bg-yellow-400", ring: "ring-yellow-200" },
+  { href: "/games/math",          label: "Ages 7+",  emoji: "🔢", dot: "bg-blue-400",   ring: "ring-blue-200" },
 ];
 
 const worksheetsMenu = [
@@ -36,8 +41,8 @@ function DropdownMenu({ items }: { items: typeof gamesMenu }) {
           >
             <span className="text-xl shrink-0">{item.emoji}</span>
             <div className="min-w-0">
-              <p className="text-sm font-semibold text-gray-800 group-hover:text-purple-700">{item.label}</p>
-              <p className="text-xs text-gray-400">{item.desc}</p>
+              <p className="text-base font-bold text-gray-900 group-hover:text-purple-700">{item.label}</p>
+              <p className="text-sm text-gray-600">{item.desc}</p>
             </div>
           </Link>
         ))}
@@ -88,7 +93,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-xl text-purple-600 shrink-0">
           <span className="text-2xl">🌈</span>
@@ -126,75 +131,157 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          className="md:hidden p-3 rounded-xl hover:bg-gray-100 -mr-2"
           onClick={() => { setMobileOpen(!mobileOpen); setMobileSection(null); }}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
-          <div className="w-5 h-0.5 bg-gray-700 mb-1" />
-          <div className="w-5 h-0.5 bg-gray-700 mb-1" />
-          <div className="w-5 h-0.5 bg-gray-700" />
+          <div className="w-6 h-0.5 bg-gray-800 mb-1.5" />
+          <div className="w-6 h-0.5 bg-gray-800 mb-1.5" />
+          <div className="w-6 h-0.5 bg-gray-800" />
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Age shortcut strip — desktop only, kids-first lane */}
+      <div className="hidden md:block border-t border-gray-100 bg-gradient-to-r from-purple-50/60 via-white to-pink-50/60">
+        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto">
+          <span className="text-xs font-bold uppercase tracking-wider text-gray-500 pr-2 whitespace-nowrap">
+            By age:
+          </span>
+          {ageShortcuts.map((a) => {
+            const active = pathname === a.href;
+            return (
+              <Link
+                key={a.href}
+                href={a.href}
+                className={`flex items-center gap-1.5 shrink-0 px-4 py-1.5 rounded-full text-sm font-bold border-2 transition-colors ${
+                  active
+                    ? "bg-purple-600 text-white border-purple-600"
+                    : "bg-white text-gray-800 border-gray-200 hover:border-purple-300 hover:bg-purple-50"
+                }`}
+              >
+                <span aria-hidden="true">{a.emoji}</span>
+                <span className={`w-2 h-2 rounded-full ${a.dot} ring-2 ${a.ring}`} aria-hidden="true" />
+                <span>{a.label}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Mobile menu — full-height sheet */}
       {mobileOpen && (
-        <div className="md:hidden border-t bg-white px-4 py-3 flex flex-col gap-1 max-h-[80vh] overflow-y-auto">
-          <Link href="/coloring-pages" onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-medium">
-            🎨 Coloring Pages
-          </Link>
-
-          {/* Games section */}
-          <button
-            onClick={() => setMobileSection(mobileSection === "games" ? null : "games")}
-            className="flex items-center justify-between px-3 py-2 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-medium w-full text-left"
-          >
-            <span>🎮 Games</span>
-            <svg className={`w-4 h-4 transition-transform ${mobileSection === "games" ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
-            </svg>
-          </button>
-          {mobileSection === "games" && (
-            <div className="pl-4 flex flex-col gap-1">
-              {gamesMenu.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-700 text-sm">
-                  {item.emoji} {item.label}
-                </Link>
-              ))}
+        <div
+          className="md:hidden fixed inset-0 top-16 z-40 bg-white overflow-y-auto"
+          role="dialog"
+          aria-label="Menu"
+        >
+          <div className="px-5 pt-5 pb-24 flex flex-col gap-5">
+            {/* Age shortcut chips — top of the sheet */}
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                Pick your age
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {ageShortcuts.map((a) => (
+                  <Link
+                    key={a.href}
+                    href={a.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-purple-50 border-2 border-purple-100 font-bold text-gray-900 hover:bg-purple-100"
+                  >
+                    <span className="text-2xl" aria-hidden="true">{a.emoji}</span>
+                    <span className={`w-2.5 h-2.5 rounded-full ${a.dot} ring-2 ${a.ring}`} aria-hidden="true" />
+                    <span>{a.label}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
-          )}
 
-          {/* Worksheets section */}
-          <button
-            onClick={() => setMobileSection(mobileSection === "worksheets" ? null : "worksheets")}
-            className="flex items-center justify-between px-3 py-2 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-medium w-full text-left"
-          >
-            <span>📄 Worksheets</span>
-            <svg className={`w-4 h-4 transition-transform ${mobileSection === "worksheets" ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
-            </svg>
-          </button>
-          {mobileSection === "worksheets" && (
-            <div className="pl-4 flex flex-col gap-1">
-              {worksheetsMenu.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-700 text-sm">
-                  {item.emoji} {item.label}
-                </Link>
-              ))}
+            {/* Main sections */}
+            <div className="flex flex-col gap-1">
+              <Link
+                href="/coloring-pages"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-3 px-4 py-4 rounded-2xl bg-white border border-gray-200 text-gray-900 text-lg font-bold hover:bg-purple-50"
+              >
+                <span className="text-2xl">🎨</span>
+                <span>Coloring Pages</span>
+              </Link>
+
+              {/* Games section */}
+              <button
+                onClick={() => setMobileSection(mobileSection === "games" ? null : "games")}
+                className="flex items-center justify-between px-4 py-4 rounded-2xl bg-white border border-gray-200 text-gray-900 text-lg font-bold hover:bg-purple-50 w-full text-left"
+                aria-expanded={mobileSection === "games"}
+              >
+                <span className="flex items-center gap-3"><span className="text-2xl">🎮</span>Games</span>
+                <svg className={`w-5 h-5 transition-transform ${mobileSection === "games" ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === "games" && (
+                <div className="pl-4 flex flex-col gap-1 mb-1">
+                  {gamesMenu.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-800 hover:bg-purple-50 text-base font-semibold"
+                    >
+                      <span className="text-xl">{item.emoji}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {/* Worksheets section */}
+              <button
+                onClick={() => setMobileSection(mobileSection === "worksheets" ? null : "worksheets")}
+                className="flex items-center justify-between px-4 py-4 rounded-2xl bg-white border border-gray-200 text-gray-900 text-lg font-bold hover:bg-purple-50 w-full text-left"
+                aria-expanded={mobileSection === "worksheets"}
+              >
+                <span className="flex items-center gap-3"><span className="text-2xl">📄</span>Worksheets</span>
+                <svg className={`w-5 h-5 transition-transform ${mobileSection === "worksheets" ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === "worksheets" && (
+                <div className="pl-4 flex flex-col gap-1 mb-1">
+                  {worksheetsMenu.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-800 hover:bg-purple-50 text-base font-semibold"
+                    >
+                      <span className="text-xl">{item.emoji}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              <Link
+                href="/blog"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-3 px-4 py-4 rounded-2xl bg-white border border-gray-200 text-gray-900 text-lg font-bold hover:bg-purple-50"
+              >
+                <span className="text-2xl">📝</span>
+                <span>Blog</span>
+              </Link>
             </div>
-          )}
 
-          <Link href="/blog" onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-medium">
-            📝 Blog
-          </Link>
-
-          <Link href="/games/times-tables-challenge" onClick={() => setMobileOpen(false)}
-            className="mt-1 px-3 py-2 bg-purple-600 text-white rounded-lg font-semibold text-center hover:bg-purple-700 transition-colors">
-            🔢 Times Tables Challenge
-          </Link>
+            {/* Primary CTA */}
+            <Link
+              href="/games/times-tables-challenge"
+              onClick={() => setMobileOpen(false)}
+              className="mt-2 px-6 py-4 bg-purple-600 text-white rounded-full font-extrabold text-center hover:bg-purple-700 transition-colors text-lg shadow-lg"
+            >
+              🔢 Times Tables Challenge
+            </Link>
+          </div>
         </div>
       )}
     </header>

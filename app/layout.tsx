@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Nunito, Fredoka } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,6 +7,22 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import InstallPrompt from "@/components/InstallPrompt";
+
+// Kid-friendly body font — rounded, extra-legible, loaded via CSS variable
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
+  weight: ["400", "600", "700", "800", "900"],
+});
+
+// Display font for headings and big playful labels
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  variable: "--font-fredoka",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
 
 const siteUrl = "https://www.jiggyjoy.com";
 
@@ -60,8 +77,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full flex flex-col antialiased">
+    <html
+      lang="en"
+      className={`h-full ${nunito.variable} ${fredoka.variable}`}
+    >
+      <body className="min-h-full flex flex-col antialiased font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

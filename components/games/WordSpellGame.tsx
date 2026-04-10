@@ -237,12 +237,12 @@ export default function WordSpellGame() {
         {state === "wrong"   && <p className="text-red-500 font-bold">Try again! 💪</p>}
 
         {/* Answer slots */}
-        <div className="flex justify-center gap-2 mt-3">
+        <div className="flex flex-wrap justify-center gap-2 mt-3">
           {Array.from({ length: entry.word.length }).map((_, i) => (
             <button
               key={i}
               onClick={() => answer[i] && removeLetter(i)}
-              className={`w-10 h-10 rounded-lg border-2 flex items-center justify-center font-extrabold text-lg transition-all
+              className={`w-14 h-14 rounded-xl border-2 flex items-center justify-center font-extrabold text-2xl transition-all
                 ${answer[i] ? "bg-amber-100 border-amber-400 text-amber-800 hover:bg-red-50 hover:border-red-300" : "bg-gray-50 border-dashed border-gray-300 text-transparent"}
               `}
             >
@@ -253,12 +253,12 @@ export default function WordSpellGame() {
       </div>
 
       {/* Letter tiles */}
-      <div className="flex flex-wrap justify-center gap-2 mb-4 min-h-[48px]">
+      <div className="flex flex-wrap justify-center gap-2 mb-4 min-h-[64px]">
         {tiles.map((letter, i) => (
           <button
             key={i}
             onClick={() => pickTile(i)}
-            className="w-11 h-11 rounded-xl bg-amber-500 text-white font-extrabold text-xl shadow-md hover:bg-amber-600 active:scale-90 transition-all"
+            className="w-14 h-14 rounded-2xl bg-amber-500 text-white font-extrabold text-2xl shadow-md hover:bg-amber-600 active:scale-90 transition-all"
           >
             {letter}
           </button>

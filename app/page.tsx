@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { coloringCategories, games, worksheets, adultCategories, kidsCategories, getGameBySlug } from "@/lib/data";
+import { games, worksheets, adultCategories, kidsCategories, getGameBySlug } from "@/lib/data";
 import GameCard from "@/components/GameCard";
+import HomeColoringTabs from "@/components/HomeColoringTabs";
 
 const stats = [
   { value: "12,000+", label: "Coloring Pages" },
@@ -8,6 +9,26 @@ const stats = [
   { value: "20+",     label: "Worksheets" },
   { value: "100%",    label: "Free Forever" },
 ];
+
+// Subject → visual mapping for worksheet cards
+function worksheetVisual(subject: string) {
+  const s = subject.toLowerCase();
+  if (s.includes("math") || s.includes("number"))
+    return { emoji: "🔢", bg: "bg-gradient-to-br from-blue-100 to-indigo-100", pill: "bg-blue-100 text-blue-700" };
+  if (s.includes("alphabet") || s.includes("letter"))
+    return { emoji: "🔤", bg: "bg-gradient-to-br from-yellow-100 to-amber-100", pill: "bg-amber-100 text-amber-800" };
+  if (s.includes("trac"))
+    return { emoji: "✏️", bg: "bg-gradient-to-br from-green-100 to-emerald-100", pill: "bg-emerald-100 text-emerald-700" };
+  if (s.includes("read"))
+    return { emoji: "📖", bg: "bg-gradient-to-br from-rose-100 to-pink-100", pill: "bg-rose-100 text-rose-700" };
+  if (s.includes("writ"))
+    return { emoji: "✍️", bg: "bg-gradient-to-br from-purple-100 to-fuchsia-100", pill: "bg-purple-100 text-purple-700" };
+  if (s.includes("science"))
+    return { emoji: "🔬", bg: "bg-gradient-to-br from-teal-100 to-cyan-100", pill: "bg-teal-100 text-teal-700" };
+  if (s.includes("shape") || s.includes("color") || s.includes("colour"))
+    return { emoji: "🎨", bg: "bg-gradient-to-br from-orange-100 to-yellow-100", pill: "bg-orange-100 text-orange-700" };
+  return { emoji: "📄", bg: "bg-gradient-to-br from-gray-100 to-slate-100", pill: "bg-gray-100 text-gray-700" };
+}
 
 const FEATURED_GAME_SLUGS = [
   "maths-play",
@@ -27,30 +48,42 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white py-20 px-4">
+      <section className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl mb-4">🌈</div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-            Free Coloring Pages,<br />Games &amp; Worksheets
+          <div className="text-6xl mb-4 animate-bounce-slow">🌈</div>
+          <h1 className="font-display text-5xl md:text-7xl font-extrabold mb-5 leading-[1.05] drop-shadow-sm">
+            Play, Color &amp; Learn<br />
+            <span className="text-yellow-200">— 100% Free!</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Hundreds of free printable coloring pages, educational games and worksheets for kids.
-            No signup needed — just print and play!
+          <p className="text-lg md:text-2xl text-white/95 font-semibold mb-8 max-w-2xl mx-auto">
+            Free games, coloring pages and worksheets for kids.
+            No signup, no ads — just pick one and start!
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+
+          {/* Primary CTA — Play Games (the main hook) */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/games"
+              className="group relative px-10 py-5 bg-yellow-300 text-purple-900 font-extrabold rounded-full text-2xl md:text-3xl shadow-[0_8px_0_0_rgba(120,53,15,0.35)] hover:shadow-[0_4px_0_0_rgba(120,53,15,0.35)] hover:translate-y-1 active:translate-y-2 transition-all whitespace-nowrap animate-bounce-slow"
+            >
+              <span className="inline-block group-hover:scale-110 transition-transform">🎮</span>{" "}
+              Play Games Now
+            </Link>
             <Link
               href="/coloring-pages"
-              className="px-8 py-3 bg-white text-purple-700 font-bold rounded-full text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="px-7 py-4 bg-white/15 border-2 border-white text-white font-bold rounded-full text-lg md:text-xl hover:bg-white/25 transition-colors whitespace-nowrap"
             >
               🎨 Coloring Pages
             </Link>
-            <Link
-              href="/games"
-              className="px-8 py-3 bg-white/20 border-2 border-white text-white font-bold rounded-full text-lg hover:bg-white/30 transition-colors"
-            >
-              🎮 Play Games
-            </Link>
           </div>
+
+          {/* Trust line — COPPA / kids-first posture */}
+          <p className="mt-6 text-sm md:text-base text-white/90 font-medium">
+            🛡️ No accounts · No ads at kids · No data collection ·{" "}
+            <Link href="/parents" className="underline hover:text-white font-bold">
+              For Parents
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -66,49 +99,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Kids Coloring Categories */}
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900">🎨 Kids Coloring Pages</h2>
-            <p className="text-gray-500 mt-1">Characters, animals, holidays — print for free</p>
-          </div>
-          <Link href="/coloring-pages" className="text-purple-600 font-semibold hover:underline hidden sm:block">View all →</Link>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {kidsCategories.map((cat) => (
-            <Link key={cat.slug} href={`/coloring-pages/${cat.slug}`}
-              className={`${cat.color} rounded-2xl p-5 flex flex-col items-center text-center hover:scale-105 transition-transform shadow-sm`}>
-              <span className="text-4xl mb-2">{cat.icon}</span>
-              <h3 className="font-bold text-gray-800 text-sm">{cat.title}</h3>
-              <span className="text-xs text-gray-500 mt-1">{cat.pages.length} pages</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Adult Coloring Categories */}
-      <section className="bg-gradient-to-br from-purple-50 to-pink-50 py-14">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900">🌸 Detailed & Mindful Coloring</h2>
-              <p className="text-gray-500 mt-1">Mandalas, stress relief, zodiac & fantasy — intricate designs, completely free</p>
-            </div>
-            <Link href="/coloring-pages" className="text-purple-600 font-semibold hover:underline hidden sm:block">View all →</Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {adultCategories.map((cat) => (
-              <Link key={cat.slug} href={`/coloring-pages/${cat.slug}`}
-                className={`${cat.color} rounded-2xl p-5 flex flex-col items-center text-center hover:scale-105 transition-transform shadow-sm border border-white`}>
-                <span className="text-4xl mb-2">{cat.icon}</span>
-                <h3 className="font-bold text-gray-800 text-sm">{cat.title}</h3>
-                <span className="text-xs text-purple-600 font-medium mt-1">{cat.pages.length} free pages</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Coloring Pages — Kids / Adults switcher */}
+      <HomeColoringTabs kidsCategories={kidsCategories} adultCategories={adultCategories} />
 
       {/* Featured Games */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-14">
@@ -116,7 +108,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold text-gray-900">🎮 Educational Games</h2>
-              <p className="text-gray-500 mt-1">Learn through play — free online games</p>
+              <p className="text-gray-600 mt-1 text-base">Learn through play — free online games</p>
             </div>
             <Link href="/games" className="text-purple-600 font-semibold hover:underline hidden sm:block">
               All games →
@@ -135,27 +127,50 @@ export default function HomePage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold text-gray-900">📄 Free Worksheets</h2>
-            <p className="text-gray-500 mt-1">Printable worksheets for every grade</p>
+            <p className="text-gray-600 mt-1 text-base">Printable worksheets for every grade</p>
           </div>
           <Link href="/worksheets" className="text-purple-600 font-semibold hover:underline hidden sm:block">
             View all →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {worksheets.slice(0, 6).map((ws) => (
-            <Link
-              key={ws.slug}
-              href={`/worksheets/${ws.slug}`}
-              className="border border-gray-200 rounded-2xl p-5 hover:border-purple-300 hover:bg-purple-50 transition-colors flex items-start gap-4"
-            >
-              <div className="text-3xl">📋</div>
-              <div>
-                <h3 className="font-bold text-gray-800 text-sm mb-1">{ws.title}</h3>
-                <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{ws.grade}</span>
-                <span className="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full ml-1">{ws.subject}</span>
-              </div>
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          {worksheets.slice(0, 6).map((ws) => {
+            const visual = worksheetVisual(ws.subject);
+            return (
+              <Link
+                key={ws.slug}
+                href={`/worksheets/${ws.slug}`}
+                className="group block rounded-3xl overflow-hidden bg-white border-2 border-gray-100 shadow-sm hover:border-purple-300 hover:shadow-xl transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-300"
+                aria-label={`${ws.title} — ${ws.grade}, ${ws.subject}`}
+              >
+                {/* Preview band — large subject emoji on colored backdrop */}
+                <div className={`relative h-36 ${visual.bg} flex items-center justify-center overflow-hidden`}>
+                  <span className="text-7xl drop-shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    {visual.emoji}
+                  </span>
+                  {/* paper-edge decoration */}
+                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-white/70" />
+                  <span className="absolute top-3 right-3 bg-white/90 text-gray-800 text-xs font-extrabold px-2.5 py-1 rounded-full shadow">
+                    {ws.grade}
+                  </span>
+                </div>
+                {/* Body */}
+                <div className="p-4">
+                  <h3 className="font-extrabold text-gray-900 text-base leading-snug line-clamp-2 mb-3">
+                    {ws.title}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <span className={`text-xs font-bold px-3 py-1 rounded-full ${visual.pill}`}>
+                      {ws.subject}
+                    </span>
+                    <span className="text-sm font-bold text-purple-600 group-hover:translate-x-1 transition-transform">
+                      Print →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

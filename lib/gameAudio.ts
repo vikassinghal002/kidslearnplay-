@@ -61,7 +61,9 @@ export const sfx = {
   eat()         { osc(880, "sine", 0.08, 0.3); },
   levelUp()     { [523,659,784,1047,1319].forEach((f,i) => osc(f,"sine",0.18,0.3, (getCtx()?.currentTime??0) + i*0.1)); },
   correct()     { [523,659,784].forEach((f,i) => osc(f,"sine",0.15,0.25, (getCtx()?.currentTime??0) + i*0.08)); },
-  wrong()       { [300,200].forEach((f,i) => osc(f,"sawtooth",0.15,0.25, (getCtx()?.currentTime??0) + i*0.1)); },
+  // Gentle "uh-oh" — two soft descending triangle notes, never a buzzer.
+  // Kids should feel nudged, not scolded.
+  wrong()       { [440,349].forEach((f,i) => osc(f,"triangle",0.18,0.13, (getCtx()?.currentTime??0) + i*0.14)); },
   pop()         { osc(600 + Math.random()*400,"sine",0.1,0.3); },
   click()       { osc(1200,"sine",0.04,0.15); },
   coin()        { osc(1046,"sine",0.08,0.2); osc(1318,"sine",0.08,0.2,(getCtx()?.currentTime??0)+0.06); },
