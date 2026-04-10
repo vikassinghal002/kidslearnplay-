@@ -21,24 +21,24 @@ export default function MathGamesHubPage() {
   return (
     <div className="bg-gray-950 min-h-screen text-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-800 py-16 px-4">
+      <section className="bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-800 py-12 sm:py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-4xl mb-4">🔢</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+          <p className="text-4xl sm:text-5xl mb-3 sm:mb-4" aria-hidden="true">🔢</p>
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight">
             Free Math Games for Kids
           </h1>
-          <p className="text-lg text-white/85 mb-8 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-xl mx-auto font-semibold">
             Practice times tables, addition and more with our free online math
             games. No download, no signup — 100% free!
           </p>
-          <div className="flex flex-wrap justify-center gap-3 text-sm font-semibold">
-            <span className="bg-white/15 rounded-full px-4 py-1.5">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold">
+            <span className="bg-white/15 rounded-full px-3 sm:px-4 py-1.5">
               ✓ 100% Free
             </span>
-            <span className="bg-white/15 rounded-full px-4 py-1.5">
+            <span className="bg-white/15 rounded-full px-3 sm:px-4 py-1.5">
               ✓ No Signup
             </span>
-            <span className="bg-white/15 rounded-full px-4 py-1.5">
+            <span className="bg-white/15 rounded-full px-3 sm:px-4 py-1.5">
               ✓ Works on Any Device
             </span>
           </div>
@@ -46,11 +46,11 @@ export default function MathGamesHubPage() {
       </section>
 
       {/* Games grid */}
-      <section className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold text-white mb-6">
+      <section className="max-w-6xl mx-auto px-4 py-10 sm:py-12">
+        <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white mb-5 sm:mb-6">
           Play Math Games Free
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
           {mathGames.map((game) => (
             <GameCard key={game.slug} game={game} />
           ))}

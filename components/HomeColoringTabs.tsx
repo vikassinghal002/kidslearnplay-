@@ -43,7 +43,7 @@ export default function HomeColoringTabs({ kidsCategories, adultCategories }: Pr
       {/* Header + tab switcher */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-gray-900">
             {mode === "kids" ? "🎨 Kids Coloring Pages" : "🌸 Detailed & Mindful Coloring"}
           </h2>
           <p className="text-gray-600 mt-1 text-base">
@@ -62,7 +62,7 @@ export default function HomeColoringTabs({ kidsCategories, adultCategories }: Pr
             role="tab"
             aria-selected={mode === "kids"}
             onClick={() => pick("kids")}
-            className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all ${
+            className={`min-h-[44px] px-5 py-2.5 rounded-full text-sm sm:text-base font-extrabold transition-all touch-manipulation ${
               mode === "kids"
                 ? "bg-white text-purple-700 shadow"
                 : "text-gray-600 hover:text-gray-900"
@@ -74,7 +74,7 @@ export default function HomeColoringTabs({ kidsCategories, adultCategories }: Pr
             role="tab"
             aria-selected={mode === "adults"}
             onClick={() => pick("adults")}
-            className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all ${
+            className={`min-h-[44px] px-5 py-2.5 rounded-full text-sm sm:text-base font-extrabold transition-all touch-manipulation ${
               mode === "adults"
                 ? "bg-white text-purple-700 shadow"
                 : "text-gray-600 hover:text-gray-900"
@@ -85,20 +85,20 @@ export default function HomeColoringTabs({ kidsCategories, adultCategories }: Pr
         </div>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Grid — 2/3/4 tiered for phone → tablet → desktop */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
         {active.map((cat) => (
           <Link
             key={cat.slug}
             href={`/coloring-pages/${cat.slug}`}
-            className={`${cat.color} rounded-2xl p-5 flex flex-col items-center text-center hover:scale-105 transition-transform shadow-sm ${
+            className={`${cat.color} min-h-[140px] sm:min-h-[160px] rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center hover:scale-105 active:scale-95 transition-transform shadow-sm touch-manipulation focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-300 ${
               mode === "adults" ? "border border-white" : ""
             }`}
           >
-            <span className="text-5xl mb-2">{cat.icon}</span>
-            <h3 className="font-bold text-gray-900 text-base">{cat.title}</h3>
+            <span className="text-4xl sm:text-5xl mb-2" aria-hidden="true">{cat.icon}</span>
+            <h3 className="font-extrabold text-gray-900 text-sm sm:text-base leading-tight">{cat.title}</h3>
             <span
-              className={`text-sm font-semibold mt-1 ${
+              className={`text-xs sm:text-sm font-bold mt-1 ${
                 mode === "adults" ? "text-purple-700" : "text-gray-700"
               }`}
             >

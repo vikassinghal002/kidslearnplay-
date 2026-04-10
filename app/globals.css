@@ -36,6 +36,29 @@ canvas {
   touch-action: none;
 }
 
+/* ── Interactive tap responsiveness ──────────────────────────────────
+   Kill the 300ms tap delay on mobile Safari for buttons/links.
+   Young kids rapidly re-tap if they think nothing happened.
+──────────────────────────────────────────────────────────────────── */
+button,
+a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Hide scrollbar but keep scrollability ────────────────────────────
+   Used on horizontal chip/filter lanes where a visible bar would add
+   noise. NOT a kids-accessibility risk because on phones we prefer to
+   wrap these lanes instead of scroll them.
+──────────────────────────────────────────────────────────────────── */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Fullscreen canvas fix ───────────────────────────────────────────
    Fill screen by HEIGHT so a 1:1 canvas doesn't become 1456×1456px
    on a wide monitor. Width auto = maintains aspect ratio.

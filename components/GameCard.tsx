@@ -38,14 +38,14 @@ export default function GameCard({ game, size = "md" }: Props) {
   const bucket = ageBucket(game.ageRange);
 
   const heroSize =
-    size === "lg" ? "text-[7rem] sm:text-[8rem]" :
-    size === "sm" ? "text-6xl sm:text-7xl" :
-    "text-7xl sm:text-8xl";
+    size === "lg" ? "text-[6rem] sm:text-[8rem]" :
+    size === "sm" ? "text-5xl sm:text-7xl" :
+    "text-6xl sm:text-7xl md:text-8xl";
 
   const cardHeight =
-    size === "lg" ? "h-64 sm:h-72" :
-    size === "sm" ? "h-40 sm:h-44" :
-    "h-52 sm:h-60";
+    size === "lg" ? "h-56 sm:h-72" :
+    size === "sm" ? "h-36 sm:h-44" :
+    "h-48 sm:h-56 md:h-60";
 
   return (
     <Link

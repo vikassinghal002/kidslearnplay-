@@ -57,6 +57,9 @@ const DivisionDuelGame       = dynamic(() => import("./DivisionDuelGame"),      
 const ReadingRocketGame      = dynamic(() => import("./ReadingRocketGame"),      { ssr: false, loading: GameLoading });
 const SightWordSlamGame      = dynamic(() => import("./SightWordSlamGame"),      { ssr: false, loading: GameLoading });
 const SudokuKidsGame         = dynamic(() => import("./SudokuKidsGame"),         { ssr: false, loading: GameLoading });
+const StackAttackGame        = dynamic(() => import("./StackAttackGame"),        { ssr: false, loading: GameLoading });
+const NumberSurgeGame        = dynamic(() => import("./NumberSurgeGame"),        { ssr: false, loading: GameLoading });
+const CipherSprintGame       = dynamic(() => import("./CipherSprintGame"),       { ssr: false, loading: GameLoading });
 
 const components: Record<string, React.ComponentType> = {
   TimesChallengeGame,
@@ -93,6 +96,9 @@ const components: Record<string, React.ComponentType> = {
   ReadingRocketGame,
   SightWordSlamGame,
   SudokuKidsGame,
+  StackAttackGame,
+  NumberSurgeGame,
+  CipherSprintGame,
 };
 
 export default function GameLoader({ component }: { component: string }) {

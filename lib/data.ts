@@ -710,6 +710,36 @@ export const games: Game[] = [
     difficulty: "medium",
     ageRange: "5–14",
   },
+  {
+    slug: "stack-attack",
+    title: "Stack Attack",
+    description: "Drop each sliding platform to land precisely on the one below. The overlap becomes your next block — miss and it's game over. How many levels can you stack before the platforms shrink to nothing?",
+    category: "Arcade Games",
+    tags: ["stack", "timing", "precision", "arcade", "reflex", "highscore"],
+    component: "StackAttackGame",
+    difficulty: "hard",
+    ageRange: "11–99",
+  },
+  {
+    slug: "number-surge",
+    title: "Number Surge",
+    description: "Slide tiles on a 4×4 grid to merge matching numbers and reach 2048! Every move spawns a new tile — plan your chain merges to avoid filling the board. How far past 2048 can you go?",
+    category: "Educational Games",
+    tags: ["2048", "merge", "strategy", "puzzle", "numbers", "brain game"],
+    component: "NumberSurgeGame",
+    difficulty: "hard",
+    ageRange: "11–99",
+  },
+  {
+    slug: "cipher-sprint",
+    title: "Cipher Sprint",
+    description: "Decode secret words using a Caesar cipher before the timer hits zero! The shift number tells you how many letters to count back. Build a combo chain for multiplied points — crack as many codes as you can.",
+    category: "Educational Games",
+    tags: ["cipher", "cryptography", "decode", "logic", "alphabet", "brain game", "combo"],
+    component: "CipherSprintGame",
+    difficulty: "hard",
+    ageRange: "11–99",
+  },
 ];
 
 // ─── Worksheets ───────────────────────────────────────────────────────────────

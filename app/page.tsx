@@ -48,30 +48,30 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white py-16 md:py-20 px-4">
+      <section className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl mb-4 animate-bounce-slow">🌈</div>
-          <h1 className="font-display text-5xl md:text-7xl font-extrabold mb-5 leading-[1.05] drop-shadow-sm">
+          <div className="text-5xl sm:text-6xl mb-3 sm:mb-4 animate-bounce-slow" aria-hidden="true">🌈</div>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-5 leading-[1.05] drop-shadow-sm">
             Play, Color &amp; Learn<br />
             <span className="text-yellow-200">— 100% Free!</span>
           </h1>
-          <p className="text-lg md:text-2xl text-white/95 font-semibold mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-2xl text-white/95 font-semibold mb-7 sm:mb-8 max-w-2xl mx-auto">
             Free games, coloring pages and worksheets for kids.
             No signup, no ads — just pick one and start!
           </p>
 
           {/* Primary CTA — Play Games (the main hook) */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-md sm:max-w-none mx-auto">
             <Link
               href="/games"
-              className="group relative px-10 py-5 bg-yellow-300 text-purple-900 font-extrabold rounded-full text-2xl md:text-3xl shadow-[0_8px_0_0_rgba(120,53,15,0.35)] hover:shadow-[0_4px_0_0_rgba(120,53,15,0.35)] hover:translate-y-1 active:translate-y-2 transition-all whitespace-nowrap animate-bounce-slow"
+              className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-yellow-300 text-purple-900 font-extrabold rounded-full text-xl sm:text-2xl md:text-3xl shadow-[0_8px_0_0_rgba(120,53,15,0.35)] hover:shadow-[0_4px_0_0_rgba(120,53,15,0.35)] hover:translate-y-1 active:translate-y-2 transition-all whitespace-nowrap animate-bounce-slow touch-manipulation"
             >
-              <span className="inline-block group-hover:scale-110 transition-transform">🎮</span>{" "}
+              <span className="inline-block group-hover:scale-110 transition-transform" aria-hidden="true">🎮</span>{" "}
               Play Games Now
             </Link>
             <Link
               href="/coloring-pages"
-              className="px-7 py-4 bg-white/15 border-2 border-white text-white font-bold rounded-full text-lg md:text-xl hover:bg-white/25 transition-colors whitespace-nowrap"
+              className="px-6 sm:px-7 py-4 bg-white/15 border-2 border-white text-white font-extrabold rounded-full text-base sm:text-lg md:text-xl hover:bg-white/25 active:bg-white/30 transition-colors whitespace-nowrap touch-manipulation"
             >
               🎨 Coloring Pages
             </Link>
@@ -88,12 +88,12 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-white py-10 border-b">
-        <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <section className="bg-white py-8 sm:py-10 border-b">
+        <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-3xl font-extrabold text-purple-600">{s.value}</div>
-              <div className="text-gray-500 text-sm mt-1">{s.label}</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-purple-600">{s.value}</div>
+              <div className="text-gray-500 text-xs sm:text-sm mt-1 font-semibold">{s.label}</div>
             </div>
           ))}
         </div>
@@ -103,18 +103,18 @@ export default function HomePage() {
       <HomeColoringTabs kidsCategories={kidsCategories} adultCategories={adultCategories} />
 
       {/* Featured Games */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-14">
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-10 sm:py-14">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900">🎮 Educational Games</h2>
-              <p className="text-gray-600 mt-1 text-base">Learn through play — free online games</p>
+          <div className="flex items-end justify-between gap-3 mb-6 sm:mb-8">
+            <div className="min-w-0">
+              <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-gray-900">🎮 Educational Games</h2>
+              <p className="text-gray-600 mt-1 text-sm sm:text-base">Learn through play — free online games</p>
             </div>
-            <Link href="/games" className="text-purple-600 font-semibold hover:underline hidden sm:block">
-              All games →
+            <Link href="/games" className="text-purple-600 font-extrabold hover:underline whitespace-nowrap text-sm sm:text-base">
+              All →
             </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
             {featuredGames.map((game) => (
               <GameCard key={game.slug} game={game} />
             ))}
@@ -123,17 +123,17 @@ export default function HomePage() {
       </section>
 
       {/* Worksheets */}
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900">📄 Free Worksheets</h2>
-            <p className="text-gray-600 mt-1 text-base">Printable worksheets for every grade</p>
+      <section className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
+        <div className="flex items-end justify-between gap-3 mb-6 sm:mb-8">
+          <div className="min-w-0">
+            <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-gray-900">📄 Free Worksheets</h2>
+            <p className="text-gray-600 mt-1 text-sm sm:text-base">Printable worksheets for every grade</p>
           </div>
-          <Link href="/worksheets" className="text-purple-600 font-semibold hover:underline hidden sm:block">
+          <Link href="/worksheets" className="text-purple-600 font-extrabold hover:underline whitespace-nowrap text-sm sm:text-base">
             View all →
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {worksheets.slice(0, 6).map((ws) => {
             const visual = worksheetVisual(ws.subject);
             return (

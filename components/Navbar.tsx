@@ -95,8 +95,8 @@ export default function Navbar() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl text-purple-600 shrink-0">
-          <span className="text-2xl">🌈</span>
+        <Link href="/" className="flex items-center gap-2 font-extrabold text-xl text-purple-600 shrink-0">
+          <span className="text-2xl" aria-hidden="true">🌈</span>
           <span>JiggyJoy</span>
         </Link>
 
@@ -104,9 +104,9 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-1">
           <Link
             href="/coloring-pages"
-            className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
+            className="flex items-center gap-1 px-3 lg:px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
           >
-            <span>🎨</span>
+            <span aria-hidden="true">🎨</span>
             <span>Coloring</span>
           </Link>
 
@@ -115,37 +115,37 @@ export default function Navbar() {
 
           <Link
             href="/blog"
-            className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
+            className="flex items-center gap-1 px-3 lg:px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors"
           >
-            <span>📝</span>
+            <span aria-hidden="true">📝</span>
             <span>Blog</span>
           </Link>
 
           <Link
             href="/games/times-tables-challenge"
-            className="ml-2 px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-semibold hover:bg-purple-700 transition-colors whitespace-nowrap"
+            className="ml-1 lg:ml-2 px-3 lg:px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-extrabold hover:bg-purple-700 transition-colors whitespace-nowrap"
           >
             🔢 Times Tables
           </Link>
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — 56×56 tap target (Maya's min for ages 5–7) */}
         <button
-          className="md:hidden p-3 rounded-xl hover:bg-gray-100 -mr-2"
+          className="md:hidden flex flex-col items-center justify-center gap-1.5 w-14 h-14 rounded-2xl hover:bg-purple-50 active:bg-purple-100 -mr-2 touch-manipulation"
           onClick={() => { setMobileOpen(!mobileOpen); setMobileSection(null); }}
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          <div className="w-6 h-0.5 bg-gray-800 mb-1.5" />
-          <div className="w-6 h-0.5 bg-gray-800 mb-1.5" />
-          <div className="w-6 h-0.5 bg-gray-800" />
+          <span className={`block w-7 h-[3px] bg-gray-800 rounded-full transition-transform ${mobileOpen ? "translate-y-[9px] rotate-45" : ""}`} />
+          <span className={`block w-7 h-[3px] bg-gray-800 rounded-full transition-opacity ${mobileOpen ? "opacity-0" : "opacity-100"}`} />
+          <span className={`block w-7 h-[3px] bg-gray-800 rounded-full transition-transform ${mobileOpen ? "-translate-y-[9px] -rotate-45" : ""}`} />
         </button>
       </div>
 
-      {/* Age shortcut strip — desktop only, kids-first lane */}
-      <div className="hidden md:block border-t border-gray-100 bg-gradient-to-r from-purple-50/60 via-white to-pink-50/60">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-gray-500 pr-2 whitespace-nowrap">
+      {/* Age shortcut strip — visible on ALL screens. The #1 affordance for kids. */}
+      <div className="border-t border-gray-100 bg-gradient-to-r from-purple-50/70 via-white to-pink-50/70">
+        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center gap-2 overflow-x-auto scrollbar-none snap-x">
+          <span className="hidden sm:inline text-xs font-extrabold uppercase tracking-wider text-gray-500 pr-2 whitespace-nowrap">
             By age:
           </span>
           {ageShortcuts.map((a) => {
@@ -154,27 +154,28 @@ export default function Navbar() {
               <Link
                 key={a.href}
                 href={a.href}
-                className={`flex items-center gap-1.5 shrink-0 px-4 py-1.5 rounded-full text-sm font-bold border-2 transition-colors ${
+                className={`flex items-center gap-1.5 shrink-0 snap-start min-h-[44px] px-4 py-2 rounded-full text-sm sm:text-base font-extrabold border-2 transition-colors touch-manipulation ${
                   active
-                    ? "bg-purple-600 text-white border-purple-600"
-                    : "bg-white text-gray-800 border-gray-200 hover:border-purple-300 hover:bg-purple-50"
+                    ? "bg-purple-600 text-white border-purple-600 shadow-md"
+                    : "bg-white text-gray-800 border-gray-200 hover:border-purple-300 hover:bg-purple-50 active:bg-purple-100"
                 }`}
               >
-                <span aria-hidden="true">{a.emoji}</span>
-                <span className={`w-2 h-2 rounded-full ${a.dot} ring-2 ${a.ring}`} aria-hidden="true" />
-                <span>{a.label}</span>
+                <span className="text-base" aria-hidden="true">{a.emoji}</span>
+                <span className={`w-2.5 h-2.5 rounded-full ${a.dot} ring-2 ${a.ring}`} aria-hidden="true" />
+                <span className="whitespace-nowrap">{a.label}</span>
               </Link>
             );
           })}
         </div>
       </div>
 
-      {/* Mobile menu — full-height sheet */}
+      {/* Mobile menu — full-height sheet. Offset accounts for header (4rem) + age strip (~3.25rem). */}
       {mobileOpen && (
         <div
-          className="md:hidden fixed inset-0 top-16 z-40 bg-white overflow-y-auto"
+          className="md:hidden fixed inset-x-0 bottom-0 top-[7.5rem] z-40 bg-white overflow-y-auto"
           role="dialog"
-          aria-label="Menu"
+          aria-modal="true"
+          aria-label="Main menu"
         >
           <div className="px-5 pt-5 pb-24 flex flex-col gap-5">
             {/* Age shortcut chips — top of the sheet */}

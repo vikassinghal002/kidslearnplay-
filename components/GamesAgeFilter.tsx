@@ -46,11 +46,11 @@ export default function GamesAgeFilter({ games, categoryEmojis }: Props) {
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-10">
-      {/* Chip strip */}
+      {/* Chip strip — wraps on phones (kids don't discover h-scroll), flows on tablet+ */}
       <div
         role="tablist"
         aria-label="Filter games by age"
-        className="flex gap-2 overflow-x-auto pb-3 mb-6 -mx-4 px-4 scrollbar-none"
+        className="flex flex-wrap sm:flex-nowrap sm:overflow-x-auto gap-2 sm:gap-3 pb-3 mb-6 -mx-4 px-4 scrollbar-none justify-center sm:justify-start"
       >
         {BUCKETS.map((b) => {
           const active = bucket === b.id;
@@ -60,15 +60,15 @@ export default function GamesAgeFilter({ games, categoryEmojis }: Props) {
               role="tab"
               aria-selected={active}
               onClick={() => setBucket(b.id)}
-              className={`flex items-center gap-2 shrink-0 px-5 py-3 rounded-full font-bold text-base transition-all border-2 ${
+              className={`flex items-center gap-2 shrink-0 min-h-[56px] px-4 sm:px-5 py-3 rounded-full font-extrabold text-base sm:text-lg transition-all border-2 touch-manipulation ${
                 active
                   ? "bg-purple-600 text-white border-purple-600 shadow-lg scale-[1.03]"
-                  : "bg-white text-gray-800 border-gray-200 hover:border-purple-300 hover:bg-purple-50"
+                  : "bg-white text-gray-800 border-gray-200 hover:border-purple-300 hover:bg-purple-50 active:bg-purple-100"
               }`}
             >
-              <span className="text-xl" aria-hidden="true">{b.emoji}</span>
+              <span className="text-2xl" aria-hidden="true">{b.emoji}</span>
               <span className={`w-2.5 h-2.5 rounded-full ${b.dot} ring-2 ${b.ring}`} aria-hidden="true" />
-              <span>{b.label}</span>
+              <span className="whitespace-nowrap">{b.label}</span>
             </button>
           );
         })}
@@ -84,15 +84,15 @@ export default function GamesAgeFilter({ games, categoryEmojis }: Props) {
         categories.map((cat) => {
           const catGames = filtered.filter((g) => g.category === cat);
           return (
-            <div key={cat} className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-5 flex items-center gap-2">
-                <span>{categoryEmojis[cat] ?? "🎯"}</span>
+            <div key={cat} className="mb-10 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4 sm:mb-5 flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span className="text-2xl" aria-hidden="true">{categoryEmojis[cat] ?? "🎯"}</span>
                 <span>{cat}</span>
-                <span className="text-sm font-semibold text-gray-500 ml-2">
+                <span className="text-sm font-bold text-gray-500">
                   {catGames.length} {catGames.length === 1 ? "game" : "games"}
                 </span>
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
                 {catGames.map((game) => (
                   <GameCard key={game.slug} game={game} />
                 ))}
