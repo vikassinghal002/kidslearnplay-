@@ -7,6 +7,7 @@ import FooterGate from "@/components/FooterGate";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import ClientSideAddons from "@/components/ClientSideAddons";
+import { JsonLd, organizationSchema, websiteSchema } from "@/lib/schemas";
 
 // Kid-friendly body font — rounded, extra-legible, loaded via CSS variable
 const nunito = Nunito({
@@ -105,6 +106,10 @@ export default function RootLayout({
         <FooterGate>
           <Footer />
         </FooterGate>
+        {/* Site-wide structured data — tells Google and AI crawlers who we
+            are and enables sitelinks search box in SERPs. */}
+        <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Analytics />
         {/* Non-critical client addons (SW register + PWA install banner)
             are code-split and loaded after the main document is ready. */}

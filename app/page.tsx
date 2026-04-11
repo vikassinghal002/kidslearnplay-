@@ -3,6 +3,37 @@ import { worksheets, adultCategories, kidsCategories, getGameBySlug } from "@/li
 import type { ColoringCategory } from "@/lib/data";
 import GameCard from "@/components/GameCard";
 import HomeColoringTabs, { type ColoringTabCard } from "@/components/HomeColoringTabs";
+import { JsonLd, faqPageSchema } from "@/lib/schemas";
+
+// Homepage FAQs — answer the questions parents type into Google when sizing
+// up a kids' content site. Doubles as FAQ rich-result fuel.
+const HOME_FAQS = [
+  {
+    question: "Is JiggyJoy really 100% free?",
+    answer:
+      "Yes. Every game, coloring page and worksheet on JiggyJoy is free forever. There are no paid tiers, no in-app purchases, and no premium unlocks.",
+  },
+  {
+    question: "Do I need to create an account or sign up?",
+    answer:
+      "No account needed. JiggyJoy works the moment you open it — no email, no password, no download. Pick a game or a coloring page and start playing.",
+  },
+  {
+    question: "What ages is JiggyJoy for?",
+    answer:
+      "JiggyJoy is built for kids ages 2 to 14. Games and worksheets are tagged by age range so you can match the right activity to your child's level — toddlers, preschoolers, elementary and tweens.",
+  },
+  {
+    question: "Are the worksheets and coloring pages printable?",
+    answer:
+      "Yes. Every worksheet and coloring page is designed to print cleanly on standard A4 or US Letter paper. One click downloads a high-resolution PDF.",
+  },
+  {
+    question: "Does JiggyJoy work on phones and tablets?",
+    answer:
+      "Yes. JiggyJoy runs in any modern browser on phones, tablets, Chromebooks and computers. There's nothing to install, and the games are touch-friendly for tablets.",
+  },
+];
 
 // Project the full ColoringCategory (with hundreds of `pages`) down to the
 // handful of fields the client tab actually renders. Without this the RSC
@@ -65,6 +96,7 @@ const featuredGames = FEATURED_GAME_SLUGS
 export default function HomePage() {
   return (
     <div>
+      <JsonLd data={faqPageSchema(HOME_FAQS)} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

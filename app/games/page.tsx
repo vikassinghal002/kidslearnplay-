@@ -2,6 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/lib/data";
 import GamesAgeFilter from "@/components/GamesAgeFilter";
+import {
+  JsonLd,
+  collectionPageSchema,
+  breadcrumbSchema,
+  faqPageSchema,
+} from "@/lib/schemas";
+
+const GAMES_FAQS = [
+  {
+    question: "Are JiggyJoy games really free?",
+    answer:
+      "Yes — every game on JiggyJoy is 100% free. No signup, no in-app purchases, no premium tier. Just open and play.",
+  },
+  {
+    question: "Do JiggyJoy games work on phones and tablets?",
+    answer:
+      "Yes. All JiggyJoy games run in any modern browser on phones, tablets, Chromebooks and computers. Touch controls work on tablets and phones.",
+  },
+  {
+    question: "What ages are JiggyJoy games for?",
+    answer:
+      "JiggyJoy games cover ages 2 to 14, from toddler-friendly tap-and-learn games to math and arcade games for tweens. Use the age filter at the top of the page to narrow down.",
+  },
+  {
+    question: "Do I need to download or install anything?",
+    answer:
+      "No. Every JiggyJoy game runs directly in the browser — there is nothing to install and nothing to update.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Free Educational Games for Kids",
@@ -29,6 +58,22 @@ const categoryEmojis: Record<string, string> = {
 export default function GamesHubPage() {
   return (
     <div>
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Free Educational Games for Kids",
+          description:
+            "Free online educational games for kids — math games, coloring games, alphabet games and more.",
+          url: "/games",
+          numberOfItems: games.length,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Games", url: "/games" },
+        ])}
+      />
+      <JsonLd data={faqPageSchema(GAMES_FAQS)} />
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-14 px-4">
         <div className="max-w-3xl mx-auto text-center">

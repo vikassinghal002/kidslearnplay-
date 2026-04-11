@@ -2,6 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { coloringCategories, getAllColoringPages } from "@/lib/data";
 import { getBulkCategories, getBulkTotal } from "@/lib/bulk-data";
+import {
+  JsonLd,
+  collectionPageSchema,
+  breadcrumbSchema,
+  faqPageSchema,
+} from "@/lib/schemas";
+
+const COLORING_FAQS = [
+  {
+    question: "Are the coloring pages really free to print?",
+    answer:
+      "Yes — every coloring page on JiggyJoy is 100% free to download and print. No signup, no email, no watermarks, no premium tier.",
+  },
+  {
+    question: "What paper size do the coloring pages print on?",
+    answer:
+      "All JiggyJoy coloring pages are sized to print cleanly on standard A4 or US Letter paper. Just click print and the layout takes care of itself.",
+  },
+  {
+    question: "Can I use the coloring pages in my classroom or homeschool?",
+    answer:
+      "Yes. Teachers, homeschool parents, daycares and libraries are welcome to print and share JiggyJoy coloring pages with kids for non-commercial educational use.",
+  },
+  {
+    question: "How often are new coloring pages added?",
+    answer:
+      "New coloring pages are added every week, covering popular characters, animals, holidays and seasonal themes.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Free Printable Coloring Pages for Kids",
@@ -24,6 +53,22 @@ export default function ColoringPagesHubPage() {
 
   return (
     <div>
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Free Printable Coloring Pages for Kids",
+          description:
+            "Hundreds of free printable coloring pages for kids — animals, characters, holidays and more.",
+          url: "/coloring-pages",
+          numberOfItems: grandTotal,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Coloring Pages", url: "/coloring-pages" },
+        ])}
+      />
+      <JsonLd data={faqPageSchema(COLORING_FAQS)} />
       {/* Header */}
       <section className="bg-gradient-to-r from-pink-500 to-orange-400 text-white py-14 px-4">
         <div className="max-w-3xl mx-auto text-center">
