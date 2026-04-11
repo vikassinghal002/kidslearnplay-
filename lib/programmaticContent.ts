@@ -3096,6 +3096,1272 @@ export const freeWorksheetTopics: ProgrammaticPage[] = [
     linkedWorksheetSlugs: ["shapes-worksheets", "pattern-worksheets"],
     linkedColoringCategorySlugs: ["floral-mandalas", "animal-mandalas"],
   },
+
+  // ── Grade × Topic programmatic entries (added 2026-04-11) ─────────────
+  // 32 grade-specific worksheet pages targeting long-tail
+  // "<grade> <topic> worksheets" searches.
+
+  // Preschool ───────────────────────────────────────────────────────────
+  {
+    slug: "preschool-counting",
+    keyword: "preschool counting worksheets",
+    searchVolume: 8100,
+    h1: "Preschool Counting Worksheets — Free Printable PDF",
+    title: "Preschool Counting Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free preschool counting worksheets — count to 5, 10 and 20 with pictures. Perfect for 3 and 4 year olds. Instant PDF download, no signup required.",
+    intro: [
+      "At preschool age, counting is mostly a physical skill: a finger touching each picture, a voice saying the number out loud. The worksheet itself is just an excuse to do that finger-and-voice routine fifteen times in a row. That's why preschool counting sheets work — not because they teach a concept, but because they create the reps.",
+      "These printables start with rows of three or four objects (apples, balloons, ducks) and a circle for the right number. They build slowly to counting up to ten and then to twenty, with mixed-object pages that force the child to look carefully instead of guessing. The artwork is deliberately big and clear because preschool eyes are still learning to track objects on a page.",
+      "Print a sheet, sit next to your 3 or 4 year old, point to each picture, count aloud together. Pair it with our free Counting Stars game on those days when sitting still feels impossible. Every sheet is free, classroom-friendly, and copy-as-many-as-you-need.",
+    ],
+    faqs: [
+      {
+        question: "What age are these counting worksheets for?",
+        answer:
+          "These are designed for ages 3–5 — typical preschool. The easiest sheets work for 2 year olds who can already point to objects.",
+      },
+      {
+        question: "Do my child need to know numbers before doing these?",
+        answer:
+          "No. The earliest sheets just ask the child to count objects out loud and circle the right group. Reading numerals comes later.",
+      },
+      {
+        question: "How many sheets should we do per session?",
+        answer:
+          "One or two is plenty for preschool. Counting sheets are about quality reps, not quantity. Stop while it's still fun.",
+      },
+      {
+        question: "Are these aligned to a specific curriculum?",
+        answer:
+          "They cover the standard preschool counting expectations used in most US, UK and Canadian early-years programs.",
+      },
+    ],
+    linkedGameSlugs: ["counting-game", "math-addition", "connect-the-dots"],
+    linkedWorksheetSlugs: ["counting-worksheets", "preschool-math-worksheets", "number-tracing-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "preschool-shapes",
+    keyword: "preschool shapes worksheets",
+    searchVolume: 5400,
+    h1: "Preschool Shapes Worksheets — Free Printable PDF",
+    title: "Preschool Shapes Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free preschool shapes worksheets — circle, square, triangle, rectangle. Identify, trace and colour basic 2D shapes. Instant download, no signup.",
+    intro: [
+      "Shapes are the first thing a small child can name with confidence after colours. The four big ones — circle, square, triangle, rectangle — show up everywhere a 3 year old looks: plates, books, doors, sandwiches. Worksheets give that recognition a structured place to land, and the tracing component sneaks in fine motor practice at the same time.",
+      "Our preschool shapes pages start with single-shape ID (find all the circles, colour them red), move to tracing the shape outlines, then to mixed identification with multiple shapes on a page. The harder sheets introduce oval, diamond and star, which preschoolers usually pick up by age 4 or 5.",
+      "These work well as a 'first activity' on a school morning — quick, low-pressure, builds confidence — and they pair naturally with our Shape Sorter game. Print as many as you like, copy them for class, no signup or paywall.",
+    ],
+    faqs: [
+      {
+        question: "Which shapes do these worksheets cover?",
+        answer:
+          "Circle, square, triangle and rectangle on the easiest sheets. Oval, diamond, star, heart and pentagon on the more advanced ones.",
+      },
+      {
+        question: "Is tracing included?",
+        answer:
+          "Yes — most sheets include a tracing exercise so children practise the shape outline as they learn to recognise it.",
+      },
+      {
+        question: "Are these printable for free?",
+        answer:
+          "Every shapes worksheet on JiggyJoy is free to print, copy and use at home or in a preschool classroom. No watermarks.",
+      },
+      {
+        question: "What comes after preschool shapes?",
+        answer:
+          "Kindergarten shapes worksheets add 3D shapes (cube, sphere, cylinder) and shape-sorting activities. Try our kindergarten shapes page next.",
+      },
+    ],
+    linkedGameSlugs: ["shape-sorter", "pattern-wizard", "colour-match"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "preschool-tracing-worksheets", "preschool-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "preschool-tracing",
+    keyword: "preschool tracing worksheets",
+    searchVolume: 12100,
+    h1: "Preschool Tracing Worksheets — Free Printable PDF",
+    title: "Preschool Tracing Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free preschool tracing worksheets — trace lines, curves, shapes, letters and numbers. Builds fine motor control for ages 3–5. Instant PDF download.",
+    intro: [
+      "Before a child can write a letter, the hand has to learn the movements: down strokes, curves, circles, zigzags. Pre-writing tracing is the foundation everything else sits on, and you can't skip it. The kids who struggle with handwriting in Grade 1 are almost always the ones who didn't get enough tracing practice at age 3 and 4.",
+      "These worksheets cover the full pre-writing progression — straight lines, curves, loops, then shapes, then letter outlines. The earliest sheets are giant, thick dotted lines a toddler can follow with a chunky crayon. Later sheets shrink the size and add directional arrows so the child learns the correct stroke order.",
+      "Use one tracing sheet per session, give a thick triangular pencil or crayon, and don't worry about neatness — the goal at this age is the movement, not the result. Combine with our Preschool Tracing collection for more variety.",
+    ],
+    faqs: [
+      {
+        question: "What's the right age to start tracing?",
+        answer:
+          "Most children are ready for line tracing at age 3, shapes at 3–4, and letters at 4–5. Follow your child's grip strength rather than age.",
+      },
+      {
+        question: "What kind of pencil should they use?",
+        answer:
+          "A triangular grip pencil or chunky crayon is best. Standard pencils are usually too thin for a preschooler's grip.",
+      },
+      {
+        question: "Should I correct them if they trace messily?",
+        answer:
+          "No. At this stage you're building motor patterns. Neatness comes later. Praise effort and stop while it's still fun.",
+      },
+      {
+        question: "How many tracing sheets per week?",
+        answer:
+          "Two or three short sessions a week is plenty. Daily is fine if the child enjoys it but never force it.",
+      },
+    ],
+    linkedGameSlugs: ["connect-the-dots", "pattern-wizard"],
+    linkedWorksheetSlugs: ["preschool-tracing-worksheets", "letter-tracing-worksheets", "number-tracing-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+
+  // Kindergarten ────────────────────────────────────────────────────────
+  {
+    slug: "kindergarten-counting",
+    keyword: "kindergarten counting worksheets",
+    searchVolume: 9900,
+    h1: "Kindergarten Counting Worksheets — Free Printable PDF",
+    title: "Kindergarten Counting Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free kindergarten counting worksheets — count to 20, count and write, skip counting by 2s, 5s and 10s. Common Core aligned. Instant PDF download.",
+    intro: [
+      "By kindergarten, counting moves from 'point and say' to 'point and write.' This is the year a child learns that the spoken word 'seven' and the symbol '7' are the same idea, and that's a bigger conceptual leap than it looks. Worksheets help by making the connection visible — count the objects, then write the numeral next to them.",
+      "Our kindergarten counting sheets cover everything in the standard Common Core K curriculum: counting to 20 with one-to-one correspondence, writing numerals 0–20, comparing groups (more, less, equal), and the first taste of skip counting by 2s, 5s and 10s. The harder sheets bridge into early addition, where two groups are counted and combined.",
+      "These pair well with our Counting Stars and Math Addition games. Most kindergarten teachers we hear from print our sheets in batches and use them as morning warm-ups. Free to copy, free to print, no signup.",
+    ],
+    faqs: [
+      {
+        question: "Are these aligned to Common Core?",
+        answer:
+          "Yes — they cover Common Core standards K.CC.A.1 through K.CC.B.5 (counting, writing numerals, and comparing groups).",
+      },
+      {
+        question: "How high should a kindergartener be able to count?",
+        answer:
+          "By the end of kindergarten, most children can count to 100 verbally and write numerals 0–20 reliably.",
+      },
+      {
+        question: "Do these include skip counting?",
+        answer:
+          "The advanced sheets introduce skip counting by 2s, 5s and 10s — a foundation skill for multiplication later.",
+      },
+      {
+        question: "Can teachers use these in class?",
+        answer:
+          "Yes. JiggyJoy worksheets are free for classroom use. Copy as many as you need, no licence required.",
+      },
+    ],
+    linkedGameSlugs: ["counting-game", "math-addition", "number-surge"],
+    linkedWorksheetSlugs: ["kindergarten-math-worksheets", "counting-worksheets", "number-tracing-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "kindergarten-addition",
+    keyword: "kindergarten addition worksheets",
+    searchVolume: 8100,
+    h1: "Kindergarten Addition Worksheets — Free Printable PDF",
+    title: "Kindergarten Addition Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free kindergarten addition worksheets — add to 5, add to 10 with pictures and number bonds. Common Core K.OA aligned. Instant PDF download.",
+    intro: [
+      "Kindergarten addition isn't really about getting answers — it's about building the mental picture. When a child sees three apples plus two apples and counts five, they're learning that 'plus' means combine, that the order doesn't matter, and that the result is bigger than either group. Those three insights are the whole foundation of arithmetic.",
+      "Our kindergarten addition sheets keep things visual. Early pages show pictures of objects with a plus sign between them — count both groups, write the total. Mid-range sheets introduce the equation format (3 + 2 = ?) with pictures still attached as scaffolding. Advanced sheets cover sums to 10 in pure numeric form, plus simple number bonds.",
+      "Use these alongside our Addition Adventure and Math Quiz games for the classic mix of paper and screen practice. Free to print, free for classroom use, no signup wall.",
+    ],
+    faqs: [
+      {
+        question: "Should a kindergartener be doing addition already?",
+        answer:
+          "Yes — Common Core expects sums within 5 by mid-kindergarten and within 10 by year-end. Picture-based addition is the standard approach.",
+      },
+      {
+        question: "Do these cover number bonds?",
+        answer:
+          "Yes, the advanced sheets introduce number bonds (part-part-whole) for numbers up to 10 — a key K.OA standard.",
+      },
+      {
+        question: "Are answer keys included?",
+        answer:
+          "Every sheet has an answer key at the bottom of the page for easy parent and teacher checking.",
+      },
+      {
+        question: "What's a good order to use these in?",
+        answer:
+          "Start with picture-only sheets, then picture-with-equation, then pure numeric. Don't rush — let the child master each level.",
+      },
+    ],
+    linkedGameSlugs: ["math-addition", "addition-attack", "math-quiz", "counting-game"],
+    linkedWorksheetSlugs: ["kindergarten-math-worksheets", "addition-worksheets", "number-bonds-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "kindergarten-shapes",
+    keyword: "kindergarten shapes worksheets",
+    searchVolume: 5400,
+    h1: "Kindergarten Shapes Worksheets — Free Printable PDF",
+    title: "Kindergarten Shapes Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free kindergarten shapes worksheets — 2D and 3D shape identification, sorting and counting sides. Common Core K.G aligned. Instant PDF download.",
+    intro: [
+      "Kindergarten shapes work goes beyond the four basic shapes a preschooler already knows. This is the year a child learns that a square has four equal sides, that a sphere is a 3D version of a circle, and that you can describe a shape by counting its corners and edges. The vocabulary explosion is the main event.",
+      "Our kindergarten shape sheets cover all the K.G Common Core standards: identifying 2D and 3D shapes, comparing shapes, counting sides and vertices, and combining shapes to make new ones. The hardest sheets in this set ask children to describe a shape using two attributes — a useful pre-writing skill.",
+      "Shape work is one of the easier wins in kindergarten — most children find it intuitive. Use it as a confidence-builder on tough days. Pair with Shape Sorter for screen practice. All free, no signup.",
+    ],
+    faqs: [
+      {
+        question: "What 3D shapes do kindergarteners learn?",
+        answer:
+          "The K.G standards cover six 3D shapes: cube, sphere, cone, cylinder, pyramid and rectangular prism.",
+      },
+      {
+        question: "Do these teach the difference between 2D and 3D?",
+        answer:
+          "Yes — several sheets focus specifically on the 'flat versus solid' distinction, which is the core kindergarten concept.",
+      },
+      {
+        question: "What does 'compose shapes' mean?",
+        answer:
+          "Combining smaller shapes to make a bigger one — for example, two triangles forming a square. K.G.B.6 covers this.",
+      },
+      {
+        question: "Are these classroom-friendly?",
+        answer:
+          "Yes. Teachers can copy and distribute freely. The sheets are designed to print clean on standard letter or A4 paper.",
+      },
+    ],
+    linkedGameSlugs: ["shape-sorter", "pattern-wizard", "sorting-frenzy"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "kindergarten-math-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "kindergarten-tracing",
+    keyword: "kindergarten tracing worksheets",
+    searchVolume: 8100,
+    h1: "Kindergarten Tracing Worksheets — Free Printable PDF",
+    title: "Kindergarten Tracing Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free kindergarten tracing worksheets — uppercase and lowercase letters, numbers 0–20, sight words. Builds handwriting fluency. Instant PDF download.",
+    intro: [
+      "Kindergarten tracing is where pre-writing turns into real handwriting. By the start of K, a child should be able to trace large shapes confidently. By the end of K, the same child should be writing recognisable letters and digits without dotted guides at all. That progression takes hundreds of repetitions, and that's exactly what worksheets are for.",
+      "Our kindergarten tracing collection covers uppercase A–Z, lowercase a–z, numerals 0–20, and the first 25 Dolch sight words. Each sheet uses dotted lines with directional arrows so the child learns the correct stroke order from the start — fixing bad stroke habits in Grade 2 is much harder than building good ones in K.",
+      "Two short sessions a day is more effective than one long one. Use a triangular grip pencil. Don't insist on perfection. These sheets pair well with our alphabet recognition games. Free, copy-friendly, no watermarks.",
+    ],
+    faqs: [
+      {
+        question: "Do these include lowercase letters?",
+        answer:
+          "Yes — both uppercase and lowercase A–Z, with separate practice sheets for each. Lowercase is harder so we include more reps.",
+      },
+      {
+        question: "Do they show stroke order?",
+        answer:
+          "Every letter sheet uses directional arrows to show the correct starting point and stroke direction.",
+      },
+      {
+        question: "What about left-handed kids?",
+        answer:
+          "The stroke order works for both hands. Left-handers may want to angle the paper slightly clockwise — there's no special left-hand version needed.",
+      },
+      {
+        question: "Should I time the practice?",
+        answer:
+          "No. Quality matters more than speed in K. Five to ten minutes a day is enough.",
+      },
+    ],
+    linkedGameSlugs: ["alphabet-match", "bubble-pop-abc", "connect-the-dots"],
+    linkedWorksheetSlugs: ["letter-tracing-worksheets", "number-tracing-worksheets", "sight-words-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+
+  // Grade 1 ─────────────────────────────────────────────────────────────
+  {
+    slug: "grade-1-addition",
+    keyword: "grade 1 addition worksheets",
+    searchVolume: 12100,
+    h1: "Grade 1 Addition Worksheets — Free Printable PDF",
+    title: "Grade 1 Addition Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 1 addition worksheets — add within 20, doubles, near doubles and missing addends. Common Core 1.OA aligned. Instant PDF download.",
+    intro: [
+      "Grade 1 is the year addition becomes pure number work. The pictures fall away, the equation format takes over, and children are expected to find sums within 20 — first by counting, then by recall. The leap from 'I count to find the answer' to 'I just know it' happens for most children somewhere in Grade 1, and worksheets are the main fuel for that leap.",
+      "Our Grade 1 addition sheets cover the full 1.OA progression: adding within 10, then within 20, doubles facts, near-doubles, making 10, missing addend problems, and the introduction of the commutative property. We also include 'word problem' sheets so children practise pulling the sum out of a sentence — a skill some Grade 1 kids struggle with even after they're fluent in pure equations.",
+      "Use these alongside our Math Addition game for fluency drills, or alongside Math Quiz for mixed practice. Free to print, free to copy for class, no paywall.",
+    ],
+    faqs: [
+      {
+        question: "What's the highest sum a Grade 1 child needs to know?",
+        answer:
+          "By the end of Grade 1, students should be fluent with addition facts within 20, with the goal of recall (not counting) for sums within 10.",
+      },
+      {
+        question: "What's a doubles fact?",
+        answer:
+          "An addition fact where both addends are the same: 4 + 4, 6 + 6, etc. These are easier for children to memorise and act as anchors for other facts.",
+      },
+      {
+        question: "Are word problems included?",
+        answer:
+          "Yes. Several sheets focus specifically on Grade 1 addition word problems — a key 1.OA.A.1 standard.",
+      },
+      {
+        question: "Are answer keys provided?",
+        answer:
+          "Yes — every sheet includes an answer key for parents and teachers.",
+      },
+    ],
+    linkedGameSlugs: ["math-addition", "addition-attack", "math-quiz", "maths-play"],
+    linkedWorksheetSlugs: ["addition-worksheets", "math-worksheets-grade-1", "number-bonds-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-1-subtraction",
+    keyword: "grade 1 subtraction worksheets",
+    searchVolume: 8100,
+    h1: "Grade 1 Subtraction Worksheets — Free Printable PDF",
+    title: "Grade 1 Subtraction Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 1 subtraction worksheets — subtract within 20, fact families, missing minuend problems. Common Core 1.OA aligned. Instant PDF download.",
+    intro: [
+      "Subtraction is harder than addition for almost every Grade 1 child. The reason isn't the maths — it's the direction. Adding combines, which feels natural; subtracting splits, which doesn't. Children who breeze through addition often slow down here, and that's fine. The fix is simply more reps.",
+      "Our Grade 1 subtraction sheets start with subtract-within-10 problems where the answer is small enough to count on fingers. They build to subtract-within-20, then introduce fact families (the relationship between 7 + 3 = 10 and 10 − 3 = 7), then missing-minuend problems where the child has to work backwards. Word problems are sprinkled throughout.",
+      "Don't push past subtract-within-10 until that's solid — moving too fast on subtraction is the most common cause of maths anxiety in Grade 2. Pair with our Subtraction Quest game. Free, copy-friendly, classroom use allowed.",
+    ],
+    faqs: [
+      {
+        question: "What's a fact family?",
+        answer:
+          "A group of three numbers that form related addition and subtraction facts — for example, 3, 4 and 7 give us 3+4=7, 4+3=7, 7-3=4 and 7-4=3.",
+      },
+      {
+        question: "Should Grade 1 kids subtract within 20?",
+        answer:
+          "Yes — Common Core 1.OA.C.6 expects fluency with subtraction within 20 by the end of Grade 1.",
+      },
+      {
+        question: "Why is subtraction so hard for my child?",
+        answer:
+          "It's harder than addition for most kids because the operation feels less intuitive. More repetition usually fixes it within a few weeks.",
+      },
+      {
+        question: "Are word problems included?",
+        answer:
+          "Yes — Grade 1 subtraction word problem sheets are included, covering 'take away' and 'compare' problem types.",
+      },
+    ],
+    linkedGameSlugs: ["math-subtraction", "subtraction-station", "math-quiz"],
+    linkedWorksheetSlugs: ["subtraction-worksheets", "math-worksheets-grade-1", "number-bonds-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-1-counting",
+    keyword: "grade 1 counting worksheets",
+    searchVolume: 3600,
+    h1: "Grade 1 Counting Worksheets — Free Printable PDF",
+    title: "Grade 1 Counting Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 1 counting worksheets — count to 120, skip counting by 2s, 5s and 10s, hundred chart practice. Common Core 1.NBT aligned.",
+    intro: [
+      "By Grade 1, counting isn't a beginner skill anymore — it's a tool. The goal isn't to learn the number names; it's to use counting to spot patterns. Skip counting by 2s reveals even numbers. Skip counting by 5s and 10s reveals the structure of money and time. Counting on from a number is the foundation of mental addition.",
+      "Our Grade 1 counting sheets cover the full 1.NBT progression: counting to 120, reading and writing numerals to 120, the hundreds chart (filling missing squares), and skip counting by 2s, 5s and 10s. We also include 'count on from' sheets where the child starts at, say, 47 and counts forward 5 — a skill that bridges directly into mental addition.",
+      "These work well as warm-up sheets at the start of a maths session. Pair with the Counting Stars game. Free, classroom-friendly, instant download.",
+    ],
+    faqs: [
+      {
+        question: "Why count to 120 specifically?",
+        answer:
+          "Common Core 1.NBT.A.1 requires counting to 120 — past 100 to ensure the child generalises beyond the special 'three-digit' threshold.",
+      },
+      {
+        question: "What's a hundred chart?",
+        answer:
+          "A 10×10 grid showing numbers 1–100 in order. Children fill missing squares to practise counting and number patterns.",
+      },
+      {
+        question: "Why skip counting?",
+        answer:
+          "Skip counting builds the foundation for multiplication and times tables. By Grade 2 it becomes essential.",
+      },
+      {
+        question: "Are these aligned to a curriculum?",
+        answer:
+          "Yes — Common Core 1.NBT standards. They also map cleanly to UK Year 2 and Australian Foundation–Year 1.",
+      },
+    ],
+    linkedGameSlugs: ["counting-game", "number-surge", "math-addition"],
+    linkedWorksheetSlugs: ["counting-worksheets", "math-worksheets-grade-1", "number-tracing-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-1-shapes",
+    keyword: "grade 1 shapes worksheets",
+    searchVolume: 2400,
+    h1: "Grade 1 Shapes Worksheets — Free Printable PDF",
+    title: "Grade 1 Shapes Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 1 shapes worksheets — defining attributes, composing shapes, halves and fourths. Common Core 1.G aligned. Instant PDF download.",
+    intro: [
+      "Grade 1 shape work is where geometry stops being about naming and starts being about reasoning. A child has to figure out which features of a shape matter (number of sides, closed figure) and which don't (colour, size, orientation). That distinction — defining versus non-defining attributes — is the cornerstone of all later geometry.",
+      "Our Grade 1 shape sheets cover the 1.G standards: identifying defining attributes, composing 2D shapes from smaller pieces (two triangles make a square), composing 3D shapes from smaller solids, and the first introduction to fractions through halves and fourths of shapes. The 'partition into equal shares' sheets are technically the start of fractions work.",
+      "These pair well with our Shape Sorter game and printable pattern-block activities. Use them in any order — Grade 1 shape work doesn't have a strict sequence. Free to print, free for class.",
+    ],
+    faqs: [
+      {
+        question: "What are defining attributes?",
+        answer:
+          "Features that determine what a shape IS (number of sides, closed figure). Non-defining attributes are colour, size and orientation.",
+      },
+      {
+        question: "Do these include fractions?",
+        answer:
+          "Yes — the partition sheets cover halves and fourths of shapes, which is Common Core 1.G.A.3 and the first taste of fractions.",
+      },
+      {
+        question: "What does 'compose shapes' mean?",
+        answer:
+          "Combining shapes to make a bigger or new shape — for example, four triangles forming a square, or two semicircles forming a circle.",
+      },
+      {
+        question: "Are these too easy for advanced first graders?",
+        answer:
+          "If your child finishes these quickly, jump to Grade 2 shapes which add quadrilaterals and more partitioning work.",
+      },
+    ],
+    linkedGameSlugs: ["shape-sorter", "pattern-wizard", "sorting-frenzy"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "math-worksheets-grade-1", "pattern-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-1-telling-time",
+    keyword: "grade 1 telling time worksheets",
+    searchVolume: 4400,
+    h1: "Grade 1 Telling Time Worksheets — Free Printable PDF",
+    title: "Grade 1 Telling Time Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 1 telling time worksheets — read clocks to the hour and half-hour, draw clock hands. Common Core 1.MD.B.3 aligned.",
+    intro: [
+      "Reading an analogue clock is one of those skills that used to be obvious and now isn't. Most kids today see digital clocks first, so the relationship between a 'big hand' and a 'small hand' has to be taught explicitly. Grade 1 is when that introduction happens, and the goal is modest: read the hour and the half-hour. Anything more comes in Grade 2.",
+      "Our Grade 1 time sheets show analogue clock faces with the child writing the time, then flip to the reverse — the child has to draw the hands on a blank clock face given a written time. Both directions matter. The 'draw the hands' problems are usually harder because they require the child to think about WHERE the hand goes, not just READ where it is.",
+      "Pair with the Time Teller game. Don't worry if your Grade 1 child finds this hard at first — analogue time clicks for most children somewhere in Grade 2. Free to print, classroom use allowed.",
+    ],
+    faqs: [
+      {
+        question: "Should Grade 1 know quarter past and quarter to?",
+        answer:
+          "No — that's a Grade 2 standard. Grade 1 covers hours and half-hours only (1.MD.B.3).",
+      },
+      {
+        question: "Why is reading a clock so hard for kids?",
+        answer:
+          "Analogue clocks require simultaneous decoding of two hands moving at different speeds, plus understanding that 'half past' means 30 minutes. It's genuinely complex.",
+      },
+      {
+        question: "Should I teach digital first?",
+        answer:
+          "Most curriculums teach analogue first because the visual clock face shows the structure of an hour. Digital is added later.",
+      },
+      {
+        question: "How can I help my child practise at home?",
+        answer:
+          "Have an analogue clock visible in the house and ask 'what time is it' a few times a day. Real practice beats worksheet practice.",
+      },
+    ],
+    linkedGameSlugs: ["time-teller", "math-quiz"],
+    linkedWorksheetSlugs: ["math-worksheets-grade-1"],
+    linkedColoringCategorySlugs: [],
+  },
+
+  // Grade 2 ─────────────────────────────────────────────────────────────
+  {
+    slug: "grade-2-addition",
+    keyword: "grade 2 addition worksheets",
+    searchVolume: 8100,
+    h1: "Grade 2 Addition Worksheets — Free Printable PDF",
+    title: "Grade 2 Addition Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 2 addition worksheets — two-digit addition with regrouping, three-digit addition, mental math strategies. Common Core 2.NBT aligned.",
+    intro: [
+      "Grade 2 addition is where the number columns start to matter. A child who could add single-digit numbers in their head now has to learn place value notation, line up the ones and tens, and handle the strange but essential trick of carrying. Regrouping (the official name for carrying) trips up many Grade 2 kids the first few weeks, but it clicks fast with reps.",
+      "Our Grade 2 addition sheets walk through it in order: two-digit + one-digit (no regrouping), two-digit + two-digit (no regrouping), then two-digit + two-digit (with regrouping), and finally three-digit + three-digit. We also include mental math strategy sheets — making 10s, breaking apart numbers, using doubles — which the Common Core 2.NBT.B.5 standard explicitly requires.",
+      "Pair with Math Quiz Challenge for fluency drills and Maths Play for game-based reps. These are free for classroom use, no signup, no watermarks.",
+    ],
+    faqs: [
+      {
+        question: "What is regrouping?",
+        answer:
+          "The new name for 'carrying' in addition — when the ones column adds to more than 9, you regroup 10 ones into a ten and carry it to the tens column.",
+      },
+      {
+        question: "Should Grade 2 do three-digit addition?",
+        answer:
+          "Yes — Common Core 2.NBT.B.7 expects addition within 1000 by end of Grade 2. Three-digit problems are core curriculum.",
+      },
+      {
+        question: "What are mental math strategies?",
+        answer:
+          "Tricks for adding without writing it down — like adding to a friendly 10 first, or breaking a number apart. 2.NBT.B.5 requires these.",
+      },
+      {
+        question: "Are answer keys included?",
+        answer:
+          "Yes. Every sheet has an answer key for parents and teachers.",
+      },
+    ],
+    linkedGameSlugs: ["math-addition", "addition-attack", "math-quiz", "maths-play"],
+    linkedWorksheetSlugs: ["addition-worksheets", "grade-2-math-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-2-subtraction",
+    keyword: "grade 2 subtraction worksheets",
+    searchVolume: 6600,
+    h1: "Grade 2 Subtraction Worksheets — Free Printable PDF",
+    title: "Grade 2 Subtraction Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 2 subtraction worksheets — two-digit subtraction with borrowing, three-digit subtraction, word problems. Common Core 2.NBT aligned.",
+    intro: [
+      "Borrowing is the make-or-break moment of Grade 2 maths. The first time a child has to subtract 7 from 4 in the ones column, it feels impossible — and the technique of crossing out the tens digit, replacing it with one less, and adding ten to the ones column is genuinely abstract. There's no trick. The fix is to do it ten times in a row until it feels normal.",
+      "Our Grade 2 subtraction sheets give exactly those reps. They start with two-digit subtraction without borrowing (the warm-up), then move to two-digit with borrowing in the ones column, then borrowing across both columns, then three-digit subtraction. Word problems appear throughout, drawn from the four standard Grade 2 problem types: take away, compare, missing addend, two-step.",
+      "Don't skip the no-borrowing warm-up — it builds confidence before the harder concept arrives. Pair with our Subtraction Quest game. Free, copy-friendly, no signup wall.",
+    ],
+    faqs: [
+      {
+        question: "What is borrowing?",
+        answer:
+          "When the top number in a subtraction column is smaller than the bottom number, you 'borrow' 10 from the next column to the left. Now called 'regrouping' in modern curriculums.",
+      },
+      {
+        question: "Why is borrowing so hard?",
+        answer:
+          "It involves multiple steps — cross out, write smaller number, add 10, then subtract — and the child has to track all of them at once. Practice is the only fix.",
+      },
+      {
+        question: "Should Grade 2 do three-digit subtraction?",
+        answer:
+          "Yes — 2.NBT.B.7 expects subtraction within 1000 by year-end. Three-digit problems are required.",
+      },
+      {
+        question: "Are word problems included?",
+        answer:
+          "Yes. Multiple word problem sheets covering all four 2.OA.A.1 problem types.",
+      },
+    ],
+    linkedGameSlugs: ["math-subtraction", "subtraction-station", "math-quiz"],
+    linkedWorksheetSlugs: ["subtraction-worksheets", "grade-2-math-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-2-multiplication",
+    keyword: "grade 2 multiplication worksheets",
+    searchVolume: 5400,
+    h1: "Grade 2 Multiplication Worksheets — Free Printable PDF",
+    title: "Grade 2 Multiplication Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 2 multiplication worksheets — equal groups, repeated addition, intro to times tables. Builds bridge to Grade 3 multiplication mastery.",
+    intro: [
+      "Grade 2 doesn't formally teach multiplication — that's a Grade 3 standard. But Common Core 2.OA.C.4 explicitly asks Grade 2 students to use repeated addition to find the total of objects in equal-sized groups. That's the foundation. A child who really gets 'four groups of three is twelve' through repeated addition will sail through Grade 3 multiplication later.",
+      "Our Grade 2 multiplication sheets focus on this bridge. Pages start with arrays — pictures of objects in rows and columns — and the child writes both the addition expression (3+3+3+3) and the resulting total. Later sheets switch to the multiplication symbol (×) and ask the child to interpret 4×3 as 'four groups of three.' We hold off on memorising the times tables until Grade 3, where it belongs.",
+      "Pair with our counting and addition games for the underlying skills. Free to print, classroom use welcome.",
+    ],
+    faqs: [
+      {
+        question: "Should Grade 2 know multiplication facts?",
+        answer:
+          "No. Memorising times tables is a Grade 3 standard. Grade 2 just builds the conceptual foundation through repeated addition and arrays.",
+      },
+      {
+        question: "What's an array in maths?",
+        answer:
+          "A grid arrangement of objects in equal rows and columns — for example, a 3×4 array has 3 rows of 4 objects each. Arrays are the visual model for multiplication.",
+      },
+      {
+        question: "Are these too advanced for early Grade 2?",
+        answer:
+          "Use them in the second half of Grade 2, after addition and subtraction within 100 are solid. Early Grade 2 should focus on addition and place value first.",
+      },
+      {
+        question: "Do these prepare for Grade 3?",
+        answer:
+          "Yes — that's their main purpose. A child who masters arrays and repeated addition in Grade 2 finds Grade 3 times tables much easier.",
+      },
+    ],
+    linkedGameSlugs: ["multiplication-blast", "math-quiz", "math-addition"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "grade-2-math-worksheets", "addition-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-2-telling-time",
+    keyword: "grade 2 telling time worksheets",
+    searchVolume: 5400,
+    h1: "Grade 2 Telling Time Worksheets — Free Printable PDF",
+    title: "Grade 2 Telling Time Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 2 telling time worksheets — time to the nearest 5 minutes, AM and PM, elapsed time. Common Core 2.MD.C.7 aligned.",
+    intro: [
+      "Grade 2 is when telling time gets serious. The Grade 1 child only had to handle hours and half-hours. Grade 2 jumps to time-to-the-nearest-5-minutes, which means understanding that the minute hand moves 5 minutes between each big number on the clock face. That single insight is the conceptual leap of Grade 2 time.",
+      "Our Grade 2 time sheets start with five-minute intervals (12:05, 12:10, 12:15...) on standard analogue clocks, then introduce the 'past' and 'to' vocabulary (twenty past three, ten to four). AM and PM appear next, along with simple elapsed time problems ('start time was 2:00, now it's 2:30, how many minutes have passed?'). Drawing clock hands is included on every other sheet for two-way fluency.",
+      "Pair with the Time Teller game. Real-world practice (asking 'what time is it' on a kitchen clock) reinforces the worksheet practice better than any drill. Free, classroom-friendly.",
+    ],
+    faqs: [
+      {
+        question: "What's the Grade 2 standard for time?",
+        answer:
+          "Common Core 2.MD.C.7 requires telling time to the nearest 5 minutes using AM and PM.",
+      },
+      {
+        question: "What is elapsed time?",
+        answer:
+          "The amount of time between two events — for example, from 2:00 to 2:30 is 30 minutes elapsed. Grade 2 covers simple within-the-hour cases.",
+      },
+      {
+        question: "Should I teach digital alongside analogue?",
+        answer:
+          "Yes by Grade 2. Both forms are needed in real life, and switching between them builds deeper time sense.",
+      },
+      {
+        question: "Are these printable for free?",
+        answer:
+          "Every Grade 2 time sheet is free to download, print and copy for home or classroom use.",
+      },
+    ],
+    linkedGameSlugs: ["time-teller", "math-quiz"],
+    linkedWorksheetSlugs: ["grade-2-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-2-shapes",
+    keyword: "grade 2 shapes worksheets",
+    searchVolume: 1900,
+    h1: "Grade 2 Shapes Worksheets — Free Printable PDF",
+    title: "Grade 2 Shapes Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 2 shapes worksheets — quadrilaterals, polygons, partitioning into thirds and quarters. Common Core 2.G aligned.",
+    intro: [
+      "Grade 2 shape work introduces precise vocabulary. A child who used to call everything four-sided a 'square' now learns rectangle, rhombus, trapezoid and the umbrella term quadrilateral. Polygon enters the vocabulary too. The geometric world goes from a handful of shapes to a categorisation system, and that's the actual skill being taught.",
+      "Our Grade 2 shape sheets cover 2.G.A.1 (recognising and drawing shapes by attributes), 2.G.A.2 (partitioning rectangles into equal squares — the array model), and 2.G.A.3 (partitioning shapes into halves, thirds and fourths). The partitioning sheets are technically the second-year fractions foundation, leading directly into Grade 3 fractions.",
+      "These pair well with our Shape Sorter game for vocabulary review. Free to print, free for class, no signup.",
+    ],
+    faqs: [
+      {
+        question: "What's a quadrilateral?",
+        answer:
+          "Any closed four-sided shape. Squares, rectangles, rhombuses and trapezoids are all quadrilaterals.",
+      },
+      {
+        question: "Why partition shapes into thirds?",
+        answer:
+          "It's the foundation of fractions. Once a child can partition a shape into three equal pieces, they understand 1/3 conceptually before they meet the symbol.",
+      },
+      {
+        question: "What's an array in shape work?",
+        answer:
+          "A rectangle divided into rows and columns of equal squares. Counting the squares previews multiplication (3 rows × 4 columns = 12 squares).",
+      },
+      {
+        question: "Common Core aligned?",
+        answer:
+          "Yes — the sheets cover all 2.G.A standards (2.G.A.1, 2.G.A.2 and 2.G.A.3).",
+      },
+    ],
+    linkedGameSlugs: ["shape-sorter", "pattern-wizard"],
+    linkedWorksheetSlugs: ["shapes-worksheets", "grade-2-math-worksheets", "pattern-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+
+  // Grade 3 ─────────────────────────────────────────────────────────────
+  {
+    slug: "grade-3-addition",
+    keyword: "grade 3 addition worksheets",
+    searchVolume: 5400,
+    h1: "Grade 3 Addition Worksheets — Free Printable PDF",
+    title: "Grade 3 Addition Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 3 addition worksheets — multi-digit addition within 1000, mental strategies, two-step word problems. Common Core 3.NBT aligned.",
+    intro: [
+      "Grade 3 addition is consolidation work. The mechanics — line up the columns, add right to left, regroup when needed — were taught in Grade 2. Grade 3 makes them automatic and adds size: addition within 1000 fluently, multi-digit problems mixed with subtraction, two-step word problems where the child has to figure out which operation to use first.",
+      "Our Grade 3 addition sheets push fluency. Pure computation pages have 30+ problems each, designed to be done in under 10 minutes. Word problem sheets focus on the tricky bit: extracting the operation from the wording, especially when the answer requires both addition and subtraction. Mental math strategy review (rounding, compensation) is included for kids who haven't yet automated those tricks.",
+      "Pair with our Math Quiz Challenge for timed drills and Math Addition for game-based practice. Free, classroom-ready, no watermarks.",
+    ],
+    faqs: [
+      {
+        question: "What's the Grade 3 standard for addition?",
+        answer:
+          "Common Core 3.NBT.A.2 expects fluent addition and subtraction within 1000 using place-value strategies.",
+      },
+      {
+        question: "What's a two-step word problem?",
+        answer:
+          "A problem requiring two operations to solve — for example, 'Sara had 47 stickers. She bought 12 more, then gave 9 to her brother. How many does she have now?'",
+      },
+      {
+        question: "Should Grade 3 use a calculator?",
+        answer:
+          "Generally no — fluency with multi-digit arithmetic is the whole point of this grade. Calculators come later.",
+      },
+      {
+        question: "What if my child still struggles with regrouping?",
+        answer:
+          "Drop back to our Grade 2 addition with regrouping sheets and rebuild the foundation. Don't push forward until that's solid.",
+      },
+    ],
+    linkedGameSlugs: ["math-addition", "addition-attack", "math-quiz", "maths-play"],
+    linkedWorksheetSlugs: ["addition-worksheets", "grade-3-math-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-3-subtraction",
+    keyword: "grade 3 subtraction worksheets",
+    searchVolume: 4400,
+    h1: "Grade 3 Subtraction Worksheets — Free Printable PDF",
+    title: "Grade 3 Subtraction Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 3 subtraction worksheets — multi-digit subtraction within 1000, borrowing across zeros, word problems. Common Core 3.NBT aligned.",
+    intro: [
+      "The hardest subtraction technique a Grade 3 child meets is borrowing across a zero. When you have to subtract from 503, the borrowing chain ripples through two columns: the tens are zero, so you can't just borrow ten — you have to first borrow a hundred to make the tens column ten, THEN borrow ten from the tens. It's the only multi-step manoeuvre in early arithmetic and it's where many Grade 3 kids stall.",
+      "Our Grade 3 subtraction sheets dedicate several pages to borrowing across zeros, with the first sheet showing each step and later sheets removing the scaffolding. Pure three-digit subtraction within 1000 is covered, along with two-step word problems and 'find the missing number' equations like 503 − ? = 247.",
+      "Don't rush this. A Grade 3 child who can borrow across a zero confidently is ready for everything Grade 4 will throw at them. Pair with our Subtraction Quest game. Free, copy-friendly.",
+    ],
+    faqs: [
+      {
+        question: "What's borrowing across zero?",
+        answer:
+          "When you need to subtract from a number with a zero in the next column, like 503 − 247. You can't borrow from the tens (which are zero), so you borrow from the hundreds first.",
+      },
+      {
+        question: "Why is it so hard?",
+        answer:
+          "It's the first time the borrowing chain spans more than one column. Most kids need 8–10 worked examples before it clicks.",
+      },
+      {
+        question: "What's the Grade 3 standard?",
+        answer:
+          "Common Core 3.NBT.A.2 — fluent addition and subtraction within 1000.",
+      },
+      {
+        question: "Are word problems included?",
+        answer:
+          "Yes — multiple word problem sheets including two-step problems (3.OA.D.8).",
+      },
+    ],
+    linkedGameSlugs: ["math-subtraction", "subtraction-station", "math-quiz"],
+    linkedWorksheetSlugs: ["subtraction-worksheets", "grade-3-math-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-3-multiplication",
+    keyword: "grade 3 multiplication worksheets",
+    searchVolume: 18100,
+    h1: "Grade 3 Multiplication Worksheets — Free Printable PDF",
+    title: "Grade 3 Multiplication Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 3 multiplication worksheets — times tables 1–10, properties of multiplication, word problems. Common Core 3.OA aligned.",
+    intro: [
+      "Grade 3 multiplication is the biggest single learning target of elementary school maths. The Common Core standard 3.OA.C.7 says it plainly: 'know from memory all products of two one-digit numbers.' That's 100 facts (or 55 if you use commutativity), and they need to be automatic by year-end. Without that automaticity, every later maths topic — fractions, division, area, algebra — runs into a wall.",
+      "Our Grade 3 multiplication sheets cover the full progression: 0 and 1 facts (free), 2s (skip counting), 5s and 10s (intuitive), 3s and 4s (strategy), then the harder middle ground of 6s, 7s, 8s and 9s. The 9s have their own page because the finger trick is a confidence-builder. We also include sheets on the properties (commutative, associative, distributive) and a mix of multiplication word problems.",
+      "Pair with Multiplication Blast and Times Tables Challenge games — the gamified reps work, and most Grade 3 kids actually enjoy them. Free for classroom use, instant download.",
+    ],
+    faqs: [
+      {
+        question: "Which times tables should Grade 3 know?",
+        answer:
+          "All facts up to 10×10 (100 facts) by end of Grade 3, with the goal of automatic recall, not counting.",
+      },
+      {
+        question: "Are 11s and 12s required?",
+        answer:
+          "11 and 12 times tables are not strictly Common Core but most US schools teach them. UK National Curriculum requires up to 12×12 by Year 4.",
+      },
+      {
+        question: "What's the distributive property?",
+        answer:
+          "Breaking a multiplication into two easier ones — for example, 7 × 8 = (7 × 5) + (7 × 3). Useful when a child can't recall a fact directly.",
+      },
+      {
+        question: "How many minutes a day for fact practice?",
+        answer:
+          "Five to ten minutes a day is ideal. Daily short practice beats weekly long sessions for fact memorisation.",
+      },
+    ],
+    linkedGameSlugs: ["multiplication-blast", "times-tables-challenge", "math-quiz", "maths-play"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "grade-3-math-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-3-division",
+    keyword: "grade 3 division worksheets",
+    searchVolume: 6600,
+    h1: "Grade 3 Division Worksheets — Free Printable PDF",
+    title: "Grade 3 Division Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 3 division worksheets — basic division facts, division as inverse of multiplication, word problems. Common Core 3.OA aligned.",
+    intro: [
+      "Division enters the Grade 3 curriculum at the same time as multiplication, and that's intentional. The two operations are inverse — every division fact is a hidden multiplication fact in disguise. A child who knows 6 × 7 = 42 already knows 42 ÷ 6 = 7 and 42 ÷ 7 = 6, even if they haven't realised it yet. The job of Grade 3 division work is making that connection conscious.",
+      "Our Grade 3 division sheets cover both meanings of division: 'sharing into equal groups' (12 cookies shared by 4 children) and 'measuring how many groups fit' (how many groups of 3 are in 12). Both interpretations matter because word problems use both. Pure fact practice sheets cover divisors 2–10, and word problem sheets mix the two interpretations.",
+      "Pair with Division Duel for game-based practice and Math Quiz for fluency. Free, classroom-ready, instant download.",
+    ],
+    faqs: [
+      {
+        question: "Why teach division before fluent multiplication?",
+        answer:
+          "Common Core 3.OA introduces both at once specifically because they're inverse. Each operation reinforces the other.",
+      },
+      {
+        question: "What's the Grade 3 division standard?",
+        answer:
+          "3.OA.A.2 — interpret whole-number quotients of whole numbers. 3.OA.C.7 — fluently multiply and divide within 100.",
+      },
+      {
+        question: "Are remainders included?",
+        answer:
+          "No — remainders are a Grade 4 topic (4.NBT.B.6). Grade 3 sticks to clean division problems.",
+      },
+      {
+        question: "What if my child finds division harder than multiplication?",
+        answer:
+          "That's normal. Division usually takes a few weeks longer to feel automatic. More word problems where the same pair of facts appear together helps.",
+      },
+    ],
+    linkedGameSlugs: ["division-duel", "multiplication-blast", "math-quiz"],
+    linkedWorksheetSlugs: ["division-worksheets-grade-3", "multiplication-worksheets", "grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-3-fractions",
+    keyword: "grade 3 fractions worksheets",
+    searchVolume: 9900,
+    h1: "Grade 3 Fractions Worksheets — Free Printable PDF",
+    title: "Grade 3 Fractions Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 3 fractions worksheets — unit fractions, fractions on a number line, equivalent fractions, comparing fractions. Common Core 3.NF aligned.",
+    intro: [
+      "Fractions are the moment maths stops being about counting and starts being about ratio. A Grade 3 child who's used to whole numbers suddenly meets the idea that 3/4 and 6/8 are the SAME number, just written differently. That's a real cognitive shift, and it's where maths anxiety often starts. The fix is to introduce fractions visually first, with a lot of pictures, before any symbolic manipulation.",
+      "Our Grade 3 fraction sheets follow the Common Core 3.NF sequence: unit fractions (the building blocks), fractions on a number line (the breakthrough representation), equivalent fractions (visually first, then numerically), and comparing fractions with the same numerator or same denominator. Every sheet includes plenty of bar models and circle diagrams.",
+      "These pair with our Fractions Frenzy game. Don't rush to mixed numbers and operations — those are Grade 4. Build a rock-solid Grade 3 foundation first. Free, no signup, classroom use welcome.",
+    ],
+    faqs: [
+      {
+        question: "What's a unit fraction?",
+        answer:
+          "A fraction with 1 as the numerator — 1/2, 1/3, 1/4 and so on. They're the building blocks of all other fractions.",
+      },
+      {
+        question: "Why fractions on a number line?",
+        answer:
+          "The number line shows that fractions are numbers (just like whole numbers). Common Core 3.NF.A.2 makes this explicit because it prevents the misconception that fractions are 'parts of a thing' rather than numbers.",
+      },
+      {
+        question: "Should Grade 3 add fractions?",
+        answer:
+          "No — fraction addition starts in Grade 4 (with same denominators). Grade 3 focuses on understanding what a fraction IS.",
+      },
+      {
+        question: "What about decimals?",
+        answer:
+          "Decimals don't appear until Grade 4 (4.NF.C.6). Grade 3 sticks to fractional notation.",
+      },
+    ],
+    linkedGameSlugs: ["fractions-frenzy", "math-quiz"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets", "multiplication-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-3-telling-time",
+    keyword: "grade 3 telling time worksheets",
+    searchVolume: 2900,
+    h1: "Grade 3 Telling Time Worksheets — Free Printable PDF",
+    title: "Grade 3 Telling Time Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 3 telling time worksheets — time to the nearest minute, elapsed time, schedule problems. Common Core 3.MD.A.1 aligned.",
+    intro: [
+      "Grade 3 telling time finishes the analogue clock once and for all. Where Grade 2 ended at five-minute intervals, Grade 3 reads to the nearest minute — meaning the child has to count individual minute marks between the hour numbers. It's the last fundamental clock skill, and it should feel automatic by end of Grade 3.",
+      "But the bigger Grade 3 time topic is elapsed time. 'A movie starts at 2:35 and ends at 4:10. How long is the movie?' These problems require subtracting time, which doesn't work like subtracting numbers (because time is base 60, not base 10). Our sheets include elapsed time within the hour, across the hour, and within a day, building gradually so the child has time to absorb the base-60 weirdness.",
+      "Pair with the Time Teller game. Real-world reinforcement (TV times, mealtimes) is the best practice you can give. Free, classroom use allowed.",
+    ],
+    faqs: [
+      {
+        question: "What's the Grade 3 standard?",
+        answer:
+          "Common Core 3.MD.A.1 — telling time to the nearest minute and solving word problems involving elapsed time.",
+      },
+      {
+        question: "What's elapsed time?",
+        answer:
+          "The amount of time between two events. 'From 2:35 to 4:10 is 1 hour 35 minutes' is an elapsed time calculation.",
+      },
+      {
+        question: "Why is elapsed time hard?",
+        answer:
+          "Time uses base 60, not base 10. So 2:35 + 35 minutes ISN'T 2:70 — it's 3:10. That mental adjustment is what trips kids up.",
+      },
+      {
+        question: "Are these printable for free?",
+        answer:
+          "Yes — every Grade 3 telling time sheet is free to download, print and copy.",
+      },
+    ],
+    linkedGameSlugs: ["time-teller", "math-quiz"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+
+  // Grade 4 ─────────────────────────────────────────────────────────────
+  {
+    slug: "grade-4-multiplication",
+    keyword: "grade 4 multiplication worksheets",
+    searchVolume: 8100,
+    h1: "Grade 4 Multiplication Worksheets — Free Printable PDF",
+    title: "Grade 4 Multiplication Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 4 multiplication worksheets — multi-digit multiplication, area model, partial products, word problems. Common Core 4.NBT aligned.",
+    intro: [
+      "Grade 4 multiplication leaves the times tables behind and enters the world of multi-digit problems. A child who's fluent with 7 × 8 now has to compute 47 × 28. The procedure — multiply, regroup, line up the place values, add the partial products — is one of the longest multi-step calculations in elementary maths. It's where careful, methodical work becomes essential.",
+      "Our Grade 4 multiplication sheets follow the Common Core 4.NBT.B.5 progression: multi-digit by one-digit (warm-up), multi-digit by two-digit (the main event), then four-digit by one-digit. We include both the standard algorithm and the area model (also called the box method) — the area model is required by Common Core because it reveals WHY the algorithm works, not just how to do it.",
+      "Pair with Multiplication Blast and Times Tables Challenge for fluency reps. Free for classroom use, no signup, no paywalls.",
+    ],
+    faqs: [
+      {
+        question: "What's the area model?",
+        answer:
+          "A grid method for multi-digit multiplication that breaks each number into place-value parts. For 47 × 28, you draw a 2×2 grid for (40+7) × (20+8) and fill in the four products.",
+      },
+      {
+        question: "Should kids learn the area model or the standard algorithm?",
+        answer:
+          "Both. Common Core 4.NBT.B.5 requires the standard algorithm by Grade 5, but Grade 4 starts with strategies (including area model) before formalising it.",
+      },
+      {
+        question: "What size numbers should Grade 4 multiply?",
+        answer:
+          "4-digit by 1-digit and 2-digit by 2-digit are the Grade 4 expectations.",
+      },
+      {
+        question: "Are word problems included?",
+        answer:
+          "Yes — multi-step multiplication word problems appear on several sheets, covering 4.OA.A.3.",
+      },
+    ],
+    linkedGameSlugs: ["multiplication-blast", "times-tables-challenge", "math-quiz"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "grade-3-math-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-4-division",
+    keyword: "grade 4 division worksheets",
+    searchVolume: 5400,
+    h1: "Grade 4 Division Worksheets — Free Printable PDF",
+    title: "Grade 4 Division Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 4 division worksheets — long division, division with remainders, multi-digit dividends. Common Core 4.NBT.B.6 aligned.",
+    intro: [
+      "Long division is one of the few elementary topics that genuinely deserves its reputation for being hard. The procedure — divide, multiply, subtract, bring down, repeat — has more steps than any other Grade 4 maths skill, and forgetting any one of them breaks the whole calculation. Children who get long division also get a confidence boost that carries through Grade 5.",
+      "Our Grade 4 division sheets walk through it gently. Sheet 1 introduces the steps with single-digit divisors and three-digit dividends, with each step labelled. Later sheets remove the labels, then add remainders, then move to four-digit dividends. Grade 4 doesn't yet require two-digit divisors (that's Grade 5), but we include a few stretch problems for advanced students.",
+      "Word problems with remainders are included — these are particularly tricky because the answer might be the quotient, the quotient + 1, or just the remainder, depending on the context. Pair with Division Duel for fluency reps. Free, classroom-friendly.",
+    ],
+    faqs: [
+      {
+        question: "What's the long division procedure?",
+        answer:
+          "Divide, multiply, subtract, bring down — repeat until done. The acronym DMSB (or 'Dad Mum Sister Brother') is a common memory aid.",
+      },
+      {
+        question: "What does 'remainder' mean?",
+        answer:
+          "The whole-number left over after a division that doesn't divide evenly. 17 ÷ 5 = 3 remainder 2.",
+      },
+      {
+        question: "Is two-digit divisor required in Grade 4?",
+        answer:
+          "No — Common Core 4.NBT.B.6 is one-digit divisors only. Two-digit divisors come in Grade 5 (5.NBT.B.6).",
+      },
+      {
+        question: "Why are remainder word problems hard?",
+        answer:
+          "The child has to figure out what the remainder MEANS in context. 'How many cars do we need for 17 people, 5 per car?' isn't 3 r 2 — it's 4 cars.",
+      },
+    ],
+    linkedGameSlugs: ["division-duel", "multiplication-blast", "math-quiz"],
+    linkedWorksheetSlugs: ["division-worksheets-grade-3", "multiplication-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-4-fractions",
+    keyword: "grade 4 fractions worksheets",
+    searchVolume: 8100,
+    h1: "Grade 4 Fractions Worksheets — Free Printable PDF",
+    title: "Grade 4 Fractions Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 4 fractions worksheets — equivalent fractions, adding and subtracting fractions, mixed numbers. Common Core 4.NF aligned.",
+    intro: [
+      "Grade 4 is when fractions become operations. The Grade 3 child only had to UNDERSTAND fractions; the Grade 4 child has to DO things with them. Adding and subtracting fractions with the same denominator comes first (the easy case), then equivalent fractions, then comparing fractions with different denominators by finding equivalents. Mixed numbers and improper fractions enter the picture too.",
+      "Our Grade 4 fraction sheets cover the full 4.NF progression: equivalent fractions (with bar models and number lines), comparing fractions (using <, >, =), adding and subtracting like-denominator fractions, decomposing fractions into smaller parts, and converting between mixed numbers and improper fractions. Multiplication of a fraction by a whole number — the start of fraction multiplication — is included on the harder sheets.",
+      "Pair with Fractions Frenzy for game-based practice. Don't move to unlike denominators until equivalent fractions feel automatic — that's a Grade 5 skill anyway. Free, classroom use welcome.",
+    ],
+    faqs: [
+      {
+        question: "Should Grade 4 add fractions with unlike denominators?",
+        answer:
+          "No — that's a Grade 5 standard (5.NF.A.1). Grade 4 sticks to like-denominator addition and subtraction (4.NF.B.3).",
+      },
+      {
+        question: "What's a mixed number?",
+        answer:
+          "A whole number combined with a fraction — for example, 2 1/2 (two and a half). It's another way to write an improper fraction like 5/2.",
+      },
+      {
+        question: "What's an improper fraction?",
+        answer:
+          "A fraction where the numerator is bigger than or equal to the denominator — for example, 7/4 or 5/5.",
+      },
+      {
+        question: "Do these include decimals?",
+        answer:
+          "Decimals get a separate set of sheets — see our Grade 4 decimals page. Common Core 4.NF.C introduces decimals as a new fraction notation.",
+      },
+    ],
+    linkedGameSlugs: ["fractions-frenzy", "math-quiz"],
+    linkedWorksheetSlugs: ["grade-3-math-worksheets", "multiplication-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-4-decimals",
+    keyword: "grade 4 decimals worksheets",
+    searchVolume: 4400,
+    h1: "Grade 4 Decimals Worksheets — Free Printable PDF",
+    title: "Grade 4 Decimals Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 4 decimals worksheets — tenths and hundredths, decimal-fraction equivalents, comparing decimals. Common Core 4.NF.C aligned.",
+    intro: [
+      "Decimals are introduced in Grade 4 as a new way to write fractions whose denominators are 10 or 100. That framing matters — children who learn decimals as 'a different number system' get confused, while children who learn them as 'just another way to write 7/10 = 0.7' don't. Our sheets follow the second approach because it matches the Common Core 4.NF.C standard.",
+      "These Grade 4 decimal sheets cover: writing fractions with denominator 10 or 100 as decimals, decimal place value (tenths, hundredths), comparing decimals using <, >, =, plotting decimals on a number line, and converting between fraction and decimal notation. We don't introduce decimal addition or subtraction yet — that's Grade 5 (5.NBT.B.7).",
+      "Pair with Math Quiz Challenge for mixed practice. Decimals build directly on Grade 3 fraction understanding, so if your child is shaky on fractions, drop back to those sheets first. Free, no signup.",
+    ],
+    faqs: [
+      {
+        question: "Why are decimals introduced as fractions?",
+        answer:
+          "Because that's what they ARE. 0.7 is just another way to write 7/10. Common Core 4.NF.C.5 makes this connection explicit.",
+      },
+      {
+        question: "Should Grade 4 add decimals?",
+        answer:
+          "No — decimal arithmetic is a Grade 5 standard. Grade 4 focuses on understanding what decimals MEAN and how to compare them.",
+      },
+      {
+        question: "Tenths and hundredths only?",
+        answer:
+          "Yes. Thousandths come in Grade 5 (5.NBT.A.3).",
+      },
+      {
+        question: "Are these aligned to Common Core?",
+        answer:
+          "Yes — they cover 4.NF.C.5, 4.NF.C.6 and 4.NF.C.7.",
+      },
+    ],
+    linkedGameSlugs: ["fractions-frenzy", "math-quiz"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+
+  // Grade 5 ─────────────────────────────────────────────────────────────
+  {
+    slug: "grade-5-multiplication",
+    keyword: "grade 5 multiplication worksheets",
+    searchVolume: 4400,
+    h1: "Grade 5 Multiplication Worksheets — Free Printable PDF",
+    title: "Grade 5 Multiplication Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 5 multiplication worksheets — standard algorithm fluency, decimal multiplication, multi-step word problems. Common Core 5.NBT aligned.",
+    intro: [
+      "Grade 5 is the year multi-digit multiplication has to become fully automatic. Common Core 5.NBT.B.5 phrases it bluntly: 'Fluently multiply multi-digit whole numbers using the standard algorithm.' No more area model, no more partial products as the main approach — by Grade 5, the child should be able to multiply 437 × 286 cleanly using the standard column algorithm without scaffolding.",
+      "Our Grade 5 multiplication sheets push that fluency. We also introduce decimal multiplication (5.NBT.B.7) — multiplying a decimal by a whole number, then a decimal by a decimal. The decimal placement rule (count the digits after the decimal points in both factors and put that many in the product) is the Grade 5 'aha moment' that some children take longer to grasp.",
+      "Pair with Multiplication Blast and Times Tables Challenge for the times-table reps that underlie everything. Free, classroom use welcome, no watermarks.",
+    ],
+    faqs: [
+      {
+        question: "What's the Grade 5 multiplication standard?",
+        answer:
+          "Common Core 5.NBT.B.5 — fluently multiply multi-digit whole numbers using the standard algorithm.",
+      },
+      {
+        question: "Are decimals included?",
+        answer:
+          "Yes — decimal multiplication is a Grade 5 standard (5.NBT.B.7) and several sheets cover it.",
+      },
+      {
+        question: "How many digits in Grade 5 problems?",
+        answer:
+          "Up to 4-digit by 3-digit. Larger problems are unusual but a few stretch sheets include them.",
+      },
+      {
+        question: "What's the rule for decimal placement?",
+        answer:
+          "Count the total number of digits after the decimal point in both factors. The product has the same total number of decimal digits.",
+      },
+    ],
+    linkedGameSlugs: ["multiplication-blast", "times-tables-challenge", "math-quiz"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-5-division",
+    keyword: "grade 5 division worksheets",
+    searchVolume: 5400,
+    h1: "Grade 5 Division Worksheets — Free Printable PDF",
+    title: "Grade 5 Division Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 5 division worksheets — two-digit divisors, decimal division, long division word problems. Common Core 5.NBT.B.6 aligned.",
+    intro: [
+      "Grade 5 division is the moment two-digit divisors arrive. A child who's mastered long division with single-digit divisors now has to estimate with two-digit divisors — and estimation is the actual skill being tested. The standard algorithm doesn't tell you whether 3,428 ÷ 23 starts with a quotient digit of 1 or 2; you have to estimate based on rounding. That's the new mental move.",
+      "Our Grade 5 division sheets cover two-digit divisors with three- and four-digit dividends, decimal division (dividing a decimal by a whole number, then by a decimal), and division word problems where remainders need contextual interpretation. Several sheets focus specifically on the estimation step, with fill-in-the-quotient-digit warm-ups before full long-division problems.",
+      "Pair with Division Duel for game-based practice. If your child is struggling with the estimation step, that's normal — it's the hardest single skill in Grade 5 maths. Free, classroom-friendly.",
+    ],
+    faqs: [
+      {
+        question: "What's the Grade 5 division standard?",
+        answer:
+          "Common Core 5.NBT.B.6 — find whole-number quotients of whole numbers with up to four-digit dividends and two-digit divisors.",
+      },
+      {
+        question: "Why is two-digit divisor harder?",
+        answer:
+          "You can't recall the multiplication facts for two-digit numbers. You have to estimate the quotient digit, multiply to check, and adjust if it's too big or too small.",
+      },
+      {
+        question: "Does Grade 5 cover decimal division?",
+        answer:
+          "Yes — 5.NBT.B.7 includes division of decimals by whole numbers and division of decimals by decimals.",
+      },
+      {
+        question: "How do you estimate the first digit?",
+        answer:
+          "Round both numbers to the lead digit. For 3,428 ÷ 23, round to 3,400 ÷ 20 = 170, so the quotient starts with a 1.",
+      },
+    ],
+    linkedGameSlugs: ["division-duel", "multiplication-blast", "math-quiz"],
+    linkedWorksheetSlugs: ["division-worksheets-grade-3", "multiplication-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-5-fractions",
+    keyword: "grade 5 fractions worksheets",
+    searchVolume: 8100,
+    h1: "Grade 5 Fractions Worksheets — Free Printable PDF",
+    title: "Grade 5 Fractions Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 5 fractions worksheets — unlike denominators, fraction multiplication, fraction division. Common Core 5.NF aligned.",
+    intro: [
+      "Grade 5 is the heaviest fraction year of elementary school. Adding and subtracting fractions with UNLIKE denominators starts here, which means finding common denominators on every problem. Multiplying fractions arrives, with all of its strange consequences (multiplying by a fraction less than 1 makes the answer SMALLER). Dividing fractions enters at the end of the year, complete with the 'invert and multiply' rule that no child finds intuitive.",
+      "Our Grade 5 fraction sheets cover the entire 5.NF progression: adding and subtracting unlike fractions (5.NF.A.1), multiplying fractions by whole numbers and other fractions (5.NF.B.4), interpreting fraction multiplication as scaling (5.NF.B.5), and dividing unit fractions by whole numbers and vice versa (5.NF.B.7). Word problem sheets test all four operations with fractions in real contexts.",
+      "Pair with Fractions Frenzy for game-based practice. Grade 5 fraction work is the foundation for Grade 6 ratios and Grade 7 proportions — getting it solid here pays dividends for years. Free, no signup.",
+    ],
+    faqs: [
+      {
+        question: "What's the trick for unlike denominators?",
+        answer:
+          "Find a common denominator (often the least common multiple of the two denominators), rewrite both fractions, then add or subtract the numerators.",
+      },
+      {
+        question: "Why does multiplying make a fraction smaller?",
+        answer:
+          "Because multiplying by a number less than 1 means taking a fractional PART of something. 1/2 of 1/3 is smaller than 1/3 — that's exactly what 1/2 × 1/3 = 1/6 means.",
+      },
+      {
+        question: "What's 'invert and multiply'?",
+        answer:
+          "To divide by a fraction, flip it upside down and multiply. 1/2 ÷ 1/4 = 1/2 × 4/1 = 2. The flipped version is called the reciprocal.",
+      },
+      {
+        question: "Is 5.NF the hardest Common Core standard?",
+        answer:
+          "Many teachers say so. Fraction multiplication and division are conceptually demanding even for kids who are fluent with whole-number arithmetic.",
+      },
+    ],
+    linkedGameSlugs: ["fractions-frenzy", "math-quiz"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "grade-3-math-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-5-decimals",
+    keyword: "grade 5 decimals worksheets",
+    searchVolume: 4400,
+    h1: "Grade 5 Decimals Worksheets — Free Printable PDF",
+    title: "Grade 5 Decimals Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 5 decimals worksheets — decimal operations, place value to thousandths, rounding decimals. Common Core 5.NBT aligned.",
+    intro: [
+      "Grade 5 decimals build on the Grade 4 introduction by extending to thousandths and adding all four operations. Where Grade 4 just asked the child to UNDERSTAND decimals, Grade 5 asks them to ADD, SUBTRACT, MULTIPLY and DIVIDE with them — and the rules for decimal placement in each operation are the new headache.",
+      "Our Grade 5 decimal sheets cover place value to thousandths (5.NBT.A.3), reading and writing decimals in expanded form, comparing decimals to thousandths, rounding decimals to any place, and the four arithmetic operations on decimals (5.NBT.B.7). The 'where does the decimal point go' question is the throughline of every operation, and we include side-by-side worked examples on the first sheet of each operation.",
+      "Pair with Math Quiz Challenge for mixed practice. Grade 5 decimal work prepares directly for Grade 6 percent and ratio work. Free, classroom-ready.",
+    ],
+    faqs: [
+      {
+        question: "What's the Grade 5 standard?",
+        answer:
+          "Common Core 5.NBT.A.3 (place value to thousandths), 5.NBT.A.4 (rounding) and 5.NBT.B.7 (four operations with decimals).",
+      },
+      {
+        question: "How do you add decimals?",
+        answer:
+          "Line up the decimal points, then add as you would whole numbers. Add zeros to the shorter decimal if needed.",
+      },
+      {
+        question: "How do you multiply decimals?",
+        answer:
+          "Multiply as if there were no decimals, then count the total decimal digits in both factors and put that many in the product.",
+      },
+      {
+        question: "Are these printable for free?",
+        answer:
+          "Yes — every Grade 5 decimals sheet is free to download, print and copy for classroom or home use.",
+      },
+    ],
+    linkedGameSlugs: ["math-quiz", "fractions-frenzy"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
+  {
+    slug: "grade-5-percentages",
+    keyword: "grade 5 percentages worksheets",
+    searchVolume: 2900,
+    h1: "Grade 5 Percentages Worksheets — Free Printable PDF",
+    title: "Grade 5 Percentages Worksheets (Free Printable) | JiggyJoy",
+    metaDescription:
+      "Free Grade 5 percentages worksheets — convert between fractions, decimals and percents. Find percent of a number. Real-world percent problems.",
+    intro: [
+      "Percent isn't an official Common Core Grade 5 standard — it formally arrives in Grade 6 (6.RP.A.3.c) — but most curriculums introduce it in late Grade 5 because it sits naturally next to decimals and fractions. A child who's just learned that 0.5 = 1/2 is one tiny step away from learning that both equal 50%. Getting this introduction in Grade 5 makes Grade 6 ratio work much easier.",
+      "Our Grade 5 percent sheets focus on the conversion triangle: fraction → decimal → percent (and back). They cover finding simple percents of whole numbers (10%, 25%, 50%, 75%) and the introduction of the percent symbol. Real-world problems use percents in tipping, sales tax and discounts — contexts a fifth grader can already imagine.",
+      "Pair with Math Quiz Challenge. These sheets are an early bridge to Grade 6 ratio and proportion work. Free, classroom-friendly, no signup.",
+    ],
+    faqs: [
+      {
+        question: "Is percent in the Common Core for Grade 5?",
+        answer:
+          "Not formally — percents start in Grade 6 (6.RP.A.3.c). But most curriculums introduce them in late Grade 5 alongside decimals.",
+      },
+      {
+        question: "How do you convert a fraction to a percent?",
+        answer:
+          "Convert the fraction to a decimal first (divide numerator by denominator), then multiply the decimal by 100. So 3/4 = 0.75 = 75%.",
+      },
+      {
+        question: "What's 25% of 80?",
+        answer:
+          "25% means 1/4. So 25% of 80 is 80 ÷ 4 = 20. The 'of' usually means multiply.",
+      },
+      {
+        question: "Why teach percents alongside fractions and decimals?",
+        answer:
+          "Because they're the same idea in three notations. Children who see all three together build a stronger number sense than children who learn them as separate topics.",
+      },
+    ],
+    linkedGameSlugs: ["fractions-frenzy", "math-quiz", "money-match"],
+    linkedWorksheetSlugs: ["multiplication-worksheets", "place-value-worksheets"],
+    linkedColoringCategorySlugs: [],
+  },
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
