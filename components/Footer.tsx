@@ -95,6 +95,7 @@ export default function Footer() {
               <li><Link href="/activities/5-year-olds" className="hover:text-white transition-colors">Activities by Age</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/parents" className="hover:text-white transition-colors">For Parents</Link></li>
+              <li><Link href="/for-teachers" className="hover:text-white transition-colors">For Teachers</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>

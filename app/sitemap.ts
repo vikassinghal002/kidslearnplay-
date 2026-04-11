@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/halloween`,                  priority: 0.95, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/about`,                     priority: 0.5, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/parents`,                    priority: 0.6, changeFrequency: "monthly" as const },
+    { url: `${BASE_URL}/for-teachers`,                priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE_URL}/privacy-policy`,            priority: 0.3, changeFrequency: "yearly" as const },
     { url: `${BASE_URL}/terms`,                     priority: 0.3, changeFrequency: "yearly" as const },
   ];
